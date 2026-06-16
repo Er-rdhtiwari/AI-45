@@ -30,7 +30,7 @@ Mandatory output format:
 - Interview relevance for Google/Amazon/Netflix roles
 - DSA topic: Arrays
 - DSA notes, patterns, and time complexity
-- One DSA practice question with Python solution
+- One DSA practice question with Golang solution
 
 ```
 
@@ -67,7 +67,7 @@ Mandatory output format:
 - Interview relevance
 - DSA topic: Strings
 - DSA notes and patterns
-- One string practice question with Python solution
+- One string practice question with Golang solution
 
 ```
 
@@ -104,7 +104,7 @@ Mandatory output format:
 - Interview relevance
 - DSA topic: HashMap / Dictionary
 - DSA notes and patterns
-- One hashmap practice question with Python solution
+- One hashmap practice question with Golang solution
 
 ```
 
@@ -141,7 +141,7 @@ Mandatory output format:
 - Interview relevance
 - DSA topic: Two Pointers
 - DSA notes and patterns
-- One two-pointer practice question with Python solution
+- One two-pointer practice question with Golang solution
 
 ```
 
@@ -178,7 +178,7 @@ Mandatory output format:
 - Interview relevance
 - DSA topic: Sliding Window
 - DSA notes and patterns
-- One sliding-window practice question with Python solution
+- One sliding-window practice question with Golang solution
 
 ```
 
@@ -215,7 +215,7 @@ Mandatory output format:
 - Interview relevance
 - DSA topic: Stack
 - DSA notes and patterns
-- One stack practice question with Python solution
+- One stack practice question with Golang solution
 
 ```
 
@@ -249,7 +249,7 @@ Mandatory output format:
 - Common mistakes
 - DSA topic: Queue
 - DSA notes
-- One queue practice question with Python solution
+- One queue practice question with Golang solution
 
 ```
 
@@ -288,7 +288,7 @@ Mandatory output format:
 - Interview relevance for Amazon roles
 - DSA topic: Linked List
 - DSA notes
-- One linked-list practice question with Python solution
+- One linked-list practice question with Golang solution
 
 ```
 
@@ -325,7 +325,7 @@ Mandatory output format:
 - Interview relevance
 - DSA topic: Binary Search
 - DSA notes and patterns
-- One binary-search practice question with Python solution
+- One binary-search practice question with Golang solution
 
 ```
 
@@ -362,7 +362,7 @@ Mandatory output format:
 - Interview relevance
 - DSA topic: Recursion
 - DSA notes
-- One recursion practice question with Python solution
+- One recursion practice question with Golang solution
 
 ```
 
@@ -399,7 +399,7 @@ Mandatory output format:
 - Interview relevance
 - DSA topic: BFS
 - DSA notes
-- One BFS practice question with Python solution
+- One BFS practice question with Golang solution
 
 ```
 
@@ -436,7 +436,7 @@ Mandatory output format:
 - Interview relevance
 - DSA topic: DFS
 - DSA notes
-- One DFS practice question with Python solution
+- One DFS practice question with Golang solution
 
 ```
 
@@ -473,7 +473,7 @@ Mandatory output format:
 - Interview relevance
 - DSA topic: Heap / Priority Queue
 - DSA notes
-- One heap practice question with Python solution
+- One heap practice question with Golang solution
 
 ```
 
@@ -506,7 +506,7 @@ Mandatory output format:
 - Common mistakes
 - DSA topic: Sorting
 - DSA notes
-- One sorting practice question with Python solution
+- One sorting practice question with Golang solution
 
 ```
 
@@ -545,7 +545,7 @@ Mandatory output format:
 - Interview relevance
 - DSA topic: Intervals
 - DSA notes
-- One interval practice question with Python solution
+- One interval practice question with Golang solution
 
 ```
 
@@ -582,7 +582,7 @@ Mandatory output format:
 - Interview relevance
 - DSA topic: Binary Tree Basics
 - DSA notes
-- One binary-tree practice question with Python solution
+- One binary-tree practice question with Golang solution
 
 ```
 
@@ -619,7 +619,7 @@ Mandatory output format:
 - Interview relevance
 - DSA topic: Binary Search Tree
 - DSA notes
-- One BST practice question with Python solution
+- One BST practice question with Golang solution
 
 ```
 
@@ -656,7 +656,7 @@ Mandatory output format:
 - Interview relevance
 - DSA topic: Trie
 - DSA notes
-- One trie practice question with Python solution
+- One trie practice question with Golang solution
 
 ```
 
@@ -693,7 +693,7 @@ Mandatory output format:
 - Interview relevance
 - DSA topic: Graph Basics
 - DSA notes
-- One graph practice question with Python solution
+- One graph practice question with Golang solution
 
 ```
 
@@ -730,7 +730,7 @@ Mandatory output format:
 - Interview relevance
 - DSA topic: Topological Sort
 - DSA notes
-- One topological-sort practice question with Python solution
+- One topological-sort practice question with Golang solution
 
 ```
 
@@ -767,7 +767,7 @@ Mandatory output format:
 - Common mistakes
 - DSA topic: Union Find
 - DSA notes
-- One union-find practice question with Python solution
+- One union-find practice question with Golang solution
 
 ```
 
@@ -806,7 +806,7 @@ Mandatory output format:
 - Interview relevance
 - DSA topic: Greedy Algorithms
 - DSA notes
-- One greedy practice question with Python solution
+- One greedy practice question with Golang solution
 
 ```
 
@@ -843,7 +843,7 @@ Mandatory output format:
 - Interview relevance
 - DSA topic: Backtracking
 - DSA notes
-- One backtracking practice question with Python solution
+- One backtracking practice question with Golang solution
 
 ```
 
@@ -880,7 +880,7 @@ Mandatory output format:
 - Interview relevance
 - DSA topic: Dynamic Programming Basics
 - DSA notes
-- One DP practice question with Python solution
+- One DP practice question with Golang solution
 
 ```
 
@@ -917,7 +917,7 @@ Mandatory output format:
 - Interview relevance
 - DSA topic: 1D Dynamic Programming
 - DSA notes
-- One 1D DP practice question with Python solution
+- One 1D DP practice question with Golang solution
 
 ```
 
@@ -954,7 +954,7 @@ Mandatory output format:
 - Interview relevance for Google Code Search role
 - DSA topic: 2D Dynamic Programming
 - DSA notes
-- One 2D DP practice question with Python solution
+- One 2D DP practice question with Golang solution
 
 ```
 
@@ -991,7 +991,7 @@ Mandatory output format:
 - Interview relevance
 - DSA topic: Bit Manipulation
 - DSA notes
-- One bit-manipulation practice question with Python solution
+- One bit-manipulation practice question with Golang solution
 
 ```
 
@@ -1028,7 +1028,7 @@ Mandatory output format:
 - Common mistakes
 - DSA topic: Mixed DSA Revision
 - DSA notes
-- One mixed DSA practice question with Python solution
+- One mixed DSA practice question with Golang solution
 
 ```
 
@@ -1067,7 +1067,7 @@ Mandatory output format:
 - Interview relevance
 - DSA topic: Matrix Problems
 - DSA notes
-- One matrix practice question with Python solution
+- One matrix practice question with Golang solution
 
 ```
 
@@ -1104,7 +1104,7 @@ Mandatory output format:
 - Interview relevance
 - DSA topic: Monotonic Stack
 - DSA notes
-- One monotonic-stack practice question with Python solution
+- One monotonic-stack practice question with Golang solution
 
 ```
 
@@ -1141,7 +1141,7 @@ Mandatory output format:
 - Interview relevance
 - DSA topic: Shortest Path
 - DSA notes
-- One shortest-path practice question with Python solution
+- One shortest-path practice question with Golang solution
 
 ```
 
@@ -1178,7 +1178,7 @@ Mandatory output format:
 - Interview relevance
 - DSA topic: Dijkstra Algorithm
 - DSA notes
-- One Dijkstra practice question with Python solution
+- One Dijkstra practice question with Golang solution
 
 ```
 
@@ -1215,7 +1215,7 @@ Mandatory output format:
 - Interview relevance
 - DSA topic: Prefix Sum
 - DSA notes
-- One prefix-sum practice question with Python solution
+- One prefix-sum practice question with Golang solution
 
 ```
 
@@ -1252,7 +1252,7 @@ Mandatory output format:
 - Interview relevance for Netflix/Google/Amazon roles
 - DSA topic: LRU Cache
 - DSA notes
-- One LRU cache practice question with Python solution
+- One LRU cache practice question with Golang solution
 
 ```
 
@@ -1289,7 +1289,7 @@ Mandatory output format:
 - Common mistakes
 - DSA topic: Coding Design Patterns
 - DSA notes
-- One design-pattern-based coding question with Python solution
+- One design-pattern-based coding question with Golang solution
 
 ```
 
@@ -1328,7 +1328,7 @@ Mandatory output format:
 - Interview relevance
 - DSA topic: Rate Limiting Algorithm
 - DSA notes
-- One rate-limiter practice question with Python solution
+- One rate-limiter practice question with Golang solution
 
 ```
 
@@ -1366,7 +1366,7 @@ Mandatory output format:
 - Interview relevance
 - DSA topic: Concurrency Coding Problems
 - DSA notes
-- One concurrency-style practice question with Python solution
+- One concurrency-style practice question with Golang solution
 
 ```
 
@@ -1403,7 +1403,7 @@ Mandatory output format:
 - Interview relevance
 - DSA topic: Advanced Hashing
 - DSA notes
-- One hashing practice question with Python solution
+- One hashing practice question with Golang solution
 
 ```
 
@@ -1440,7 +1440,7 @@ Mandatory output format:
 - Interview relevance
 - DSA topic: System Design Coding
 - DSA notes
-- One system-design-style coding question with Python solution
+- One system-design-style coding question with Golang solution
 
 ```
 
@@ -1477,7 +1477,7 @@ Mandatory output format:
 - Interview relevance
 - DSA topic: Graph Revision
 - DSA notes
-- One graph revision practice question with Python solution
+- One graph revision practice question with Golang solution
 
 ```
 
@@ -1514,7 +1514,7 @@ Mandatory output format:
 - Interview relevance
 - DSA topic: DP Revision
 - DSA notes
-- One DP revision practice question with Python solution
+- One DP revision practice question with Golang solution
 
 ```
 
@@ -1551,7 +1551,7 @@ Mandatory output format:
 - Common mistakes
 - DSA topic: Mixed DSA Mock
 - DSA notes
-- One mixed DSA practice question with Python solution
+- One mixed DSA practice question with Golang solution
 
 ```
 
@@ -1592,7 +1592,7 @@ Mandatory output format:
 - Interview relevance
 - DSA topic: Weak Area Recovery
 - DSA notes for choosing weak topics
-- One practice question from weak area with Python solution
+- One practice question from weak area with Golang solution
 
 ```
 
@@ -1634,7 +1634,7 @@ Mandatory output format:
 - Strong interview closing summary
 - DSA topic: Full Coding Mock
 - DSA notes
-- One medium-level coding problem with Python solution
+- One medium-level coding problem with Golang solution
 - Final revision checklist
 ```
 
@@ -1691,7 +1691,7 @@ Mandatory output format:
 - 25 interview questions with short answers
 - 10 STAR behavioral prompts
 - DSA final revision table
-- One final mixed DSA problem with Python solution
+- One final mixed DSA problem with Golang solution
 - Final 7-day revision plan after these 45 days
 ```
 
@@ -1763,7 +1763,7 @@ Mandatory output format:
 - Final resume headline suggestion
 - Final LinkedIn headline suggestion
 - DSA revision topic: Arrays + HashMap
-- One medium DSA question with Python solution
+- One medium DSA question with Golang solution
 
 ```
 
@@ -1824,7 +1824,7 @@ Mandatory output format:
 - STAR story for Deliver Results
 - 10 resume bullets with placeholders where needed
 - DSA revision topic: Two Pointers + Sliding Window
-- One medium DSA question with Python solution
+- One medium DSA question with Golang solution
 
 ```
 
@@ -1887,7 +1887,7 @@ Mandatory output format:
 - STAR story for Dive Deep
 - 10 resume bullets with metric placeholders
 - DSA revision topic: Stack + Queue + Heap
-- One medium DSA question with Python solution
+- One medium DSA question with Golang solution
 
 ```
 
@@ -1956,7 +1956,7 @@ Mandatory output format:
 - 30 hard interviewer questions with strong answers
 - 10 resume bullets with metric placeholders
 - DSA revision topic: Trees + Tries
-- One medium DSA question with Python solution
+- One medium DSA question with Golang solution
 
 ```
 
@@ -2011,7 +2011,7 @@ Mandatory output format:
 - 10 cost optimization techniques
 - 10 security best practices
 - DSA revision topic: Binary Search + Sorting
-- One medium DSA question with Python solution
+- One medium DSA question with Golang solution
 
 ```
 
@@ -2067,7 +2067,7 @@ Mandatory output format:
 - Strong answer: How do you improve recall without hurting precision?
 - Strong answer: Why hybrid search instead of only vector search?
 - DSA revision topic: Graph BFS/DFS + Union Find
-- One medium DSA question with Python solution
+- One medium DSA question with Golang solution
 
 ```
 
@@ -2129,7 +2129,7 @@ Mandatory output format:
 - Table: production metric → why it matters → project example
 - 30 hard production-readiness questions with strong answers
 - DSA revision topic: Dynamic Programming basics
-- One medium DSA question with Python solution
+- One medium DSA question with Golang solution
 
 ```
 
@@ -2178,8 +2178,8 @@ Mandatory output format:
 - Golang interview checklist
 - Common coding mistakes table
 - 5 mini coding problems with hints only
-- 3 medium coding problems with full Python solutions
-- 1 concurrency-style problem with Python solution
+- 3 medium coding problems with full Golang solutions
+- 1 concurrency-style problem with Golang solution
 - 1 small Golang HTTP/concurrency example
 - Line-by-line explanation for all solutions
 - Mock interviewer feedback after each solution
@@ -2246,7 +2246,7 @@ Mandatory output format:
 - Final answer: “Tell me about a failure”
 - Final answer: “Tell me about a difficult technical decision”
 - DSA revision topic: Mixed DSA
-- One medium DSA question with Python solution
+- One medium DSA question with Golang solution
 
 ```
 
@@ -2303,7 +2303,7 @@ Mandatory output format:
 - ASCII diagrams for both system designs
 - Pseudocode for both systems
 - Python script for one key component from each system
-- One medium DSA problem with full Python solution
+- One medium DSA problem with full Golang solution
 - 20 final technical questions with answers
 - 20 final behavioral questions with answer strategy
 - Final resume bullet improvement list
@@ -2467,7 +2467,7 @@ Mandatory output format:
 - Final IBM resume headline suggestion
 - Final IBM LinkedIn headline suggestion
 - DSA revision topic: Arrays + HashMap
-- One medium DSA question with Python solution
+- One medium DSA question with Golang solution
 - End-of-day revision checklist
 ```
 
@@ -2522,7 +2522,7 @@ Mandatory output format:
 - IBM interview relevance
 - Table: data science step → purpose → interview explanation
 - DSA revision topic: Strings
-- One string practice question with Python solution
+- One string practice question with Golang solution
 - Revision checklist
 ```
 
@@ -2580,7 +2580,7 @@ Mandatory output format:
 - Strong answer: How do you choose the right ML metric?
 - Strong answer: How do you explain model results to business stakeholders?
 - DSA revision topic: Two Pointers
-- One two-pointer practice question with Python solution
+- One two-pointer practice question with Golang solution
 - Revision checklist
 ```
 
@@ -2632,7 +2632,7 @@ Mandatory output format:
 - Strong answer: How do NLP and LLMs work together?
 - Strong answer: How would you process unstructured enterprise documents?
 - DSA revision topic: Sliding Window
-- One sliding-window practice question with Python solution
+- One sliding-window practice question with Golang solution
 - Revision checklist
 ```
 
@@ -2691,7 +2691,7 @@ Mandatory output format:
 - Strong answer: What is your experience with Hugging Face?
 - Strong answer: How do you choose between TensorFlow, PyTorch, and Keras?
 - DSA revision topic: Stack
-- One stack practice question with Python solution
+- One stack practice question with Golang solution
 - Revision checklist
 ```
 
@@ -2745,7 +2745,7 @@ Mandatory output format:
 - Strong answer: How do you reduce hallucination?
 - Strong answer: How do you combine structured and unstructured data?
 - DSA revision topic: Queue
-- One queue practice question with Python solution
+- One queue practice question with Golang solution
 - Revision checklist
 ```
 
@@ -2798,7 +2798,7 @@ Mandatory output format:
 - Strong answer: How would you map your AWS GenAI experience to IBM hybrid cloud?
 - Strong answer: What is responsible AI governance?
 - DSA revision topic: Linked List
-- One linked-list practice question with Python solution
+- One linked-list practice question with Golang solution
 - Revision checklist
 ```
 
@@ -2858,7 +2858,7 @@ Mandatory output format:
 - Strong answer: How would you deploy an AI solution in a client environment?
 - Strong answer: How do you choose SQL vs NoSQL for AI apps?
 - DSA revision topic: Binary Search
-- One binary-search practice question with Python solution
+- One binary-search practice question with Golang solution
 - Revision checklist
 ```
 
@@ -2919,7 +2919,7 @@ Mandatory output format:
 - STAR story for Handling Ambiguity
 - Strong answer: How do you take an AI prototype to production?
 - DSA revision topic: BFS + DFS
-- One graph practice question with Python solution
+- One graph practice question with Golang solution
 - Revision checklist
 ```
 
@@ -3020,7 +3020,7 @@ Mandatory output format:
 - Pseudocode for both systems
 - Python script for one ML/data science component
 - Python script for one GenAI/RAG component
-- One medium DSA problem with full Python solution
+- One medium DSA problem with full Golang solution
 - 25 IBM technical questions with strong answers
 - 20 IBM behavioral/consulting questions with answer strategy
 - 10 questions I should ask the IBM interviewer
