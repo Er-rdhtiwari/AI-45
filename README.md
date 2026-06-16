@@ -31,7 +31,7 @@ Mandatory output format:
 - DSA topic: Arrays
 - DSA notes, patterns, and time complexity
 - One DSA practice question with Python solution
-- Revision checklist
+
 ```
 
 ## Day 2 — FastAPI, REST APIs, Pydantic + Strings
@@ -68,7 +68,7 @@ Mandatory output format:
 - DSA topic: Strings
 - DSA notes and patterns
 - One string practice question with Python solution
-- Revision checklist
+
 ```
 
 ## Day 3 — API Contracts, Validation, Idempotency + HashMap
@@ -105,7 +105,7 @@ Mandatory output format:
 - DSA topic: HashMap / Dictionary
 - DSA notes and patterns
 - One hashmap practice question with Python solution
-- Revision checklist
+
 ```
 
 ## Day 4 — Databases, Redis, Caching + Two Pointers
@@ -142,7 +142,7 @@ Mandatory output format:
 - DSA topic: Two Pointers
 - DSA notes and patterns
 - One two-pointer practice question with Python solution
-- Revision checklist
+
 ```
 
 ## Day 5 — Async Python, Concurrency, Retry + Sliding Window
@@ -179,7 +179,7 @@ Mandatory output format:
 - DSA topic: Sliding Window
 - DSA notes and patterns
 - One sliding-window practice question with Python solution
-- Revision checklist
+
 ```
 
 ## Day 6 — Testing, Logging, Debugging + Stack
@@ -216,7 +216,7 @@ Mandatory output format:
 - DSA topic: Stack
 - DSA notes and patterns
 - One stack practice question with Python solution
-- Revision checklist
+
 ```
 
 ## Day 7 — Revision 1: Backend Foundation + Queue
@@ -250,7 +250,7 @@ Mandatory output format:
 - DSA topic: Queue
 - DSA notes
 - One queue practice question with Python solution
-- Weekly revision checklist
+
 ```
 
 ---
@@ -289,7 +289,7 @@ Mandatory output format:
 - DSA topic: Linked List
 - DSA notes
 - One linked-list practice question with Python solution
-- Revision checklist
+
 ```
 
 ## Day 9 — AWS Bedrock + LLM APIs + Binary Search
@@ -326,7 +326,7 @@ Mandatory output format:
 - DSA topic: Binary Search
 - DSA notes and patterns
 - One binary-search practice question with Python solution
-- Revision checklist
+
 ```
 
 ## Day 10 — S3 Document Ingestion + Recursion
@@ -363,7 +363,7 @@ Mandatory output format:
 - DSA topic: Recursion
 - DSA notes
 - One recursion practice question with Python solution
-- Revision checklist
+
 ```
 
 ## Day 11 — SQS, SNS, EventBridge, Step Functions + BFS
@@ -400,7 +400,7 @@ Mandatory output format:
 - DSA topic: BFS
 - DSA notes
 - One BFS practice question with Python solution
-- Revision checklist
+
 ```
 
 ## Day 12 — Docker, Kubernetes, EKS, Helm + DFS
@@ -437,7 +437,7 @@ Mandatory output format:
 - DSA topic: DFS
 - DSA notes
 - One DFS practice question with Python solution
-- Revision checklist
+
 ```
 
 ## Day 13 — Golang Backend Refresher + Heap
@@ -474,7 +474,7 @@ Mandatory output format:
 - DSA topic: Heap / Priority Queue
 - DSA notes
 - One heap practice question with Python solution
-- Revision checklist
+
 ```
 
 ## Day 14 — Revision 2: AWS + Platform Basics + Sorting
@@ -507,7 +507,7 @@ Mandatory output format:
 - DSA topic: Sorting
 - DSA notes
 - One sorting practice question with Python solution
-- Weekly revision checklist
+
 ```
 
 ---
@@ -546,7 +546,7 @@ Mandatory output format:
 - DSA topic: Intervals
 - DSA notes
 - One interval practice question with Python solution
-- Revision checklist
+
 ```
 
 ## Day 16 — Prompt Engineering, Structured Output + Binary Tree
@@ -583,7 +583,7 @@ Mandatory output format:
 - DSA topic: Binary Tree Basics
 - DSA notes
 - One binary-tree practice question with Python solution
-- Revision checklist
+
 ```
 
 ## Day 17 — Embeddings, Vector DBs, ANN + BST
@@ -620,7 +620,7 @@ Mandatory output format:
 - DSA topic: Binary Search Tree
 - DSA notes
 - One BST practice question with Python solution
-- Revision checklist
+
 ```
 
 ## Day 18 — RAG Fundamentals + Trie
@@ -657,7 +657,7 @@ Mandatory output format:
 - DSA topic: Trie
 - DSA notes
 - One trie practice question with Python solution
-- Revision checklist
+
 ```
 
 ## Day 19 — Chunking, Metadata, Recall vs Precision + Graph Basics
@@ -694,7 +694,7 @@ Mandatory output format:
 - DSA topic: Graph Basics
 - DSA notes
 - One graph practice question with Python solution
-- Revision checklist
+
 ```
 
 ## Day 20 — Hybrid Search, BM25, OpenSearch + Topological Sort
@@ -731,7 +731,7 @@ Mandatory output format:
 - DSA topic: Topological Sort
 - DSA notes
 - One topological-sort practice question with Python solution
-- Revision checklist
+
 ```
 
 ## Day 21 — Revision 3: LLM + RAG + Search + Union Find
@@ -768,7 +768,7 @@ Mandatory output format:
 - DSA topic: Union Find
 - DSA notes
 - One union-find practice question with Python solution
-- Weekly revision checklist
+
 ```
 
 ---
@@ -807,7 +807,7 @@ Mandatory output format:
 - DSA topic: Greedy Algorithms
 - DSA notes
 - One greedy practice question with Python solution
-- Revision checklist
+
 ```
 
 ## Day 23 — LangGraph, Workflow vs Agent + Backtracking
@@ -844,7 +844,7 @@ Mandatory output format:
 - DSA topic: Backtracking
 - DSA notes
 - One backtracking practice question with Python solution
-- Revision checklist
+
 ```
 
 ## Day 24 — Agent Patterns, Planner-Executor, Critic Loop + DP Basics
@@ -881,7 +881,7 @@ Mandatory output format:
 - DSA topic: Dynamic Programming Basics
 - DSA notes
 - One DP practice question with Python solution
-- Revision checklist
+
 ```
 
 ## Day 25 — MCP and Safe Tool Integration + 1D DP
@@ -918,7 +918,7 @@ Mandatory output format:
 - DSA topic: 1D Dynamic Programming
 - DSA notes
 - One 1D DP practice question with Python solution
-- Revision checklist
+
 ```
 
 ## Day 26 — Code Search, AST, Symbol Search + 2D DP
@@ -955,7 +955,7 @@ Mandatory output format:
 - DSA topic: 2D Dynamic Programming
 - DSA notes
 - One 2D DP practice question with Python solution
-- Revision checklist
+
 ```
 
 ## Day 27 — IR Metrics, RAG Metrics, Search Quality + Bit Manipulation
@@ -992,7 +992,7 @@ Mandatory output format:
 - DSA topic: Bit Manipulation
 - DSA notes
 - One bit-manipulation practice question with Python solution
-- Revision checklist
+
 ```
 
 ## Day 28 — Revision 4: Agents + Code Search + Metrics + Mixed DSA
@@ -1029,7 +1029,7 @@ Mandatory output format:
 - DSA topic: Mixed DSA Revision
 - DSA notes
 - One mixed DSA practice question with Python solution
-- Weekly revision checklist
+
 ```
 
 ---
@@ -1068,7 +1068,7 @@ Mandatory output format:
 - DSA topic: Matrix Problems
 - DSA notes
 - One matrix practice question with Python solution
-- Revision checklist
+
 ```
 
 ## Day 30 — AWS SageMaker Lifecycle + Monotonic Stack
@@ -1105,7 +1105,7 @@ Mandatory output format:
 - DSA topic: Monotonic Stack
 - DSA notes
 - One monotonic-stack practice question with Python solution
-- Revision checklist
+
 ```
 
 ## Day 31 — Fine-Tuning, PEFT, LoRA, QLoRA + Shortest Path
@@ -1142,7 +1142,7 @@ Mandatory output format:
 - DSA topic: Shortest Path
 - DSA notes
 - One shortest-path practice question with Python solution
-- Revision checklist
+
 ```
 
 ## Day 32 — Model Serving Optimization, vLLM, Triton + Dijkstra
@@ -1179,7 +1179,7 @@ Mandatory output format:
 - DSA topic: Dijkstra Algorithm
 - DSA notes
 - One Dijkstra practice question with Python solution
-- Revision checklist
+
 ```
 
 ## Day 33 — Multimodal AI, Vision-Language Models + Prefix Sum
@@ -1216,7 +1216,7 @@ Mandatory output format:
 - DSA topic: Prefix Sum
 - DSA notes
 - One prefix-sum practice question with Python solution
-- Revision checklist
+
 ```
 
 ## Day 34 — Recommendations, Ads, Forecasting + LRU Cache
@@ -1253,7 +1253,7 @@ Mandatory output format:
 - DSA topic: LRU Cache
 - DSA notes
 - One LRU cache practice question with Python solution
-- Revision checklist
+
 ```
 
 ## Day 35 — Revision 5: ML Platform + LLMOps + Advanced ML + Design Patterns
@@ -1290,7 +1290,7 @@ Mandatory output format:
 - DSA topic: Coding Design Patterns
 - DSA notes
 - One design-pattern-based coding question with Python solution
-- Weekly revision checklist
+
 ```
 
 ---
@@ -1329,7 +1329,7 @@ Mandatory output format:
 - DSA topic: Rate Limiting Algorithm
 - DSA notes
 - One rate-limiter practice question with Python solution
-- Revision checklist
+
 ```
 
 ## Day 37 — Reliability, SLO, Retry, Circuit Breaker + Concurrency
@@ -1367,7 +1367,7 @@ Mandatory output format:
 - DSA topic: Concurrency Coding Problems
 - DSA notes
 - One concurrency-style practice question with Python solution
-- Revision checklist
+
 ```
 
 ## Day 38 — GenAI Security, Prompt Injection, Guardrails + Hashing Advanced
@@ -1404,7 +1404,7 @@ Mandatory output format:
 - DSA topic: Advanced Hashing
 - DSA notes
 - One hashing practice question with Python solution
-- Revision checklist
+
 ```
 
 ## Day 39 — Multi-Tenant AI Platform + System Design Coding
@@ -1441,7 +1441,7 @@ Mandatory output format:
 - DSA topic: System Design Coding
 - DSA notes
 - One system-design-style coding question with Python solution
-- Revision checklist
+
 ```
 
 ## Day 40 — CI/CD, Evaluation Gates, Canary, Rollback + Graph Revision
@@ -1478,7 +1478,7 @@ Mandatory output format:
 - DSA topic: Graph Revision
 - DSA notes
 - One graph revision practice question with Python solution
-- Revision checklist
+
 ```
 
 ## Day 41 — Cost Optimization, Performance, Capacity Planning + DP Revision
@@ -1515,7 +1515,7 @@ Mandatory output format:
 - DSA topic: DP Revision
 - DSA notes
 - One DP revision practice question with Python solution
-- Revision checklist
+
 ```
 
 ## Day 42 — Revision 6: Production Readiness + Mixed DSA Mock
@@ -1552,7 +1552,7 @@ Mandatory output format:
 - DSA topic: Mixed DSA Mock
 - DSA notes
 - One mixed DSA practice question with Python solution
-- Weekly revision checklist
+
 ```
 
 ---
@@ -1593,7 +1593,7 @@ Mandatory output format:
 - DSA topic: Weak Area Recovery
 - DSA notes for choosing weak topics
 - One practice question from weak area with Python solution
-- Revision checklist
+
 ```
 
 ## Day 44 — Full Mock System Design + Full Coding Mock
@@ -1764,7 +1764,7 @@ Mandatory output format:
 - Final LinkedIn headline suggestion
 - DSA revision topic: Arrays + HashMap
 - One medium DSA question with Python solution
-- End-of-day revision checklist
+
 ```
 
 ---
@@ -1825,7 +1825,7 @@ Mandatory output format:
 - 10 resume bullets with placeholders where needed
 - DSA revision topic: Two Pointers + Sliding Window
 - One medium DSA question with Python solution
-- End-of-day revision checklist
+
 ```
 
 ---
@@ -1888,7 +1888,7 @@ Mandatory output format:
 - 10 resume bullets with metric placeholders
 - DSA revision topic: Stack + Queue + Heap
 - One medium DSA question with Python solution
-- End-of-day revision checklist
+
 ```
 
 ---
@@ -1957,7 +1957,7 @@ Mandatory output format:
 - 10 resume bullets with metric placeholders
 - DSA revision topic: Trees + Tries
 - One medium DSA question with Python solution
-- End-of-day revision checklist
+
 ```
 
 ---
@@ -2012,7 +2012,7 @@ Mandatory output format:
 - 10 security best practices
 - DSA revision topic: Binary Search + Sorting
 - One medium DSA question with Python solution
-- End-of-day revision checklist
+
 ```
 
 ---
@@ -2068,7 +2068,7 @@ Mandatory output format:
 - Strong answer: Why hybrid search instead of only vector search?
 - DSA revision topic: Graph BFS/DFS + Union Find
 - One medium DSA question with Python solution
-- End-of-day revision checklist
+
 ```
 
 ---
@@ -2130,7 +2130,7 @@ Mandatory output format:
 - 30 hard production-readiness questions with strong answers
 - DSA revision topic: Dynamic Programming basics
 - One medium DSA question with Python solution
-- End-of-day revision checklist
+
 ```
 
 ---
@@ -2184,7 +2184,7 @@ Mandatory output format:
 - Line-by-line explanation for all solutions
 - Mock interviewer feedback after each solution
 - Final DSA weak-area checklist
-- End-of-day revision checklist
+
 ```
 
 ---
@@ -2247,7 +2247,7 @@ Mandatory output format:
 - Final answer: “Tell me about a difficult technical decision”
 - DSA revision topic: Mixed DSA
 - One medium DSA question with Python solution
-- End-of-day revision checklist
+
 ```
 
 ---
