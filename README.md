@@ -64,7 +64,7 @@ Mandatory output format:
 - Python FastAPI script
 - Line-by-line explanation
 - Common mistakes
-- Interview relevance
+- Interview relevance for Google/Amazon/Netflix roles
 - DSA topic: Strings
 - DSA notes and patterns
 - One string practice question with Golang solution
@@ -101,7 +101,7 @@ Mandatory output format:
 - Python FastAPI + Pydantic script
 - Line-by-line explanation
 - Common mistakes
-- Interview relevance
+- Interview relevance for Google/Amazon/Netflix roles
 - DSA topic: HashMap / Dictionary
 - DSA notes and patterns
 - One hashmap practice question with Golang solution
@@ -138,7 +138,7 @@ Mandatory output format:
 - Python script using repository + cache pattern
 - Line-by-line explanation
 - Common mistakes
-- Interview relevance
+- Interview relevance for Google/Amazon/Netflix roles
 - DSA topic: Two Pointers
 - DSA notes and patterns
 - One two-pointer practice question with Golang solution
@@ -175,7 +175,7 @@ Mandatory output format:
 - Python async script
 - Line-by-line explanation
 - Common mistakes
-- Interview relevance
+- Interview relevance for Google/Amazon/Netflix roles
 - DSA topic: Sliding Window
 - DSA notes and patterns
 - One sliding-window practice question with Golang solution
@@ -212,7 +212,7 @@ Mandatory output format:
 - Python script with pytest-style example
 - Line-by-line explanation
 - Common mistakes
-- Interview relevance
+- Interview relevance for Google/Amazon/Netflix roles
 - DSA topic: Stack
 - DSA notes and patterns
 - One stack practice question with Golang solution
@@ -247,6 +247,7 @@ Mandatory output format:
 - Python script combining API + validation + cache + async mock LLM call
 - Common interview questions with answers
 - Common mistakes
+- Interview relevance for Google/Amazon/Netflix roles
 - DSA topic: Queue
 - DSA notes
 - One queue practice question with Golang solution
@@ -285,7 +286,7 @@ Mandatory output format:
 - Python script simulating AWS-style request flow
 - Line-by-line explanation
 - Common mistakes
-- Interview relevance for Amazon roles
+- Interview relevance for Google/Amazon/Netflix roles
 - DSA topic: Linked List
 - DSA notes
 - One linked-list practice question with Golang solution
@@ -322,7 +323,7 @@ Mandatory output format:
 - Python script using a mock Bedrock client
 - Line-by-line explanation
 - Common mistakes
-- Interview relevance
+- Interview relevance for Google/Amazon/Netflix roles
 - DSA topic: Binary Search
 - DSA notes and patterns
 - One binary-search practice question with Golang solution
@@ -359,7 +360,7 @@ Mandatory output format:
 - Python script simulating document upload + metadata extraction
 - Line-by-line explanation
 - Common mistakes
-- Interview relevance
+- Interview relevance for Google/Amazon/Netflix roles
 - DSA topic: Recursion
 - DSA notes
 - One recursion practice question with Golang solution
@@ -396,7 +397,7 @@ Mandatory output format:
 - Python script simulating producer-consumer queue
 - Line-by-line explanation
 - Common mistakes
-- Interview relevance
+- Interview relevance for Google/Amazon/Netflix roles
 - DSA topic: BFS
 - DSA notes
 - One BFS practice question with Golang solution
@@ -433,7 +434,7 @@ Mandatory output format:
 - Dockerfile + Kubernetes YAML + Python health-check API
 - Line-by-line explanation
 - Common mistakes
-- Interview relevance
+- Interview relevance for Google/Amazon/Netflix roles
 - DSA topic: DFS
 - DSA notes
 - One DFS practice question with Golang solution
@@ -470,7 +471,7 @@ Mandatory output format:
 - Small Go HTTP API/client script
 - Line-by-line explanation
 - Common mistakes
-- Interview relevance
+- Interview relevance for Google/Amazon/Netflix roles
 - DSA topic: Heap / Priority Queue
 - DSA notes
 - One heap practice question with Golang solution
@@ -504,6 +505,7 @@ Mandatory output format:
 - Python script simulating upload → queue → process → answer
 - Common interview questions with answers
 - Common mistakes
+- Interview relevance for Google/Amazon/Netflix roles
 - DSA topic: Sorting
 - DSA notes
 - One sorting practice question with Golang solution
@@ -542,7 +544,7 @@ Mandatory output format:
 - Python script using a mock LLM function
 - Line-by-line explanation
 - Common mistakes
-- Interview relevance
+- Interview relevance for Google/Amazon/Netflix roles
 - DSA topic: Intervals
 - DSA notes
 - One interval practice question with Golang solution
@@ -579,7 +581,7 @@ Mandatory output format:
 - Python script generating structured JSON output from mock LLM
 - Line-by-line explanation
 - Common mistakes
-- Interview relevance
+- Interview relevance for Google/Amazon/Netflix roles
 - DSA topic: Binary Tree Basics
 - DSA notes
 - One binary-tree practice question with Golang solution
@@ -616,7 +618,7 @@ Mandatory output format:
 - Python script showing simple vector similarity
 - Line-by-line explanation
 - Common mistakes
-- Interview relevance
+- Interview relevance for Google/Amazon/Netflix roles
 - DSA topic: Binary Search Tree
 - DSA notes
 - One BST practice question with Golang solution
@@ -653,7 +655,7 @@ Mandatory output format:
 - Python script implementing tiny RAG without external services
 - Line-by-line explanation
 - Common mistakes
-- Interview relevance
+- Interview relevance for Google/Amazon/Netflix roles
 - DSA topic: Trie
 - DSA notes
 - One trie practice question with Golang solution
@@ -690,7 +692,7 @@ Mandatory output format:
 - Python script for chunking documents with metadata
 - Line-by-line explanation
 - Common mistakes
-- Interview relevance
+- Interview relevance for Google/Amazon/Netflix roles
 - DSA topic: Graph Basics
 - DSA notes
 - One graph practice question with Golang solution
@@ -727,7 +729,7 @@ Mandatory output format:
 - Python script simulating keyword + vector scoring
 - Line-by-line explanation
 - Common mistakes
-- Interview relevance
+- Interview relevance for Google/Amazon/Netflix roles
 - DSA topic: Topological Sort
 - DSA notes
 - One topological-sort practice question with Golang solution
@@ -765,6 +767,7 @@ Mandatory output format:
 - Python mini RAG + hybrid retrieval script
 - Interview questions with answers
 - Common mistakes
+- Interview relevance for Google/Amazon/Netflix roles
 - DSA topic: Union Find
 - DSA notes
 - One union-find practice question with Golang solution
@@ -803,7 +806,7 @@ Mandatory output format:
 - Python script simulating LLM tool calling
 - Line-by-line explanation
 - Common mistakes
-- Interview relevance
+- Interview relevance for Google/Amazon/Netflix roles
 - DSA topic: Greedy Algorithms
 - DSA notes
 - One greedy practice question with Golang solution
@@ -840,7 +843,7 @@ Mandatory output format:
 - Python script simulating graph routing
 - Line-by-line explanation
 - Common mistakes
-- Interview relevance
+- Interview relevance for Google/Amazon/Netflix roles
 - DSA topic: Backtracking
 - DSA notes
 - One backtracking practice question with Golang solution
@@ -877,7 +880,7 @@ Mandatory output format:
 - Python script simulating planner-executor behavior
 - Line-by-line explanation
 - Common mistakes
-- Interview relevance
+- Interview relevance for Google/Amazon/Netflix roles
 - DSA topic: Dynamic Programming Basics
 - DSA notes
 - One DP practice question with Golang solution
@@ -914,7 +917,7 @@ Mandatory output format:
 - Python script simulating safe tool execution
 - Line-by-line explanation
 - Common mistakes
-- Interview relevance
+- Interview relevance for Google/Amazon/Netflix roles
 - DSA topic: 1D Dynamic Programming
 - DSA notes
 - One 1D DP practice question with Golang solution
@@ -951,7 +954,7 @@ Mandatory output format:
 - Python script for tiny code search over sample snippets
 - Line-by-line explanation
 - Common mistakes
-- Interview relevance for Google Code Search role
+- Interview relevance for Google/Amazon/Netflix roles
 - DSA topic: 2D Dynamic Programming
 - DSA notes
 - One 2D DP practice question with Golang solution
@@ -988,7 +991,7 @@ Mandatory output format:
 - Python script calculating retrieval metrics
 - Line-by-line explanation
 - Common mistakes
-- Interview relevance
+- Interview relevance for Google/Amazon/Netflix roles
 - DSA topic: Bit Manipulation
 - DSA notes
 - One bit-manipulation practice question with Golang solution
@@ -1026,6 +1029,7 @@ Mandatory output format:
 - Python script combining search + reranking + tool call simulation
 - Interview questions with answers
 - Common mistakes
+- Interview relevance for Google/Amazon/Netflix roles
 - DSA topic: Mixed DSA Revision
 - DSA notes
 - One mixed DSA practice question with Golang solution
@@ -1064,7 +1068,7 @@ Mandatory output format:
 - Python script simulating model serving endpoint
 - Line-by-line explanation
 - Common mistakes
-- Interview relevance
+- Interview relevance for Google/Amazon/Netflix roles
 - DSA topic: Matrix Problems
 - DSA notes
 - One matrix practice question with Golang solution
@@ -1101,7 +1105,7 @@ Mandatory output format:
 - Python script simulating training → registry → deployment
 - Line-by-line explanation
 - Common mistakes
-- Interview relevance
+- Interview relevance for Google/Amazon/Netflix roles
 - DSA topic: Monotonic Stack
 - DSA notes
 - One monotonic-stack practice question with Golang solution
@@ -1138,7 +1142,7 @@ Mandatory output format:
 - Python script simulating training data preparation
 - Line-by-line explanation
 - Common mistakes
-- Interview relevance
+- Interview relevance for Google/Amazon/Netflix roles
 - DSA topic: Shortest Path
 - DSA notes
 - One shortest-path practice question with Golang solution
@@ -1175,7 +1179,7 @@ Mandatory output format:
 - Python script simulating batching and streaming behavior
 - Line-by-line explanation
 - Common mistakes
-- Interview relevance
+- Interview relevance for Google/Amazon/Netflix roles
 - DSA topic: Dijkstra Algorithm
 - DSA notes
 - One Dijkstra practice question with Golang solution
@@ -1212,7 +1216,7 @@ Mandatory output format:
 - Python script simulating multimodal document metadata extraction
 - Line-by-line explanation
 - Common mistakes
-- Interview relevance
+- Interview relevance for Google/Amazon/Netflix roles
 - DSA topic: Prefix Sum
 - DSA notes
 - One prefix-sum practice question with Golang solution
@@ -1249,7 +1253,7 @@ Mandatory output format:
 - Python script simulating simple ranking or forecasting
 - Line-by-line explanation
 - Common mistakes
-- Interview relevance for Netflix/Google/Amazon roles
+- Interview relevance for Google/Amazon/Netflix roles
 - DSA topic: LRU Cache
 - DSA notes
 - One LRU cache practice question with Golang solution
@@ -1287,6 +1291,7 @@ Mandatory output format:
 - Python script simulating model registry + serving decision flow
 - Interview questions with answers
 - Common mistakes
+- Interview relevance for Google/Amazon/Netflix roles
 - DSA topic: Coding Design Patterns
 - DSA notes
 - One design-pattern-based coding question with Golang solution
@@ -1325,7 +1330,7 @@ Mandatory output format:
 - Python script showing structured logs and trace IDs
 - Line-by-line explanation
 - Common mistakes
-- Interview relevance
+- Interview relevance for Google/Amazon/Netflix roles
 - DSA topic: Rate Limiting Algorithm
 - DSA notes
 - One rate-limiter practice question with Golang solution
@@ -1363,7 +1368,7 @@ Mandatory output format:
 - Add a small Go goroutine/concurrency example
 - Line-by-line explanation
 - Common mistakes
-- Interview relevance
+- Interview relevance for Google/Amazon/Netflix roles
 - DSA topic: Concurrency Coding Problems
 - DSA notes
 - One concurrency-style practice question with Golang solution
@@ -1400,7 +1405,7 @@ Mandatory output format:
 - Python script showing prompt validation and tool permission check
 - Line-by-line explanation
 - Common mistakes
-- Interview relevance
+- Interview relevance for Google/Amazon/Netflix roles
 - DSA topic: Advanced Hashing
 - DSA notes
 - One hashing practice question with Golang solution
@@ -1437,7 +1442,7 @@ Mandatory output format:
 - Python script showing tenant-aware request handling
 - Line-by-line explanation
 - Common mistakes
-- Interview relevance
+- Interview relevance for Google/Amazon/Netflix roles
 - DSA topic: System Design Coding
 - DSA notes
 - One system-design-style coding question with Golang solution
@@ -1474,7 +1479,7 @@ Mandatory output format:
 - YAML-like pipeline example followed by Python test script
 - Line-by-line explanation
 - Common mistakes
-- Interview relevance
+- Interview relevance for Google/Amazon/Netflix roles
 - DSA topic: Graph Revision
 - DSA notes
 - One graph revision practice question with Golang solution
@@ -1511,7 +1516,7 @@ Mandatory output format:
 - Python script estimating token/model cost and capacity
 - Line-by-line explanation
 - Common mistakes
-- Interview relevance
+- Interview relevance for Google/Amazon/Netflix roles
 - DSA topic: DP Revision
 - DSA notes
 - One DP revision practice question with Golang solution
@@ -1549,6 +1554,7 @@ Mandatory output format:
 - Python script simulating tenant-aware request + logging + guardrail + fallback
 - Interview questions with answers
 - Common mistakes
+- Interview relevance for Google/Amazon/Netflix roles
 - DSA topic: Mixed DSA Mock
 - DSA notes
 - One mixed DSA practice question with Golang solution
@@ -1589,7 +1595,7 @@ Mandatory output format:
 - Python script showing a simple risk tracker
 - Line-by-line explanation
 - Common mistakes
-- Interview relevance
+- Interview relevance for Google/Amazon/Netflix roles
 - DSA topic: Weak Area Recovery
 - DSA notes for choosing weak topics
 - One practice question from weak area with Golang solution
@@ -1631,6 +1637,7 @@ Mandatory output format:
 - Pseudocode first
 - Python script for one important component
 - Common mistakes
+- Interview relevance for Google/Amazon/Netflix roles
 - Strong interview closing summary
 - DSA topic: Full Coding Mock
 - DSA notes
@@ -1690,6 +1697,7 @@ Mandatory output format:
 - Python script for simplified end-to-end platform flow
 - 25 interview questions with short answers
 - 10 STAR behavioral prompts
+- Interview relevance for Google/Amazon/Netflix roles
 - DSA final revision table
 - One final mixed DSA problem with Golang solution
 - Final 7-day revision plan after these 45 days
@@ -1762,6 +1770,7 @@ Mandatory output format:
 - 10 weak areas I must avoid or explain carefully
 - Final resume headline suggestion
 - Final LinkedIn headline suggestion
+- Interview relevance for Google/Amazon/Netflix roles
 - DSA revision topic: Arrays + HashMap
 - One medium DSA question with Golang solution
 
@@ -1823,6 +1832,7 @@ Mandatory output format:
 - STAR story for Dive Deep
 - STAR story for Deliver Results
 - 10 resume bullets with placeholders where needed
+- Interview relevance for Google/Amazon/Netflix roles
 - DSA revision topic: Two Pointers + Sliding Window
 - One medium DSA question with Golang solution
 
@@ -1886,6 +1896,7 @@ Mandatory output format:
 - STAR story for Ownership
 - STAR story for Dive Deep
 - 10 resume bullets with metric placeholders
+- Interview relevance for Google/Amazon/Netflix roles
 - DSA revision topic: Stack + Queue + Heap
 - One medium DSA question with Golang solution
 
@@ -1955,6 +1966,7 @@ Mandatory output format:
 - Strong answer: How did you make tool calling safe?
 - 30 hard interviewer questions with strong answers
 - 10 resume bullets with metric placeholders
+- Interview relevance for Google/Amazon/Netflix roles
 - DSA revision topic: Trees + Tries
 - One medium DSA question with Golang solution
 
@@ -2010,6 +2022,7 @@ Mandatory output format:
 - 20 Amazon Solution Architect interview questions with answers
 - 10 cost optimization techniques
 - 10 security best practices
+- Interview relevance for Google/Amazon/Netflix roles
 - DSA revision topic: Binary Search + Sorting
 - One medium DSA question with Golang solution
 
@@ -2066,6 +2079,7 @@ Mandatory output format:
 - Strong answer: How do you debug bad retrieval?
 - Strong answer: How do you improve recall without hurting precision?
 - Strong answer: Why hybrid search instead of only vector search?
+- Interview relevance for Google/Amazon/Netflix roles
 - DSA revision topic: Graph BFS/DFS + Union Find
 - One medium DSA question with Golang solution
 
@@ -2128,6 +2142,7 @@ Mandatory output format:
 - Table: risk → mitigation → interview explanation
 - Table: production metric → why it matters → project example
 - 30 hard production-readiness questions with strong answers
+- Interview relevance for Google/Amazon/Netflix roles
 - DSA revision topic: Dynamic Programming basics
 - One medium DSA question with Golang solution
 
@@ -2173,6 +2188,7 @@ Cover:
 
 Mandatory output format:
 - 5-line coding revision summary
+- Interview relevance for Google/Amazon/Netflix roles
 - DSA pattern table: pattern → when to use → complexity → example problem
 - Python interview checklist
 - Golang interview checklist
@@ -2245,6 +2261,7 @@ Mandatory output format:
 - Final answer: “What is your biggest achievement?”
 - Final answer: “Tell me about a failure”
 - Final answer: “Tell me about a difficult technical decision”
+- Interview relevance for Google/Amazon/Netflix roles
 - DSA revision topic: Mixed DSA
 - One medium DSA question with Golang solution
 
@@ -2310,6 +2327,7 @@ Mandatory output format:
 - Final weak-area checklist
 - Final 7-day maintenance plan after this 10-day revision
 - Final confidence-building summary
+- Interview relevance for Google/Amazon/Netflix roles
 ```
 
 ---
@@ -2466,6 +2484,7 @@ Mandatory output format:
 - 10 weak areas I must prepare carefully
 - Final IBM resume headline suggestion
 - Final IBM LinkedIn headline suggestion
+- Interview relevance for Google/Amazon/Netflix roles
 - DSA revision topic: Arrays + HashMap
 - One medium DSA question with Golang solution
 - End-of-day revision checklist
@@ -2519,6 +2538,7 @@ Mandatory output format:
 - Python script using pandas and scikit-learn
 - Line-by-line explanation
 - Common mistakes
+- Interview relevance for Google/Amazon/Netflix roles
 - IBM interview relevance
 - Table: data science step → purpose → interview explanation
 - DSA revision topic: Strings
@@ -2576,6 +2596,7 @@ Mandatory output format:
 - Confusion matrix explanation
 - Metric comparison table
 - Common mistakes
+- Interview relevance for Google/Amazon/Netflix roles
 - IBM interview relevance
 - Strong answer: How do you choose the right ML metric?
 - Strong answer: How do you explain model results to business stakeholders?
@@ -2628,6 +2649,7 @@ Mandatory output format:
 - Python script showing basic text preprocessing + TF-IDF similarity
 - Line-by-line explanation
 - Common mistakes
+- Interview relevance for Google/Amazon/Netflix roles
 - IBM interview relevance
 - Strong answer: How do NLP and LLMs work together?
 - Strong answer: How would you process unstructured enterprise documents?
@@ -2687,6 +2709,7 @@ Mandatory output format:
 - Small TensorFlow/Keras-style conceptual example
 - Line-by-line explanation
 - Common mistakes
+- Interview relevance for Google/Amazon/Netflix roles
 - IBM interview relevance
 - Strong answer: What is your experience with Hugging Face?
 - Strong answer: How do you choose between TensorFlow, PyTorch, and Keras?
@@ -2740,6 +2763,7 @@ Mandatory output format:
 - Python script simulating structured + unstructured retrieval and answer generation
 - Line-by-line explanation
 - Common mistakes
+- Interview relevance for Google/Amazon/Netflix roles
 - IBM interview relevance
 - Strong answer: Why RAG instead of fine-tuning?
 - Strong answer: How do you reduce hallucination?
@@ -2793,6 +2817,7 @@ Mandatory output format:
 - Python script simulating provider-agnostic AI inference routing
 - Line-by-line explanation
 - Common mistakes
+- Interview relevance for Google/Amazon/Netflix roles
 - IBM interview relevance
 - Strong answer: Do you have Watson experience?
 - Strong answer: How would you map your AWS GenAI experience to IBM hybrid cloud?
@@ -2854,6 +2879,7 @@ Mandatory output format:
 - Simple React-style UI pseudocode
 - Line-by-line explanation
 - Common mistakes
+- Interview relevance for Google/Amazon/Netflix roles
 - IBM interview relevance
 - Strong answer: How would you deploy an AI solution in a client environment?
 - Strong answer: How do you choose SQL vs NoSQL for AI apps?
@@ -2913,6 +2939,7 @@ Mandatory output format:
 - Python script showing a simple project risk tracker
 - Line-by-line explanation
 - Common mistakes
+- Interview relevance for Google/Amazon/Netflix roles
 - IBM interview relevance
 - STAR story for Ownership
 - STAR story for Client Value
@@ -3028,6 +3055,7 @@ Mandatory output format:
 - Final weak-area checklist
 - Final 7-day maintenance plan after this IBM patch
 - Final confidence-building summary
+- Interview relevance for Google/Amazon/Netflix roles
 ```
 
 ---
