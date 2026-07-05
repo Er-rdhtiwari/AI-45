@@ -1,33 +1,33 @@
-# Final 3-Week Plan
+```
+- Teach me Machine Learning fundamentals required for JD 1 and JD 2.
 
-## Week 1: AI, ML, NLP, LLM Foundations
+- Teach me the Python AI framework ecosystem required for JD 1 and JD 2.
 
-### Day 1 — Understand JD 1 and JD 2 Expectations
+- Interview relevance for JD 1 and JD 2
+```
+
+# Final 3-Week Copy-Paste-Ready Daily Prompts
+
+## Week 1: AI, ML, Python, NLP and LLM Foundations
+
+## Day 1 — Understand the Role and AI Project Lifecycle
 
 ```text
 Act as a senior IBM AI/Data Scientist interview mentor.
 
-Today is Day 1 of my 3-week preparation for two IBM IJP roles.
+Today is Day 1 of my 3-week preparation for IBM Data Scientist AI/GenAI IJP roles.
 
-JD 1:
-Data Scientist - Artificial Intelligence
-Focus: foundation models, LLMs, NLP/ML, Python AI frameworks, cloud platforms, SQL/NoSQL, AI solution architecture, full AI lifecycle, Watson technologies.
-
-JD 2:
-Data Scientist - Advanced Analytics / GenAI / Databricks
-Focus: Databricks, Delta Lake, ETL/ELT, MLflow, RAG, advanced RAG, vector databases, reranking, LangChain, LangGraph, CrewAI, Semantic Kernel, MLOps, REST API deployment, governance, cloud.
-
-Teach me what these roles expect in practical terms.
+Teach me what this type of role expects in practical terms.
 
 Cover:
-1. Difference between JD 1 and JD 2
-2. Common skills required in both roles
-3. Skills more important for JD 1
-4. Skills more important for JD 2
-5. What a Band 08 Data Scientist is expected to do
-6. End-to-end AI project lifecycle
-7. How to connect backend, cloud, CI/CD and automation experience with these roles
-8. What interviewers may expect from me
+1. What a Data Scientist in AI/GenAI does
+2. What a Band 08 Data Scientist is expected to handle
+3. Difference between data analysis, machine learning, GenAI, and AI solution architecture
+4. Common responsibilities in enterprise AI projects
+5. End-to-end AI project lifecycle
+6. How business problems are converted into AI solutions
+7. How backend, cloud, CI/CD and automation experience connects to AI roles
+8. What mindset is expected from a senior Data Scientist
 
 Output format:
 - 5-line beginner summary
@@ -35,20 +35,19 @@ Output format:
 - Easy real-world example
 - ASCII diagram showing AI project lifecycle
 - Pseudocode for solving an AI business problem
-- Interview relevance
 - Common mistakes
 ```
 
 ---
 
-### Day 2 — Machine Learning Fundamentals
+## Day 2 — Machine Learning Fundamentals
 
 ```text
-Act as a senior Data Scientist and ML interview mentor.
+Act as a senior Data Scientist and Machine Learning mentor.
 
-Today is Day 2 of my IBM IJP preparation.
+Today is Day 2 of my IBM AI/GenAI preparation.
 
-Teach me Machine Learning fundamentals required for JD 1 and JD 2.
+Teach me Machine Learning fundamentals in beginner-friendly language.
 
 Cover:
 1. What Machine Learning is
@@ -61,7 +60,7 @@ Cover:
 8. Train/test split
 9. Cross-validation
 10. Model evaluation metrics
-11. Accuracy, precision, recall, F1-score, ROC-AUC
+11. Accuracy, precision, recall, F1-score and ROC-AUC
 12. Overfitting and underfitting
 13. How ML moves from experiment to production
 
@@ -72,32 +71,32 @@ Output format:
 - ASCII diagram showing ML workflow
 - Pseudocode for building an ML model
 - Simple comparison table where useful
-- Interview relevance
 - Common mistakes
 ```
 
 ---
 
-### Day 3 — Python AI Frameworks
+## Day 3 — Python AI Frameworks
 
 ```text
 Act as a senior Python AI mentor.
 
-Today is Day 3 of my IBM Data Scientist preparation.
+Today is Day 3 of my IBM AI/GenAI preparation.
 
-Teach me the Python AI framework ecosystem required for JD 1 and JD 2.
+Teach me the Python AI framework ecosystem.
 
 Cover:
-1. Why Python is important in AI roles
+1. Why Python is important in AI projects
 2. NumPy for numerical operations
 3. Pandas for data analysis
 4. Scikit-learn for traditional ML
 5. PyTorch basics
 6. TensorFlow/Keras basics
 7. Hugging Face basics
-8. When to use Scikit-learn vs PyTorch vs Hugging Face
-9. How Python frameworks fit into enterprise AI projects
-10. How to explain Python AI experience in interview
+8. When to use Scikit-learn
+9. When to use PyTorch or TensorFlow
+10. When to use Hugging Face
+11. How these frameworks fit into enterprise AI projects
 
 Output format:
 - 5-line beginner summary
@@ -106,20 +105,56 @@ Output format:
 - ASCII diagram showing Python AI ecosystem
 - Pseudocode for choosing the right framework
 - Simple comparison table
-- Interview relevance
 - Common mistakes
 ```
 
 ---
 
-### Day 4 — NLP and Unstructured Data
+## Day 4 — EDA, Data Preprocessing and Feature Engineering
+
+```text
+Act as a senior Data Scientist mentor.
+
+Today is Day 4 of my IBM AI/GenAI preparation.
+
+Teach me EDA, data preprocessing and feature engineering.
+
+Cover:
+1. What EDA is
+2. Why EDA is important before ML
+3. Understanding data shape, columns and data types
+4. Missing values
+5. Duplicate records
+6. Outliers
+7. Categorical variables
+8. Numerical variables
+9. Encoding
+10. Scaling
+11. Feature engineering
+12. Data leakage
+13. Train/test split after preprocessing
+14. How clean data improves model performance
+
+Output format:
+- 5-line beginner summary
+- Descriptive notes
+- Easy examples
+- ASCII diagram showing data preparation flow
+- Pseudocode for EDA and preprocessing
+- Simple comparison table where useful
+- Common mistakes
+```
+
+---
+
+## Day 5 — NLP and Unstructured Data
 
 ```text
 Act as a senior NLP and GenAI mentor.
 
-Today is Day 4 of my IBM IJP preparation.
+Today is Day 5 of my IBM AI/GenAI preparation.
 
-Teach me NLP fundamentals for Data Scientist - AI and GenAI roles.
+Teach me NLP fundamentals in beginner-friendly language.
 
 Cover:
 1. What NLP is
@@ -139,23 +174,22 @@ Cover:
 
 Output format:
 - 5-line beginner summary
-- Descriptive notes in simple language
+- Descriptive notes
 - Easy examples
 - ASCII diagram showing NLP pipeline
 - Pseudocode for text classification
 - Pseudocode for converting documents into embeddings
-- Interview relevance for JD 1 and JD 2
 - Common mistakes
 ```
 
 ---
 
-### Day 5 — Foundation Models and LLM Basics
+## Day 6 — Foundation Models and LLM Basics
 
 ```text
 Act as a senior LLM mentor and enterprise AI architect.
 
-Today is Day 5 of my IBM IJP preparation.
+Today is Day 6 of my IBM AI/GenAI preparation.
 
 Teach me foundation models and LLM fundamentals.
 
@@ -171,7 +205,7 @@ Cover:
 9. Temperature, top-p and max tokens
 10. Embeddings vs generated text
 11. Open-source LLMs like Llama
-12. Commercial LLMs like OpenAI models
+12. Commercial LLMs
 13. Enterprise use cases of LLMs
 14. Risks and limitations of LLMs
 
@@ -181,20 +215,19 @@ Output format:
 - Beginner-friendly examples
 - ASCII diagram showing LLM lifecycle
 - Pseudocode for using an LLM in an enterprise app
-- Interview relevance for IBM AI roles
 - Common mistakes
 ```
 
 ---
 
-### Day 6 — SQL, NoSQL and Data Storage for AI
+## Day 7 — SQL, NoSQL and Data Storage for AI
 
 ```text
 Act as a senior Data Scientist and data platform mentor.
 
-Today is Day 6 of my IBM IJP preparation.
+Today is Day 7 of my IBM AI/GenAI preparation.
 
-Teach me SQL, NoSQL and data storage concepts required for AI and GenAI systems.
+Teach me SQL, NoSQL and data storage concepts required for AI systems.
 
 Cover:
 1. Why databases matter in AI projects
@@ -206,10 +239,12 @@ Cover:
 7. Document databases
 8. Key-value stores
 9. SQL vs NoSQL
-10. Metadata storage for RAG systems
-11. Storing documents, chunks, embeddings, user queries and model responses
-12. Data quality and preprocessing
-13. How databases connect with AI pipelines
+10. Storing documents
+11. Storing chunks
+12. Storing embeddings
+13. Storing user queries and model responses
+14. Metadata storage for AI applications
+15. How databases connect with AI pipelines
 
 Output format:
 - 5-line beginner summary
@@ -217,66 +252,28 @@ Output format:
 - Easy SQL examples
 - ASCII diagram showing database usage in AI system
 - Pseudocode for storing and retrieving AI application data
-- Interview relevance
 - Common mistakes
 ```
 
 ---
 
-### Day 7 — AI Solution Architecture Practice
+# Week 2: RAG, Vector DB, Advanced RAG and Agentic AI
 
-```text
-Act as a senior IBM AI solution architect and interview coach.
-
-Today is Day 7 of my IBM IJP preparation.
-
-Help me design a simple enterprise AI solution.
-
-Use case:
-A company wants an AI assistant that can answer questions from internal policy documents.
-
-Cover:
-1. Business problem understanding
-2. Data required
-3. ML/LLM approach
-4. Document storage
-5. Metadata storage
-6. API design idea
-7. Evaluation approach
-8. Deployment approach
-9. Risk and governance points
-10. How to explain this in an IBM interview
-
-Output format:
-- 5-line beginner summary
-- Descriptive architecture notes
-- ASCII architecture diagram
-- Step-by-step solution design
-- Pseudocode for complete workflow
-- Interview-style explanation
-- Common follow-up questions and answers
-- Common mistakes
-```
-
----
-
-# Week 2: RAG, Advanced RAG and Agentic AI
-
-### Day 8 — RAG Fundamentals
+## Day 8 — RAG Fundamentals
 
 ```text
 Act as a senior GenAI and RAG mentor.
 
-Today is Day 8 of my IBM IJP preparation.
+Today is Day 8 of my IBM AI/GenAI preparation.
 
 Teach me Retrieval-Augmented Generation, also called RAG.
 
 Cover:
 1. What RAG is
-2. Why normal LLMs are not enough
+2. Why normal LLMs are not enough for enterprise knowledge
 3. Hallucination problem
 4. Knowledge cutoff problem
-5. How RAG solves enterprise document Q&A
+5. How RAG solves document Q&A
 6. Document ingestion
 7. Chunking
 8. Embeddings
@@ -285,7 +282,7 @@ Cover:
 11. Prompt construction
 12. LLM response generation
 13. Citations and source grounding
-14. RAG evaluation basics
+14. Basic RAG evaluation
 
 Output format:
 - 5-line beginner summary
@@ -293,18 +290,17 @@ Output format:
 - Easy real-world example
 - ASCII diagram showing RAG architecture
 - Pseudocode for basic RAG pipeline
-- Interview relevance for JD 1 and JD 2
 - Common mistakes
 ```
 
 ---
 
-### Day 9 — Embeddings and Vector Databases
+## Day 9 — Embeddings and Vector Databases
 
 ```text
 Act as a senior vector database and RAG mentor.
 
-Today is Day 9 of my IBM IJP preparation.
+Today is Day 9 of my IBM AI/GenAI preparation.
 
 Teach me embeddings and vector databases in simple language.
 
@@ -315,12 +311,14 @@ Cover:
 4. Similarity search
 5. Cosine similarity
 6. Vector database purpose
-7. FAISS, Chroma, Pinecone, Weaviate and Milvus
-8. Metadata filtering
-9. Top-k retrieval
-10. Hybrid search basics
-11. How vector DB fits into enterprise RAG
-12. Common vector DB design mistakes
+7. FAISS
+8. Chroma
+9. Pinecone
+10. Weaviate
+11. Milvus
+12. Metadata filtering
+13. Top-k retrieval
+14. How vector DB fits into enterprise RAG
 
 Output format:
 - 5-line beginner summary
@@ -329,20 +327,19 @@ Output format:
 - ASCII diagram showing embedding and search flow
 - Pseudocode for indexing documents
 - Pseudocode for retrieving top-k chunks
-- Interview relevance
 - Common mistakes
 ```
 
 ---
 
-### Day 10 — Advanced RAG
+## Day 10 — Advanced RAG
 
 ```text
 Act as a senior enterprise RAG architect.
 
-Today is Day 10 of my IBM IJP preparation.
+Today is Day 10 of my IBM AI/GenAI preparation.
 
-Teach me Advanced RAG patterns required for JD 2.
+Teach me Advanced RAG patterns.
 
 Cover:
 1. Why basic RAG may fail
@@ -367,18 +364,54 @@ Output format:
 - ASCII diagram showing advanced RAG
 - Pseudocode for hybrid search plus reranking
 - Pseudocode for grounded answer generation
-- Interview relevance for JD 2
 - Common mistakes
 ```
 
 ---
 
-### Day 11 — LangChain Fundamentals
+## Day 11 — RAG Evaluation and Quality Improvement
+
+```text
+Act as a senior GenAI evaluation mentor.
+
+Today is Day 11 of my IBM AI/GenAI preparation.
+
+Teach me how to evaluate and improve a RAG system.
+
+Cover:
+1. Why RAG evaluation is important
+2. Retrieval quality
+3. Answer quality
+4. Groundedness
+5. Faithfulness
+6. Relevance
+7. Hallucination detection
+8. Context precision
+9. Context recall
+10. Human evaluation
+11. Golden question-answer dataset
+12. Offline evaluation
+13. Online feedback
+14. Continuous improvement loop
+
+Output format:
+- 5-line beginner summary
+- Descriptive notes
+- Easy example using an internal policy assistant
+- ASCII diagram showing RAG evaluation flow
+- Pseudocode for evaluating RAG responses
+- Simple metrics table
+- Common mistakes
+```
+
+---
+
+## Day 12 — LangChain Fundamentals
 
 ```text
 Act as a senior LangChain and GenAI application mentor.
 
-Today is Day 11 of my IBM IJP preparation.
+Today is Day 12 of my IBM AI/GenAI preparation.
 
 Teach me LangChain fundamentals.
 
@@ -403,18 +436,17 @@ Output format:
 - Easy examples
 - ASCII diagram showing LangChain components
 - Pseudocode for a LangChain RAG app
-- Interview relevance for JD 2
 - Common mistakes
 ```
 
 ---
 
-### Day 12 — LangGraph and Agentic Workflows
+## Day 13 — LangGraph and Agentic Workflows
 
 ```text
 Act as a senior LangGraph and Agentic AI mentor.
 
-Today is Day 12 of my IBM IJP preparation.
+Today is Day 13 of my IBM AI/GenAI preparation.
 
 Teach me LangGraph and agentic workflows.
 
@@ -429,7 +461,7 @@ Cover:
 8. Tool calling
 9. Human-in-the-loop
 10. Multi-step workflow
-11. When to use LangGraph instead of LangChain
+11. When to use LangGraph instead of simple chains
 12. Enterprise use cases
 13. Risks of agents
 
@@ -439,18 +471,17 @@ Output format:
 - Simple real-world example
 - ASCII diagram showing LangGraph workflow
 - Pseudocode for an agentic workflow
-- Interview relevance
 - Common mistakes
 ```
 
 ---
 
-### Day 13 — CrewAI and Semantic Kernel
+## Day 14 — Multi-Agent Systems: CrewAI and Semantic Kernel
 
 ```text
 Act as a senior Agentic AI architecture mentor.
 
-Today is Day 13 of my IBM IJP preparation.
+Today is Day 14 of my IBM AI/GenAI preparation.
 
 Teach me CrewAI, Microsoft Semantic Kernel and multi-agent AI patterns.
 
@@ -475,48 +506,7 @@ Output format:
 - Easy business examples
 - ASCII diagram showing multi-agent architecture
 - Pseudocode for a multi-agent workflow
-- Comparison of LangGraph, CrewAI and Semantic Kernel
-- Interview relevance for JD 2
-- Common mistakes
-```
-
----
-
-### Day 14 — RAG and Agent Architecture Practice
-
-```text
-Act as a senior IBM GenAI solution architect and interview coach.
-
-Today is Day 14 of my IBM IJP preparation.
-
-Help me design an enterprise GenAI solution.
-
-Use case:
-Build an internal HR policy assistant that answers employee questions using company documents and escalates unclear cases to a human HR team.
-
-Cover:
-1. Requirements
-2. Architecture
-3. Data ingestion
-4. Chunking
-5. Embedding
-6. Vector database
-7. Hybrid retrieval
-8. Reranking
-9. Answer generation
-10. Agent workflow
-11. Human escalation
-12. Evaluation
-13. Governance
-14. Deployment approach
-
-Output format:
-- 5-line beginner summary
-- Descriptive architecture notes
-- ASCII architecture diagram
-- Pseudocode for full system
-- Interview-style explanation
-- Common follow-up questions and answers
+- Comparison table of LangGraph, CrewAI and Semantic Kernel
 - Common mistakes
 ```
 
@@ -524,14 +514,14 @@ Output format:
 
 # Week 3: Databricks, MLflow, MLOps, Deployment and Governance
 
-### Day 15 — Databricks Fundamentals
+## Day 15 — Databricks Fundamentals
 
 ```text
 Act as a senior Databricks and Data Science mentor.
 
-Today is Day 15 of my IBM IJP preparation.
+Today is Day 15 of my IBM AI/GenAI preparation.
 
-Teach me Databricks fundamentals required for JD 2.
+Teach me Databricks fundamentals.
 
 Cover:
 1. What Databricks is
@@ -546,8 +536,9 @@ Cover:
 10. Databricks SQL
 11. Databricks for ML
 12. Databricks for GenAI
-13. Databricks Apps and Agents at a beginner level
-14. How Databricks connects with MLflow and Delta Lake
+13. Databricks Apps
+14. Databricks Agents
+15. How Databricks connects with MLflow and Delta Lake
 
 Output format:
 - 5-line beginner summary
@@ -555,18 +546,17 @@ Output format:
 - Easy examples
 - ASCII diagram showing Databricks lakehouse architecture
 - Pseudocode for a Databricks data pipeline
-- Interview relevance for JD 2
 - Common mistakes
 ```
 
 ---
 
-### Day 16 — Delta Lake and ETL/ELT
+## Day 16 — Delta Lake and ETL/ELT Pipelines
 
 ```text
 Act as a senior Data Engineering and Databricks mentor.
 
-Today is Day 16 of my IBM IJP preparation.
+Today is Day 16 of my IBM AI/GenAI preparation.
 
 Teach me Delta Lake and ETL/ELT pipelines.
 
@@ -577,12 +567,13 @@ Cover:
 4. Schema enforcement
 5. Schema evolution
 6. Time travel
-7. Bronze, Silver, Gold architecture
+7. Bronze, Silver and Gold architecture
 8. ETL vs ELT
 9. Batch pipeline
 10. Streaming pipeline basics
-11. Feature engineering pipeline
-12. How Delta Lake supports ML and GenAI use cases
+11. Data quality checks
+12. Feature engineering pipeline
+13. How Delta Lake supports ML and GenAI use cases
 
 Output format:
 - 5-line beginner summary
@@ -591,18 +582,17 @@ Output format:
 - ASCII diagram showing Bronze/Silver/Gold architecture
 - Pseudocode for an ETL pipeline
 - Pseudocode for feature engineering
-- Interview relevance for JD 2
 - Common mistakes
 ```
 
 ---
 
-### Day 17 — MLflow and Model Lifecycle
+## Day 17 — MLflow and Model Lifecycle
 
 ```text
 Act as a senior MLOps and MLflow mentor.
 
-Today is Day 17 of my IBM IJP preparation.
+Today is Day 17 of my IBM AI/GenAI preparation.
 
 Teach me MLflow for machine learning lifecycle management.
 
@@ -614,11 +604,13 @@ Cover:
 5. Artifacts
 6. Model registry
 7. Model versioning
-8. Model promotion from staging to production
+8. Model promotion from development to production
 9. Reproducibility
 10. Model deployment basics
 11. MLflow with Databricks
-12. MLflow for GenAI and LLM evaluation at a beginner level
+12. MLflow for GenAI evaluation
+13. Model lineage
+14. Rollback strategy
 
 Output format:
 - 5-line beginner summary
@@ -627,18 +619,17 @@ Output format:
 - ASCII diagram showing MLflow lifecycle
 - Pseudocode for tracking an experiment
 - Pseudocode for registering and deploying a model
-- Interview relevance for JD 2
 - Common mistakes
 ```
 
 ---
 
-### Day 18 — MLOps, Monitoring and Governance
+## Day 18 — MLOps, Monitoring and Governance
 
 ```text
-Act as a senior MLOps architect and IBM AI interview mentor.
+Act as a senior MLOps architect and AI platform mentor.
 
-Today is Day 18 of my IBM IJP preparation.
+Today is Day 18 of my IBM AI/GenAI preparation.
 
 Teach me MLOps for production AI systems.
 
@@ -656,8 +647,9 @@ Cover:
 11. Concept drift
 12. Performance monitoring
 13. Governance frameworks
-14. Auditability and compliance
-15. Responsible AI basics
+14. Auditability
+15. Compliance
+16. Responsible AI basics
 
 Output format:
 - 5-line beginner summary
@@ -666,18 +658,17 @@ Output format:
 - ASCII diagram showing MLOps pipeline
 - Pseudocode for CI/CD model deployment
 - Pseudocode for monitoring model drift
-- Interview relevance for JD 1 and JD 2
 - Common mistakes
 ```
 
 ---
 
-### Day 19 — REST API Deployment for ML and GenAI
+## Day 19 — REST API Deployment for ML and GenAI
 
 ```text
 Act as a senior backend engineer and GenAI platform mentor.
 
-Today is Day 19 of my IBM IJP preparation.
+Today is Day 19 of my IBM AI/GenAI preparation.
 
 Teach me how to deploy ML and GenAI models using REST APIs and web applications.
 
@@ -696,7 +687,7 @@ Cover:
 12. RAG API design
 13. Agent API design
 14. API versioning
-15. How backend, cloud and CI/CD experience connects to this role
+15. Production readiness checklist
 
 Output format:
 - 5-line beginner summary
@@ -705,18 +696,17 @@ Output format:
 - ASCII diagram showing client to API to model flow
 - Pseudocode for ML prediction API
 - Pseudocode for RAG API
-- Interview relevance for JD 1 and JD 2
 - Common mistakes
 ```
 
 ---
 
-### Day 20 — Cloud, Kubernetes and Enterprise AI Architecture
+## Day 20 — Cloud, Kubernetes and Enterprise AI Architecture
 
 ```text
-Act as a senior cloud AI architect and IBM interview mentor.
+Act as a senior cloud AI architect.
 
-Today is Day 20 of my IBM IJP preparation.
+Today is Day 20 of my IBM AI/GenAI preparation.
 
 Teach me cloud platforms and enterprise AI architecture.
 
@@ -743,52 +733,53 @@ Output format:
 - Easy examples
 - ASCII diagram showing cloud AI architecture
 - Pseudocode for cloud deployment workflow
-- Interview relevance for JD 1 and JD 2
 - Common mistakes
 ```
 
 ---
 
-### Day 21 — Final Interview Preparation
+## Day 21 — Final End-to-End AI Solution Design
 
 ```text
-Act as a senior IBM hiring manager, AI architect and interview mentor.
+Act as a senior enterprise AI solution architect and interview coach.
 
-Today is Day 21, the final day of my 3-week IBM IJP preparation.
+Today is Day 21 of my IBM AI/GenAI preparation.
 
-Help me prepare for interviews for both roles.
+Help me design one complete end-to-end enterprise GenAI solution.
 
-JD 1:
-Data Scientist - Artificial Intelligence
-Focus: foundation models, LLMs, NLP/ML, Python AI frameworks, cloud platforms, SQL/NoSQL, AI solution architecture, full AI lifecycle, Watson technologies.
-
-JD 2:
-Data Scientist - Advanced Analytics / GenAI / Databricks
-Focus: Databricks, Delta Lake, ETL/ELT, MLflow, RAG, advanced RAG, vector databases, reranking, LangChain, LangGraph, CrewAI, Semantic Kernel, MLOps, REST API deployment, governance, cloud.
+Use case:
+Build an internal policy assistant that answers employee questions from company documents, uses RAG for grounded answers, uses an agent workflow for complex cases, stores metadata, tracks evaluations, and can be deployed as a production API.
 
 Cover:
-1. Final comparison of both roles
-2. My interview pitch for JD 1
-3. My interview pitch for JD 2
-4. How to explain my backend, cloud, CI/CD and automation experience
-5. How to explain GenAI learning and project readiness
-6. Important technical questions
-7. Important scenario-based questions
-8. Important architecture questions
-9. Questions I should ask the hiring manager
-10. How to decide after interview discussion
-11. 30-second introduction
-12. 2-minute project explanation
-13. Strengths and gap handling
+1. Business problem
+2. Functional requirements
+3. Non-functional requirements
+4. Data sources
+5. Document ingestion
+6. Chunking strategy
+7. Embedding strategy
+8. Vector database design
+9. Hybrid retrieval
+10. Reranking
+11. Prompt design
+12. LLM response generation
+13. Agent workflow
+14. Human escalation
+15. API layer
+16. Metadata storage
+17. Evaluation
+18. Monitoring
+19. Governance
+20. Deployment architecture
 
 Output format:
-- Final preparation summary
-- Descriptive notes
-- ASCII diagram showing complete enterprise GenAI platform
-- Pseudocode for end-to-end enterprise GenAI solution
-- Interview Q&A with beginner-friendly answers
-- Hiring manager discussion checklist
-- Final decision checklist for JD 1 vs JD 2
+- 5-line beginner summary
+- Descriptive architecture notes
+- ASCII architecture diagram
+- Step-by-step solution design
+- Pseudocode for complete workflow
+- 2-minute explanation of the solution
+- Common follow-up questions and answers
 - Common mistakes
 ```
 
