@@ -1,9 +1,874 @@
+# Revision Day 1 — Data Science, ML and Data Foundations
+
+```text
+Act as a senior Data Scientist and beginner-friendly AI mentor.
+
+Today is Revision Day 1 of my IBM AI/GenAI preparation.
+
+Create comprehensive revision notes covering the Data Scientist role, AI project lifecycle, Machine Learning, EDA, data preprocessing, Python AI frameworks and data storage.
+
+Group connected topics together instead of following the original study days separately. Avoid repeating the same explanation in multiple sections.
+
+Cover:
+
+1. Data Scientist role and AI project lifecycle
+   - What an enterprise Data Scientist does
+   - Difference between data analysis, Machine Learning, GenAI and AI solution architecture
+   - Responsibilities of a senior or Band 08 Data Scientist
+   - Understanding a business problem
+   - Converting a business problem into an ML or AI problem
+   - Defining business goals and technical success metrics
+   - Data collection
+   - Data preparation
+   - Model development
+   - Evaluation
+   - Deployment
+   - Monitoring
+   - Continuous improvement
+   - How backend, cloud, API, CI/CD and automation experience supports AI projects
+
+2. Machine Learning foundations
+   - What Machine Learning is
+   - Supervised and unsupervised learning
+   - Classification
+   - Regression
+   - Clustering
+   - Features
+   - Labels
+   - Predictions
+   - Training, validation and test datasets
+   - Train/test split
+   - Cross-validation
+   - Baseline models
+   - Model selection
+   - Hyperparameters
+   - Overfitting
+   - Underfitting
+   - Bias and variance
+
+3. Model evaluation
+   - Confusion matrix
+   - Accuracy
+   - Precision
+   - Recall
+   - F1-score
+   - ROC-AUC
+   - Class imbalance
+   - Prediction thresholds
+   - MAE
+   - MSE
+   - RMSE
+   - How business requirements influence metric selection
+   - Why accuracy alone may be misleading
+
+4. EDA and data preprocessing
+   - Data shape
+   - Columns and data types
+   - Numerical and categorical variables
+   - Summary statistics
+   - Missing values
+   - Duplicate records
+   - Outliers
+   - Data distributions
+   - Correlation
+   - Encoding categorical variables
+   - Feature scaling
+   - Normalization
+   - Feature engineering
+   - Feature selection
+   - Data leakage
+   - Why preprocessing must be fitted only on training data
+   - Using pipelines to apply consistent preprocessing
+
+5. Python AI ecosystem
+   - NumPy
+   - Pandas
+   - Matplotlib
+   - Scikit-learn
+   - TensorFlow
+   - Keras
+   - PyTorch
+   - Hugging Face
+   - When each framework should be used
+   - How these frameworks work together in an enterprise AI project
+
+6. SQL, NoSQL and AI application storage
+   - Tables, rows and columns
+   - Primary keys
+   - Filtering
+   - Joins
+   - Grouping
+   - Aggregations
+   - Relational databases
+   - Document databases
+   - Key-value databases
+   - SQL vs NoSQL
+   - Storing training data
+   - Storing features and predictions
+   - Storing documents and document chunks
+   - Storing metadata
+   - Storing user queries and model responses
+   - How databases connect with ML, RAG and API applications
+
+Use one consistent business example, such as customer churn prediction, to connect the concepts.
+
+Output format:
+- 5-line beginner summary
+- Clear headings and subheadings
+- Detailed but simple explanations
+- Key definitions
+- Easy examples
+- Comparison tables where useful
+- ASCII diagram showing the end-to-end ML lifecycle
+- Pseudocode for a complete ML workflow
+- Explanation of the relationship between EDA, preprocessing, training and evaluation
+- Common confusions and mistakes
+- Memory aids and simple rules
+- Concise final recap
 ```
-- Teach me Machine Learning fundamentals required for JD 1 and JD 2.
 
-- Teach me the Python AI framework ecosystem required for JD 1 and JD 2.
+---
 
-- Interview relevance for JD 1 and JD 2
+# Revision Day 2 — NLP, Embeddings, Foundation Models and LLMs
+
+```text
+Act as a senior NLP, LLM and enterprise AI mentor.
+
+Today is Revision Day 2 of my IBM AI/GenAI preparation.
+
+Create comprehensive revision notes covering unstructured data, traditional NLP, embeddings, foundation models, LLMs, prompting, fine-tuning and enterprise LLM use cases.
+
+Organize the notes to show how traditional NLP concepts evolved into modern LLM applications. Avoid repeating concepts unnecessarily.
+
+Cover:
+
+1. Structured and unstructured data
+   - Structured data
+   - Semi-structured data
+   - Unstructured data
+   - Examples involving tables, JSON, text, PDFs, images, audio and video
+   - Why unstructured data requires special processing
+
+2. Traditional NLP pipeline
+   - Text extraction
+   - Text cleaning
+   - Lowercasing
+   - Tokenization
+   - Stop-word removal
+   - Stemming
+   - Lemmatization
+   - N-grams
+   - Bag of Words
+   - TF-IDF
+   - Limitations of traditional text representations
+
+3. Common NLP tasks
+   - Text classification
+   - Sentiment analysis
+   - Named Entity Recognition
+   - Information extraction
+   - Summarization
+   - Question answering
+   - Semantic search
+
+4. Embeddings
+   - What embeddings are
+   - Why text is converted into vectors
+   - Word embeddings
+   - Sentence embeddings
+   - Document embeddings
+   - Dense representations
+   - Sparse representations
+   - Embedding dimensions
+   - Semantic similarity
+   - Cosine similarity
+   - Embeddings vs generated text
+   - How embeddings support semantic search and RAG
+
+5. Foundation models
+   - What foundation models are
+   - Why they are called foundation models
+   - Difference between traditional ML models and foundation models
+   - Text foundation models
+   - Image foundation models
+   - Audio foundation models
+   - Multimodal models
+   - Open-source models
+   - Commercial models
+   - Examples involving Llama, Hugging Face, OpenAI and IBM watsonx
+
+6. LLM lifecycle
+   - Pretraining
+   - Fine-tuning
+   - Instruction tuning
+   - Alignment
+   - Inference
+   - Prompting
+   - Retrieval-Augmented Generation
+   - Model serving
+
+7. Important LLM concepts
+   - Tokens
+   - Tokenization
+   - Context window
+   - System prompt
+   - User prompt
+   - Few-shot prompting
+   - Zero-shot prompting
+   - Structured output
+   - Temperature
+   - Top-p
+   - Maximum output tokens
+   - Deterministic vs creative responses
+
+8. Prompting vs RAG vs fine-tuning
+   - When prompting is enough
+   - When external knowledge requires RAG
+   - When fine-tuning may be useful
+   - Why fine-tuning does not automatically provide current enterprise knowledge
+   - Cost, complexity and maintenance differences
+
+9. Enterprise LLM use cases
+   - Document question answering
+   - Customer support
+   - Summarization
+   - Information extraction
+   - Code assistance
+   - Internal knowledge assistants
+   - Workflow automation
+
+10. LLM risks and limitations
+   - Hallucination
+   - Knowledge cutoff
+   - Bias
+   - Prompt injection
+   - Sensitive-data exposure
+   - Privacy
+   - Context-window limits
+   - Inference latency
+   - Token cost
+   - Lack of explainability
+   - Need for human oversight
+
+Use easy examples such as sentiment analysis and an employee policy assistant.
+
+Output format:
+- 5-line beginner summary
+- Clear headings and subheadings
+- Detailed beginner-friendly explanations
+- Key definitions
+- Traditional NLP vs LLM comparison table
+- Sparse vs dense representation comparison
+- Prompting vs RAG vs fine-tuning comparison table
+- Easy examples
+- ASCII diagram showing raw text to NLP to embeddings to LLM applications
+- ASCII diagram showing the LLM lifecycle
+- Pseudocode for using an LLM in an enterprise application
+- Explanation of the relationship between NLP, embeddings, LLMs and RAG
+- Common confusions and mistakes
+- Memory aids
+- Concise final recap
+```
+
+---
+
+# Revision Day 3 — RAG, Vector Databases and Evaluation
+
+```text
+Act as a senior enterprise RAG architect and GenAI evaluation mentor.
+
+Today is Revision Day 3 of my IBM AI/GenAI preparation.
+
+Create comprehensive revision notes covering basic RAG, vector databases, Advanced RAG, reranking, grounded answer generation and RAG evaluation.
+
+Explain the complete lifecycle from document ingestion to retrieval, generation, evaluation, monitoring and continuous improvement.
+
+Use one consistent example: an internal HR policy assistant.
+
+Cover:
+
+1. RAG fundamentals
+   - What Retrieval-Augmented Generation is
+   - Why normal LLMs are insufficient for enterprise knowledge
+   - Hallucination
+   - Knowledge cutoff
+   - Private organizational knowledge
+   - Difference between model knowledge and retrieved knowledge
+   - Main components of a RAG system
+   - When RAG should and should not be used
+
+2. Document ingestion
+   - Loading PDF, Word, HTML, text and database content
+   - Text extraction
+   - Cleaning
+   - Handling document structure
+   - Extracting titles, sections and page numbers
+   - Metadata extraction
+   - Document identifiers
+   - Source tracking
+   - Access-control metadata
+   - Handling tables
+   - Handling scanned documents at a conceptual level
+   - Updating and deleting documents
+   - Re-indexing changed content
+   - Avoiding duplicate documents
+
+3. Chunking
+   - Why documents are divided into chunks
+   - Fixed-size chunking
+   - Recursive chunking
+   - Semantic chunking
+   - Parent-child chunking
+   - Chunk size
+   - Chunk overlap
+   - Preserving headings and section context
+   - Problems caused by chunks that are too large
+   - Problems caused by chunks that are too small
+
+4. Embedding and indexing
+   - Converting chunks into embeddings
+   - Embedding-model selection
+   - Embedding dimensions
+   - Storing vectors and metadata
+   - Creating an index
+   - Document and index versioning
+   - Batch indexing
+   - Incremental indexing
+
+5. Vector databases
+   - Purpose of a vector database
+   - FAISS
+   - Chroma
+   - Pinecone
+   - Weaviate
+   - Milvus
+   - Similarity search
+   - Cosine similarity
+   - Top-k retrieval
+   - Metadata filtering
+   - Namespace or collection concepts
+   - Vector database vs relational database
+   - When a local vector index is enough
+   - When a managed vector database is useful
+
+6. Retrieval methods
+   - Keyword search
+   - Sparse retrieval
+   - Dense vector retrieval
+   - Hybrid search
+   - Metadata filtering
+   - Query rewriting
+   - Query expansion
+   - Multi-query retrieval
+   - Parent-document retrieval
+   - Retrieval top-k selection
+
+7. Reranking
+   - Why reranking is needed
+   - First-stage retrieval
+   - Second-stage reranking
+   - Bi-encoder retrieval
+   - Cross-encoder reranking
+   - Small reranking models
+   - LLM-based reranking
+   - Retrieval top-k vs final context top-n
+   - Accuracy, latency and cost trade-offs
+
+8. Context construction
+   - Duplicate removal
+   - Contextual compression
+   - Context ordering
+   - Token-budget management
+   - Long-document handling
+   - Preserving source information
+   - Prompt construction
+   - Instructions to answer only from retrieved context
+   - Source citations
+   - Citation validation
+   - Refusing or escalating when evidence is insufficient
+
+9. Answer generation
+   - Grounded answer generation
+   - Faithful summarization
+   - Structured answers
+   - Citing retrieved sources
+   - Preventing unsupported claims
+   - Handling conflicting documents
+   - Returning a safe fallback answer
+
+10. RAG evaluation
+   - Retrieval quality
+   - Answer quality
+   - Relevance
+   - Groundedness
+   - Faithfulness
+   - Hallucination
+   - Context precision
+   - Context recall
+   - Answer correctness
+   - Citation correctness
+   - Golden question-answer datasets
+   - Human evaluation
+   - Offline evaluation
+   - Online feedback
+   - User satisfaction
+
+11. Continuous improvement
+   - Logging failed queries
+   - Identifying retrieval failures
+   - Identifying generation failures
+   - Improving chunking
+   - Improving metadata
+   - Improving retrieval
+   - Improving reranking
+   - Updating prompts
+   - Updating documents
+   - Monitoring production quality
+
+Output format:
+- 5-line beginner summary
+- Clear headings and subheadings
+- Detailed but easy-to-scan explanations
+- Key definitions
+- Basic RAG vs Advanced RAG comparison table
+- Keyword vs vector vs hybrid search comparison table
+- Bi-encoder vs cross-encoder comparison
+- ASCII diagram showing document ingestion and indexing
+- ASCII diagram showing the complete query-time RAG pipeline
+- ASCII diagram showing the evaluation and improvement loop
+- Pseudocode for document indexing
+- Pseudocode for hybrid retrieval and reranking
+- Pseudocode for grounded answer generation with fallback
+- Pseudocode for RAG evaluation
+- Explanation of the relationship between retrieval quality and answer quality
+- Common failure scenarios and fixes
+- Memory aids
+- Concise final recap
+```
+
+---
+
+# Revision Day 4 — LangChain, LangGraph and Agentic AI
+
+```text
+Act as a senior Agentic AI architect and beginner-friendly GenAI mentor.
+
+Today is Revision Day 4 of my IBM AI/GenAI preparation.
+
+Create comprehensive revision notes covering LangChain, LangGraph, tool-using agents, human-in-the-loop systems and multi-agent frameworks.
+
+Explain the progression from a direct LLM call to chains, deterministic workflows, agents and multi-agent systems.
+
+Use an example such as an HR assistant that answers policy questions and escalates uncertain or sensitive cases to a human.
+
+Cover:
+
+1. Direct LLM applications
+   - Prompt and response
+   - System and user instructions
+   - Structured output
+   - Limitations of a single LLM call
+
+2. LangChain fundamentals
+   - What LangChain is
+   - Model wrappers
+   - Prompt templates
+   - Chains
+   - Runnable pipelines
+   - Output parsers
+   - Retrievers
+   - Tools
+   - Memory
+   - RAG using LangChain
+   - Benefits
+   - Limitations
+   - When a framework may be unnecessary
+
+3. Deterministic workflows vs agents
+   - Fixed workflow
+   - Conditional workflow
+   - Agentic decision-making
+   - Predictability
+   - Flexibility
+   - Cost
+   - Risk
+   - When to use a normal workflow
+   - When to use an agent
+
+4. Agentic AI
+   - What an AI agent is
+   - Goal
+   - State
+   - Planning
+   - Reasoning
+   - Tool selection
+   - Tool execution
+   - Observation
+   - Iteration
+   - Final response
+   - Difference between automation and autonomous decision-making
+
+5. Tools, skills and plugins
+   - Search tools
+   - Database tools
+   - API tools
+   - File tools
+   - Code-execution tools
+   - Tool schemas
+   - Structured tool arguments
+   - Input validation
+   - Authentication
+   - Authorization
+   - Least-privilege access
+   - Safe handling of tool output
+
+6. LangGraph
+   - What LangGraph is
+   - Nodes
+   - Edges
+   - State
+   - Conditional routing
+   - Cycles
+   - Checkpoints
+   - Persistence
+   - Pausing and resuming
+   - Retry logic
+   - Error recovery
+   - Timeouts
+   - Fallback paths
+   - Human-in-the-loop
+   - When to use LangGraph instead of a simple chain
+
+7. Agent state and memory
+   - Conversation history
+   - Working memory
+   - Long-term memory
+   - State storage
+   - Checkpointing
+   - Memory summarization
+   - Risks of incorrect, stale or excessive memory
+   - Privacy considerations
+
+8. Multi-agent systems
+   - Why multiple agents may be used
+   - Planner agent
+   - Researcher agent
+   - Executor agent
+   - Critic or reviewer agent
+   - Supervisor agent
+   - Task delegation
+   - Agent communication
+   - Shared state
+   - Sequential collaboration
+   - Parallel collaboration
+   - Conflict resolution
+   - When multi-agent architecture is overkill
+
+9. Framework comparison
+   - LangChain
+   - LangGraph
+   - CrewAI
+   - Microsoft Semantic Kernel
+   - Chains, workflows, skills, plugins and agents
+   - Suitable use cases for each framework
+
+10. Human-in-the-loop
+   - Approval steps
+   - Review of high-risk actions
+   - Escalation
+   - Correcting agent decisions
+   - Pausing and resuming workflows
+   - Human ownership of final decisions
+
+11. Agent evaluation and observability
+   - Task completion
+   - Correct tool selection
+   - Tool-call success rate
+   - Number of workflow steps
+   - Latency
+   - Token usage
+   - Cost
+   - Failure rate
+   - Human intervention rate
+   - Quality of final responses
+   - Tracing agent decisions and tool calls
+
+12. Risks and guardrails
+   - Infinite loops
+   - Excessive tool usage
+   - Wrong tool selection
+   - Hallucinated actions
+   - Unauthorized actions
+   - Prompt injection
+   - Sensitive-data exposure
+   - Retry and iteration limits
+   - Timeouts
+   - Cost limits
+   - Audit logs
+   - Allow-listed tools
+   - Human approval before high-risk actions
+
+Output format:
+- 5-line beginner summary
+- Clear headings and subheadings
+- Detailed beginner-friendly explanations
+- Key definitions
+- Direct LLM vs chain vs workflow vs agent comparison
+- Single-agent vs multi-agent comparison
+- LangChain vs LangGraph vs CrewAI vs Semantic Kernel comparison table
+- ASCII diagram showing a LangGraph-style workflow
+- ASCII diagram showing a multi-agent architecture
+- Pseudocode for a stateful agent workflow
+- Pseudocode for a multi-agent workflow
+- Pseudocode for human approval and fallback handling
+- Explanation of the relationship between tools, state, routing, memory and human approval
+- Common mistakes and over-engineering risks
+- Memory aids
+- Concise final recap
+```
+
+---
+
+# Revision Day 5 — Databricks, MLOps and Production AI Architecture
+
+```text
+Act as a senior Databricks, MLOps, cloud and enterprise AI platform architect.
+
+Today is Revision Day 5 of my IBM AI/GenAI preparation.
+
+Create comprehensive revision notes covering Databricks, Delta Lake, MLflow, MLOps, REST APIs, cloud infrastructure, Kubernetes, monitoring, governance and end-to-end production AI architecture.
+
+Explain how all these components connect to move an ML, RAG or agentic application from development to production.
+
+Use one consistent example: a production internal policy assistant.
+
+Cover:
+
+1. Databricks fundamentals
+   - What Databricks is
+   - Why enterprises use Databricks
+   - Lakehouse architecture
+   - Workspace
+   - Notebooks
+   - Compute
+   - Clusters
+   - Jobs
+   - Workflows
+   - Databricks SQL
+   - Data ingestion
+   - Databricks for data engineering
+   - Databricks for Machine Learning
+   - Databricks for GenAI
+   - Databricks Apps
+   - Databricks Agents
+   - Relationship among Databricks, Delta Lake and MLflow
+
+2. Data architecture and Delta Lake
+   - Data lake
+   - Data warehouse
+   - Lakehouse
+   - ETL
+   - ELT
+   - Batch processing
+   - Streaming basics
+   - Bronze layer
+   - Silver layer
+   - Gold layer
+   - ACID transactions
+   - Schema enforcement
+   - Schema evolution
+   - Time travel
+   - Data quality checks
+   - Deduplication
+   - Feature-engineering pipelines
+   - Preparing documents and metadata for RAG
+   - How Delta Lake supports ML and GenAI workloads
+
+3. MLflow
+   - Experiments
+   - Runs
+   - Parameters
+   - Metrics
+   - Artifacts
+   - Model packaging
+   - Model registry
+   - Model versions
+   - Model aliases or lifecycle stages
+   - Model lineage
+   - Data lineage relationship
+   - Reproducibility
+   - Model promotion
+   - Rollback
+   - MLflow with Databricks
+   - MLflow for LLM and RAG evaluation
+
+4. MLOps
+   - What MLOps is
+   - DevOps vs MLOps
+   - Source control
+   - Data validation
+   - Model validation
+   - Unit testing
+   - Integration testing
+   - Performance testing
+   - Security testing
+   - CI/CD for ML
+   - Model packaging
+   - Deployment
+   - Batch inference
+   - Real-time inference
+   - Canary deployment
+   - Blue-green deployment
+   - Rollback strategy
+   - Reproducible environments
+
+5. Monitoring and observability
+   - Logs
+   - Metrics
+   - Traces
+   - Application health
+   - Latency
+   - Throughput
+   - Error rate
+   - Availability
+   - Infrastructure utilization
+   - Model accuracy
+   - Data drift
+   - Concept drift
+   - Retrieval quality
+   - Groundedness
+   - Hallucination rate
+   - Agent tool failures
+   - Token usage
+   - Cost
+   - User feedback
+   - Alerting and incident response
+
+6. REST API deployment
+   - Why AI models are exposed through APIs
+   - FastAPI basics
+   - Prediction endpoints
+   - RAG endpoints
+   - Agent endpoints
+   - Request schemas
+   - Response schemas
+   - Input validation
+   - Error handling
+   - Authentication
+   - Authorization
+   - Rate limiting
+   - API versioning
+   - Idempotency where relevant
+   - Logging
+   - Correlation identifiers
+   - Synchronous processing
+   - Asynchronous processing
+   - Background jobs
+   - Timeouts
+   - Retries
+   - Health endpoints
+   - Production-readiness checks
+
+7. Cloud and Kubernetes
+   - IBM Cloud, AWS, Azure and GCP at a high level
+   - Compute
+   - Object storage
+   - Managed databases
+   - Networking
+   - Secrets management
+   - Identity and access management
+   - Containers
+   - Container images
+   - Kubernetes pods
+   - Deployments
+   - Services
+   - Configuration
+   - Secrets
+   - Autoscaling
+   - Load balancing
+   - High availability
+   - Backup
+   - Disaster recovery
+   - Cost management
+
+8. Governance and Responsible AI
+   - Data governance
+   - Model governance
+   - Model documentation
+   - Data lineage
+   - Model lineage
+   - Auditability
+   - Explainability
+   - Bias and fairness
+   - Privacy
+   - Security
+   - Access control
+   - Compliance
+   - Human oversight
+   - Approval workflows
+   - Retention policies
+   - Traceability of prompts, retrieved context and responses
+
+9. End-to-end production AI architecture
+   - Business requirements
+   - Functional requirements
+   - Non-functional requirements
+   - Data sources
+   - Ingestion pipeline
+   - Bronze, Silver and Gold layers
+   - Document processing
+   - Embedding generation
+   - Vector database
+   - Retriever
+   - Reranker
+   - LLM or agent workflow
+   - Metadata database
+   - REST API
+   - Web application
+   - MLflow tracking
+   - Source control
+   - CI/CD
+   - Containerization
+   - Kubernetes deployment
+   - Monitoring
+   - Governance
+   - Human escalation
+   - Continuous improvement
+
+10. Production decision-making
+   - Batch vs real-time inference
+   - Synchronous vs asynchronous APIs
+   - Managed service vs self-hosted model
+   - Scaling stateless API components
+   - Managing stateful workflow components
+   - Reliability, security, performance and cost trade-offs
+
+Output format:
+- 5-line beginner summary
+- Clear headings and subheadings
+- Detailed but easy-to-scan explanations
+- Key definitions
+- Data lake vs warehouse vs lakehouse comparison
+- ETL vs ELT comparison
+- Batch vs real-time inference comparison
+- DevOps vs MLOps comparison
+- Synchronous vs asynchronous API comparison
+- ASCII diagram showing Bronze, Silver and Gold architecture
+- ASCII diagram showing the MLflow lifecycle
+- ASCII diagram showing CI/CD and deployment flow
+- ASCII diagram showing the complete production GenAI architecture
+- Pseudocode for an ETL pipeline
+- Pseudocode for experiment tracking and model registration
+- Pseudocode for a production RAG API
+- Pseudocode for CI/CD deployment and rollback
+- Pseudocode for monitoring and alerting
+- Explanation of the relationship between Databricks, Delta Lake, MLflow, APIs, cloud, Kubernetes and MLOps
+- Production-readiness checklist
+- 2-minute explanation of the complete architecture
+- Common follow-up questions and beginner-friendly answers
+- Common mistakes
+- Memory aids
+- Concise final recap
 ```
 
 # Final 3-Week Copy-Paste-Ready Daily Prompts
