@@ -1,0 +1,44 @@
+{
+  "success": true,
+  "status": "success",
+  "exit_code": 0,
+  "wrapper_exit_code": 0,
+  "failure_reason": null,
+  "strict_log_errors": true,
+  "detected_log_error": false,
+  "timed_out": false,
+  "capture_limit_exceeded": false,
+  "timeout_seconds": 3600,
+  "max_output_bytes": 65536,
+  "max_capture_bytes": 252428800,
+  "success_message": "Command completed successfully in 137900 ms.",
+  "error_message": null,
+  "command": {
+    "display": "./scripts/travis/profile_diff.sh -prod",
+    "args": [
+      "./scripts/travis/profile_diff.sh",
+      "-prod"
+    ]
+  },
+  "timing": {
+    "started_at": "2026-07-17T05:08:48+0000",
+    "finished_at": "2026-07-17T05:11:06+0000",
+    "duration_ms": 137900
+  },
+  "summary": {
+    "total_log_lines": 2347,
+    "stdout_lines": 2339,
+    "stderr_lines": 8,
+    "error_lines": 0,
+    "warning_lines": 0,
+    "first_error": null,
+    "stdout_raw_bytes": 10948909,
+    "stderr_raw_bytes": 468,
+    "stdout_truncated": true,
+    "stderr_truncated": false,
+    "output_truncated": true
+  },
+  "output": {
+    "stderr": "go: downloading golang.org/x/exp v0.0.0-20260112195511-716be5621a96\ngo: downloading github.com/google/uuid v1.6.0\ngo: downloading github.com/nsf/jsondiff v0.0.0-20230430225905-43f6cf3098c1\ngo: downloading github.com/dlclark/regexp2 v1.11.5\ngo: downloading github.com/json-iterator/go v1.1.12\ngo: downloading gopkg.in/yaml.v2 v2.4.0\ngo: downloading github.com/modern-go/reflect2 v1.0.2\ngo: downloading github.com/modern-go/concurrent v0.0.0-20180306012644-bacd9c7ef1dd\n"
+  }
+}

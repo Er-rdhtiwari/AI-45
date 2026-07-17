@@ -1,0 +1,45 @@
+{
+  "success": false,
+  "status": "failed",
+  "exit_code": 127,
+  "wrapper_exit_code": 127,
+  "failure_reason": "non_zero_exit_code",
+  "strict_log_errors": true,
+  "detected_log_error": true,
+  "timed_out": false,
+  "capture_limit_exceeded": false,
+  "timeout_seconds": 3600,
+  "max_output_bytes": 10240,
+  "max_capture_bytes": 252428800,
+  "success_message": null,
+  "error_message": "Command failed with exit code 127.",
+  "command": {
+    "display": "./scripts/travis/profile_diff.sh -prod",
+    "args": [
+      "./scripts/travis/profile_diff.sh",
+      "-prod"
+    ]
+  },
+  "timing": {
+    "started_at": "2026-07-17T09:14:20+0530",
+    "finished_at": "2026-07-17T09:14:22+0530",
+    "duration_ms": 2418
+  },
+  "summary": {
+    "total_log_lines": 9,
+    "stdout_lines": 6,
+    "stderr_lines": 3,
+    "error_lines": 2,
+    "warning_lines": 0,
+    "first_error": "./scripts/travis/profile_diff.sh: line 87: yq: command not found",
+    "stdout_raw_bytes": 328,
+    "stderr_raw_bytes": 255,
+    "stdout_truncated": false,
+    "stderr_truncated": false,
+    "output_truncated": false
+  },
+  "output": {
+    "stdout": "[profile-diff] repository=cloud-onboarding\n[profile-diff] environment=prod\n[profile-diff] generating effective profiles\ngo run ./cmd/profile-generator --environment prod --output /tmp/generated-profiles\n[profile-diff] comparing /tmp/generated-profiles with config/profiles/prod\n[profile-diff] normalizing YAML before comparison\n",
+    "stderr": "./scripts/travis/profile_diff.sh: line 87: yq: command not found\n[profile-diff] ERROR: unable to normalize generated YAML because required executable \"yq\" is unavailable\n[profile-diff] Install yq v4.x in the build image and ensure it is available on PATH\n"
+  }
+}
