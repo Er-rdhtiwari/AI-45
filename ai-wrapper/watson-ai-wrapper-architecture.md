@@ -8,6 +8,18 @@ The wrapper receives the JSON status produced by the existing capture-error flow
 
 The wrapper must be fail-safe. If the AI wrapper encounters any internal issue, such as a configuration error, token error, API timeout, invalid AI response, or network failure, it must return the original status JSON unchanged to preserve the existing pipeline behavior.
 
+## Developer Skills
+
+A developer does not need to be an expert in every area before working on this repository. The following skills are the minimum needed to start safely:
+
+- Basic Go knowledge: packages, structs, interfaces, error handling, JSON, unit tests, and the `context` and `net/http` packages.
+- Basic CI/CD knowledge: shell commands, environment variables, exit codes, standard input/output, and how a pipeline passes status between steps.
+- Basic GenAI knowledge: prompts, model input/output, token and context limits, hallucination risk, and why model responses must be treated as untrusted output.
+- Basic API and security knowledge: HTTP requests, timeouts, retries, bearer tokens, secret handling, log redaction, and avoiding credentials in source code or logs.
+- Ability to read configuration and tests: YAML, prompt templates, test fixtures, and existing Go tests should be reviewed before changing behavior.
+
+Developers can learn the deeper topics while working on maintenance tasks. Over time, they should become comfortable with Watsonx APIs and IAM, Tekton concepts, prompt evaluation, large-log reduction, structured logging, secure CI/CD design, and the wrapper's fail-safe behavior. Changes to authentication, status classification, fallback behavior, prompt security, or the `stdout` JSON contract require additional care and review because mistakes in these areas can affect pipeline reliability or expose sensitive data.
+
 ## Current Flow
 
 Existing command pattern:
@@ -16,7 +28,7 @@ Existing command pattern:
 status="$(./scripts/capture-error/capture-error.sh \
   --exit-code-only \
   --redaction-regex-file /tmp/capture-redaction-patterns.txt \
-  -- ./scripts/capture-error/capture-error-scenarios.sh --all-failure)"
+  -- ./scripts/capture-error/capture-error-scenarios.sh --any-execution-script/command)"
 ```
 
 The current output is a JSON document such as:
@@ -41,7 +53,7 @@ Proposed post-processing pattern:
 raw_status="$(./scripts/capture-error/capture-error.sh \
   --exit-code-only \
   --redaction-regex-file /tmp/capture-redaction-patterns.txt \
-  -- ./scripts/capture-error/capture-error-scenarios.sh --all-failure)"
+  -- ./scripts/capture-error/capture-error-scenarios.sh --any-execution-script/command)"
 
 status="$(printf '%s' "$raw_status" | ./bin/ai-status-wrapper \
   --config ./config/ai-status-wrapper/config.yaml \
@@ -200,7 +212,8 @@ Optional flags:
 | `--prompt-version` | Prompt pack version, for example `v1` |
 | `--timeout` | Overall wrapper timeout |
 | `--dry-run` | Parse and classify JSON without calling Watson |
-| `--debug` | Write wrapper diagnostics to `stderr`, never to `stdout` |
+| `--log-level` | Logging level: `off`, `error`, `info`, or `debug` |
+| `--debug` | Compatibility shortcut that overrides the log level to `debug` |
 
 Important output rule:
 
@@ -631,6 +644,10 @@ ai-status-wrapper: Watson enrichment failed: IAM token request returned 401; ret
 
 Never write diagnostics to `stdout`.
 
+### Logging
+
+Use Go's standard `log/slog` package for structured runtime diagnostics and write all logs to `stderr`. The default level is `error`; it can be set with `AI_STATUS_WRAPPER_LOG_LEVEL` or `--log-level`, with the CLI flag taking precedence. `--debug` overrides both and selects `debug`. Logging may be disabled with `--log-level off` without changing wrapper behavior.
+
 ## Log Size and Context Management
 
 The sample success JSON shows large stdout with truncation:
@@ -758,6 +775,30 @@ go run ./cmd/ai-status-wrapper \
 
 For CI, mock Watson APIs by using `httptest.Server`. Do not call real Watson endpoints in normal unit tests.
 
+### Real End-to-End Test Proposal
+
+Provide an opt-in test that runs the real CLI flow against IBM IAM and Watsonx using the synthetic JSON fixtures in `testdata/status`. Keep it disabled during normal test runs to avoid requiring credentials, network access, model quota, or cost.
+
+```bash
+export WATSONX_API_KEY="..."
+export WATSONX_PROJECT_ID="..."
+export WATSONX_MODEL_ID="openai/gpt-oss-120b"
+export RUN_WATSONX_E2E=1
+
+go test ./cmd/ai-status-wrapper \
+  -run '^TestRealWatsonEndToEndScore$' \
+  -count=1 -v
+```
+
+The default run should discover every JSON fixture. A success fixture must be returned byte-for-byte without a Watson call. Each failure fixture must complete the IAM exchange and three Watson calls, then satisfy all of the following acceptance criteria:
+
+- The wrapper exits `0` and preserves every status field except `error_message`.
+- The new message starts with `AI analysis:` and uses evidence from the captured command or logs.
+- The diagnosis includes actionable remediation and passes fixture-specific reliability checks.
+- The response contains no known misleading guidance, stays within 180 words, and reaches the default quality score of at least `70/100`.
+
+Field preservation and reliability are mandatory even when the total score reaches the configured threshold. Allow `WATSONX_E2E_FIXTURE` to select one fixture for debugging and `WATSONX_E2E_MIN_SCORE` to raise the quality threshold when evaluating a model or prompt change. Because model output can vary, investigate repeated failures by reviewing the score breakdown and generated message before changing prompts, models, or acceptance rules.
+
 ## Tekton Integration
 
 Recommended minimal Tekton script change:
@@ -766,7 +807,7 @@ Recommended minimal Tekton script change:
 raw_status="$(./scripts/capture-error/capture-error.sh \
   --exit-code-only \
   --redaction-regex-file /tmp/capture-redaction-patterns.txt \
-  -- ./scripts/capture-error/capture-error-scenarios.sh --all-failure)"
+  -- ./scripts/capture-error/capture-error-scenarios.sh --any-execution-script/command)"
 
 status="$(printf '%s' "$raw_status" | ./bin/ai-status-wrapper \
   --config ./config/ai-status-wrapper/config.yaml \
