@@ -28,9 +28,12 @@ Mandatory output format:
 - Line-by-line explanation
 - Common mistakes
 - Interview relevance for Google/Amazon/Netflix roles
+```
+# Day 1: DSA Topic
+```text
 - DSA topic: Arrays
 - DSA notes, patterns, and time complexity
-- One DSA practice question with Golang solution
+- One DSA practice question with Golang and Python solution
 
 ```
 
@@ -65,9 +68,12 @@ Mandatory output format:
 - Line-by-line explanation
 - Common mistakes
 - Interview relevance for Google/Amazon/Netflix roles
+```
+# Day 2: DSA Topic
+```text
 - DSA topic: Strings
 - DSA notes and patterns
-- One string practice question with Golang solution
+- One string practice question with Golang and Python solution
 
 ```
 
@@ -102,9 +108,12 @@ Mandatory output format:
 - Line-by-line explanation
 - Common mistakes
 - Interview relevance for Google/Amazon/Netflix roles
+```
+# Day 3: DSA Topic
+```text
 - DSA topic: HashMap / Dictionary
 - DSA notes and patterns
-- One hashmap practice question with Golang solution
+- One hashmap practice question with Golang and Python solution
 
 ```
 
@@ -139,9 +148,12 @@ Mandatory output format:
 - Line-by-line explanation
 - Common mistakes
 - Interview relevance for Google/Amazon/Netflix roles
+```
+# Day 4: DSA Topic
+```text
 - DSA topic: Two Pointers
 - DSA notes and patterns
-- One two-pointer practice question with Golang solution
+- One two-pointer practice question with Golang and Python solution
 
 ```
 
@@ -176,9 +188,12 @@ Mandatory output format:
 - Line-by-line explanation
 - Common mistakes
 - Interview relevance for Google/Amazon/Netflix roles
+```
+# Day 5: DSA Topic
+```text
 - DSA topic: Sliding Window
 - DSA notes and patterns
-- One sliding-window practice question with Golang solution
+- One sliding-window practice question with Golang and Python solution
 
 ```
 
@@ -213,9 +228,12 @@ Mandatory output format:
 - Line-by-line explanation
 - Common mistakes
 - Interview relevance for Google/Amazon/Netflix roles
+```
+# Day 6: DSA Topic
+```text
 - DSA topic: Stack
 - DSA notes and patterns
-- One stack practice question with Golang solution
+- One stack practice question with Golang and Python solution
 
 ```
 
@@ -247,9 +265,12 @@ Mandatory output format:
 - Python script combining API + validation + cache + async mock LLM call
 - Common mistakes
 - Interview relevance for Google/Amazon/Netflix roles
+```
+# Day 7: DSA Topic
+```text
 - DSA topic: Queue
 - DSA notes
-- One queue practice question with Golang solution
+- One queue practice question with Golang and Python solution
 
 ```
 
@@ -286,9 +307,12 @@ Mandatory output format:
 - Line-by-line explanation
 - Common mistakes
 - Interview relevance for Google/Amazon/Netflix roles
+```
+# Day 8: DSA Topic
+```text
 - DSA topic: Linked List
 - DSA notes
-- One linked-list practice question with Golang solution
+- One linked-list practice question with Golang and Python solution
 
 ```
 
@@ -323,9 +347,12 @@ Mandatory output format:
 - Line-by-line explanation
 - Common mistakes
 - Interview relevance for Google/Amazon/Netflix roles
+```
+# Day 9: DSA Topic
+```text
 - DSA topic: Binary Search
 - DSA notes and patterns
-- One binary-search practice question with Golang solution
+- One binary-search practice question with Golang and Python solution
 
 ```
 
@@ -360,9 +387,12 @@ Mandatory output format:
 - Line-by-line explanation
 - Common mistakes
 - Interview relevance for Google/Amazon/Netflix roles
+```
+# Day 10: DSA Topic
+```text
 - DSA topic: Recursion
 - DSA notes
-- One recursion practice question with Golang solution
+- One recursion practice question with Golang and Python solution
 
 ```
 
@@ -397,9 +427,12 @@ Mandatory output format:
 - Line-by-line explanation
 - Common mistakes
 - Interview relevance for Google/Amazon/Netflix roles
+```
+# Day 11: DSA Topic
+```text
 - DSA topic: BFS
 - DSA notes
-- One BFS practice question with Golang solution
+- One BFS practice question with Golang and Python solution
 
 ```
 
@@ -434,20 +467,23 @@ Mandatory output format:
 - Line-by-line explanation
 - Common mistakes
 - Interview relevance for Google/Amazon/Netflix roles
+```
+# Day 12: DSA Topic
+```text
 - DSA topic: DFS
 - DSA notes
-- One DFS practice question with Golang solution
+- One DFS practice question with Golang and Python solution
 
 ```
 
-## Day 13 — Golang Backend Refresher + Heap
+## Day 13 — Golang and Python Backend Refresher + Heap
 
 ```text
-Act as a patient Golang + backend mentor.
+Act as a patient Golang and Python + backend mentor.
 
 Today is Day 13.
 
-Teach me: Golang backend fundamentals for someone whose primary language is Python.
+Teach me: Golang and Python backend fundamentals for someone whose primary language is Python.
 
 Cover:
 1. Why Go is useful in backend/platform roles
@@ -471,9 +507,12 @@ Mandatory output format:
 - Line-by-line explanation
 - Common mistakes
 - Interview relevance for Google/Amazon/Netflix roles
+```
+# Day 13: DSA Topic
+```text
 - DSA topic: Heap / Priority Queue
 - DSA notes
-- One heap practice question with Golang solution
+- One heap practice question with Golang and Python solution
 
 ```
 
@@ -490,7 +529,7 @@ Revise Days 8–13:
 3. S3 ingestion
 4. SQS/SNS/EventBridge/Step Functions
 5. Docker and EKS
-6. Golang backend basics
+6. Golang and Python backend basics
 
 Create one combined architecture:
 AWS-based GenAI document processing system.
@@ -504,9 +543,12 @@ Mandatory output format:
 - Python script simulating upload → queue → process → answer
 - Common mistakes
 - Interview relevance for Google/Amazon/Netflix roles
+```
+# Day 14: DSA Topic
+```text
 - DSA topic: Sorting
 - DSA notes
-- One sorting practice question with Golang solution
+- One sorting practice question with Golang and Python solution
 
 ```
 
@@ -543,9 +585,12 @@ Mandatory output format:
 - Line-by-line explanation
 - Common mistakes
 - Interview relevance for Google/Amazon/Netflix roles
+```
+# Day 15: DSA Topic
+```text
 - DSA topic: Intervals
 - DSA notes
-- One interval practice question with Golang solution
+- One interval practice question with Golang and Python solution
 
 ```
 
@@ -580,9 +625,12 @@ Mandatory output format:
 - Line-by-line explanation
 - Common mistakes
 - Interview relevance for Google/Amazon/Netflix roles
+```
+# Day 16: DSA Topic
+```text
 - DSA topic: Binary Tree Basics
 - DSA notes
-- One binary-tree practice question with Golang solution
+- One binary-tree practice question with Golang and Python solution
 
 ```
 
@@ -617,9 +665,12 @@ Mandatory output format:
 - Line-by-line explanation
 - Common mistakes
 - Interview relevance for Google/Amazon/Netflix roles
+```
+# Day 17: DSA Topic
+```text
 - DSA topic: Binary Search Tree
 - DSA notes
-- One BST practice question with Golang solution
+- One BST practice question with Golang and Python solution
 
 ```
 
@@ -654,9 +705,12 @@ Mandatory output format:
 - Line-by-line explanation
 - Common mistakes
 - Interview relevance for Google/Amazon/Netflix roles
+```
+# Day 18: DSA Topic
+```text
 - DSA topic: Trie
 - DSA notes
-- One trie practice question with Golang solution
+- One trie practice question with Golang and Python solution
 
 ```
 
@@ -691,9 +745,12 @@ Mandatory output format:
 - Line-by-line explanation
 - Common mistakes
 - Interview relevance for Google/Amazon/Netflix roles
+```
+# Day 19: DSA Topic
+```text
 - DSA topic: Graph Basics
 - DSA notes
-- One graph practice question with Golang solution
+- One graph practice question with Golang and Python solution
 
 ```
 
@@ -728,9 +785,12 @@ Mandatory output format:
 - Line-by-line explanation
 - Common mistakes
 - Interview relevance for Google/Amazon/Netflix roles
+```
+# Day 20: DSA Topic
+```text
 - DSA topic: Topological Sort
 - DSA notes
-- One topological-sort practice question with Golang solution
+- One topological-sort practice question with Golang and Python solution
 
 ```
 
@@ -765,9 +825,12 @@ Mandatory output format:
 - Python mini RAG + hybrid retrieval script
 - Common mistakes
 - Interview relevance for Google/Amazon/Netflix roles
+```
+# Day 21: DSA Topic
+```text
 - DSA topic: Union Find
 - DSA notes
-- One union-find practice question with Golang solution
+- One union-find practice question with Golang and Python solution
 
 ```
 
@@ -804,9 +867,12 @@ Mandatory output format:
 - Line-by-line explanation
 - Common mistakes
 - Interview relevance for Google/Amazon/Netflix roles
+```
+# Day 22: DSA Topic
+```text
 - DSA topic: Greedy Algorithms
 - DSA notes
-- One greedy practice question with Golang solution
+- One greedy practice question with Golang and Python solution
 
 ```
 
@@ -841,9 +907,12 @@ Mandatory output format:
 - Line-by-line explanation
 - Common mistakes
 - Interview relevance for Google/Amazon/Netflix roles
+```
+# Day 23: DSA Topic
+```text
 - DSA topic: Backtracking
 - DSA notes
-- One backtracking practice question with Golang solution
+- One backtracking practice question with Golang and Python solution
 
 ```
 
@@ -878,9 +947,12 @@ Mandatory output format:
 - Line-by-line explanation
 - Common mistakes
 - Interview relevance for Google/Amazon/Netflix roles
+```
+# Day 24: DSA Topic
+```text
 - DSA topic: Dynamic Programming Basics
 - DSA notes
-- One DP practice question with Golang solution
+- One DP practice question with Golang and Python solution
 
 ```
 
@@ -915,9 +987,12 @@ Mandatory output format:
 - Line-by-line explanation
 - Common mistakes
 - Interview relevance for Google/Amazon/Netflix roles
+```
+# Day 25: DSA Topic
+```text
 - DSA topic: 1D Dynamic Programming
 - DSA notes
-- One 1D DP practice question with Golang solution
+- One 1D DP practice question with Golang and Python solution
 
 ```
 
@@ -952,9 +1027,12 @@ Mandatory output format:
 - Line-by-line explanation
 - Common mistakes
 - Interview relevance for Google/Amazon/Netflix roles
+```
+# Day 26: DSA Topic
+```text
 - DSA topic: 2D Dynamic Programming
 - DSA notes
-- One 2D DP practice question with Golang solution
+- One 2D DP practice question with Golang and Python solution
 
 ```
 
@@ -989,9 +1067,12 @@ Mandatory output format:
 - Line-by-line explanation
 - Common mistakes
 - Interview relevance for Google/Amazon/Netflix roles
+```
+# Day 27: DSA Topic
+```text
 - DSA topic: Bit Manipulation
 - DSA notes
-- One bit-manipulation practice question with Golang solution
+- One bit-manipulation practice question with Golang and Python solution
 
 ```
 
@@ -1026,9 +1107,12 @@ Mandatory output format:
 - Python script combining search + reranking + tool call simulation
 - Common mistakes
 - Interview relevance for Google/Amazon/Netflix roles
+```
+# Day 28: DSA Topic
+```text
 - DSA topic: Mixed DSA Revision
 - DSA notes
-- One mixed DSA practice question with Golang solution
+- One mixed DSA practice question with Golang and Python solution
 
 ```
 
@@ -1065,9 +1149,12 @@ Mandatory output format:
 - Line-by-line explanation
 - Common mistakes
 - Interview relevance for Google/Amazon/Netflix roles
+```
+# Day 29: DSA Topic
+```text
 - DSA topic: Matrix Problems
 - DSA notes
-- One matrix practice question with Golang solution
+- One matrix practice question with Golang and Python solution
 
 ```
 
@@ -1102,9 +1189,12 @@ Mandatory output format:
 - Line-by-line explanation
 - Common mistakes
 - Interview relevance for Google/Amazon/Netflix roles
+```
+# Day 30: DSA Topic
+```text
 - DSA topic: Monotonic Stack
 - DSA notes
-- One monotonic-stack practice question with Golang solution
+- One monotonic-stack practice question with Golang and Python solution
 
 ```
 
@@ -1139,9 +1229,12 @@ Mandatory output format:
 - Line-by-line explanation
 - Common mistakes
 - Interview relevance for Google/Amazon/Netflix roles
+```
+# Day 31: DSA Topic
+```text
 - DSA topic: Shortest Path
 - DSA notes
-- One shortest-path practice question with Golang solution
+- One shortest-path practice question with Golang and Python solution
 
 ```
 
@@ -1176,9 +1269,12 @@ Mandatory output format:
 - Line-by-line explanation
 - Common mistakes
 - Interview relevance for Google/Amazon/Netflix roles
+```
+# Day 32: DSA Topic
+```text
 - DSA topic: Dijkstra Algorithm
 - DSA notes
-- One Dijkstra practice question with Golang solution
+- One Dijkstra practice question with Golang and Python solution
 
 ```
 
@@ -1213,9 +1309,12 @@ Mandatory output format:
 - Line-by-line explanation
 - Common mistakes
 - Interview relevance for Google/Amazon/Netflix roles
+```
+# Day 33: DSA Topic
+```text
 - DSA topic: Prefix Sum
 - DSA notes
-- One prefix-sum practice question with Golang solution
+- One prefix-sum practice question with Golang and Python solution
 
 ```
 
@@ -1250,9 +1349,12 @@ Mandatory output format:
 - Line-by-line explanation
 - Common mistakes
 - Interview relevance for Google/Amazon/Netflix roles
+```
+# Day 34: DSA Topic
+```text
 - DSA topic: LRU Cache
 - DSA notes
-- One LRU cache practice question with Golang solution
+- One LRU cache practice question with Golang and Python solution
 
 ```
 
@@ -1287,9 +1389,12 @@ Mandatory output format:
 - Python script simulating model registry + serving decision flow
 - Common mistakes
 - Interview relevance for Google/Amazon/Netflix roles
+```
+# Day 35: DSA Topic
+```text
 - DSA topic: Coding Design Patterns
 - DSA notes
-- One design-pattern-based coding question with Golang solution
+- One design-pattern-based coding question with Golang and Python solution
 
 ```
 
@@ -1326,9 +1431,12 @@ Mandatory output format:
 - Line-by-line explanation
 - Common mistakes
 - Interview relevance for Google/Amazon/Netflix roles
+```
+# Day 36: DSA Topic
+```text
 - DSA topic: Rate Limiting Algorithm
 - DSA notes
-- One rate-limiter practice question with Golang solution
+- One rate-limiter practice question with Golang and Python solution
 
 ```
 
@@ -1364,9 +1472,12 @@ Mandatory output format:
 - Line-by-line explanation
 - Common mistakes
 - Interview relevance for Google/Amazon/Netflix roles
+```
+# Day 37: DSA Topic
+```text
 - DSA topic: Concurrency Coding Problems
 - DSA notes
-- One concurrency-style practice question with Golang solution
+- One concurrency-style practice question with Golang and Python solution
 
 ```
 
@@ -1401,9 +1512,12 @@ Mandatory output format:
 - Line-by-line explanation
 - Common mistakes
 - Interview relevance for Google/Amazon/Netflix roles
+```
+# Day 38: DSA Topic
+```text
 - DSA topic: Advanced Hashing
 - DSA notes
-- One hashing practice question with Golang solution
+- One hashing practice question with Golang and Python solution
 
 ```
 
@@ -1438,9 +1552,12 @@ Mandatory output format:
 - Line-by-line explanation
 - Common mistakes
 - Interview relevance for Google/Amazon/Netflix roles
+```
+# Day 39: DSA Topic
+```text
 - DSA topic: System Design Coding
 - DSA notes
-- One system-design-style coding question with Golang solution
+- One system-design-style coding question with Golang and Python solution
 
 ```
 
@@ -1475,9 +1592,12 @@ Mandatory output format:
 - Line-by-line explanation
 - Common mistakes
 - Interview relevance for Google/Amazon/Netflix roles
+```
+# Day 40: DSA Topic
+```text
 - DSA topic: Graph Revision
 - DSA notes
-- One graph revision practice question with Golang solution
+- One graph revision practice question with Golang and Python solution
 
 ```
 
@@ -1512,9 +1632,12 @@ Mandatory output format:
 - Line-by-line explanation
 - Common mistakes
 - Interview relevance for Google/Amazon/Netflix roles
+```
+# Day 41: DSA Topic
+```text
 - DSA topic: DP Revision
 - DSA notes
-- One DP revision practice question with Golang solution
+- One DP revision practice question with Golang and Python solution
 
 ```
 
@@ -1549,9 +1672,12 @@ Mandatory output format:
 - Python script simulating tenant-aware request + logging + guardrail + fallback
 - Common mistakes
 - Interview relevance for Google/Amazon/Netflix roles
+```
+# Day 42: DSA Topic
+```text
 - DSA topic: Mixed DSA Mock
 - DSA notes
-- One mixed DSA practice question with Golang solution
+- One mixed DSA practice question with Golang and Python solution
 
 ```
 
@@ -1590,9 +1716,12 @@ Mandatory output format:
 - Line-by-line explanation
 - Common mistakes
 - Interview relevance for Google/Amazon/Netflix roles
+```
+# Day 43: DSA Topic
+```text
 - DSA topic: Weak Area Recovery
 - DSA notes for choosing weak topics
-- One practice question from weak area with Golang solution
+- One practice question from weak area with Golang and Python solution
 
 ```
 
@@ -1633,9 +1762,12 @@ Mandatory output format:
 - Common mistakes
 - Interview relevance for Google/Amazon/Netflix roles
 - Strong interview closing summary
+```
+# Day 44: DSA Topic
+```text
 - DSA topic: Full Coding Mock
 - DSA notes
-- One medium-level coding problem with Golang solution
+- One medium-level coding problem with Golang and Python solution
 - Final revision checklist
 ```
 
@@ -1649,7 +1781,7 @@ Today is Day 45 final revision.
 Create a complete final revision pack covering:
 1. Python backend
 2. FastAPI
-3. Golang backend basics
+3. Golang and Python backend basics
 4. AWS foundation
 5. Bedrock
 6. SageMaker
@@ -1691,8 +1823,11 @@ Mandatory output format:
 - Python script for simplified end-to-end platform flow
 - 10 STAR behavioral prompts
 - Interview relevance for Google/Amazon/Netflix roles
+```
+# Day 45: DSA Topic
+```text
 - DSA final revision table
-- One final mixed DSA problem with Golang solution
+- One final mixed DSA problem with Golang and Python solution
 - Final 7-day revision plan after these 45 days
 ```
 
@@ -1765,7 +1900,7 @@ Mandatory output format:
 - Final LinkedIn headline suggestion
 - Interview relevance for Google/Amazon/Netflix roles
 - DSA revision topic: Arrays + HashMap
-- One medium DSA question with Golang solution
+- One medium DSA question with Golang and Python solution
 
 ```
 
@@ -1826,7 +1961,7 @@ Mandatory output format:
 - 10 resume bullets with placeholders where needed
 - Interview relevance for Google/Amazon/Netflix roles
 - DSA revision topic: Two Pointers + Sliding Window
-- One medium DSA question with Golang solution
+- One medium DSA question with Golang and Python solution
 
 ```
 
@@ -1889,7 +2024,7 @@ Mandatory output format:
 - 10 resume bullets with metric placeholders
 - Interview relevance for Google/Amazon/Netflix roles
 - DSA revision topic: Stack + Queue + Heap
-- One medium DSA question with Golang solution
+- One medium DSA question with Golang and Python solution
 
 ```
 
@@ -1958,7 +2093,7 @@ Mandatory output format:
 - 10 resume bullets with metric placeholders
 - Interview relevance for Google/Amazon/Netflix roles
 - DSA revision topic: Trees + Tries
-- One medium DSA question with Golang solution
+- One medium DSA question with Golang and Python solution
 
 ```
 
@@ -2013,7 +2148,7 @@ Mandatory output format:
 - 10 security best practices
 - Interview relevance for Google/Amazon/Netflix roles
 - DSA revision topic: Binary Search + Sorting
-- One medium DSA question with Golang solution
+- One medium DSA question with Golang and Python solution
 
 ```
 
@@ -2069,7 +2204,7 @@ Mandatory output format:
 - Strong answer: Why hybrid search instead of only vector search?
 - Interview relevance for Google/Amazon/Netflix roles
 - DSA revision topic: Graph BFS/DFS + Union Find
-- One medium DSA question with Golang solution
+- One medium DSA question with Golang and Python solution
 
 ```
 
@@ -2131,13 +2266,13 @@ Mandatory output format:
 - Table: production metric → why it matters → project example
 - Interview relevance for Google/Amazon/Netflix roles
 - DSA revision topic: Dynamic Programming basics
-- One medium DSA question with Golang solution
+- One medium DSA question with Golang and Python solution
 
 ```
 
 ---
 
-## Day 8 — Coding + DSA + Python/Golang Interview Revision
+## Day 8 — Coding + DSA + Python/Golang and Python Interview Revision
 
 ```text
 Act as a senior coding interviewer for Google/Amazon/Netflix.
@@ -2145,7 +2280,7 @@ Act as a senior coding interviewer for Google/Amazon/Netflix.
 Today is Day 8 of my 10-day final revision.
 
 Goal:
-Revise coding interview skills using Python as primary language and Golang as secondary exposure.
+Revise coding interview skills using Python as primary language and Golang and Python as secondary exposure.
 
 Cover:
 1. How to approach coding interviews
@@ -2156,7 +2291,7 @@ Cover:
 6. How to discuss time and space complexity
 7. Python coding best practices
 8. Common Python pitfalls
-9. Golang basics for backend interviews
+9. Golang and Python basics for backend interviews
 10. Go structs, interfaces, goroutines, channels
 11. When to mention Go in interviews
 12. DSA pattern revision:
@@ -2178,12 +2313,12 @@ Mandatory output format:
 - Interview relevance for Google/Amazon/Netflix roles
 - DSA pattern table: pattern → when to use → complexity → example problem
 - Python interview checklist
-- Golang interview checklist
+- Golang and Python interview checklist
 - Common coding mistakes table
 - 5 mini coding problems with hints only
-- 3 medium coding problems with full Golang solutions
-- 1 concurrency-style problem with Golang solution
-- 1 small Golang HTTP/concurrency example
+- 3 medium coding problems with full Golang and Python solutions
+- 1 concurrency-style problem with Golang and Python solution
+- 1 small Golang and Python HTTP/concurrency example
 - Line-by-line explanation for all solutions
 - Mock interviewer feedback after each solution
 - Final DSA weak-area checklist
@@ -2249,7 +2384,7 @@ Mandatory output format:
 - Final answer: “Tell me about a difficult technical decision”
 - Interview relevance for Google/Amazon/Netflix roles
 - DSA revision topic: Mixed DSA
-- One medium DSA question with Golang solution
+- One medium DSA question with Golang and Python solution
 
 ```
 
@@ -2306,7 +2441,7 @@ Mandatory output format:
 - ASCII diagrams for both system designs
 - Pseudocode for both systems
 - Python script for one key component from each system
-- One medium DSA problem with full Golang solution
+- One medium DSA problem with full Golang and Python solution
 - Final resume bullet improvement list
 - Final weak-area checklist
 - Final 7-day maintenance plan after this 10-day revision
@@ -2470,7 +2605,7 @@ Mandatory output format:
 - Final IBM LinkedIn headline suggestion
 - Interview relevance for Google/Amazon/Netflix roles
 - DSA revision topic: Arrays + HashMap
-- One medium DSA question with Golang solution
+- One medium DSA question with Golang and Python solution
 - End-of-day revision checklist
 ```
 
@@ -2526,7 +2661,7 @@ Mandatory output format:
 - IBM interview relevance
 - Table: data science step → purpose → interview explanation
 - DSA revision topic: Strings
-- One string practice question with Golang solution
+- One string practice question with Golang and Python solution
 - Revision checklist
 ```
 
@@ -2585,7 +2720,7 @@ Mandatory output format:
 - Strong answer: How do you choose the right ML metric?
 - Strong answer: How do you explain model results to business stakeholders?
 - DSA revision topic: Two Pointers
-- One two-pointer practice question with Golang solution
+- One two-pointer practice question with Golang and Python solution
 - Revision checklist
 ```
 
@@ -2638,7 +2773,7 @@ Mandatory output format:
 - Strong answer: How do NLP and LLMs work together?
 - Strong answer: How would you process unstructured enterprise documents?
 - DSA revision topic: Sliding Window
-- One sliding-window practice question with Golang solution
+- One sliding-window practice question with Golang and Python solution
 - Revision checklist
 ```
 
@@ -2698,7 +2833,7 @@ Mandatory output format:
 - Strong answer: What is your experience with Hugging Face?
 - Strong answer: How do you choose between TensorFlow, PyTorch, and Keras?
 - DSA revision topic: Stack
-- One stack practice question with Golang solution
+- One stack practice question with Golang and Python solution
 - Revision checklist
 ```
 
@@ -2753,7 +2888,7 @@ Mandatory output format:
 - Strong answer: How do you reduce hallucination?
 - Strong answer: How do you combine structured and unstructured data?
 - DSA revision topic: Queue
-- One queue practice question with Golang solution
+- One queue practice question with Golang and Python solution
 - Revision checklist
 ```
 
@@ -2807,7 +2942,7 @@ Mandatory output format:
 - Strong answer: How would you map your AWS GenAI experience to IBM hybrid cloud?
 - Strong answer: What is responsible AI governance?
 - DSA revision topic: Linked List
-- One linked-list practice question with Golang solution
+- One linked-list practice question with Golang and Python solution
 - Revision checklist
 ```
 
@@ -2868,7 +3003,7 @@ Mandatory output format:
 - Strong answer: How would you deploy an AI solution in a client environment?
 - Strong answer: How do you choose SQL vs NoSQL for AI apps?
 - DSA revision topic: Binary Search
-- One binary-search practice question with Golang solution
+- One binary-search practice question with Golang and Python solution
 - Revision checklist
 ```
 
@@ -2930,7 +3065,7 @@ Mandatory output format:
 - STAR story for Handling Ambiguity
 - Strong answer: How do you take an AI prototype to production?
 - DSA revision topic: BFS + DFS
-- One graph practice question with Golang solution
+- One graph practice question with Golang and Python solution
 - Revision checklist
 ```
 
@@ -3031,7 +3166,7 @@ Mandatory output format:
 - Pseudocode for both systems
 - Python script for one ML/data science component
 - Python script for one GenAI/RAG component
-- One medium DSA problem with full Golang solution
+- One medium DSA problem with full Golang and Python solution
 - 10 questions I should ask the IBM interviewer
 - Final resume bullet improvement list for IBM
 - Final weak-area checklist
