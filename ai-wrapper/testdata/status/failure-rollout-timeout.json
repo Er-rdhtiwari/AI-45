@@ -1,0 +1,50 @@
+{
+  "success": false,
+  "status": "failed",
+  "exit_code": 124,
+  "wrapper_exit_code": 124,
+  "failure_reason": "timeout",
+  "strict_log_errors": true,
+  "detected_log_error": true,
+  "timed_out": true,
+  "capture_limit_exceeded": false,
+  "timeout_seconds": 300,
+  "max_output_bytes": 10240,
+  "max_capture_bytes": 252428800,
+  "success_message": null,
+  "error_message": "Command timed out after 300 seconds.",
+  "command": {
+    "display": "kubectl rollout status deployment/onboarding-api --namespace prod --timeout=5m",
+    "args": [
+      "kubectl",
+      "rollout",
+      "status",
+      "deployment/onboarding-api",
+      "--namespace",
+      "prod",
+      "--timeout=5m"
+    ]
+  },
+  "timing": {
+    "started_at": "2026-07-17T10:10:00+0530",
+    "finished_at": "2026-07-17T10:15:00+0530",
+    "duration_ms": 300021
+  },
+  "summary": {
+    "total_log_lines": 2,
+    "stdout_lines": 1,
+    "stderr_lines": 1,
+    "error_lines": 1,
+    "warning_lines": 0,
+    "first_error": "error: timed out waiting for the condition on deployments/onboarding-api",
+    "stdout_raw_bytes": 101,
+    "stderr_raw_bytes": 73,
+    "stdout_truncated": false,
+    "stderr_truncated": false,
+    "output_truncated": false
+  },
+  "output": {
+    "stdout": "Waiting for deployment \"onboarding-api\" rollout to finish: 1 old replicas are pending termination...\n",
+    "stderr": "error: timed out waiting for the condition on deployments/onboarding-api\n"
+  }
+}

@@ -245,7 +245,6 @@ Mandatory output format:
 - ASCII architecture diagram
 - Pseudocode first
 - Python script combining API + validation + cache + async mock LLM call
-- Common interview questions with answers
 - Common mistakes
 - Interview relevance for Google/Amazon/Netflix roles
 - DSA topic: Queue
@@ -503,7 +502,6 @@ Mandatory output format:
 - ASCII architecture diagram
 - Pseudocode first
 - Python script simulating upload → queue → process → answer
-- Common interview questions with answers
 - Common mistakes
 - Interview relevance for Google/Amazon/Netflix roles
 - DSA topic: Sorting
@@ -765,7 +763,6 @@ Mandatory output format:
 - ASCII architecture diagram
 - Pseudocode first
 - Python mini RAG + hybrid retrieval script
-- Interview questions with answers
 - Common mistakes
 - Interview relevance for Google/Amazon/Netflix roles
 - DSA topic: Union Find
@@ -1027,7 +1024,6 @@ Mandatory output format:
 - ASCII diagram
 - Pseudocode first
 - Python script combining search + reranking + tool call simulation
-- Interview questions with answers
 - Common mistakes
 - Interview relevance for Google/Amazon/Netflix roles
 - DSA topic: Mixed DSA Revision
@@ -1289,7 +1285,6 @@ Mandatory output format:
 - ASCII diagram
 - Pseudocode first
 - Python script simulating model registry + serving decision flow
-- Interview questions with answers
 - Common mistakes
 - Interview relevance for Google/Amazon/Netflix roles
 - DSA topic: Coding Design Patterns
@@ -1552,7 +1547,6 @@ Mandatory output format:
 - ASCII diagram
 - Pseudocode first
 - Python script simulating tenant-aware request + logging + guardrail + fallback
-- Interview questions with answers
 - Common mistakes
 - Interview relevance for Google/Amazon/Netflix roles
 - DSA topic: Mixed DSA Mock
@@ -1695,7 +1689,6 @@ Mandatory output format:
 - Final ASCII architecture diagram
 - Pseudocode for complete GenAI platform flow
 - Python script for simplified end-to-end platform flow
-- 25 interview questions with short answers
 - 10 STAR behavioral prompts
 - Interview relevance for Google/Amazon/Netflix roles
 - DSA final revision table
@@ -1825,7 +1818,6 @@ Mandatory output format:
 - Pseudocode for idempotent OTP verification
 - Python script showing Redis-like cache + idempotency key + retry handling
 - Line-by-line explanation
-- 30 hard interviewer questions with strong answers
 - Table: interviewer concern → safe answer
 - Table: design decision → trade-off → alternative
 - STAR story for Ownership
@@ -1888,7 +1880,6 @@ Mandatory output format:
 - Pseudocode for benchmark orchestration
 - Python script simulating config-driven benchmark execution, log parsing, validation, and report generation
 - Line-by-line explanation
-- 30 hard interviewer questions with strong answers
 - Table: benchmark stage → responsibility → failure handling
 - Table: metric → meaning → validation method
 - Table: design decision → trade-off → alternative
@@ -1964,7 +1955,6 @@ Mandatory output format:
 - Strong answer: Why RAG instead of fine-tuning?
 - Strong answer: How did you reduce hallucination?
 - Strong answer: How did you make tool calling safe?
-- 30 hard interviewer questions with strong answers
 - 10 resume bullets with metric placeholders
 - Interview relevance for Google/Amazon/Netflix roles
 - DSA revision topic: Trees + Tries
@@ -2019,7 +2009,6 @@ Mandatory output format:
 - Line-by-line explanation
 - Table: AWS service → role → alternative → trade-off
 - Table: failure scenario → AWS mitigation
-- 20 Amazon Solution Architect interview questions with answers
 - 10 cost optimization techniques
 - 10 security best practices
 - Interview relevance for Google/Amazon/Netflix roles
@@ -2075,7 +2064,6 @@ Mandatory output format:
 - Python script calculating precision, recall, MRR, NDCG, citation coverage, and tool success rate
 - Line-by-line explanation
 - Table: metric → formula → meaning → interview explanation
-- 25 Google-style hard questions with strong answers
 - Strong answer: How do you debug bad retrieval?
 - Strong answer: How do you improve recall without hurting precision?
 - Strong answer: Why hybrid search instead of only vector search?
@@ -2141,7 +2129,6 @@ Mandatory output format:
 - Line-by-line explanation
 - Table: risk → mitigation → interview explanation
 - Table: production metric → why it matters → project example
-- 30 hard production-readiness questions with strong answers
 - Interview relevance for Google/Amazon/Netflix roles
 - DSA revision topic: Dynamic Programming basics
 - One medium DSA question with Golang solution
@@ -2254,7 +2241,6 @@ Mandatory output format:
   - Follow-up questions
   - Strong answers
 - Table: leadership principle → best project to use → story angle
-- 20 behavioral questions with short answer strategy
 - 10 “tell me about a time” prompts
 - 10 one-line leadership soundbites
 - Red flags to avoid while answering
@@ -2321,8 +2307,6 @@ Mandatory output format:
 - Pseudocode for both systems
 - Python script for one key component from each system
 - One medium DSA problem with full Golang solution
-- 20 final technical questions with answers
-- 20 final behavioral questions with answer strategy
 - Final resume bullet improvement list
 - Final weak-area checklist
 - Final 7-day maintenance plan after this 10-day revision
@@ -3048,8 +3032,6 @@ Mandatory output format:
 - Python script for one ML/data science component
 - Python script for one GenAI/RAG component
 - One medium DSA problem with full Golang solution
-- 25 IBM technical questions with strong answers
-- 20 IBM behavioral/consulting questions with answer strategy
 - 10 questions I should ask the IBM interviewer
 - Final resume bullet improvement list for IBM
 - Final weak-area checklist
