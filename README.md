@@ -16,17 +16,16 @@ Cover:
 6. Error handling
 7. Logging basics
 8. How backend code connects to AI workflows
-9. Real-world example: AI document Q&A backend
+9. Real-world examples (maximum 2): AI document Q&A backend
 
 Mandatory output format:
-- 5-line beginner summary
-- Descriptive notes in simple language
-- Easy real-world examples
-- ASCII diagram
+- Begin with a concise beginner-friendly summary, then explain the concepts clearly using practical and interview-relevant details
+- Easy real-world examples (maximum 2)
+- One concise ASCII diagram showing the most important architecture or workflow; use a second diagram only when it adds a genuinely different view (maximum 2)
 - Pseudocode first
 - Python script after pseudocode
-- Line-by-line explanation
-- Common mistakes
+- Line-by-line explanation (only for important logic code block)
+- Common mistakes (maximum 2; include only important new mistakes and avoid repetition)
 - Interview relevance for Google/Amazon/Netflix roles
 ```
 # Day 1: DSA Topic
@@ -59,14 +58,13 @@ Cover:
 10. Document upload API design
 
 Mandatory output format:
-- 5-line beginner summary
-- Descriptive notes
-- Easy examples
-- ASCII diagram showing client → API → service → response
+- Begin with a concise beginner-friendly summary, then explain the concepts clearly using practical and interview-relevant details
+- Easy examples (maximum 2)
+- One concise ASCII diagram showing the most important architecture or workflow; use a second diagram only when it adds a genuinely different view (maximum 2)
 - Pseudocode first
 - Python FastAPI script
-- Line-by-line explanation
-- Common mistakes
+- Line-by-line explanation (only for important logic code block)
+- Common mistakes (maximum 2; include only important new mistakes and avoid repetition)
 - Interview relevance for Google/Amazon/Netflix roles
 ```
 # Day 2: DSA Topic
@@ -99,14 +97,13 @@ Cover:
 10. GenAI API example
 
 Mandatory output format:
-- 5-line beginner summary
-- Descriptive notes
+- Begin with a concise beginner-friendly summary, then explain the concepts clearly using practical and interview-relevant details
 - Simple GenAI API example
-- ASCII diagram
+- One concise ASCII diagram showing the most important architecture or workflow; use a second diagram only when it adds a genuinely different view (maximum 2)
 - Pseudocode first
 - Python FastAPI + Pydantic script
-- Line-by-line explanation
-- Common mistakes
+- Line-by-line explanation (only for important logic code block)
+- Common mistakes (maximum 2; include only important new mistakes and avoid repetition)
 - Interview relevance for Google/Amazon/Netflix roles
 ```
 # Day 3: DSA Topic
@@ -139,14 +136,13 @@ Cover:
 10. Database schema for document Q&A system
 
 Mandatory output format:
-- 5-line beginner summary
-- Descriptive notes
+- Begin with a concise beginner-friendly summary, then explain the concepts clearly using practical and interview-relevant details
 - Real-world AI backend example
-- ASCII database/cache architecture diagram
+- One concise ASCII diagram showing the most important architecture or workflow; use a second diagram only when it adds a genuinely different view (maximum 2)
 - Pseudocode first
 - Python script using repository + cache pattern
-- Line-by-line explanation
-- Common mistakes
+- Line-by-line explanation (only for important logic code block)
+- Common mistakes (maximum 2; include only important new mistakes and avoid repetition)
 - Interview relevance for Google/Amazon/Netflix roles
 ```
 # Day 4: DSA Topic
@@ -179,14 +175,13 @@ Cover:
 10. Where async does not help
 
 Mandatory output format:
-- 5-line beginner summary
-- Descriptive notes
+- Begin with a concise beginner-friendly summary, then explain the concepts clearly using practical and interview-relevant details
 - Simple analogy
-- ASCII diagram showing concurrent retrieval/LLM calls
+- One concise ASCII diagram showing the most important architecture or workflow; use a second diagram only when it adds a genuinely different view (maximum 2)
 - Pseudocode first
 - Python async script
-- Line-by-line explanation
-- Common mistakes
+- Line-by-line explanation (only for important logic code block)
+- Common mistakes (maximum 2; include only important new mistakes and avoid repetition)
 - Interview relevance for Google/Amazon/Netflix roles
 ```
 # Day 5: DSA Topic
@@ -219,14 +214,13 @@ Cover:
 10. Why testing matters in GenAI systems
 
 Mandatory output format:
-- 5-line beginner summary
-- Descriptive notes
-- Simple examples
-- ASCII test flow diagram
+- Begin with a concise beginner-friendly summary, then explain the concepts clearly using practical and interview-relevant details
+- Simple examples (maximum 2)
+- One concise ASCII diagram showing the most important architecture or workflow; use a second diagram only when it adds a genuinely different view (maximum 2)
 - Pseudocode first
 - Python script with pytest-style example
-- Line-by-line explanation
-- Common mistakes
+- Line-by-line explanation (only for important logic code block)
+- Common mistakes (maximum 2; include only important new mistakes and avoid repetition)
 - Interview relevance for Google/Amazon/Netflix roles
 ```
 # Day 6: DSA Topic
@@ -260,10 +254,10 @@ Mandatory output format:
 - 10-line beginner revision summary
 - Key concepts table
 - One end-to-end backend example
-- ASCII architecture diagram
+- One concise ASCII diagram showing the most important architecture or workflow; use a second diagram only when it adds a genuinely different view (maximum 2)
 - Pseudocode first
 - Python script combining API + validation + cache + async mock LLM call
-- Common mistakes
+- Common mistakes (maximum 2; include only important new mistakes and avoid repetition)
 - Interview relevance for Google/Amazon/Netflix roles
 ```
 # Day 7: DSA Topic
@@ -298,14 +292,13 @@ Cover:
 10. How AWS services fit into GenAI applications
 
 Mandatory output format:
-- 5-line beginner summary
-- Descriptive notes
+- Begin with a concise beginner-friendly summary, then explain the concepts clearly using practical and interview-relevant details
 - AWS GenAI example
-- ASCII AWS foundation diagram
+- One concise ASCII diagram showing the most important architecture or workflow; use a second diagram only when it adds a genuinely different view (maximum 2)
 - Pseudocode first
 - Python script simulating AWS-style request flow
-- Line-by-line explanation
-- Common mistakes
+- Line-by-line explanation (only for important logic code block)
+- Common mistakes (maximum 2; include only important new mistakes and avoid repetition)
 - Interview relevance for Google/Amazon/Netflix roles
 ```
 # Day 8: DSA Topic
@@ -338,14 +331,13 @@ Cover:
 10. Cost and latency awareness
 
 Mandatory output format:
-- 5-line beginner summary
-- Descriptive notes
+- Begin with a concise beginner-friendly summary, then explain the concepts clearly using practical and interview-relevant details
 - Simple Bedrock-style example
-- ASCII diagram: client → API → Bedrock → response
+- One concise ASCII diagram showing the most important architecture or workflow; use a second diagram only when it adds a genuinely different view (maximum 2)
 - Pseudocode first
 - Python script using a mock Bedrock client
-- Line-by-line explanation
-- Common mistakes
+- Line-by-line explanation (only for important logic code block)
+- Common mistakes (maximum 2; include only important new mistakes and avoid repetition)
 - Interview relevance for Google/Amazon/Netflix roles
 ```
 # Day 9: DSA Topic
@@ -378,14 +370,13 @@ Cover:
 10. Ingestion pipeline design
 
 Mandatory output format:
-- 5-line beginner summary
-- Descriptive notes
+- Begin with a concise beginner-friendly summary, then explain the concepts clearly using practical and interview-relevant details
 - Real-world document Q&A example
-- ASCII ingestion diagram
+- One concise ASCII diagram showing the most important architecture or workflow; use a second diagram only when it adds a genuinely different view (maximum 2)
 - Pseudocode first
 - Python script simulating document upload + metadata extraction
-- Line-by-line explanation
-- Common mistakes
+- Line-by-line explanation (only for important logic code block)
+- Common mistakes (maximum 2; include only important new mistakes and avoid repetition)
 - Interview relevance for Google/Amazon/Netflix roles
 ```
 # Day 10: DSA Topic
@@ -418,14 +409,13 @@ Cover:
 10. Sync vs async trade-off
 
 Mandatory output format:
-- 5-line beginner summary
-- Descriptive notes
+- Begin with a concise beginner-friendly summary, then explain the concepts clearly using practical and interview-relevant details
 - Real-world GenAI ingestion example
-- ASCII event-driven architecture diagram
+- One concise ASCII diagram showing the most important architecture or workflow; use a second diagram only when it adds a genuinely different view (maximum 2)
 - Pseudocode first
 - Python script simulating producer-consumer queue
-- Line-by-line explanation
-- Common mistakes
+- Line-by-line explanation (only for important logic code block)
+- Common mistakes (maximum 2; include only important new mistakes and avoid repetition)
 - Interview relevance for Google/Amazon/Netflix roles
 ```
 # Day 11: DSA Topic
@@ -458,14 +448,13 @@ Cover:
 10. Deploying FastAPI/RAG services on EKS
 
 Mandatory output format:
-- 5-line beginner summary
-- Descriptive notes
+- Begin with a concise beginner-friendly summary, then explain the concepts clearly using practical and interview-relevant details
 - Simple deployment example
-- ASCII Kubernetes/EKS architecture diagram
+- One concise ASCII diagram showing the most important architecture or workflow; use a second diagram only when it adds a genuinely different view (maximum 2)
 - Pseudocode first
 - Dockerfile + Kubernetes YAML + Python health-check API
-- Line-by-line explanation
-- Common mistakes
+- Line-by-line explanation (only for important logic code block)
+- Common mistakes (maximum 2; include only important new mistakes and avoid repetition)
 - Interview relevance for Google/Amazon/Netflix roles
 ```
 # Day 12: DSA Topic
@@ -498,14 +487,13 @@ Cover:
 10. Comparing Go with Python for backend services
 
 Mandatory output format:
-- 5-line beginner summary
-- Descriptive notes
-- Python vs Go comparison examples
-- ASCII diagram showing Go service flow
+- Begin with a concise beginner-friendly summary, then explain the concepts clearly using practical and interview-relevant details
+- Python vs Go comparison examples (maximum 2)
+- One concise ASCII diagram showing the most important architecture or workflow; use a second diagram only when it adds a genuinely different view (maximum 2)
 - Pseudocode first
 - Small Go HTTP API/client script
-- Line-by-line explanation
-- Common mistakes
+- Line-by-line explanation (only for important logic code block)
+- Common mistakes (maximum 2; include only important new mistakes and avoid repetition)
 - Interview relevance for Google/Amazon/Netflix roles
 ```
 # Day 13: DSA Topic
@@ -538,10 +526,10 @@ Mandatory output format:
 - 10-line revision summary
 - AWS service comparison table
 - One end-to-end AWS GenAI architecture
-- ASCII architecture diagram
+- One concise ASCII diagram showing the most important architecture or workflow; use a second diagram only when it adds a genuinely different view (maximum 2)
 - Pseudocode first
 - Python script simulating upload → queue → process → answer
-- Common mistakes
+- Common mistakes (maximum 2; include only important new mistakes and avoid repetition)
 - Interview relevance for Google/Amazon/Netflix roles
 ```
 # Day 14: DSA Topic
@@ -576,14 +564,13 @@ Cover:
 10. Where LLMs fit in backend systems
 
 Mandatory output format:
-- 5-line beginner summary
-- Descriptive notes
-- Simple examples
+- Begin with a concise beginner-friendly summary, then explain the concepts clearly using practical and interview-relevant details
+- Simple examples (maximum 2)
 - ASCII LLM request flow
 - Pseudocode first
 - Python script using a mock LLM function
-- Line-by-line explanation
-- Common mistakes
+- Line-by-line explanation (only for important logic code block)
+- Common mistakes (maximum 2; include only important new mistakes and avoid repetition)
 - Interview relevance for Google/Amazon/Netflix roles
 ```
 # Day 15: DSA Topic
@@ -616,14 +603,13 @@ Cover:
 10. Prompt failure modes
 
 Mandatory output format:
-- 5-line beginner summary
-- Descriptive notes
-- Simple examples
+- Begin with a concise beginner-friendly summary, then explain the concepts clearly using practical and interview-relevant details
+- Simple examples (maximum 2)
 - ASCII prompt-to-output flow
 - Pseudocode first
 - Python script generating structured JSON output from mock LLM
-- Line-by-line explanation
-- Common mistakes
+- Line-by-line explanation (only for important logic code block)
+- Common mistakes (maximum 2; include only important new mistakes and avoid repetition)
 - Interview relevance for Google/Amazon/Netflix roles
 ```
 # Day 16: DSA Topic
@@ -656,14 +642,13 @@ Cover:
 10. Where embeddings fail
 
 Mandatory output format:
-- 5-line beginner summary
-- Descriptive notes
-- Easy examples
-- ASCII embedding/vector search diagram
+- Begin with a concise beginner-friendly summary, then explain the concepts clearly using practical and interview-relevant details
+- Easy examples (maximum 2)
+- One concise ASCII diagram showing the most important architecture or workflow; use a second diagram only when it adds a genuinely different view (maximum 2)
 - Pseudocode first
 - Python script showing simple vector similarity
-- Line-by-line explanation
-- Common mistakes
+- Line-by-line explanation (only for important logic code block)
+- Common mistakes (maximum 2; include only important new mistakes and avoid repetition)
 - Interview relevance for Google/Amazon/Netflix roles
 ```
 # Day 17: DSA Topic
@@ -696,14 +681,13 @@ Cover:
 10. Common RAG failure modes
 
 Mandatory output format:
-- 5-line beginner summary
-- Descriptive notes
+- Begin with a concise beginner-friendly summary, then explain the concepts clearly using practical and interview-relevant details
 - Simple document Q&A example
-- ASCII RAG architecture diagram
+- One concise ASCII diagram showing the most important architecture or workflow; use a second diagram only when it adds a genuinely different view (maximum 2)
 - Pseudocode first
 - Python script implementing tiny RAG without external services
-- Line-by-line explanation
-- Common mistakes
+- Line-by-line explanation (only for important logic code block)
+- Common mistakes (maximum 2; include only important new mistakes and avoid repetition)
 - Interview relevance for Google/Amazon/Netflix roles
 ```
 # Day 18: DSA Topic
@@ -732,18 +716,17 @@ Cover:
 6. Metadata fields
 7. Filters
 8. Recall vs precision
-9. Bad chunking examples
+9. Bad chunking examples (maximum 2)
 10. Log/document chunking example
 
 Mandatory output format:
-- 5-line beginner summary
-- Descriptive notes
+- Begin with a concise beginner-friendly summary, then explain the concepts clearly using practical and interview-relevant details
 - Real-world logs/docs example
-- ASCII chunking diagram
+- One concise ASCII diagram showing the most important architecture or workflow; use a second diagram only when it adds a genuinely different view (maximum 2)
 - Pseudocode first
 - Python script for chunking documents with metadata
-- Line-by-line explanation
-- Common mistakes
+- Line-by-line explanation (only for important logic code block)
+- Common mistakes (maximum 2; include only important new mistakes and avoid repetition)
 - Interview relevance for Google/Amazon/Netflix roles
 ```
 # Day 19: DSA Topic
@@ -776,14 +759,13 @@ Cover:
 10. When hybrid search beats pure vector search
 
 Mandatory output format:
-- 5-line beginner summary
-- Descriptive notes
-- Easy examples
-- ASCII hybrid search diagram
+- Begin with a concise beginner-friendly summary, then explain the concepts clearly using practical and interview-relevant details
+- Easy examples (maximum 2)
+- One concise ASCII diagram showing the most important architecture or workflow; use a second diagram only when it adds a genuinely different view (maximum 2)
 - Pseudocode first
 - Python script simulating keyword + vector scoring
-- Line-by-line explanation
-- Common mistakes
+- Line-by-line explanation (only for important logic code block)
+- Common mistakes (maximum 2; include only important new mistakes and avoid repetition)
 - Interview relevance for Google/Amazon/Netflix roles
 ```
 # Day 20: DSA Topic
@@ -820,10 +802,10 @@ Mandatory output format:
 - 10-line revision summary
 - Concept comparison table
 - One full RAG system example
-- ASCII architecture diagram
+- One concise ASCII diagram showing the most important architecture or workflow; use a second diagram only when it adds a genuinely different view (maximum 2)
 - Pseudocode first
 - Python mini RAG + hybrid retrieval script
-- Common mistakes
+- Common mistakes (maximum 2; include only important new mistakes and avoid repetition)
 - Interview relevance for Google/Amazon/Netflix roles
 ```
 # Day 21: DSA Topic
@@ -858,14 +840,13 @@ Cover:
 10. When not to use LangChain
 
 Mandatory output format:
-- 5-line beginner summary
-- Descriptive notes
-- Simple examples
-- ASCII tool-calling flow diagram
+- Begin with a concise beginner-friendly summary, then explain the concepts clearly using practical and interview-relevant details
+- Simple examples (maximum 2)
+- One concise ASCII diagram showing the most important architecture or workflow; use a second diagram only when it adds a genuinely different view (maximum 2)
 - Pseudocode first
 - Python script simulating LLM tool calling
-- Line-by-line explanation
-- Common mistakes
+- Line-by-line explanation (only for important logic code block)
+- Common mistakes (maximum 2; include only important new mistakes and avoid repetition)
 - Interview relevance for Google/Amazon/Netflix roles
 ```
 # Day 22: DSA Topic
@@ -898,14 +879,13 @@ Cover:
 10. When fixed workflow is better than agent loop
 
 Mandatory output format:
-- 5-line beginner summary
-- Descriptive notes
+- Begin with a concise beginner-friendly summary, then explain the concepts clearly using practical and interview-relevant details
 - Real-world support agent example
-- ASCII LangGraph-style diagram
+- One concise ASCII diagram showing the most important architecture or workflow; use a second diagram only when it adds a genuinely different view (maximum 2)
 - Pseudocode first
 - Python script simulating graph routing
-- Line-by-line explanation
-- Common mistakes
+- Line-by-line explanation (only for important logic code block)
+- Common mistakes (maximum 2; include only important new mistakes and avoid repetition)
 - Interview relevance for Google/Amazon/Netflix roles
 ```
 # Day 23: DSA Topic
@@ -938,14 +918,13 @@ Cover:
 10. Why agents are risky in production
 
 Mandatory output format:
-- 5-line beginner summary
-- Descriptive notes
+- Begin with a concise beginner-friendly summary, then explain the concepts clearly using practical and interview-relevant details
 - Simple real-world example
-- ASCII agent loop diagram
+- One concise ASCII diagram showing the most important architecture or workflow; use a second diagram only when it adds a genuinely different view (maximum 2)
 - Pseudocode first
 - Python script simulating planner-executor behavior
-- Line-by-line explanation
-- Common mistakes
+- Line-by-line explanation (only for important logic code block)
+- Common mistakes (maximum 2; include only important new mistakes and avoid repetition)
 - Interview relevance for Google/Amazon/Netflix roles
 ```
 # Day 24: DSA Topic
@@ -978,14 +957,13 @@ Cover:
 10. Safe command execution
 
 Mandatory output format:
-- 5-line beginner summary
-- Descriptive notes
-- Simple examples
-- ASCII MCP architecture diagram
+- Begin with a concise beginner-friendly summary, then explain the concepts clearly using practical and interview-relevant details
+- Simple examples (maximum 2)
+- One concise ASCII diagram showing the most important architecture or workflow; use a second diagram only when it adds a genuinely different view (maximum 2)
 - Pseudocode first
 - Python script simulating safe tool execution
-- Line-by-line explanation
-- Common mistakes
+- Line-by-line explanation (only for important logic code block)
+- Common mistakes (maximum 2; include only important new mistakes and avoid repetition)
 - Interview relevance for Google/Amazon/Netflix roles
 ```
 # Day 25: DSA Topic
@@ -1018,14 +996,13 @@ Cover:
 10. Code search use cases in developer tools
 
 Mandatory output format:
-- 5-line beginner summary
-- Descriptive notes
+- Begin with a concise beginner-friendly summary, then explain the concepts clearly using practical and interview-relevant details
 - Simple example
-- ASCII code search architecture diagram
+- One concise ASCII diagram showing the most important architecture or workflow; use a second diagram only when it adds a genuinely different view (maximum 2)
 - Pseudocode first
 - Python script for tiny code search over sample snippets
-- Line-by-line explanation
-- Common mistakes
+- Line-by-line explanation (only for important logic code block)
+- Common mistakes (maximum 2; include only important new mistakes and avoid repetition)
 - Interview relevance for Google/Amazon/Netflix roles
 ```
 # Day 26: DSA Topic
@@ -1058,14 +1035,13 @@ Cover:
 10. How metrics apply to code search and RAG
 
 Mandatory output format:
-- 5-line beginner summary
-- Descriptive notes
-- Easy examples
-- ASCII evaluation flow diagram
+- Begin with a concise beginner-friendly summary, then explain the concepts clearly using practical and interview-relevant details
+- Easy examples (maximum 2)
+- One concise ASCII diagram showing the most important architecture or workflow; use a second diagram only when it adds a genuinely different view (maximum 2)
 - Pseudocode first
 - Python script calculating retrieval metrics
-- Line-by-line explanation
-- Common mistakes
+- Line-by-line explanation (only for important logic code block)
+- Common mistakes (maximum 2; include only important new mistakes and avoid repetition)
 - Interview relevance for Google/Amazon/Netflix roles
 ```
 # Day 27: DSA Topic
@@ -1102,10 +1078,10 @@ Mandatory output format:
 - 10-line revision summary
 - Comparison table
 - Complete AI code-search architecture
-- ASCII diagram
+- One concise ASCII diagram showing the most important architecture or workflow; use a second diagram only when it adds a genuinely different view (maximum 2)
 - Pseudocode first
 - Python script combining search + reranking + tool call simulation
-- Common mistakes
+- Common mistakes (maximum 2; include only important new mistakes and avoid repetition)
 - Interview relevance for Google/Amazon/Netflix roles
 ```
 # Day 28: DSA Topic
@@ -1140,14 +1116,13 @@ Cover:
 10. Model monitoring basics
 
 Mandatory output format:
-- 5-line beginner summary
-- Descriptive notes
+- Begin with a concise beginner-friendly summary, then explain the concepts clearly using practical and interview-relevant details
 - Real-world production ML example
-- ASCII ML serving architecture diagram
+- One concise ASCII diagram showing the most important architecture or workflow; use a second diagram only when it adds a genuinely different view (maximum 2)
 - Pseudocode first
 - Python script simulating model serving endpoint
-- Line-by-line explanation
-- Common mistakes
+- Line-by-line explanation (only for important logic code block)
+- Common mistakes (maximum 2; include only important new mistakes and avoid repetition)
 - Interview relevance for Google/Amazon/Netflix roles
 ```
 # Day 29: DSA Topic
@@ -1180,14 +1155,13 @@ Cover:
 10. SageMaker vs Bedrock
 
 Mandatory output format:
-- 5-line beginner summary
-- Descriptive notes
+- Begin with a concise beginner-friendly summary, then explain the concepts clearly using practical and interview-relevant details
 - Simple AWS example
-- ASCII SageMaker lifecycle diagram
+- One concise ASCII diagram showing the most important architecture or workflow; use a second diagram only when it adds a genuinely different view (maximum 2)
 - Pseudocode first
 - Python script simulating training → registry → deployment
-- Line-by-line explanation
-- Common mistakes
+- Line-by-line explanation (only for important logic code block)
+- Common mistakes (maximum 2; include only important new mistakes and avoid repetition)
 - Interview relevance for Google/Amazon/Netflix roles
 ```
 # Day 30: DSA Topic
@@ -1220,14 +1194,13 @@ Cover:
 10. Cost and GPU considerations
 
 Mandatory output format:
-- 5-line beginner summary
-- Descriptive notes
+- Begin with a concise beginner-friendly summary, then explain the concepts clearly using practical and interview-relevant details
 - RAG vs fine-tuning comparison
-- ASCII fine-tuning workflow diagram
+- One concise ASCII diagram showing the most important architecture or workflow; use a second diagram only when it adds a genuinely different view (maximum 2)
 - Pseudocode first
 - Python script simulating training data preparation
-- Line-by-line explanation
-- Common mistakes
+- Line-by-line explanation (only for important logic code block)
+- Common mistakes (maximum 2; include only important new mistakes and avoid repetition)
 - Interview relevance for Google/Amazon/Netflix roles
 ```
 # Day 31: DSA Topic
@@ -1260,14 +1233,13 @@ Cover:
 10. Cost optimization in serving
 
 Mandatory output format:
-- 5-line beginner summary
-- Descriptive notes
+- Begin with a concise beginner-friendly summary, then explain the concepts clearly using practical and interview-relevant details
 - Simple serving example
-- ASCII model serving diagram
+- One concise ASCII diagram showing the most important architecture or workflow; use a second diagram only when it adds a genuinely different view (maximum 2)
 - Pseudocode first
 - Python script simulating batching and streaming behavior
-- Line-by-line explanation
-- Common mistakes
+- Line-by-line explanation (only for important logic code block)
+- Common mistakes (maximum 2; include only important new mistakes and avoid repetition)
 - Interview relevance for Google/Amazon/Netflix roles
 ```
 # Day 32: DSA Topic
@@ -1300,14 +1272,13 @@ Cover:
 10. Evaluation challenges
 
 Mandatory output format:
-- 5-line beginner summary
-- Descriptive notes
-- Simple examples
-- ASCII multimodal architecture diagram
+- Begin with a concise beginner-friendly summary, then explain the concepts clearly using practical and interview-relevant details
+- Simple examples (maximum 2)
+- One concise ASCII diagram showing the most important architecture or workflow; use a second diagram only when it adds a genuinely different view (maximum 2)
 - Pseudocode first
 - Python script simulating multimodal document metadata extraction
-- Line-by-line explanation
-- Common mistakes
+- Line-by-line explanation (only for important logic code block)
+- Common mistakes (maximum 2; include only important new mistakes and avoid repetition)
 - Interview relevance for Google/Amazon/Netflix roles
 ```
 # Day 33: DSA Topic
@@ -1340,14 +1311,13 @@ Cover:
 10. Where GenAI can help these systems
 
 Mandatory output format:
-- 5-line beginner summary
-- Descriptive notes
-- Simple examples
-- ASCII recommendation/ads architecture diagram
+- Begin with a concise beginner-friendly summary, then explain the concepts clearly using practical and interview-relevant details
+- Simple examples (maximum 2)
+- One concise ASCII diagram showing the most important architecture or workflow; use a second diagram only when it adds a genuinely different view (maximum 2)
 - Pseudocode first
 - Python script simulating simple ranking or forecasting
-- Line-by-line explanation
-- Common mistakes
+- Line-by-line explanation (only for important logic code block)
+- Common mistakes (maximum 2; include only important new mistakes and avoid repetition)
 - Interview relevance for Google/Amazon/Netflix roles
 ```
 # Day 34: DSA Topic
@@ -1384,10 +1354,10 @@ Mandatory output format:
 - 10-line revision summary
 - Concept comparison table
 - End-to-end ML platform architecture
-- ASCII diagram
+- One concise ASCII diagram showing the most important architecture or workflow; use a second diagram only when it adds a genuinely different view (maximum 2)
 - Pseudocode first
 - Python script simulating model registry + serving decision flow
-- Common mistakes
+- Common mistakes (maximum 2; include only important new mistakes and avoid repetition)
 - Interview relevance for Google/Amazon/Netflix roles
 ```
 # Day 35: DSA Topic
@@ -1422,14 +1392,13 @@ Cover:
 10. Retrieval and tool-call tracing
 
 Mandatory output format:
-- 5-line beginner summary
-- Descriptive notes
+- Begin with a concise beginner-friendly summary, then explain the concepts clearly using practical and interview-relevant details
 - Production GenAI example
-- ASCII observability diagram
+- One concise ASCII diagram showing the most important architecture or workflow; use a second diagram only when it adds a genuinely different view (maximum 2)
 - Pseudocode first
 - Python script showing structured logs and trace IDs
-- Line-by-line explanation
-- Common mistakes
+- Line-by-line explanation (only for important logic code block)
+- Common mistakes (maximum 2; include only important new mistakes and avoid repetition)
 - Interview relevance for Google/Amazon/Netflix roles
 ```
 # Day 36: DSA Topic
@@ -1462,15 +1431,14 @@ Cover:
 10. Incident handling basics
 
 Mandatory output format:
-- 5-line beginner summary
-- Descriptive notes
+- Begin with a concise beginner-friendly summary, then explain the concepts clearly using practical and interview-relevant details
 - Simple production example
-- ASCII resilience architecture diagram
+- One concise ASCII diagram showing the most important architecture or workflow; use a second diagram only when it adds a genuinely different view (maximum 2)
 - Pseudocode first
 - Python script showing retry + circuit breaker simulation
 - Add a small Go goroutine/concurrency example
-- Line-by-line explanation
-- Common mistakes
+- Line-by-line explanation (only for important logic code block)
+- Common mistakes (maximum 2; include only important new mistakes and avoid repetition)
 - Interview relevance for Google/Amazon/Netflix roles
 ```
 # Day 37: DSA Topic
@@ -1503,14 +1471,13 @@ Cover:
 10. Security testing for AI systems
 
 Mandatory output format:
-- 5-line beginner summary
-- Descriptive notes
-- Simple attack/defense examples
-- ASCII security boundary diagram
+- Begin with a concise beginner-friendly summary, then explain the concepts clearly using practical and interview-relevant details
+- Simple attack/defense examples (maximum 2)
+- One concise ASCII diagram showing the most important architecture or workflow; use a second diagram only when it adds a genuinely different view (maximum 2)
 - Pseudocode first
 - Python script showing prompt validation and tool permission check
-- Line-by-line explanation
-- Common mistakes
+- Line-by-line explanation (only for important logic code block)
+- Common mistakes (maximum 2; include only important new mistakes and avoid repetition)
 - Interview relevance for Google/Amazon/Netflix roles
 ```
 # Day 38: DSA Topic
@@ -1543,14 +1510,13 @@ Cover:
 10. Noisy neighbor problem
 
 Mandatory output format:
-- 5-line beginner summary
-- Descriptive notes
+- Begin with a concise beginner-friendly summary, then explain the concepts clearly using practical and interview-relevant details
 - Enterprise GenAI platform example
-- ASCII multi-tenant architecture diagram
+- One concise ASCII diagram showing the most important architecture or workflow; use a second diagram only when it adds a genuinely different view (maximum 2)
 - Pseudocode first
 - Python script showing tenant-aware request handling
-- Line-by-line explanation
-- Common mistakes
+- Line-by-line explanation (only for important logic code block)
+- Common mistakes (maximum 2; include only important new mistakes and avoid repetition)
 - Interview relevance for Google/Amazon/Netflix roles
 ```
 # Day 39: DSA Topic
@@ -1583,14 +1549,13 @@ Cover:
 10. Rollback strategy
 
 Mandatory output format:
-- 5-line beginner summary
-- Descriptive notes
+- Begin with a concise beginner-friendly summary, then explain the concepts clearly using practical and interview-relevant details
 - Simple deployment example
-- ASCII CI/CD pipeline diagram
+- One concise ASCII diagram showing the most important architecture or workflow; use a second diagram only when it adds a genuinely different view (maximum 2)
 - Pseudocode first
 - YAML-like pipeline example followed by Python test script
-- Line-by-line explanation
-- Common mistakes
+- Line-by-line explanation (only for important logic code block)
+- Common mistakes (maximum 2; include only important new mistakes and avoid repetition)
 - Interview relevance for Google/Amazon/Netflix roles
 ```
 # Day 40: DSA Topic
@@ -1623,14 +1588,13 @@ Cover:
 10. Capacity estimation for GenAI APIs
 
 Mandatory output format:
-- 5-line beginner summary
-- Descriptive notes
+- Begin with a concise beginner-friendly summary, then explain the concepts clearly using practical and interview-relevant details
 - Real-world cost example
-- ASCII cost optimization diagram
+- One concise ASCII diagram showing the most important architecture or workflow; use a second diagram only when it adds a genuinely different view (maximum 2)
 - Pseudocode first
 - Python script estimating token/model cost and capacity
-- Line-by-line explanation
-- Common mistakes
+- Line-by-line explanation (only for important logic code block)
+- Common mistakes (maximum 2; include only important new mistakes and avoid repetition)
 - Interview relevance for Google/Amazon/Netflix roles
 ```
 # Day 41: DSA Topic
@@ -1667,10 +1631,10 @@ Mandatory output format:
 - 10-line revision summary
 - Production-readiness checklist
 - End-to-end architecture
-- ASCII diagram
+- One concise ASCII diagram showing the most important architecture or workflow; use a second diagram only when it adds a genuinely different view (maximum 2)
 - Pseudocode first
 - Python script simulating tenant-aware request + logging + guardrail + fallback
-- Common mistakes
+- Common mistakes (maximum 2; include only important new mistakes and avoid repetition)
 - Interview relevance for Google/Amazon/Netflix roles
 ```
 # Day 42: DSA Topic
@@ -1707,14 +1671,13 @@ Cover:
 12. STAR format
 
 Mandatory output format:
-- 5-line beginner summary
-- Descriptive notes
+- Begin with a concise beginner-friendly summary, then explain the concepts clearly using practical and interview-relevant details
 - Enterprise GenAI customer example
-- ASCII program + architecture execution diagram
+- One concise ASCII diagram showing the most important architecture or workflow; use a second diagram only when it adds a genuinely different view (maximum 2)
 - Pseudocode first for TPM execution flow
 - Python script showing a simple risk tracker
-- Line-by-line explanation
-- Common mistakes
+- Line-by-line explanation (only for important logic code block)
+- Common mistakes (maximum 2; include only important new mistakes and avoid repetition)
 - Interview relevance for Google/Amazon/Netflix roles
 ```
 # Day 43: DSA Topic
@@ -1754,12 +1717,12 @@ Cover:
 16. Interview closing summary
 
 Mandatory output format:
-- 5-line beginner summary
+- Begin with a concise beginner-friendly summary, then explain the concepts clearly using practical and interview-relevant details
 - Step-by-step system design answer
-- ASCII end-to-end architecture diagram
+- One concise ASCII diagram showing the most important architecture or workflow; use a second diagram only when it adds a genuinely different view (maximum 2)
 - Pseudocode first
 - Python script for one important component
-- Common mistakes
+- Common mistakes (maximum 2; include only important new mistakes and avoid repetition)
 - Interview relevance for Google/Amazon/Netflix roles
 - Strong interview closing summary
 ```
@@ -1768,7 +1731,6 @@ Mandatory output format:
 - DSA topic: Full Coding Mock
 - DSA notes
 - One medium-level coding problem with Golang and Python solution
-- Final revision checklist
 ```
 
 ## Day 45 — Final Revision Pack + Final Interview Readiness
@@ -1812,13 +1774,13 @@ Create a complete final revision pack covering:
 31. Cost optimization
 32. TPM thinking
 33. Solution architecture
-34. Behavioral interview examples
+34. Behavioral interview examples (maximum 2)
 
 Mandatory output format:
 - 25-line final summary
 - High-priority topic table
 - Weak-area checklist
-- Final ASCII architecture diagram
+- One concise ASCII diagram showing the most important architecture or workflow; use a second diagram only when it adds a genuinely different view (maximum 2)
 - Pseudocode for complete GenAI platform flow
 - Python script for simplified end-to-end platform flow
 - 10 STAR behavioral prompts
@@ -1893,7 +1855,7 @@ Mandatory output format:
 - Final 2-minute “Tell me about yourself”
 - Role-wise positioning table
 - Project-wise strengths table
-- ASCII diagram showing career evolution
+- One concise ASCII diagram showing the most important architecture or workflow; use a second diagram only when it adds a genuinely different view (maximum 2)
 - 10 strong interview soundbites
 - 10 weak areas I must avoid or explain carefully
 - Final resume headline suggestion
@@ -1946,13 +1908,10 @@ Mandatory output format:
 - 60-second Aadhaar project pitch
 - 2-minute Aadhaar project explanation
 - 5-minute technical deep dive
-- Before architecture ASCII diagram
-- After architecture ASCII diagram
-- Request lifecycle ASCII diagram
-- Failure-handling ASCII diagram
+- One concise ASCII diagram showing the most important architecture or workflow; use a second diagram only when it adds a genuinely different view (maximum 2)
 - Pseudocode for idempotent OTP verification
 - Python script showing Redis-like cache + idempotency key + retry handling
-- Line-by-line explanation
+- Line-by-line explanation (only for important logic code block)
 - Table: interviewer concern → safe answer
 - Table: design decision → trade-off → alternative
 - STAR story for Ownership
@@ -2006,15 +1965,12 @@ Mandatory output format:
 - 60-second DPDK Automation pitch
 - 2-minute project explanation
 - 5-minute technical deep dive
-- Benchmark workflow ASCII diagram
-- System architecture ASCII diagram
-- Manual vs automated workflow ASCII diagram
-- Failure handling ASCII diagram
+- One concise ASCII diagram showing the most important architecture or workflow; use a second diagram only when it adds a genuinely different view (maximum 2)
 - Example benchmark config schema
 - Example result schema
 - Pseudocode for benchmark orchestration
 - Python script simulating config-driven benchmark execution, log parsing, validation, and report generation
-- Line-by-line explanation
+- Line-by-line explanation (only for important logic code block)
 - Table: benchmark stage → responsibility → failure handling
 - Table: metric → meaning → validation method
 - Table: design decision → trade-off → alternative
@@ -2077,14 +2033,10 @@ Mandatory output format:
 - 60-second BenchOps Copilot pitch
 - 2-minute project explanation
 - 5-minute GenAI architecture deep dive
-- End-to-end ASCII architecture diagram
-- RAG ingestion ASCII diagram
-- LangGraph workflow ASCII diagram
-- MCP tool-calling ASCII diagram
-- Evaluation pipeline ASCII diagram
+- One concise ASCII diagram showing the most important architecture or workflow; use a second diagram only when it adds a genuinely different view (maximum 2)
 - Pseudocode for complete RAG + tool workflow
 - Python script simulating retrieval + tool call + verification + cited answer
-- Line-by-line explanation
+- Line-by-line explanation (only for important logic code block)
 - Table: component → responsibility → failure mode → mitigation
 - Table: metric → meaning → why it matters
 - Strong answer: Why RAG instead of fine-tuning?
@@ -2136,12 +2088,11 @@ Cover:
 Mandatory output format:
 - 5-line AWS architecture summary
 - AWS service mapping table
-- Production AWS ASCII architecture diagram
-- Multi-tenant AWS ASCII architecture diagram
+- One concise ASCII diagram showing the most important architecture or workflow; use a second diagram only when it adds a genuinely different view (maximum 2)
 - Data flow from upload → ingestion → retrieval → answer
 - Pseudocode for AWS-based GenAI workflow
 - Python script simulating S3 upload → SQS event → retrieval → Bedrock-like response
-- Line-by-line explanation
+- Line-by-line explanation (only for important logic code block)
 - Table: AWS service → role → alternative → trade-off
 - Table: failure scenario → AWS mitigation
 - 10 cost optimization techniques
@@ -2192,12 +2143,10 @@ Cover:
 Mandatory output format:
 - 5-line beginner-friendly revision summary
 - RAG vs search vs code search comparison table
-- Hybrid search ASCII diagram
-- Code search ASCII diagram
-- Evaluation pipeline ASCII diagram
+- One concise ASCII diagram showing the most important architecture or workflow; use a second diagram only when it adds a genuinely different view (maximum 2)
 - Pseudocode for hybrid retrieval + reranking
 - Python script calculating precision, recall, MRR, NDCG, citation coverage, and tool success rate
-- Line-by-line explanation
+- Line-by-line explanation (only for important logic code block)
 - Table: metric → formula → meaning → interview explanation
 - Strong answer: How do you debug bad retrieval?
 - Strong answer: How do you improve recall without hurting precision?
@@ -2255,13 +2204,10 @@ Mandatory output format:
 - Production-readiness checklist for Aadhaar
 - Production-readiness checklist for DPDK Automation
 - Production-readiness checklist for BenchOps Copilot
-- Observability ASCII diagram
-- Reliability ASCII diagram
-- Security boundary ASCII diagram
-- Multi-tenant GenAI platform ASCII diagram
+- One concise ASCII diagram showing the most important architecture or workflow; use a second diagram only when it adds a genuinely different view (maximum 2)
 - Pseudocode for guardrail + retry + fallback flow
 - Python script simulating request handling with logging, guardrail, retry, fallback, and metrics
-- Line-by-line explanation
+- Line-by-line explanation (only for important logic code block)
 - Table: risk → mitigation → interview explanation
 - Table: production metric → why it matters → project example
 - Interview relevance for Google/Amazon/Netflix roles
@@ -2319,7 +2265,7 @@ Mandatory output format:
 - 3 medium coding problems with full Golang and Python solutions
 - 1 concurrency-style problem with Golang and Python solution
 - 1 small Golang and Python HTTP/concurrency example
-- Line-by-line explanation for all solutions
+- Line-by-line explanation (only for important logic code block)
 - Mock interviewer feedback after each solution
 - Final DSA weak-area checklist
 
@@ -2438,7 +2384,7 @@ Mandatory output format:
 - 3 project summaries in interview-ready form
 - Full system design answer for enterprise RAG platform
 - Full system design answer for high-scale verification API
-- ASCII diagrams for both system designs
+- One concise ASCII diagram showing the most important architecture or workflow; use a second diagram only when it adds a genuinely different view (maximum 2)
 - Pseudocode for both systems
 - Python script for one key component from each system
 - One medium DSA problem with full Golang and Python solution
@@ -2598,7 +2544,7 @@ Mandatory output format:
 - Final 2-minute “Tell me about yourself” for IBM
 - IBM JD requirement → my matching experience table
 - Project-wise IBM relevance table
-- ASCII diagram showing career evolution toward AI consulting
+- One concise ASCII diagram showing the most important architecture or workflow; use a second diagram only when it adds a genuinely different view (maximum 2)
 - 10 IBM interview soundbites
 - 10 weak areas I must prepare carefully
 - Final IBM resume headline suggestion
@@ -2606,7 +2552,6 @@ Mandatory output format:
 - Interview relevance for Google/Amazon/Netflix roles
 - DSA revision topic: Arrays + HashMap
 - One medium DSA question with Golang and Python solution
-- End-of-day revision checklist
 ```
 
 ---
@@ -2648,21 +2593,19 @@ Use a simple business example:
 Customer onboarding risk prediction or support ticket classification.
 
 Mandatory output format:
-- 5-line beginner summary
-- Descriptive notes in simple language
+- Begin with a concise beginner-friendly summary, then explain the concepts clearly using practical and interview-relevant details
 - Structured data analytics workflow
-- ASCII diagram: raw data → cleaning → features → model → insight
+- One concise ASCII diagram showing the most important architecture or workflow; use a second diagram only when it adds a genuinely different view (maximum 2)
 - Example dataset schema
 - Pseudocode first
 - Python script using pandas and scikit-learn
-- Line-by-line explanation
-- Common mistakes
+- Line-by-line explanation (only for important logic code block)
+- Common mistakes (maximum 2; include only important new mistakes and avoid repetition)
 - Interview relevance for Google/Amazon/Netflix roles
 - IBM interview relevance
 - Table: data science step → purpose → interview explanation
 - DSA revision topic: Strings
 - One string practice question with Golang and Python solution
-- Revision checklist
 ```
 
 ---
@@ -2705,23 +2648,22 @@ Use example:
 Predict whether a customer support ticket needs escalation.
 
 Mandatory output format:
-- 5-line beginner summary
+- Begin with a concise beginner-friendly summary, then explain the concepts clearly using practical and interview-relevant details
 - Descriptive ML notes
 - ML workflow table
-- ASCII model training and evaluation diagram
+- One concise ASCII diagram showing the most important architecture or workflow; use a second diagram only when it adds a genuinely different view (maximum 2)
 - Pseudocode first
 - Python script using scikit-learn
-- Line-by-line explanation
+- Line-by-line explanation (only for important logic code block)
 - Confusion matrix explanation
 - Metric comparison table
-- Common mistakes
+- Common mistakes (maximum 2; include only important new mistakes and avoid repetition)
 - Interview relevance for Google/Amazon/Netflix roles
 - IBM interview relevance
 - Strong answer: How do you choose the right ML metric?
 - Strong answer: How do you explain model results to business stakeholders?
 - DSA revision topic: Two Pointers
 - One two-pointer practice question with Golang and Python solution
-- Revision checklist
 ```
 
 ---
@@ -2759,22 +2701,21 @@ Use my project context:
 DPDK BenchOps Copilot ingests logs, benchmark reports, tuning docs, DB JSON, and run metadata.
 
 Mandatory output format:
-- 5-line beginner summary
+- Begin with a concise beginner-friendly summary, then explain the concepts clearly using practical and interview-relevant details
 - Descriptive NLP notes
-- Enterprise NLP use case examples
-- ASCII diagram: documents → preprocessing → embeddings/NLP → insight
+- Enterprise NLP use case examples (maximum 2)
+- One concise ASCII diagram showing the most important architecture or workflow; use a second diagram only when it adds a genuinely different view (maximum 2)
 - NLP task comparison table
 - Pseudocode first
 - Python script showing basic text preprocessing + TF-IDF similarity
-- Line-by-line explanation
-- Common mistakes
+- Line-by-line explanation (only for important logic code block)
+- Common mistakes (maximum 2; include only important new mistakes and avoid repetition)
 - Interview relevance for Google/Amazon/Netflix roles
 - IBM interview relevance
 - Strong answer: How do NLP and LLMs work together?
 - Strong answer: How would you process unstructured enterprise documents?
 - DSA revision topic: Sliding Window
 - One sliding-window practice question with Golang and Python solution
-- Revision checklist
 ```
 
 ---
@@ -2811,30 +2752,29 @@ Cover:
 11. How these frameworks fit into production AI systems
 12. How to honestly explain familiarity vs hands-on experience
 
-Use examples:
+Use examples (maximum 2):
 - Text classification
 - Embedding generation
 - Sentiment analysis
 - RAG embedding model usage
 
 Mandatory output format:
-- 5-line beginner summary
+- Begin with a concise beginner-friendly summary, then explain the concepts clearly using practical and interview-relevant details
 - Framework comparison table
 - Hugging Face workflow explanation
-- ASCII diagram: text → tokenizer → model → prediction
+- One concise ASCII diagram showing the most important architecture or workflow; use a second diagram only when it adds a genuinely different view (maximum 2)
 - Pseudocode first
 - Python script using Hugging Face-style mock pipeline
 - Small PyTorch-style conceptual example
 - Small TensorFlow/Keras-style conceptual example
-- Line-by-line explanation
-- Common mistakes
+- Line-by-line explanation (only for important logic code block)
+- Common mistakes (maximum 2; include only important new mistakes and avoid repetition)
 - Interview relevance for Google/Amazon/Netflix roles
 - IBM interview relevance
 - Strong answer: What is your experience with Hugging Face?
 - Strong answer: How do you choose between TensorFlow, PyTorch, and Keras?
 - DSA revision topic: Stack
 - One stack practice question with Golang and Python solution
-- Revision checklist
 ```
 
 ---
@@ -2872,16 +2812,14 @@ Use my project:
 DPDK BenchOps Copilot as a cognitive solution for benchmark analysis.
 
 Mandatory output format:
-- 5-line beginner summary
+- Begin with a concise beginner-friendly summary, then explain the concepts clearly using practical and interview-relevant details
 - Foundation model vs LLM vs RAG comparison table
 - Cognitive AI solution explanation
-- ASCII end-to-end cognitive AI architecture diagram
-- RAG ingestion ASCII diagram
-- Retrieval and generation ASCII diagram
+- One concise ASCII diagram showing the most important architecture or workflow; use a second diagram only when it adds a genuinely different view (maximum 2)
 - Pseudocode first
 - Python script simulating structured + unstructured retrieval and answer generation
-- Line-by-line explanation
-- Common mistakes
+- Line-by-line explanation (only for important logic code block)
+- Common mistakes (maximum 2; include only important new mistakes and avoid repetition)
 - Interview relevance for Google/Amazon/Netflix roles
 - IBM interview relevance
 - Strong answer: Why RAG instead of fine-tuning?
@@ -2889,7 +2827,6 @@ Mandatory output format:
 - Strong answer: How do you combine structured and unstructured data?
 - DSA revision topic: Queue
 - One queue practice question with Golang and Python solution
-- Revision checklist
 ```
 
 ---
@@ -2927,15 +2864,15 @@ Important instruction:
 If exact IBM product details are uncertain, explain at a high level and mark them as concepts to verify before interview.
 
 Mandatory output format:
-- 5-line beginner summary
+- Begin with a concise beginner-friendly summary, then explain the concepts clearly using practical and interview-relevant details
 - IBM AI platform overview table
 - AWS/GCP/Azure/Kubernetes skill → IBM equivalent mapping table
 - OpenShift vs Kubernetes comparison table
-- ASCII hybrid cloud AI architecture diagram
+- One concise ASCII diagram showing the most important architecture or workflow; use a second diagram only when it adds a genuinely different view (maximum 2)
 - Pseudocode for hybrid AI deployment decision flow
 - Python script simulating provider-agnostic AI inference routing
-- Line-by-line explanation
-- Common mistakes
+- Line-by-line explanation (only for important logic code block)
+- Common mistakes (maximum 2; include only important new mistakes and avoid repetition)
 - Interview relevance for Google/Amazon/Netflix roles
 - IBM interview relevance
 - Strong answer: Do you have Watson experience?
@@ -2943,7 +2880,6 @@ Mandatory output format:
 - Strong answer: What is responsible AI governance?
 - DSA revision topic: Linked List
 - One linked-list practice question with Golang and Python solution
-- Revision checklist
 ```
 
 ---
@@ -2988,23 +2924,22 @@ Use example:
 Enterprise AI document Q&A assistant with a web UI.
 
 Mandatory output format:
-- 5-line beginner summary
+- Begin with a concise beginner-friendly summary, then explain the concepts clearly using practical and interview-relevant details
 - Cloud comparison table
 - Database comparison table
 - UI integration explanation
-- ASCII diagram: UI → API → AI service → database/vector DB → response
+- One concise ASCII diagram showing the most important architecture or workflow; use a second diagram only when it adds a genuinely different view (maximum 2)
 - Pseudocode first
 - Python FastAPI script for AI backend endpoint
 - Simple React-style UI pseudocode
-- Line-by-line explanation
-- Common mistakes
+- Line-by-line explanation (only for important logic code block)
+- Common mistakes (maximum 2; include only important new mistakes and avoid repetition)
 - Interview relevance for Google/Amazon/Netflix roles
 - IBM interview relevance
 - Strong answer: How would you deploy an AI solution in a client environment?
 - Strong answer: How do you choose SQL vs NoSQL for AI apps?
 - DSA revision topic: Binary Search
 - One binary-search practice question with Golang and Python solution
-- Revision checklist
 ```
 
 ---
@@ -3053,11 +2988,11 @@ Mandatory output format:
 - PoC-to-production roadmap
 - Risk register table
 - Stakeholder communication plan
-- ASCII AI project lifecycle diagram
+- One concise ASCII diagram showing the most important architecture or workflow; use a second diagram only when it adds a genuinely different view (maximum 2)
 - Pseudocode for AI delivery lifecycle
 - Python script showing a simple project risk tracker
-- Line-by-line explanation
-- Common mistakes
+- Line-by-line explanation (only for important logic code block)
+- Common mistakes (maximum 2; include only important new mistakes and avoid repetition)
 - Interview relevance for Google/Amazon/Netflix roles
 - IBM interview relevance
 - STAR story for Ownership
@@ -3066,7 +3001,6 @@ Mandatory output format:
 - Strong answer: How do you take an AI prototype to production?
 - DSA revision topic: BFS + DFS
 - One graph practice question with Golang and Python solution
-- Revision checklist
 ```
 
 ---
@@ -3162,7 +3096,7 @@ Mandatory output format:
 - 3 project summaries in IBM-ready form
 - Full answer: Design an enterprise GenAI document intelligence platform
 - Full answer: Design a structured + unstructured AI analytics solution for a client
-- ASCII diagrams for both designs
+- One concise ASCII diagram showing the most important architecture or workflow; use a second diagram only when it adds a genuinely different view (maximum 2)
 - Pseudocode for both systems
 - Python script for one ML/data science component
 - Python script for one GenAI/RAG component
