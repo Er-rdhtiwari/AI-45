@@ -22,12 +22,15 @@ data lake flexibility
 | Notebook | Interactive Python/SQL/Scala/R and narrative work. |
 | All-purpose compute | Interactive development. |
 | Job compute | Automated production work with controlled lifecycle/cost. |
+| Serverless compute | Managed execution where the platform handles more of the compute lifecycle. |
 | SQL warehouse | SQL analytics and dashboards. |
 | Jobs/pipelines | Scheduled or event-driven task orchestration. |
 | Delta Lake | Reliable table/storage foundation. |
 | MLflow | Experiment, model, and GenAI lifecycle. |
 | Unity Catalog | Access control, lineage, discovery, audit, and governance. |
 | Apps/Agents | Data/AI applications and tool-using experiences. |
+
+The source notes use both “cluster” and “compute.” Treat compute as the broader execution category; all-purpose and job clusters are cluster-backed examples, while serverless offerings abstract more cluster management.
 
 Notebooks are useful for exploration and development; production pipelines require source control, tests, jobs, dependency control, and monitoring.
 
@@ -45,6 +48,8 @@ source
 → job publishes Gold analytics/features or RAG-ready data
 → monitoring and quality results
 ```
+
+Source-note ingestion options include Auto Loader for incremental cloud-file ingestion, `COPY INTO` for SQL-driven incremental loading, and Lakeflow Spark Declarative Pipelines for managed ETL pipelines. Choose from source type, latency, state/checkpoint needs, team skills, and operational ownership rather than memorizing one universal mechanism.
 
 Use notebooks to explore and develop the transformation. Move production logic into version-controlled, tested code executed by jobs/pipelines on appropriately scoped job compute. Use SQL warehouses for governed SQL analytics rather than treating an interactive cluster as every workload.
 
@@ -333,6 +338,56 @@ Changes to parser, chunker, embedding, metadata, index, prompt, or model are ver
 - Confusing tracking, registry, serving, and monitoring.
 - No data version, dependency record, or rollback target.
 
+## Project-grounded examples
+
+### Scenario 1: raw benchmark output to comparison-ready data
+
+**Project scenario.** **DPDK Automation for Network Packet Processing** collected raw DPDK output and CPU/system statistics, used Bash scripts for parallel collection, processed measurements with a Python module, applied workload-specific parsers for testpmd, crypto, and vhost, stored structured results in a database, and exposed graphs and side-by-side run comparisons.
+
+**How the lifecycle concepts apply.** Although the project did not use Databricks or Delta Lake, its data flow maps naturally to lifecycle layers:
+
+```text
+raw benchmark logs and statistics
+→ normalized benchmark metrics plus run/configuration context
+→ comparison-ready data and dashboards
+```
+
+The raw artifacts are replay/debug evidence; the normalized layer resolves workload-specific formats; the serving layer supports comparisons such as SMT on/off, BIOS or OS changes, compiler differences, and CPU SKU variations. This is the same separation of raw, validated, and consumption-ready responsibilities that medallion architecture teaches.
+
+**Decision and trade-offs.** Retaining workload-specific parsers increased maintenance but protected semantic correctness. Storing normalized structured metrics enabled reliable comparisons, while raw data remained important when a parser or benchmark format needed investigation. The database-backed reporting layer improved usability but created a schema contract between parsers and dashboards.
+
+**Senior/Staff interview framing.**
+
+- **Senior:** show the schema and quality checks needed to turn one raw benchmark result into a comparable record, including run configuration and parser failure handling.
+- **Staff:** explain data ownership, lineage from dashboard value back to raw artifact and configuration, schema evolution across benchmark families, and how replayable raw data reduces migration risk.
+
+### Scenario 2: truth-bearing artifacts to an evaluated RAG index
+
+**Project scenario.** **DPDK BenchOps Copilot** ingested benchmark logs, database JSON, AMD tuning documents, methodology guides, historical run metadata, and internal notes. It normalized and phase-chunked the content, attached workload/platform/source/provenance metadata, retained authoritative records and artifacts in Postgres and S3/MinIO, and used a vector database for embeddings. CI gates evaluated context precision/recall, groundedness, citation coverage, tool reliability, and p95 latency.
+
+**How the lifecycle concepts apply.** This is an RAG data-product lifecycle:
+
+```text
+source artifacts and records
+→ normalized, metadata-rich benchmark knowledge
+→ semantic index
+→ evaluated publication
+→ traced query and tool behavior
+```
+
+The design distinguishes data preparation from index publication and separates truth storage from retrieval-optimized representations.
+
+**Decision and trade-offs.** Rich metadata and evaluated publication add pipeline work, but reduce the risk of retrieving the right words for the wrong workload or AMD generation. Separate stores add lineage and synchronization obligations, but permit authoritative records and semantic indexes to evolve according to different access patterns.
+
+**Senior/Staff interview framing.**
+
+- **Senior:** trace a source version through normalization, chunks, embeddings, retrieval, citation, and a failing evaluation case.
+- **Staff:** describe the index as a governed data product with owners, quality gates, lineage, publication, rollback, and freshness expectations—not merely a vector-store write.
+
+**Evidence boundary and product gap.** Neither project documents Databricks, Spark, Delta Lake, Unity Catalog, MLflow, a feature store, or a model registry. Use these scenarios to explain transferable data-lifecycle principles, not direct experience with those products.
+
+**Hypothetical improvement.** If the organization later standardized on a lakehouse, it could evaluate Bronze/Silver/Gold tables for benchmark and ingestion lineage and MLflow for tracking RAG/application versions and evaluations. This is a proposed evolution, not an implemented project outcome.
+
 ## 10. Interview questions
 
 1. Data lake versus warehouse versus lakehouse?
@@ -348,6 +403,8 @@ Changes to parser, chunker, embedding, metadata, index, prompt, or model are ver
 11. How do aliases support promotion and rollback?
 12. How does MLflow extend to RAG and agents?
 13. How do Delta Lake, MLflow, Unity Catalog, and Databricks relate?
+14. How do all-purpose, job, SQL-warehouse, and serverless compute differ?
+15. When would Auto Loader, `COPY INTO`, or a managed pipeline fit ingestion?
 
 ## 11. Exit checklist
 
@@ -358,6 +415,7 @@ Changes to parser, chunker, embedding, metadata, index, prompt, or model are ver
 - [ ] Explain MLflow run, registry, alias, promotion, and rollback.
 - [ ] Assign each data type to the right storage system.
 - [ ] Connect governance across data, models, GenAI, and applications.
+- [ ] Select compute and ingestion mechanisms from workload and operational requirements.
 
 ## Source notes
 
@@ -368,3 +426,5 @@ Changes to parser, chunker, embedding, metadata, index, prompt, or model are ver
 - [Databases for AI Systems](<../ijp/w01/Day7: Databases for AI Systems.md>)
 - [IBM IJP Roles](<../ijp/w01/Day:1 IBM IJP Roles Preparation.md>)
 - [Capstone Revision Day 1](<../revision/Day:7 Capstone Revision Day 1.md>)
+- [DPDK Automation for Network Packet Processing](../project/dpdk-final.md)
+- [DPDK BenchOps Copilot](../project/final-DPDK-BenchOps-Copilot.md)

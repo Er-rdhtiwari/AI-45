@@ -177,6 +177,8 @@ Sparse/keyword search:
 - legal phrases;
 - exact versions.
 
+BM25 is a common lexical ranking method based on term frequency and rarity. It is strong for exact identifiers and rare domain terms but can miss semantic paraphrases, which is why it is often paired with dense retrieval.
+
 Hybrid retrieval combines both, merges/fuses results, removes duplicates, and reranks.
 
 Reciprocal Rank Fusion (RRF) combines ranked lists without assuming their raw scores are comparable:
@@ -287,12 +289,15 @@ Context precision asks whether the supplied chunks are mostly useful. Context re
 
 ### Generation metrics
 
-- Groundedness/faithfulness: claims supported by context?
+- Groundedness: is each material claim supported by the supplied context?
+- Faithfulness: does the answer accurately represent that context without contradiction or distortion?
 - Answer relevance: does it address the question?
 - Correctness/required facts.
 - Citation correctness/coverage.
 - Abstention/refusal correctness.
 - Safety/toxicity where applicable.
+
+Groundedness and faithfulness are closely related and some evaluators use the labels differently. Define the rubric and evaluator contract rather than comparing scores with incompatible meanings.
 
 ### System/business metrics
 
@@ -338,6 +343,12 @@ collect representative questions
 ```
 
 Do not automatically train on every user correction; validate authority, privacy, and quality first.
+
+### Retrieval drift
+
+Retrieval drift means search quality degrades over time even when the service remains technically healthy. Causes in the source notes include new document formats, changed terminology or question patterns, collection growth, duplicate content, metadata changes, and embedding-model changes.
+
+Monitor Recall@k, Precision@k, MRR, no-result rate, reranker-score distribution, user reformulation, and citation interaction over time. Diagnose the changed stage before retuning the LLM.
 
 ## 6. Failure diagnosis
 
@@ -434,6 +445,53 @@ employee identity/groups
 
 If policies conflict, return the conflict and escalate rather than inventing authority.
 
+## Project-grounded example: benchmark-aware RAG over a deterministic platform
+
+**Project scenario.** The first **DPDK Automation for Network Packet Processing** project produced the truth-bearing assets: AMD-centric tuning documents, benchmark templates, raw logs, parsed metrics, run metadata, and comparisons across BIOS, OS, compiler, CPU SKU, and benchmark variations. **DPDK BenchOps Copilot** then made those fragmented assets searchable and usable through a LlamaIndex ingestion pipeline and a grounded query workflow.
+
+**How the ingestion concepts apply.**
+
+```text
+benchmark documents + logs + database JSON + run metadata + internal notes
+→ normalize source formats
+→ create phase-aware chunks for setup, execution, metrics, and interpretation
+→ attach benchmark/platform/source/run/provenance metadata
+→ store authoritative records and artifacts in Postgres and S3/MinIO
+→ store embeddings in a vector database
+```
+
+The phase-aware chunking decision addressed a real domain problem: a generic fixed chunk could mix setup instructions with metric interpretation or separate a performance value from its run context. Metadata such as benchmark type, AMD server generation, source type, run context, and provenance enabled context-aware filtering rather than relying on semantic similarity alone.
+
+**How the online concepts apply.**
+
+```text
+engineer asks a tuning or regression question
+→ identify intent
+→ retrieve benchmark-aware evidence with metadata filters
+→ combine hybrid retrieval with deterministic run/log access where needed
+→ compare runs through a deterministic tool
+→ verify support
+→ answer with citations
+```
+
+This separates three failure classes: missing/wrong retrieved evidence, incorrect deterministic run data, and unsupported generation. It also gives the interviewer a concrete reason to measure context precision/recall separately from groundedness and citation coverage.
+
+**Design decisions and trade-offs.**
+
+- **Truth store versus semantic index:** Postgres and S3/MinIO remained authoritative while the vector database supported discovery. This added synchronization and versioning work, but avoided making approximate retrieval the record of truth.
+- **Domain-aware chunks versus naive chunks:** phase-aware chunks and rich metadata required more ingestion logic, but preserved workload and platform context needed for safe advice.
+- **Hybrid retrieval and tools versus vector-only RAG:** additional stages increased latency and observability needs, but exact run data and command-related questions could not safely depend on similarity alone.
+- **Verification and citations versus fastest response:** verification added work to the critical path, but the domain explicitly rejected hallucinated tuning guidance.
+
+**Outcome.** The documented result was grounded benchmark assistance with contextual evidence and citations, faster analysis, and less dependence on tribal knowledge. The project provides no numeric retrieval scores, latency reduction, or productivity percentage.
+
+**Senior/Staff interview framing.**
+
+- **Senior:** take one question such as “why did these runs differ?” and trace source ingestion, metadata filtering, retrieval, `RunDiff`, context construction, answer verification, and citations. Explain how you would diagnose a missing expected run or guide section.
+- **Staff:** begin with the trust constraint, then show how the earlier deterministic platform made the later RAG system possible. Discuss ownership of authoritative data, index publication, versioning, evaluation gates, failure isolation, and which measured failure would justify a more advanced retrieval stage.
+
+**Evidence boundary.** The project states that retrieval was hybrid, but it does not name a lexical engine, vector database product, embedding model, similarity index family, reranker, or exact top-k values. Do not supply those details in an interview unless you can support them from another real source.
+
 ## 10. Interview questions
 
 1. Why is RAG an “open-book” pattern rather than a model?
@@ -450,6 +508,8 @@ If policies conflict, return the conflict and escalate rather than inventing aut
 12. How do you debug “the answer is wrong” without immediately changing the LLM?
 13. When is Vanilla RAG sufficient?
 14. RAG versus fine-tuning?
+15. What is BM25 good at, and why combine it with dense retrieval?
+16. How is retrieval drift different from a vector-store outage?
 
 ## 11. Exit checklist
 
@@ -460,6 +520,7 @@ If policies conflict, return the conflict and escalate rather than inventing aut
 - [ ] Diagnose indexing, retrieval, generation, authorization, and freshness failures separately.
 - [ ] Design safe caching and versioning.
 - [ ] Explain when each advanced RAG technique is justified.
+- [ ] Distinguish groundedness, faithfulness, answer relevance, and retrieval drift.
 
 ## Source notes
 
@@ -474,3 +535,5 @@ If policies conflict, return the conflict and escalate rather than inventing aut
 - [Vanilla RAG End to End](<../revision/Day:1 Vanilla RAG.md>)
 - [LlamaIndex End to End](<../revision/Day:2 LlamaIndex End to End.md>)
 - [Capstone Revision Day 2](<../revision/Day:8 Capstone Revision Day 2.md>)
+- [DPDK Automation for Network Packet Processing](../project/dpdk-final.md)
+- [DPDK BenchOps Copilot](../project/final-DPDK-BenchOps-Copilot.md)

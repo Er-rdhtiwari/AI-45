@@ -11,6 +11,8 @@ This analysis covers all 39 Markdown files in the three source folders:
 | `revision` | 9 | 26,356 |
 | **Total** | **39** | **74,256** |
 
+This file records the original three-folder consolidation analysis. The later four-folder audit also reviewed the two `project` files; its findings, project-claim checks, and final remediation record are in [final-review-report.md](final-review-report.md) and [project-scenario-mapping.md](project-scenario-mapping.md).
+
 The review was performed in batches:
 
 1. Python, software design, concurrency, DSA, and system design.
@@ -387,9 +389,9 @@ After the first consolidation, a second heading-to-notes and concept-level compa
 
 This pass did not change the 10-day structure; it strengthened the affected daily notes without duplicating whole explanations.
 
-## Final validation pass
+## Prior validation pass
 
-The final 115-topic validation is recorded in [gap-analysis.md](gap-analysis.md). It found ten remaining depth/example gaps rather than missing broad subject areas:
+The prior 115-topic validation found ten remaining depth/example gaps rather than missing broad subject areas:
 
 - long-running API completion through polling, webhooks, SSE, and WebSockets;
 - relational one-to-many, ACID, isolation, and concurrency controls;
@@ -402,7 +404,7 @@ The final 115-topic validation is recorded in [gap-analysis.md](gap-analysis.md)
 - frontend server/UI/stream/authentication state ownership;
 - branch, environment, and promotion workflow.
 
-The affected Day 2, Day 3, and Day 9 notes were strengthened using only the source corpus. The final ledger marks all 115 important topics fully covered, with no unresolved gaps and no unnecessary duplicated long-form section.
+The affected Day 2, Day 3, and Day 9 notes were strengthened using only the source corpus. A later final review found additional compactness, terminology, link, and project-evidence issues not represented in that 115-topic checklist; those are recorded in [final-review-report.md](final-review-report.md).
 
 ## Consolidation rules used in the final notes
 

@@ -400,6 +400,25 @@ Treat duplicate delivery as expected:
 - idempotent external calls;
 - deduplication records.
 
+### Sagas and compensating actions
+
+A database rollback can undo writes inside its transaction; it cannot undo an external API call, published message, sent notification, or completed benchmark action.
+
+For a multi-step business operation, a saga coordinates committed steps and explicit compensating actions where reversal is valid:
+
+```text
+reserve capacity
+→ start run
+→ publish result
+
+failure after reservation
+→ cancel run if possible
+→ release reserved capacity
+→ record final outcome
+```
+
+Compensation is a new business action, not a time-reversed transaction. Some effects cannot be fully undone, so prevention, approval, idempotency, and reconciliation may be more important than compensation.
+
 ### State machine
 
 ```text
@@ -526,6 +545,8 @@ DFS explores depth; BFS explores levels and finds shortest paths in unweighted g
 
 Topological ordering schedules a DAG of dependencies. A cycle prevents a complete topological order.
 
+Kahn’s algorithm repeatedly processes zero-indegree nodes and reduces the indegree of their dependents. If fewer than all nodes are processed, the dependency graph contains a cycle. With an adjacency list, BFS, DFS, and topological processing are normally `O(V + E)` time and `O(V)` auxiliary state, excluding the graph itself.
+
 ### Dynamic programming
 
 Look for:
@@ -580,6 +601,36 @@ Framework choice is secondary to contracts, testability, observability, security
 - Async versus worker queue: low-latency I/O overlap versus durable background execution.
 - Cache versus freshness/security: faster reads versus invalidation and scope correctness.
 
+## Project-grounded examples
+
+### Scenario 1: parallel benchmark campaigns and statistics collection
+
+**Project scenario.** **DPDK Automation for Network Packet Processing** replaced manual runs with a parameter-driven pipeline that could submit 10–50+ scenarios, run multi-server benchmarking in parallel, switch BIOS profiles, execute workloads, and capture selected CPU/system statistics in parallel. Bash scripts collected measurements such as powerstat and turbostat output, Python modules processed the results, custom parsers normalized benchmark logs, and a structured database fed comparison dashboards.
+
+**How the concepts apply.** This is a real concurrency and backend-orchestration problem, not simply “use `async`.” Remote host setup, benchmark execution, packet generation, statistics collection, reboots, parsing, and persistence have different lifetimes and failure modes. Concurrency is valuable between independent servers or collectors, while ordering is essential inside a scenario—for example, the required environment and BIOS state must exist before a valid benchmark run.
+
+**Decision and trade-offs.** Parallel multi-server execution made large campaigns practical, but it increased coordination, partial-failure, resource-contention, and result-correlation risk. Parameterized templates improved repeatability, while retaining more than ten workload variables preserved experimental flexibility. The trade-off was a larger validation surface: defaults reduced user error, but the framework still had to allow expert overrides.
+
+**Senior/Staff interview framing.**
+
+- **Senior:** draw one scenario as a stateful sequence—configure, reboot where required, verify, run benchmark and collectors, parse, persist—and identify which steps may run concurrently and which must be serialized.
+- **Staff:** describe fairness and capacity across servers, failure isolation, correlation IDs/run IDs, idempotent reruns, and how you would evolve orchestration as campaign volume grows. Separate evidenced behavior from proposed reliability mechanisms.
+
+**Evidence boundary.** The project confirms parallel execution and structured persistence, but it does not document `asyncio`, a queue product, a transactional outbox, cursor pagination, or specific database technology. Those are design options to discuss, not implementation claims.
+
+### Scenario 2: storage roles and service boundaries in BenchOps Copilot
+
+**Project scenario.** **DPDK BenchOps Copilot** used FastAPI as its service layer, Postgres for structured authoritative data, S3/MinIO for artifacts, a vector database for semantic representations, and MCP tools for `RunQuery`, `LogFetch`, `RunDiff`, and `CommandBuilder`.
+
+**How the concepts apply.** The storage split follows access patterns: structured runs and metadata need authoritative queryable records; logs and large artifacts fit object storage; embeddings need similarity search. The tool boundary acts like an adapter/facade over deterministic business capabilities so the orchestration layer does not issue arbitrary database, shell, or storage commands.
+
+**Decision and trade-offs.** Separating truth storage from semantic indexing adds operational components and consistency/versioning work, but it avoids treating a vector index as the system of record. Narrow tools reduce flexibility compared with generic SQL or shell access, but make validation, authorization, audit, and testing tractable.
+
+**Senior/Staff interview framing.**
+
+- **Senior:** explain the request path and why each datum belongs in Postgres, object storage, or the vector database.
+- **Staff:** connect the split to ownership, failure containment, security, lineage, and evolution. State the trigger for adding a new store or service rather than presenting multiple technologies as intrinsically better.
+
 ## 9. Interview questions
 
 1. Why return `202 Accepted` for an agent run or ingestion job?
@@ -594,6 +645,8 @@ Framework choice is secondary to contracts, testability, observability, security
 10. When should BFS be preferred to DFS?
 11. How does a visited set prevent graph failures?
 12. Why does one-dimensional 0/1 knapsack iterate backward?
+13. Why can a database rollback not undo an external side effect?
+14. How does topological sorting reveal a dependency cycle?
 
 ## 10. Exit checklist
 
@@ -604,6 +657,7 @@ Framework choice is secondary to contracts, testability, observability, security
 - [ ] Explain outbox, at-least-once delivery, and state transitions.
 - [ ] Recognize all major DSA patterns and state complexity.
 - [ ] Connect graphs/DAGs to pipelines and agent workflows.
+- [ ] Distinguish transaction rollback, compensation, and reconciliation.
 
 ## Source notes
 
@@ -616,3 +670,5 @@ Framework choice is secondary to contracts, testability, observability, security
 - [Databases for AI Systems](<../ijp/w01/Day7: Databases for AI Systems.md>)
 - [Deploying ML Models API](<../ijp/w03/Day:19 Deploying ML Models API.md>)
 - [Capstone Revision Day 1](<../revision/Day:7 Capstone Revision Day 1.md>)
+- [DPDK Automation for Network Packet Processing](../project/dpdk-final.md)
+- [DPDK BenchOps Copilot](../project/final-DPDK-BenchOps-Copilot.md)

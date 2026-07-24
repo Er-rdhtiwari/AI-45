@@ -40,6 +40,8 @@ Traditional ML usually learns one narrower task from task-specific features and 
 
 Use time-aware splits for future prediction and group-aware splits when documents, users, or conversations could leak across sets.
 
+In K-fold cross-validation, each fold becomes validation data once while the remaining folds train the model. It produces a more stable estimate than relying on one lucky split, especially for smaller datasets. Learned preprocessing must be fitted inside each training fold; fitting it once on all data leaks validation information.
+
 ### Leakage test
 
 Ask:
@@ -62,6 +64,15 @@ GenAI leakage:
 - Overfitting/high variance: excellent training performance, weak unseen performance.
 
 Controls include more representative data, regularization, smaller capacity, limiting tree depth, dropout, early stopping, frozen parameters, and careful validation.
+
+### Bias, variance, and regularization
+
+- High bias: the model is too simple and underfits.
+- High variance: the model is too sensitive to its training sample and overfits.
+- Reduce high bias with justified capacity or better features.
+- Reduce high variance with representative data, L1/L2 or weight-decay penalties, dropout, early stopping, data augmentation, ensembling, pruning/depth limits, label smoothing, or freezing most pretrained parameters.
+
+Choose a control that matches the model and observed failure; adding regularization to an already underfit model can make it worse.
 
 ## 3. Evaluation metrics
 
@@ -545,9 +556,51 @@ business understanding
 → retrain or roll back
 ```
 
-- Data drift: input distribution changes.
-- Concept/model drift: relationship between input and outcome changes.
+- Data drift: the production input distribution changes.
+- Concept drift: the relationship between input and target/outcome changes.
+- Model-performance degradation: observed quality declines. It may be caused by data drift, concept drift, pipeline defects, label changes, or an unsuitable threshold.
 - Version model, data, preprocessing, code, dependencies, and evaluation.
+
+The phrase “model drift” is ambiguous across teams. In an interview or monitoring contract, define whether it means concept drift or measured model-performance degradation.
+
+## Project-grounded examples
+
+### Scenario 1: recognizing when deterministic data engineering is the right solution
+
+**Project scenario.** The first **DPDK Automation for Network Packet Processing** project had a concrete business decision: compare AMD CPU performance across workloads, CPU SKUs, BIOS settings, operating systems, and compilers. Raw DPDK output and CPU statistics were converted by workload-specific parsers and a Python processing module into structured metrics for database-backed graphs and run comparisons.
+
+**How the concepts apply.** The correct formulation was initially automation and data normalization, not model training. The command formats and performance fields were sufficiently defined to use deterministic parsers, while the outcome required trustworthy comparisons rather than a learned prediction. This is the “start with the business decision, not an algorithm” principle in practice.
+
+**Decision and trade-offs.** Custom parsers required maintenance when benchmark output changed, but they provided explicit, reproducible metric extraction for testpmd, crypto, and vhost. A single generic parser would have been simpler to describe but less able to preserve workload-specific semantics. The structured data then became a stronger substrate for later analysis and AI assistance.
+
+**Senior/Staff interview framing.**
+
+- **Senior:** explain the input schema, normalization rules, invalid-output behavior, and how you verified that two runs were comparable.
+- **Staff:** explain why you deliberately did not introduce ML for a deterministic problem, and how investing in clean operational data created the option to add higher-level intelligence later.
+
+### Scenario 2: choosing RAG and tools instead of fine-tuning
+
+**Project scenario.** In **DPDK BenchOps Copilot**, engineers needed current/private benchmark guidance, historical run context, exact commands, and safe comparisons. The architecture used RAG for factual benchmark/tuning knowledge, an LLM for question answering and synthesis, and deterministic tools for run/log access, comparison, validation, parsing, and command construction. The project narrative does not identify a fine-tuned model.
+
+**How the concepts apply.** This maps directly to the mechanism-selection table:
+
+```text
+private and changing guides/logs/run context → RAG
+live run data and comparisons               → tools
+safe repeatable command construction        → deterministic templates/tools
+natural-language explanation                → LLM prompting and synthesis
+```
+
+Fine-tuning would not have solved knowledge freshness, citations, authorization, or safe command execution.
+
+**Decision and trade-offs.** RAG and tools introduced retrieval, metadata, orchestration, evaluation, and dependency latency, but preserved source provenance and let authoritative data change without retraining. The design also constrained the model: it could synthesize evidence but could not become the source of operational truth.
+
+**Outcome.** The documented outcome was grounded assistance with citations, faster analysis, reduced reliance on tribal knowledge, and safer workflows. No quantitative latency, accuracy, or productivity improvement is recorded, so do not invent one.
+
+**Senior/Staff interview framing.**
+
+- **Senior:** walk through one regression question and show which facts came from retrieval, which values came from `RunDiff`, and what the LLM was allowed to summarize.
+- **Staff:** frame the choice as failure-mode allocation: freshness and provenance went to RAG, live truth and side effects to tools, and language synthesis to the model. Then explain the evaluation metrics—groundedness, context precision/recall, citation coverage, tool success/error rate, and p95 latency—that governed releases.
 
 ## 14. Interview questions
 
@@ -570,6 +623,8 @@ business understanding
 17. What belongs in system, user, assistant, and tool messages?
 18. Why are prompt guardrails not a security boundary?
 19. BLEU/ROUGE versus LLM-as-judge versus human evaluation?
+20. How can preprocessing leak information during cross-validation?
+21. How do high bias and high variance lead to different interventions?
 
 ## 15. Exit checklist
 
@@ -584,6 +639,7 @@ business understanding
 - [ ] Explain deployment, drift, retraining, and rollback.
 - [ ] Explain prompt roles, structured output, guardrails, and regression tests.
 - [ ] Compare generative evaluation methods and their failure modes.
+- [ ] Distinguish data drift, concept drift, and measured performance degradation.
 
 ## Source notes
 
@@ -593,3 +649,5 @@ business understanding
 - [NLP Fundamentals](<../ijp/w01/Day:5 NLP Fundamentals for IBM AI.md>)
 - [LLM Fundamentals](<../ijp/w01/Day:6 LLM Fundamentals Overview.md>)
 - [Capstone Revision Day 2](<../revision/Day:8 Capstone Revision Day 2.md>)
+- [DPDK Automation for Network Packet Processing](../project/dpdk-final.md)
+- [DPDK BenchOps Copilot](../project/final-DPDK-BenchOps-Copilot.md)

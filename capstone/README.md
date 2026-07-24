@@ -1,16 +1,16 @@
 # AI engineering interview revision capstone
 
-This folder is a deduplicated revision path synthesized only from the 39 Markdown files in `ijp`, `Python-AI`, and `revision`.
+This folder is a deduplicated revision path audited against all 41 Markdown source files in `ijp`, `Python-AI`, `revision`, and `project`.
 
-It covers the source corpus’s 74,256 lines while assigning each concept one primary home. The original folders remain the detailed reference library and were not modified.
+The four source folders contain 75,285 lines. Concepts have one primary revision home, while the two real projects supply evidence-backed scenarios and interview framing. The original folders remain the detailed reference library and were not modified.
 
 ## Start here
 
-1. Read [gap-analysis.md](gap-analysis.md) for the final topic-by-topic coverage validation and remediation record.
-2. Read [analysis.md](analysis.md) for the duplicate, overlapping, unique-topic, and full source-coverage analysis.
-3. Follow [10-day-revision-plan.md](10-day-revision-plan.md) for the schedule and daily practice.
-4. Use the detailed day files below.
-5. Use the source links at the end of each daily file when a deeper reference is needed.
+1. Read [final-review-report.md](final-review-report.md) for the final four-folder audit, fixes, and unresolved boundaries.
+2. Read [project-scenario-mapping.md](project-scenario-mapping.md) for the real-project evidence used on each day.
+3. Read [analysis.md](analysis.md) for the original duplicate, overlap, unique-topic, and 39-file source-coverage analysis.
+4. Follow [10-day-revision-plan.md](10-day-revision-plan.md) for the schedule and daily practice.
+5. Use the detailed day files below and their source links when a deeper reference is needed.
 
 ## Daily revision notes
 
@@ -134,7 +134,7 @@ constraint
 
 ## Source coverage
 
-The final 115-topic validation and remediation record is in [gap-analysis.md](gap-analysis.md). The complete 39-file source audit trail and primary/secondary day mapping is in the [source-to-day coverage ledger](analysis.md#source-to-day-coverage-ledger).
+The final audit and remediation record is in [final-review-report.md](final-review-report.md). The original 39-file `ijp`/`Python-AI`/`revision` audit trail and primary/secondary day mapping is in the [source-to-day coverage ledger](analysis.md#source-to-day-coverage-ledger); the two project files are traced separately in [project-scenario-mapping.md](project-scenario-mapping.md).
 
 ## Files in this folder
 
@@ -142,8 +142,9 @@ The final 115-topic validation and remediation record is in [gap-analysis.md](ga
 capstone/
 ├── README.md
 ├── analysis.md
-├── gap-analysis.md
 ├── 10-day-revision-plan.md
+├── final-review-report.md
+├── project-scenario-mapping.md
 ├── day-01-python-engineering.md
 ├── day-02-backend-dsa-and-concurrency.md
 ├── day-03-ml-data-llm-foundations.md

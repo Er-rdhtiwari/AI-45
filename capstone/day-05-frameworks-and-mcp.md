@@ -18,6 +18,8 @@ None of these is the LLM, vector database, identity system, policy engine, compl
 
 ## 2. LlamaIndex
 
+LlamaIndex implements context augmentation: it connects application questions to private or current data so the model receives relevant runtime context rather than relying only on pretrained knowledge.
+
 ### Building blocks
 
 - **Document:** source-level unit plus metadata.
@@ -363,6 +365,18 @@ Optimizations:
 
 Retry read operations more safely than non-idempotent writes. A timeout on a write may leave the external outcome unknown; reconcile before retrying.
 
+### Framework-boundary and upgrade testing
+
+Keep the application’s tests layered:
+
+- unit-test domain services with framework-neutral evidence, tool, and model fakes;
+- contract-test each adapter’s translation of framework objects and errors;
+- integration-test important ingestion, retrieval, structured-output, and MCP paths;
+- run golden behavioral and failure cases before changing framework, model, prompt, parser, index, or tool versions;
+- pin compatible versions and keep a rollback target for production upgrades.
+
+The purpose is not to test a framework’s internals. It is to prove that an upgrade preserves the application contract, observable behavior, safety policy, and required provider features.
+
 ## 9. Integrated architecture
 
 ```text
@@ -439,6 +453,37 @@ The same use case may need only direct retrieval and one prompt. Add each framew
 7. Are tool actions consequential?
 8. Can the team trace, test, upgrade, and operate the abstraction?
 
+## Project-grounded example: each framework had one architectural job
+
+**Project scenario.** **DPDK BenchOps Copilot** needed to ingest fragmented benchmark knowledge, answer grounded questions, execute multi-step flows, and access operational data without allowing an LLM to construct arbitrary commands. The selected stack matched those separate needs:
+
+| Project component | Real responsibility |
+|---|---|
+| LlamaIndex | Ingest logs, database JSON records, tuning documents, methodology guides, historical metadata, and notes; normalize, chunk, enrich, index, and retrieve them. |
+| LangChain | Provide the LLM interface and tool-calling/composition glue. |
+| LangGraph | Orchestrate intent identification, retrieval, metadata filtering, deterministic tool use, verification, and final response. |
+| MCP | Expose narrow deterministic capabilities: `RunQuery`, `LogFetch`, `RunDiff`, and `CommandBuilder`. |
+| Postgres + S3/MinIO | Retain structured truth and artifacts. |
+| Vector database | Retain semantic representations for retrieval. |
+
+**How the concepts apply.** This is a concrete counterexample to treating all four technologies as interchangeable. LlamaIndex did not authorize tools, LangChain did not become the durable source of benchmark truth, LangGraph did not replace retrieval, and MCP did not decide the workflow. The host/orchestration layer still owned what the model could request and whether a risky action required approval.
+
+**Design decisions and trade-offs.**
+
+- Using several framework layers added dependency, upgrade, tracing, and debugging complexity. The justification was distinct responsibility, not framework popularity.
+- Narrow MCP tools were less flexible than `run_shell` or `execute_sql`, but their schemas and deterministic implementations made validation, auditing, and reproducibility possible.
+- `CommandBuilder` used allowlisted templates inherited from the automation platform. This constrained the model, but avoided free-form generation across DPDK crypto’s 23+ commands and 10+ variables per command.
+- BIOS- or reboot-affecting operations retained a manual gate. That added operator delay but contained a known high-impact risk.
+
+**Outcome.** The architecture connected grounded evidence to safe operational capabilities, while commands and comparisons remained deterministic. Tool calls were auditable, and CI evaluation covered tool reliability as well as answer quality.
+
+**Senior/Staff interview framing.**
+
+- **Senior:** trace one request and name the input/output contract at each framework boundary. Explain what happens when retrieval is empty, a tool fails, or verification finds unsupported claims.
+- **Staff:** state the selection principle first: “adopt a layer only when it owns a distinct problem.” Explain the organizational benefit of reusable tool capabilities and the operational cost of a larger stack, plus the trigger for simplifying or replacing a layer.
+
+**Evidence boundary.** The project documents an MCP tool boundary but does not describe transport choice, JSON-RPC message traces, capability negotiation, session handling, or MCP server topology. Do not infer those protocol-level implementation details.
+
 ## 11. Interview questions
 
 1. What is LlamaIndex’s center of gravity?
@@ -454,6 +499,8 @@ The same use case may need only direct retrieval and one prompt. Add each framew
 11. How do you govern hundreds of tools?
 12. What must happen before a state-changing tool runs?
 13. Why keep framework types out of domain interfaces?
+14. What does context augmentation mean?
+15. How would you test and roll back a framework upgrade?
 
 ## 12. Exit checklist
 
@@ -463,6 +510,7 @@ The same use case may need only direct retrieval and one prompt. Add each framew
 - [ ] Explain MCP architecture, lifecycle, capabilities, and JSON-RPC.
 - [ ] Design narrow, authorized, approved, auditable tools.
 - [ ] Choose the minimum useful stack and state its trade-offs.
+- [ ] Test framework adapters and upgrades without coupling domain tests to framework internals.
 
 ## Source notes
 
@@ -472,3 +520,5 @@ The same use case may need only direct retrieval and one prompt. Add each framew
 - [MCP End to End](<../revision/Day:5 MCP End to End.md>)
 - [Vanilla RAG and Frameworks](<../revision/Day:6 Vanilla RAG and Frameworks.md>)
 - [Capstone Revision Day 2](<../revision/Day:8 Capstone Revision Day 2.md>)
+- [DPDK Automation for Network Packet Processing](../project/dpdk-final.md)
+- [DPDK BenchOps Copilot](../project/final-DPDK-BenchOps-Copilot.md)

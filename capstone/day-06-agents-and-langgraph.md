@@ -112,6 +112,12 @@ Checkpoint significant state so execution can pause and resume after:
 
 Durable execution preserves workflow progress. It does not automatically reverse a real-world action.
 
+A thread/workflow identifier selects the correct persisted execution history. Development may use an in-memory saver, but production recovery requires a persistent checkpointer. Resume must use the same trusted workflow identity and a compatible state/graph version.
+
+The source notes describe three durability choices: persist on exit, persist asynchronously while the next step proceeds, or persist synchronously before advancing. They trade write latency against how much completed progress may need replay after failure. Exact names and behavior are version-sensitive, so verify them against the pinned runtime before implementation.
+
+A resumed node may restart from its beginning rather than continue at a CPU instruction. Any side effect before an interrupt or checkpoint boundary therefore needs idempotency and a recorded outcome.
+
 ### Human in the loop
 
 Use human review for high-impact, ambiguous, or low-confidence decisions. Show the proposed action, target, inputs, evidence, and effect.
@@ -194,7 +200,7 @@ For side effects use:
 
 - idempotency;
 - reconciliation;
-- compensating business action where valid;
+- compensating business action where valid, often coordinated as part of a saga;
 - human/operator escalation.
 
 ### Graph changes
@@ -394,6 +400,46 @@ The model never receives a broad admin token and never authorizes its own action
 - Coarse nodes: fewer transitions, less visibility.
 - Fine nodes: better control/telemetry, more workflow sprawl.
 
+## Project-grounded example: controlled autonomy in BenchOps Copilot
+
+**Project scenario.** **DPDK BenchOps Copilot** had to answer variable natural-language questions and assist with benchmark plans, but incorrect commands or disruptive BIOS guidance were unacceptable. The documented LangGraph/LangChain flow identified intent, retrieved benchmark context, filtered by workload/platform/source metadata, called deterministic tools when needed, verified evidence support, and returned cited structured answers.
+
+**How the concepts apply.** This is a hybrid agent:
+
+```text
+model-assisted:
+  interpret the request
+  synthesize retrieved evidence
+  explain metrics or regression context
+
+deterministic:
+  query runs and metadata
+  fetch logs/artifacts
+  compare runs
+  validate plans
+  build commands from allowlisted templates
+  parse results
+  gate BIOS/reboot-affecting actions
+```
+
+The model could choose or propose a bounded capability, but the tool implementation and safety boundary determined what was actually possible. A verification step checked that the response was supported by retrieved context and tool results.
+
+**Design decisions and trade-offs.**
+
+- **Explicit graph over a free-form agent:** more workflow design and node-level testing, but clearer control over tool use and evidence verification.
+- **Deterministic tools over generated shell commands:** narrower behavior, but reproducible commands and lower operational risk.
+- **Human control for BIOS/reboot operations:** slower completion, but a proportionate control for disruptive actions.
+- **Verification before response:** additional latency, but a direct mitigation for unsupported benchmark guidance.
+
+**Outcome.** The project reports safer operational workflows, grounded cited answers, auditable tool calls, and higher release confidence through golden-set CI evaluation. It does not provide a measured agent-completion rate, average step count, or approval wait time.
+
+**Senior/Staff interview framing.**
+
+- **Senior:** draw the node/edge flow for a tuning question and a command-plan request. Identify the tool schemas, failure branches, loop/attempt bounds you would require, and the evidence needed before answering.
+- **Staff:** explain how you allocated autonomy by risk. Tie graph structure, tool ownership, approval, audit, evaluation, and deployment rollback into one governance model, and state what evidence would justify giving the model more or less freedom.
+
+**Evidence boundary and topic gap.** The project narrative does not document checkpoint persistence, replay behavior, long-term memory, or a multi-agent implementation. Do not turn the retrieval, tool, and verifier stages into fictional “agents.” If asked about multi-agent systems, use this project to explain why a controlled single workflow was sufficient and describe multi-agent adoption only as a **hypothetical** option requiring real specialization or parallel value.
+
 ## 11. Interview questions
 
 1. Workflow versus agent versus hybrid?
@@ -408,6 +454,8 @@ The model never receives a broad admin token and never authorizes its own action
 10. Where should authorization occur?
 11. When is multi-agent useful, and when is it overkill?
 12. What metrics prove an agent is useful, safe, and affordable?
+13. Why must workflow identity and graph/state version accompany a checkpoint?
+14. How do stronger durability settings trade latency against recovery work?
 
 ## 12. Exit checklist
 
@@ -418,6 +466,7 @@ The model never receives a broad admin token and never authorizes its own action
 - [ ] Choose single versus multi-agent patterns.
 - [ ] Design unit, scenario, failure, and evaluation tests.
 - [ ] Explain framework roles without confusing MCP and orchestration.
+- [ ] Explain persistent checkpoint identity, resume semantics, and side-effect idempotency.
 
 ## Source notes
 
@@ -431,3 +480,5 @@ The model never receives a broad admin token and never authorizes its own action
 - [Vanilla RAG and Frameworks](<../revision/Day:6 Vanilla RAG and Frameworks.md>)
 - [Capstone Revision Day 2](<../revision/Day:8 Capstone Revision Day 2.md>)
 - [Capstone Revision Day 3](<../revision/Day:9 Capstone Revision Day 3.md>)
+- [DPDK Automation for Network Packet Processing](../project/dpdk-final.md)
+- [DPDK BenchOps Copilot](../project/final-DPDK-BenchOps-Copilot.md)

@@ -28,6 +28,17 @@ AI examples:
 - Dictionary: document metadata or provider configuration.
 - Set: processed chunk IDs or allowed-role intersection.
 
+### Collection behavior worth recalling
+
+- Assignment does not copy a mutable object: two names can refer to the same list or dictionary.
+- `items.copy()` and `items[:]` create a shallow list copy. Nested mutable values are still shared unless a deeper copy is deliberately required.
+- `list.sort()` changes a list in place and returns `None`; `sorted(iterable)` returns a new list. Do not assign the result of `.sort()` expecting the sorted data.
+- Strings and tuples are immutable, but a tuple may still contain a mutable object.
+- A dictionary comprehension is useful for a simple key/value transformation; duplicate generated keys overwrite earlier values.
+- A set is ideal for membership or deduplication, but it discards counts and should not define user-visible ordering.
+
+These details matter in request-scoped state, fixtures, caches, and agent/RAG payloads because an accidental alias or in-place update can leak changes across layers.
+
 ### Slicing and comprehensions
 
 Slicing is useful for bounded retrieval results:
@@ -603,6 +614,36 @@ Mocking pitfalls:
 - Test deterministic logic without provider calls; retain a small real integration suite.
 - Avoid speculative abstractions; introduce them at real variation points.
 
+## Project-grounded examples
+
+### Scenario 1: reusable Python boundaries in DPDK benchmark automation
+
+**Project scenario.** In **DPDK Automation for Network Packet Processing**, the implementation had several different reasons to change: AMD Cinnabar BIOS handling, Dell/HP Redfish-based BIOS operations, Xena packet generation, DPDK command execution, and parsing for testpmd, crypto, and vhost output. The project used Python for the BIOS scripts, the Clif-based BIOS CLI, the reusable Xena integration module, stats processing, and custom parsers; Ansible roles handled repeatable host setup and benchmark workflows.
+
+**How the concepts apply.** This is a concrete reason to use cohesive modules and composition. A packet-generator integration should expose a small benchmark-facing capability instead of leaking Xena-specific details throughout every workload. BIOS automation and result parsing are separate responsibilities: they have different inputs, failure modes, and change triggers. The documented “plug-and-play” Xena module and reusable roles are evidence of designing around real reuse points rather than creating abstraction only for style.
+
+**Decision and trade-offs.** The decision was to generalize shared setup, command templates, statistics collection, and packet-generation behavior while keeping workload-specific parsers for formats that actually differed. That reduced duplication and supported extension across seven networking benchmarks, but a shared framework also had to preserve OS-, platform-, and workload-specific behavior. Too little abstraction would duplicate fragile automation; too much would hide the parameters that performance engineers needed to control.
+
+**Senior/Staff interview framing.**
+
+- **Senior:** explain one boundary in depth: “I made packet generation reusable, kept benchmark parsing workload-specific, and used configuration/templates for the real variation points.” Describe inputs, errors, tests you would expect, and how that made a new benchmark easier to integrate.
+- **Staff:** explain how you identified platform-wide capabilities—BIOS automation, environment setup, command templating, statistics, and reporting—and separated them from benchmark-specific logic. Connect the choice to team onboarding, consistency across Ubuntu/RHEL and compiler combinations, and reuse for future platforms.
+
+**Evidence boundary.** The project narrative does not document use of Python protocols, ABCs, Pydantic, `mypy`, or a particular automated-test framework. Present those as ways you would formalize or strengthen the boundaries, not as technologies already used.
+
+### Scenario 2: separating AI reasoning from deterministic Python services
+
+**Project scenario.** In **DPDK BenchOps Copilot**, the AI layer answered benchmark questions and synthesized tuning or regression explanations, while command construction, run lookup, log retrieval, plan validation, result parsing, and run comparison remained deterministic. LlamaIndex handled ingestion/retrieval, LangChain connected model and tool components, LangGraph controlled the workflow, and MCP exposed narrow operational tools.
+
+**How the concepts apply.** The project is a practical SOLID example: retrieval, orchestration, model interaction, and tool execution have distinct contracts and safety responsibilities. The important boundary was not “one class per framework”; it was that business logic could ask for evidence or a safe operation without treating an LLM response as executable truth.
+
+**Decision and trade-offs.** Keeping AI synthesis separate from execution sacrificed some free-form flexibility and introduced more interfaces, but it made high-risk behavior auditable and kept commands reproducible. The extra structure was justified by the cost of a hallucinated DPDK flag or an unsafe BIOS recommendation.
+
+**Senior/Staff interview framing.**
+
+- **Senior:** trace one request through retrieval, deterministic tool invocation, verification, and response construction, calling out validation and error translation at each boundary.
+- **Staff:** lead with the governing principle—“probabilistic reasoning may propose; deterministic services validate and execute”—then explain how that principle shaped framework selection, operational ownership, release evaluation, and future extensibility.
+
 ## 10. Interview questions
 
 1. Why is a tuple different from a list, and where would each appear in RAG?
@@ -615,6 +656,8 @@ Mocking pitfalls:
 8. How do you test an LLM integration without slow and nondeterministic unit tests?
 9. What makes a provider adapter substitutable?
 10. What is a sign that an OOP design is overengineered?
+11. How do assignment, a shallow copy, and an in-place sort differ?
+12. When can a dictionary comprehension silently lose data?
 
 ## 11. Exit checklist
 
@@ -627,6 +670,7 @@ Mocking pitfalls:
 - [ ] Design an exception hierarchy and safe structured logs.
 - [ ] Build deterministic fakes and separate test layers.
 - [ ] Keep SDK details out of domain and service code.
+- [ ] Explain aliasing, shallow copies, in-place mutation, and stable output ordering.
 
 ## Source notes
 
@@ -635,3 +679,5 @@ Mocking pitfalls:
 - [Python Advanced: Typing & Testing](<../Python-AI/Day:3 Python Advanced: Typing & Testing.md>)
 - [GenAI Design Patterns](<../Python-AI/Day:8 GenAI Design Patterns.md>)
 - [Capstone Revision Day 1](<../revision/Day:7 Capstone Revision Day 1.md>)
+- [DPDK Automation for Network Packet Processing](../project/dpdk-final.md)
+- [DPDK BenchOps Copilot](../project/final-DPDK-BenchOps-Copilot.md)

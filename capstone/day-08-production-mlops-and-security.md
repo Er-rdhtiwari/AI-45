@@ -4,6 +4,8 @@
 
 Be able to turn a model, RAG pipeline, or agent into a validated, secure, observable, scalable, versioned, evaluated, and reversible production service.
 
+**Scope note:** Day 2 owns general HTTP, persistence, and concurrency semantics. This day applies those foundations specifically to ML, RAG, and agent release, serving, monitoring, security, and incident response.
+
 ## 1. Production API contracts
 
 ### Prediction
@@ -406,6 +408,22 @@ Responsible AI principles in the source material include fairness, transparency/
 
 Audit must answer who, what version, which data/tool, what approval, what outcome, and when—without becoming a second unprotected sensitive-data store.
 
+### Operational response and learning
+
+A production design also needs a response loop:
+
+```text
+alert or failed evaluation
+→ identify affected version, tenant/scope, and dependency
+→ contain through denial, fallback, traffic reduction, or rollback
+→ reconcile unknown tool/job outcomes
+→ preserve safe evidence for audit
+→ correct the root cause
+→ add the case to tests, evaluations, or runbooks
+```
+
+Maintain ownership, alert thresholds, runbooks, rollback criteria, and a review process for failed evaluations and incidents. Restoring service is not the end: confirm data/index/tool consistency and feed validated lessons back into release gates.
+
 ## 10. Production readiness checklist
 
 API:
@@ -432,13 +450,47 @@ Deployment:
 
 - immutable artifact, staged rollout, health/quality gates, known rollback.
 
+## Project-grounded examples
+
+### Scenario 1: CI quality gates for a production-style RAG/agent service
+
+**Project scenario.** **DPDK BenchOps Copilot** was exposed through FastAPI and deployed using Kubernetes and Helm with HPA and Jenkins. Its release checks included faithfulness/groundedness, context precision, context recall, citation coverage, tool success rate, tool error rate, and p95 latency. The platform also traced retrieval and tool calls and used retries, timeouts, circuit-breaker-style dependency protection, and canary/rollback thinking.
+
+**How the concepts apply.** This is LLMOps rather than ordinary “service is up” monitoring. A release can pass unit tests and still retrieve the wrong workload context, lose citations, call tools less reliably, or exceed its latency target. The project therefore treated retrieval behavior, answer support, tool outcomes, and latency as release dimensions.
+
+**Decision and trade-offs.** Golden-set gates increased CI time and required maintained evaluation cases, but prevented prompt, retrieval, or tool changes from silently degrading operational quality. Kubernetes/HPA enabled production-style scaling, while the multi-component service increased dependency and observability complexity. Canary/rollback reduced change risk but required compatible application, retrieval, prompt, tool, and data versions.
+
+**Senior/Staff interview framing.**
+
+- **Senior:** describe one release change, the deterministic tests and AI evaluations it should run, the metrics that would block promotion, and the rollback artifact.
+- **Staff:** define the quality contract and ownership model across code, prompt, index, tools, and deployment. Explain how you balance release speed with evaluation cost, and how online failures become reviewed golden cases.
+
+**Evidence boundary.** The project does not record exact gate thresholds, traffic volume, autoscaling signals, image-registry details, or measured availability. Do not invent them.
+
+### Scenario 2: architectural safety for commands and disruptive actions
+
+**Project scenario.** The original DPDK platform contained complex command templates and BIOS automation, including Redfish-based changes for Dell/HP and Python automation for AMD Cinnabar platforms. In the Copilot, `CommandBuilder` generated commands only from allowlisted templates; run access, log retrieval, and comparisons were exposed as narrow MCP tools; calls were audited; and BIOS/reboot-affecting actions required human control.
+
+**How the concepts apply.** The model had no need for arbitrary shell access. Prompt instructions were supplemented by hard capability boundaries: deterministic tool implementations, constrained command templates, verification, audit, and approval for the highest-impact operations.
+
+**Decision and trade-offs.** An allowlist cannot express every novel command an expert might want, so it trades flexibility for controlled behavior. Manual BIOS approval adds delay, but limits a disruptive and platform-sensitive risk. Audit and verification add storage and latency, but support incident review and operator trust.
+
+**Outcome.** The project reports safer, more reproducible operational workflows and auditable tool use. It does not claim zero incidents or quantify risk reduction.
+
+**Senior/Staff interview framing.**
+
+- **Senior:** show validation before a `CommandBuilder` or run-access call, safe failure behavior, and the data captured in an audit event.
+- **Staff:** present a risk-tiered capability model—read, deterministic preparation, and disruptive execution—with progressively stronger policy and approval. Connect it to least privilege, incident response, and release evaluation.
+
+**Security scope boundary.** The project documents tool controls and approvals, but not multi-tenant isolation, OAuth/OIDC, JWT validation, WAF/DDoS configuration, PII processing, encryption implementation, or a secrets product. Discuss those as general production requirements or clearly labeled **hypothetical improvements**, not completed project work.
+
 ## 11. Interview questions
 
 1. Why is input validation not authorization?
 2. Why can `async` fail to speed CPU-heavy inference?
 3. Model inside API or separate model server?
 4. What belongs in a RAG or agent API response?
-5. Data drift versus concept/model drift?
+5. Data drift versus concept drift versus measured model-performance degradation?
 6. What should block an AI release?
 7. Provider API versus self-hosting?
 8. What do batching, quantization, caching, and streaming trade?
@@ -451,6 +503,7 @@ Deployment:
 15. What belongs in the control plane versus data plane?
 16. Why are WAF/DDoS controls different from prompt-injection controls?
 17. How would you detect and contain data poisoning?
+18. After rollback, what reconciliation and learning work remains?
 
 ## 12. Exit checklist
 
@@ -462,6 +515,7 @@ Deployment:
 - [ ] Compare hosted/self-hosted inference and optimization levers.
 - [ ] Enforce identity, access, tenant scope, PII, and tool safety.
 - [ ] Define audit/governance/responsible-AI controls.
+- [ ] Define incident ownership, runbooks, containment, reconciliation, and post-incident evaluation updates.
 
 ## Source notes
 
@@ -477,3 +531,5 @@ Deployment:
 - [MCP End to End](<../revision/Day:5 MCP End to End.md>)
 - [Capstone Revision Day 2](<../revision/Day:8 Capstone Revision Day 2.md>)
 - [Capstone Revision Day 3](<../revision/Day:9 Capstone Revision Day 3.md>)
+- [DPDK Automation for Network Packet Processing](../project/dpdk-final.md)
+- [DPDK BenchOps Copilot](../project/final-DPDK-BenchOps-Copilot.md)

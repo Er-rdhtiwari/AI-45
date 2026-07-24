@@ -4,14 +4,17 @@
 
 Each day has one canonical topic boundary, one production exercise, and one interview drill. The detailed note for that day contains the consolidated explanations, examples, trade-offs, best practices, production use cases, and questions.
 
+Before starting, use [project-scenario-mapping.md](project-scenario-mapping.md) to select one real project story for the day. Use [final-review-report.md](final-review-report.md) when you need the final source-coverage and evidence-boundary record.
+
 Suggested daily sequence:
 
 1. **Recall:** explain the previous day without notes.
 2. **Core revision:** read the day’s detailed note.
 3. **Active practice:** write code, pseudocode, a data model, or an architecture.
 4. **Production review:** enumerate failures, controls, telemetry, and trade-offs.
-5. **Interview drill:** answer the selected questions aloud.
-6. **Exit check:** complete the checklist from memory.
+5. **Project drill:** connect one evidenced project scenario to the concept; label any proposed evolution hypothetical.
+6. **Interview drill:** answer the selected questions aloud.
+7. **Exit check:** complete the checklist from memory.
 
 The sequence moves from implementation foundations to complete enterprise architecture:
 

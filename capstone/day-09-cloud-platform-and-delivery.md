@@ -4,6 +4,8 @@
 
 Be able to deploy and operate an AI platform across network, compute, data, Kubernetes, infrastructure code, CI/CD, and user experience with clear ownership and rollback.
 
+**Scope note:** Day 8 owns service-level MLOps/LLMOps and security behavior. This day owns the cloud, Kubernetes, infrastructure-as-code, delivery, frontend, and developer-experience mechanisms that enforce and expose those requirements.
+
 ## 1. Cloud architecture choices
 
 ### Compute
@@ -135,6 +137,8 @@ The URL inherits creator permissions and must be narrowly scoped.
 
 ### Objects
 
+- Cluster: the Kubernetes control plane plus worker capacity.
+- Node: a worker machine that runs pods.
 - Pod: running container unit.
 - Deployment: desired replicas and rollout.
 - Service: stable network endpoint for pods.
@@ -502,6 +506,63 @@ Git push
 - Healthy pods but regressed RAG/tool behavior.
 - Monitoring infrastructure only.
 
+## Project-grounded examples
+
+### Scenario 1: using Ansible for repeatable host and benchmark configuration
+
+**Project scenario.** In **DPDK Automation for Network Packet Processing**, reusable Ansible roles installed OS packages, gcc/AOCC/clang toolchains, statistics utilities, and benchmark dependencies across Ubuntu 22.04/24.04 and RHEL 8/9. Conditional tasks and variables handled platform differences, while Python/Redfish components handled BIOS-specific operations.
+
+**How the concepts apply.** This is exactly Ansible’s configuration-management role: converge long-lived benchmark hosts toward a repeatable environment and reuse roles across workloads. It also illustrates why module/role boundaries and idempotence matter; repeated campaign setup should not accumulate accidental machine state.
+
+**Decision and trade-offs.** Shared roles reduced manual variation and made multi-server campaigns feasible, but cross-OS conditions increased role complexity and test combinations. Keeping BIOS automation in dedicated Python/Redfish components avoided forcing every platform operation into Ansible, at the cost of coordinating two automation layers.
+
+**Outcome.** The framework became the team’s default execution path, supported multi-server parallel scenarios, and made 10–50+ scenario campaigns practical. The project says setup time and human error were significantly reduced but gives no numeric reduction.
+
+**Senior/Staff interview framing.**
+
+- **Senior:** explain role inputs, OS condition handling, idempotent reruns, failure reporting, and how a new benchmark consumes shared setup.
+- **Staff:** explain ownership boundaries among host configuration, BIOS/platform control, benchmark execution, and reporting; then discuss how you prevented platform variation from fragmenting the whole system.
+
+### Scenario 2: production-style delivery for BenchOps Copilot
+
+**Project scenario.** **DPDK BenchOps Copilot** used FastAPI, Kubernetes, Helm, HPA, Jenkins, Postgres, a vector database, and S3/MinIO. The documented safeguards included tracing, retries, timeouts, circuit-breaker-style protection, CI evaluation gates, and canary/rollback deployment thinking.
+
+**How the concepts apply.**
+
+```text
+Jenkins quality/evaluation gates
+→ application release
+→ Helm-managed Kubernetes deployment
+→ HPA-based scaling
+→ FastAPI service
+→ Postgres + vector database + S3/MinIO dependencies
+→ tracing and rollback controls
+```
+
+This provides a real example of separating application packaging/deployment from the data systems the application consumes. It also shows why deployment health must include RAG and tool behavior, not only pod health.
+
+**Decision and trade-offs.** Kubernetes and Helm provided standardized deployment and scaling controls, but added operational overhead that would not be justified for a small one-process prototype. HPA improved elasticity but could not remove downstream model, database, or tool limits. Jenkins evaluation gates improved release confidence at the cost of longer and more specialized CI.
+
+**Senior/Staff interview framing.**
+
+- **Senior:** describe the build/test/deploy/verify/rollback path and the readiness implications of Postgres, vector, object, model, and tool dependencies.
+- **Staff:** justify Kubernetes from workload and operational needs, identify independent scaling/failure domains, define behavior-aware promotion gates, and state which bottleneck HPA cannot solve.
+
+### Scenario 3: dashboard and trust-oriented UX
+
+**Project scenario.** The first project collaborated with a UI/dashboard team on a parameter-driven interface with benchmark settings, statistics toggles, BIOS options, sensible defaults, graphs, metric drill-down, and side-by-side run comparisons. The Copilot added cited answers and visibility into tool-driven workflows as trust requirements.
+
+**How the concepts apply.** The UI reduced domain complexity without removing expert control. Defaults and structured controls lowered configuration error; comparisons connected raw automation to an engineer’s actual decision. In the AI evolution, citations and explicit operational boundaries were part of usability because benchmark engineers needed to verify advice.
+
+**Senior/Staff interview framing.**
+
+- **Senior:** explain validation, dependent fields, run status, comparison selection, and how source/citation details help a user recover from uncertainty.
+- **Staff:** frame UX as an operational safety surface: defaults, provenance, approval, and clear failure states reduce misuse and support adoption.
+
+**Evidence boundary and platform gap.** The projects do not name a frontend framework, cloud provider, Terraform, container registry, ingress controller, network topology, Kubernetes probe configuration, rollout mechanism, or exact HPA metric. Do not claim React/Next.js, AWS/Azure/GCP/IBM Cloud, Terraform, EKS/AKS/GKE/IKS, or a specific rollout implementation.
+
+**Hypothetical improvement.** Terraform-managed cloud infrastructure and explicitly separated Kubernetes workloads could be evaluated if scale, ownership, or environment-reproducibility requirements justified them. This is not documented as implemented.
+
 ## 13. Interview questions
 
 1. VM versus container versus Kubernetes versus managed endpoint?
@@ -522,6 +583,7 @@ Git push
 16. What makes an AI deployment gate different?
 17. How do IBM Cloud, AWS, Azure, and GCP map to the same architecture concepts?
 18. When are Streamlit or Gradio appropriate, and what remains for production?
+19. Cluster versus node versus pod?
 
 ## 14. Exit checklist
 
@@ -542,3 +604,5 @@ Git push
 - [Databricks Fundamentals](<../ijp/w03/Day:15 Databricks Fundamentals Overview.md>)
 - [Capstone Revision Day 1](<../revision/Day:7 Capstone Revision Day 1.md>)
 - [Capstone Revision Day 3](<../revision/Day:9 Capstone Revision Day 3.md>)
+- [DPDK Automation for Network Packet Processing](../project/dpdk-final.md)
+- [DPDK BenchOps Copilot](../project/final-DPDK-BenchOps-Copilot.md)
