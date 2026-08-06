@@ -106,8 +106,7 @@ Mandatory output format:
 - Begin with a concise, beginner-friendly summary, then teach at senior interview depth
 - Include one concise ASCII architecture/workflow diagram; use a second only when it shows a genuinely different view
 - Give thought process and pseudocode before code
-- Provide runnable Python, SQL, Go, YAML, or configuration examples appropriate to the topic
-- Explain only non-obvious logic, correctness conditions, and key design decisions; do not narrate code line by line.- Include production trade-offs, failure modes, and no more than three important mistakes
+- Explain non-obvious logic, correctness conditions, key design decisions, production trade-offs, failure modes, and important pitfalls; do not narrate code line by line.
 - Do not invent project metrics or claim hands-on experience I do not have; use placeholders or label conceptual knowledge clearly
 ```
 
@@ -150,8 +149,7 @@ Mandatory output format:
 - Begin with a concise, beginner-friendly summary, then teach at senior interview depth
 - Include one concise ASCII architecture/workflow diagram; use a second only when it shows a genuinely different view
 - Give thought process and pseudocode before code
-- Provide runnable Python, SQL, Go, YAML, or configuration examples appropriate to the topic
-- Explain only non-obvious logic, correctness conditions, and key design decisions; do not narrate code line by line.- Include production trade-offs, failure modes, and no more than three important mistakes
+- Explain non-obvious logic, correctness conditions, key design decisions, production trade-offs, failure modes, and important pitfalls; do not narrate code line by line.
 - Do not invent project metrics or claim hands-on experience I do not have; use placeholders or label conceptual knowledge clearly
 ```
 
@@ -194,8 +192,7 @@ Mandatory output format:
 - Begin with a concise, beginner-friendly summary, then teach at senior interview depth
 - Include one concise ASCII architecture/workflow diagram; use a second only when it shows a genuinely different view
 - Give thought process and pseudocode before code
-- Provide runnable Python, SQL, Go, YAML, or configuration examples appropriate to the topic
-- Explain only non-obvious logic, correctness conditions, and key design decisions; do not narrate code line by line.- Include production trade-offs, failure modes, and no more than three important mistakes
+- Explain non-obvious logic, correctness conditions, key design decisions, production trade-offs, failure modes, and important pitfalls; do not narrate code line by line.
 - Do not invent project metrics or claim hands-on experience I do not have; use placeholders or label conceptual knowledge clearly
 ```
 
@@ -238,8 +235,7 @@ Mandatory output format:
 - Begin with a concise, beginner-friendly summary, then teach at senior interview depth
 - Include one concise ASCII architecture/workflow diagram; use a second only when it shows a genuinely different view
 - Give thought process and pseudocode before code
-- Provide runnable Python, SQL, Go, YAML, or configuration examples appropriate to the topic
-- Explain only non-obvious logic, correctness conditions, and key design decisions; do not narrate code line by line.- Include production trade-offs, failure modes, and no more than three important mistakes
+- Explain non-obvious logic, correctness conditions, key design decisions, production trade-offs, failure modes, and important pitfalls; do not narrate code line by line.
 - Do not invent project metrics or claim hands-on experience I do not have; use placeholders or label conceptual knowledge clearly
 ```
 
@@ -284,8 +280,7 @@ Mandatory output format:
 - Begin with a concise, beginner-friendly summary, then teach at senior interview depth
 - Include one concise ASCII architecture/workflow diagram; use a second only when it shows a genuinely different view
 - Give thought process and pseudocode before code
-- Provide runnable Python, SQL, Go, YAML, or configuration examples appropriate to the topic
-- Explain only non-obvious logic, correctness conditions, and key design decisions; do not narrate code line by line.- Include production trade-offs, failure modes, and no more than three important mistakes
+- Explain non-obvious logic, correctness conditions, key design decisions, production trade-offs, failure modes, and important pitfalls; do not narrate code line by line.
 - Do not invent project metrics or claim hands-on experience I do not have; use placeholders or label conceptual knowledge clearly
 ```
 
@@ -426,8 +421,7 @@ Mandatory output format:
 - Begin with a concise, beginner-friendly summary, then teach at senior interview depth
 - Include one concise ASCII architecture/workflow diagram; use a second only when it shows a genuinely different view
 - Give thought process and pseudocode before code
-- Provide runnable Python, SQL, Go, YAML, or configuration examples appropriate to the topic
-- Explain only non-obvious logic, correctness conditions, and key design decisions; do not narrate code line by line.- Include production trade-offs, failure modes, and no more than three important mistakes
+- Explain non-obvious logic, correctness conditions, key design decisions, production trade-offs, failure modes, and important pitfalls; do not narrate code line by line.
 - Do not invent project metrics or claim hands-on experience I do not have; use placeholders or label conceptual knowledge clearly
 ```
 
@@ -470,8 +464,7 @@ Mandatory output format:
 - Begin with a concise, beginner-friendly summary, then teach at senior interview depth
 - Include one concise ASCII architecture/workflow diagram; use a second only when it shows a genuinely different view
 - Give thought process and pseudocode before code
-- Provide runnable Python, SQL, Go, YAML, or configuration examples appropriate to the topic
-- Explain only non-obvious logic, correctness conditions, and key design decisions; do not narrate code line by line.- Include production trade-offs, failure modes, and no more than three important mistakes
+- Explain non-obvious logic, correctness conditions, key design decisions, production trade-offs, failure modes, and important pitfalls; do not narrate code line by line.
 - Do not invent project metrics or claim hands-on experience I do not have; use placeholders or label conceptual knowledge clearly
 ```
 
@@ -514,8 +507,7 @@ Mandatory output format:
 - Begin with a concise, beginner-friendly summary, then teach at senior interview depth
 - Include one concise ASCII architecture/workflow diagram; use a second only when it shows a genuinely different view
 - Give thought process and pseudocode before code
-- Provide runnable Python, SQL, Go, YAML, or configuration examples appropriate to the topic
-- Explain only non-obvious logic, correctness conditions, and key design decisions; do not narrate code line by line.- Include production trade-offs, failure modes, and no more than three important mistakes
+- Explain non-obvious logic, correctness conditions, key design decisions, production trade-offs, failure modes, and important pitfalls; do not narrate code line by line.
 - Do not invent project metrics or claim hands-on experience I do not have; use placeholders or label conceptual knowledge clearly
 ```
 
@@ -560,8 +552,7 @@ Mandatory output format:
 - Begin with a concise, beginner-friendly summary, then teach at senior interview depth
 - Include one concise ASCII architecture/workflow diagram; use a second only when it shows a genuinely different view
 - Give thought process and pseudocode before code
-- Provide runnable Python, SQL, Go, YAML, or configuration examples appropriate to the topic
-- Explain only non-obvious logic, correctness conditions, and key design decisions; do not narrate code line by line.- Include production trade-offs, failure modes, and no more than three important mistakes
+- Explain non-obvious logic, correctness conditions, key design decisions, production trade-offs, failure modes, and important pitfalls; do not narrate code line by line.
 - Do not invent project metrics or claim hands-on experience I do not have; use placeholders or label conceptual knowledge clearly
 ```
 
@@ -607,8 +598,7 @@ Mandatory output format:
 - Begin with a concise, beginner-friendly summary, then teach at senior interview depth
 - Include one concise ASCII architecture/workflow diagram; use a second only when it shows a genuinely different view
 - Give thought process and pseudocode before code
-- Provide runnable Python, SQL, Go, YAML, or configuration examples appropriate to the topic
-- Explain only non-obvious logic, correctness conditions, and key design decisions; do not narrate code line by line.- Include production trade-offs, failure modes, and no more than three important mistakes
+- Explain non-obvious logic, correctness conditions, key design decisions, production trade-offs, failure modes, and important pitfalls; do not narrate code line by line.
 - Do not invent project metrics or claim hands-on experience I do not have; use placeholders or label conceptual knowledge clearly
 ```
 
@@ -748,7 +738,7 @@ Mandatory output format:
 - Explain tensor shapes at every important operation
 - Give thought process and pseudocode before code
 - Provide runnable NumPy code without using PyTorch/TensorFlow for the core forward pass
-- Explain only non-obvious logic, correctness conditions, and key design decisions; do not narrate code line by line.- Include production implications, failure modes, and no more than three important mistakes
+- Explain non-obvious logic, correctness conditions, key design decisions, production trade-offs, failure modes, and important pitfalls; do not narrate code line by line.
 - Do not invent project metrics or claim hands-on experience I do not have
 ```
 
@@ -793,7 +783,7 @@ Mandatory output format:
 - Give pseudocode before implementation
 - Provide runnable NumPy and small PyTorch examples
 - Include a gradient-comparison check with tolerances
-- Explain only non-obvious logic, correctness conditions, and key design decisions; do not narrate code line by line.- Include optimizer trade-offs and no more than three important mistakes
+- Explain non-obvious logic, correctness conditions, key design decisions, production trade-offs, failure modes, and important pitfalls; do not narrate code line by line.
 ```
 
 ### Day 16 DSA Track
@@ -835,8 +825,7 @@ Mandatory output format:
 - Provide a failure symptom → likely cause → debugging action table
 - Give pseudocode before code
 - Provide runnable PyTorch code and a compact Keras comparison
-- Explain only the important training-loop logic line by line
-- Include reproducibility and production trade-offs and no more than three important mistakes
+- Explain non-obvious training-loop logic, correctness and reproducibility conditions, key design decisions, production trade-offs, failure modes, and important pitfalls; do not narrate code line by line.
 ```
 
 ### Day 17 DSA Track
@@ -879,8 +868,7 @@ Mandatory output format:
 - Show convolution output-shape calculations
 - Give pseudocode before code
 - Provide runnable PyTorch code with a small data pipeline
-- Explain only the important model and training logic line by line
-- Include architecture trade-offs and no more than three important mistakes
+- Explain non-obvious model and training logic, correctness conditions, architecture decisions, production trade-offs, failure modes, and important pitfalls; do not narrate code line by line.
 ```
 
 ### Day 18 DSA Track
@@ -923,8 +911,7 @@ Mandatory output format:
 - Provide a comparison table for RNN, LSTM, GRU, CNN and transformer choices
 - Give pseudocode before code
 - Provide runnable PyTorch code with masking/length handling where practical
-- Explain only the important model and training logic line by line
-- Include production trade-offs and no more than three important mistakes
+- Explain non-obvious model and training logic, correctness conditions, architecture decisions, production trade-offs, failure modes, and important pitfalls; do not narrate code line by line.
 ```
 
 ### Day 19 DSA Track
@@ -1072,8 +1059,7 @@ Mandatory output format:
 - Begin with a concise, beginner-friendly summary, then teach at senior interview depth
 - Include one concise ASCII architecture/workflow diagram; use a second only when it shows a genuinely different view
 - Give thought process and pseudocode before code
-- Provide runnable Python, SQL, Go, YAML, or configuration examples appropriate to the topic
-- Explain only non-obvious logic, correctness conditions, and key design decisions; do not narrate code line by line.- Include production trade-offs, failure modes, and no more than three important mistakes
+- Explain non-obvious logic, correctness conditions, key design decisions, production trade-offs, failure modes, and important pitfalls; do not narrate code line by line.
 - Do not invent project metrics or claim hands-on experience I do not have; use placeholders or label conceptual knowledge clearly
 ```
 
@@ -1118,8 +1104,7 @@ Mandatory output format:
 - Begin with a concise, beginner-friendly summary, then teach at senior interview depth
 - Include one concise ASCII architecture/workflow diagram; use a second only when it shows a genuinely different view
 - Give thought process and pseudocode before code
-- Provide runnable Python, SQL, Go, YAML, or configuration examples appropriate to the topic
-- Explain only non-obvious logic, correctness conditions, and key design decisions; do not narrate code line by line.- Include production trade-offs, failure modes, and no more than three important mistakes
+- Explain non-obvious logic, correctness conditions, key design decisions, production trade-offs, failure modes, and important pitfalls; do not narrate code line by line.
 - Do not invent project metrics or claim hands-on experience I do not have; use placeholders or label conceptual knowledge clearly
 ```
 
@@ -1162,8 +1147,7 @@ Mandatory output format:
 - Begin with a concise, beginner-friendly summary, then teach at senior interview depth
 - Include one concise ASCII architecture/workflow diagram; use a second only when it shows a genuinely different view
 - Give thought process and pseudocode before code
-- Provide runnable Python, SQL, Go, YAML, or configuration examples appropriate to the topic
-- Explain only non-obvious logic, correctness conditions, and key design decisions; do not narrate code line by line.- Include production trade-offs, failure modes, and no more than three important mistakes
+- Explain non-obvious logic, correctness conditions, key design decisions, production trade-offs, failure modes, and important pitfalls; do not narrate code line by line.
 - Do not invent project metrics or claim hands-on experience I do not have; use placeholders or label conceptual knowledge clearly
 ```
 
@@ -1208,8 +1192,7 @@ Mandatory output format:
 - Begin with a concise, beginner-friendly summary, then teach at senior interview depth
 - Include one concise ASCII architecture/workflow diagram; use a second only when it shows a genuinely different view
 - Give thought process and pseudocode before code
-- Provide runnable Python, SQL, Go, YAML, or configuration examples appropriate to the topic
-- Explain only non-obvious logic, correctness conditions, and key design decisions; do not narrate code line by line.- Include production trade-offs, failure modes, and no more than three important mistakes
+- Explain non-obvious logic, correctness conditions, key design decisions, production trade-offs, failure modes, and important pitfalls; do not narrate code line by line.
 - Do not invent project metrics or claim hands-on experience I do not have; use placeholders or label conceptual knowledge clearly
 ```
 
@@ -1254,8 +1237,7 @@ Mandatory output format:
 - Begin with a concise, beginner-friendly summary, then teach at senior interview depth
 - Include one concise ASCII architecture/workflow diagram; use a second only when it shows a genuinely different view
 - Give thought process and pseudocode before code
-- Provide runnable Python, SQL, Go, YAML, or configuration examples appropriate to the topic
-- Explain only non-obvious logic, correctness conditions, and key design decisions; do not narrate code line by line.- Include production trade-offs, failure modes, and no more than three important mistakes
+- Explain non-obvious logic, correctness conditions, key design decisions, production trade-offs, failure modes, and important pitfalls; do not narrate code line by line.
 - Do not invent project metrics or claim hands-on experience I do not have; use placeholders or label conceptual knowledge clearly
 ```
 
@@ -1396,8 +1378,7 @@ Mandatory output format:
 - Begin with a concise, beginner-friendly summary, then teach at senior interview depth
 - Include one concise ASCII architecture/workflow diagram; use a second only when it shows a genuinely different view
 - Give thought process and pseudocode before code
-- Provide runnable Python, SQL, Go, YAML, or configuration examples appropriate to the topic
-- Explain only non-obvious logic, correctness conditions, and key design decisions; do not narrate code line by line.- Include production trade-offs, failure modes, and no more than three important mistakes
+- Explain non-obvious logic, correctness conditions, key design decisions, production trade-offs, failure modes, and important pitfalls; do not narrate code line by line.
 - Do not invent project metrics or claim hands-on experience I do not have; use placeholders or label conceptual knowledge clearly
 ```
 
@@ -1442,8 +1423,7 @@ Mandatory output format:
 - Begin with a concise, beginner-friendly summary, then teach at senior interview depth
 - Include one concise ASCII architecture/workflow diagram; use a second only when it shows a genuinely different view
 - Give thought process and pseudocode before code
-- Provide runnable Python, SQL, Go, YAML, or configuration examples appropriate to the topic
-- Explain only non-obvious logic, correctness conditions, and key design decisions; do not narrate code line by line.- Include production trade-offs, failure modes, and no more than three important mistakes
+- Explain non-obvious logic, correctness conditions, key design decisions, production trade-offs, failure modes, and important pitfalls; do not narrate code line by line.
 - Do not invent project metrics or claim hands-on experience I do not have; use placeholders or label conceptual knowledge clearly
 ```
 
@@ -1488,8 +1468,7 @@ Mandatory output format:
 - Begin with a concise, beginner-friendly summary, then teach at senior interview depth
 - Include one concise ASCII architecture/workflow diagram; use a second only when it shows a genuinely different view
 - Give thought process and pseudocode before code
-- Provide runnable Python, SQL, Go, YAML, or configuration examples appropriate to the topic
-- Explain only non-obvious logic, correctness conditions, and key design decisions; do not narrate code line by line.- Include production trade-offs, failure modes, and no more than three important mistakes
+- Explain non-obvious logic, correctness conditions, key design decisions, production trade-offs, failure modes, and important pitfalls; do not narrate code line by line.
 - Do not invent project metrics or claim hands-on experience I do not have; use placeholders or label conceptual knowledge clearly
 ```
 
@@ -1531,8 +1510,7 @@ Mandatory output format:
 - Begin with a concise, beginner-friendly summary, then teach at senior interview depth
 - Include one concise ASCII architecture/workflow diagram; use a second only when it shows a genuinely different view
 - Give thought process and pseudocode before code
-- Provide runnable Python, SQL, Go, YAML, or configuration examples appropriate to the topic
-- Explain only non-obvious logic, correctness conditions, and key design decisions; do not narrate code line by line.- Include production trade-offs, failure modes, and no more than three important mistakes
+- Explain non-obvious logic, correctness conditions, key design decisions, production trade-offs, failure modes, and important pitfalls; do not narrate code line by line.
 - Do not invent project metrics or claim hands-on experience I do not have; use placeholders or label conceptual knowledge clearly
 ```
 
@@ -1577,8 +1555,7 @@ Mandatory output format:
 - Begin with a concise, beginner-friendly summary, then teach at senior interview depth
 - Include one concise ASCII architecture/workflow diagram; use a second only when it shows a genuinely different view
 - Give thought process and pseudocode before code
-- Provide runnable Python, SQL, Go, YAML, or configuration examples appropriate to the topic
-- Explain only non-obvious logic, correctness conditions, and key design decisions; do not narrate code line by line.- Include production trade-offs, failure modes, and no more than three important mistakes
+- Explain non-obvious logic, correctness conditions, key design decisions, production trade-offs, failure modes, and important pitfalls; do not narrate code line by line.
 - Do not invent project metrics or claim hands-on experience I do not have; use placeholders or label conceptual knowledge clearly
 ```
 
@@ -1720,8 +1697,7 @@ Mandatory output format:
 - Begin with a concise, beginner-friendly summary, then teach at senior interview depth
 - Include one concise ASCII architecture/workflow diagram; use a second only when it shows a genuinely different view
 - Give thought process and pseudocode before code
-- Provide runnable Python, SQL, Go, YAML, or configuration examples appropriate to the topic
-- Explain only non-obvious logic, correctness conditions, and key design decisions; do not narrate code line by line.- Include production trade-offs, failure modes, and no more than three important mistakes
+- Explain non-obvious logic, correctness conditions, key design decisions, production trade-offs, failure modes, and important pitfalls; do not narrate code line by line.
 - Do not invent project metrics or claim hands-on experience I do not have; use placeholders or label conceptual knowledge clearly
 ```
 
@@ -1766,8 +1742,7 @@ Mandatory output format:
 - Begin with a concise, beginner-friendly summary, then teach at senior interview depth
 - Include one concise ASCII architecture/workflow diagram; use a second only when it shows a genuinely different view
 - Give thought process and pseudocode before code
-- Provide runnable Python, SQL, Go, YAML, or configuration examples appropriate to the topic
-- Explain only non-obvious logic, correctness conditions, and key design decisions; do not narrate code line by line.- Include production trade-offs, failure modes, and no more than three important mistakes
+- Explain non-obvious logic, correctness conditions, key design decisions, production trade-offs, failure modes, and important pitfalls; do not narrate code line by line.
 - Do not invent project metrics or claim hands-on experience I do not have; use placeholders or label conceptual knowledge clearly
 ```
 
@@ -1810,8 +1785,7 @@ Mandatory output format:
 - Begin with a concise, beginner-friendly summary, then teach at senior interview depth
 - Include one concise ASCII architecture/workflow diagram; use a second only when it shows a genuinely different view
 - Give thought process and pseudocode before code
-- Provide runnable Python, SQL, Go, YAML, or configuration examples appropriate to the topic
-- Explain only non-obvious logic, correctness conditions, and key design decisions; do not narrate code line by line.- Include production trade-offs, failure modes, and no more than three important mistakes
+- Explain non-obvious logic, correctness conditions, key design decisions, production trade-offs, failure modes, and important pitfalls; do not narrate code line by line.
 - Do not invent project metrics or claim hands-on experience I do not have; use placeholders or label conceptual knowledge clearly
 ```
 
@@ -1855,8 +1829,7 @@ Mandatory output format:
 - Begin with a concise, beginner-friendly summary, then teach at senior interview depth
 - Include one concise ASCII architecture/workflow diagram; use a second only when it shows a genuinely different view
 - Give thought process and pseudocode before code
-- Provide runnable Python, SQL, Go, YAML, or configuration examples appropriate to the topic
-- Explain only non-obvious logic, correctness conditions, and key design decisions; do not narrate code line by line.- Include production trade-offs, failure modes, and no more than three important mistakes
+- Explain non-obvious logic, correctness conditions, key design decisions, production trade-offs, failure modes, and important pitfalls; do not narrate code line by line.
 - Do not invent project metrics or claim hands-on experience I do not have; use placeholders or label conceptual knowledge clearly
 ```
 
@@ -1901,8 +1874,7 @@ Mandatory output format:
 - Begin with a concise, beginner-friendly summary, then teach at senior interview depth
 - Include one concise ASCII architecture/workflow diagram; use a second only when it shows a genuinely different view
 - Give thought process and pseudocode before code
-- Provide runnable Python, SQL, Go, YAML, or configuration examples appropriate to the topic
-- Explain only non-obvious logic, correctness conditions, and key design decisions; do not narrate code line by line.- Include production trade-offs, failure modes, and no more than three important mistakes
+- Explain non-obvious logic, correctness conditions, key design decisions, production trade-offs, failure modes, and important pitfalls; do not narrate code line by line.
 - Do not invent project metrics or claim hands-on experience I do not have; use placeholders or label conceptual knowledge clearly
 ```
 
@@ -2044,8 +2016,7 @@ Mandatory output format:
 - Begin with a concise, beginner-friendly summary, then teach at senior interview depth
 - Include one concise ASCII architecture/workflow diagram; use a second only when it shows a genuinely different view
 - Give thought process and pseudocode before code
-- Provide runnable Python, SQL, Go, YAML, or configuration examples appropriate to the topic
-- Explain only non-obvious logic, correctness conditions, and key design decisions; do not narrate code line by line.- Include production trade-offs, failure modes, and no more than three important mistakes
+- Explain non-obvious logic, correctness conditions, key design decisions, production trade-offs, failure modes, and important pitfalls; do not narrate code line by line.
 - Do not invent project metrics or claim hands-on experience I do not have; use placeholders or label conceptual knowledge clearly
 ```
 
@@ -2091,8 +2062,7 @@ Mandatory output format:
 - Begin with a concise, beginner-friendly summary, then teach at senior interview depth
 - Include one concise ASCII architecture/workflow diagram; use a second only when it shows a genuinely different view
 - Give thought process and pseudocode before code
-- Provide runnable Python, SQL, Go, YAML, or configuration examples appropriate to the topic
-- Explain only non-obvious logic, correctness conditions, and key design decisions; do not narrate code line by line.- Include production trade-offs, failure modes, and no more than three important mistakes
+- Explain non-obvious logic, correctness conditions, key design decisions, production trade-offs, failure modes, and important pitfalls; do not narrate code line by line.
 - Do not invent project metrics or claim hands-on experience I do not have; use placeholders or label conceptual knowledge clearly
 ```
 
@@ -2135,8 +2105,7 @@ Mandatory output format:
 - Begin with a concise, beginner-friendly summary, then teach at senior interview depth
 - Include one concise ASCII architecture/workflow diagram; use a second only when it shows a genuinely different view
 - Give thought process and pseudocode before code
-- Provide runnable Python, SQL, Go, YAML, or configuration examples appropriate to the topic
-- Explain only non-obvious logic, correctness conditions, and key design decisions; do not narrate code line by line.- Include production trade-offs, failure modes, and no more than three important mistakes
+- Explain non-obvious logic, correctness conditions, key design decisions, production trade-offs, failure modes, and important pitfalls; do not narrate code line by line.
 - Do not invent project metrics or claim hands-on experience I do not have; use placeholders or label conceptual knowledge clearly
 ```
 
@@ -2179,8 +2148,7 @@ Mandatory output format:
 - Begin with a concise, beginner-friendly summary, then teach at senior interview depth
 - Include one concise ASCII architecture/workflow diagram; use a second only when it shows a genuinely different view
 - Give thought process and pseudocode before code
-- Provide runnable Python, SQL, Go, YAML, or configuration examples appropriate to the topic
-- Explain only non-obvious logic, correctness conditions, and key design decisions; do not narrate code line by line.- Include production trade-offs, failure modes, and no more than three important mistakes
+- Explain non-obvious logic, correctness conditions, key design decisions, production trade-offs, failure modes, and important pitfalls; do not narrate code line by line.
 - Do not invent project metrics or claim hands-on experience I do not have; use placeholders or label conceptual knowledge clearly
 ```
 
@@ -2225,8 +2193,7 @@ Mandatory output format:
 - Begin with a concise, beginner-friendly summary, then teach at senior interview depth
 - Include one concise ASCII architecture/workflow diagram; use a second only when it shows a genuinely different view
 - Give thought process and pseudocode before code
-- Provide runnable Python, SQL, Go, YAML, or configuration examples appropriate to the topic
-- Explain only non-obvious logic, correctness conditions, and key design decisions; do not narrate code line by line.- Include production trade-offs, failure modes, and no more than three important mistakes
+- Explain non-obvious logic, correctness conditions, key design decisions, production trade-offs, failure modes, and important pitfalls; do not narrate code line by line.
 - Do not invent project metrics or claim hands-on experience I do not have; use placeholders or label conceptual knowledge clearly
 ```
 
@@ -2366,8 +2333,7 @@ Mandatory output format:
 - Begin with a concise, beginner-friendly summary, then teach at senior interview depth
 - Include one concise ASCII architecture/workflow diagram; use a second only when it shows a genuinely different view
 - Give thought process and pseudocode before code
-- Provide runnable Python, SQL, Go, YAML, or configuration examples appropriate to the topic
-- Explain only non-obvious logic, correctness conditions, and key design decisions; do not narrate code line by line.- Include production trade-offs, failure modes, and no more than three important mistakes
+- Explain non-obvious logic, correctness conditions, key design decisions, production trade-offs, failure modes, and important pitfalls; do not narrate code line by line.
 - Do not invent project metrics or claim hands-on experience I do not have; use placeholders or label conceptual knowledge clearly
 ```
 
@@ -2411,8 +2377,7 @@ Mandatory output format:
 - Begin with a concise, beginner-friendly summary, then teach at senior interview depth
 - Include one concise ASCII architecture/workflow diagram; use a second only when it shows a genuinely different view
 - Give thought process and pseudocode before code
-- Provide runnable Python, SQL, Go, YAML, or configuration examples appropriate to the topic
-- Explain only non-obvious logic, correctness conditions, and key design decisions; do not narrate code line by line.- Include production trade-offs, failure modes, and no more than three important mistakes
+- Explain non-obvious logic, correctness conditions, key design decisions, production trade-offs, failure modes, and important pitfalls; do not narrate code line by line.
 - Do not invent project metrics or claim hands-on experience I do not have; use placeholders or label conceptual knowledge clearly
 ```
 
@@ -2457,8 +2422,7 @@ Mandatory output format:
 - Begin with a concise, beginner-friendly summary, then teach at senior interview depth
 - Include one concise ASCII architecture/workflow diagram; use a second only when it shows a genuinely different view
 - Give thought process and pseudocode before code
-- Provide runnable Python, SQL, Go, YAML, or configuration examples appropriate to the topic
-- Explain only non-obvious logic, correctness conditions, and key design decisions; do not narrate code line by line.- Include production trade-offs, failure modes, and no more than three important mistakes
+- Explain non-obvious logic, correctness conditions, key design decisions, production trade-offs, failure modes, and important pitfalls; do not narrate code line by line.
 - Do not invent project metrics or claim hands-on experience I do not have; use placeholders or label conceptual knowledge clearly
 ```
 
@@ -2501,8 +2465,7 @@ Mandatory output format:
 - Begin with a concise, beginner-friendly summary, then teach at senior interview depth
 - Include one concise ASCII architecture/workflow diagram; use a second only when it shows a genuinely different view
 - Give thought process and pseudocode before code
-- Provide runnable Python, SQL, Go, YAML, or configuration examples appropriate to the topic
-- Explain only non-obvious logic, correctness conditions, and key design decisions; do not narrate code line by line.- Include production trade-offs, failure modes, and no more than three important mistakes
+- Explain non-obvious logic, correctness conditions, key design decisions, production trade-offs, failure modes, and important pitfalls; do not narrate code line by line.
 - Do not invent project metrics or claim hands-on experience I do not have; use placeholders or label conceptual knowledge clearly
 ```
 
@@ -2547,8 +2510,7 @@ Mandatory output format:
 - Begin with a concise, beginner-friendly summary, then teach at senior interview depth
 - Include one concise ASCII architecture/workflow diagram; use a second only when it shows a genuinely different view
 - Give thought process and pseudocode before code
-- Provide runnable Python, SQL, Go, YAML, or configuration examples appropriate to the topic
-- Explain only non-obvious logic, correctness conditions, and key design decisions; do not narrate code line by line.- Include production trade-offs, failure modes, and no more than three important mistakes
+- Explain non-obvious logic, correctness conditions, key design decisions, production trade-offs, failure modes, and important pitfalls; do not narrate code line by line.
 - Do not invent project metrics or claim hands-on experience I do not have; use placeholders or label conceptual knowledge clearly
 ```
 
@@ -2687,8 +2649,7 @@ Mandatory output format:
 - Begin with a concise, beginner-friendly summary, then teach at senior interview depth
 - Include one concise ASCII architecture/workflow diagram; use a second only when it shows a genuinely different view
 - Give thought process and pseudocode before code
-- Provide runnable Python, SQL, Go, YAML, or configuration examples appropriate to the topic
-- Explain only non-obvious logic, correctness conditions, and key design decisions; do not narrate code line by line.- Include production trade-offs, failure modes, and no more than three important mistakes
+- Explain non-obvious logic, correctness conditions, key design decisions, production trade-offs, failure modes, and important pitfalls; do not narrate code line by line.
 - Do not invent project metrics or claim hands-on experience I do not have; use placeholders or label conceptual knowledge clearly
 ```
 
@@ -2730,8 +2691,7 @@ Mandatory output format:
 - Begin with a concise, beginner-friendly summary, then teach at senior interview depth
 - Include one concise ASCII architecture/workflow diagram; use a second only when it shows a genuinely different view
 - Give thought process and pseudocode before code
-- Provide runnable Python, SQL, Go, YAML, or configuration examples appropriate to the topic
-- Explain only non-obvious logic, correctness conditions, and key design decisions; do not narrate code line by line.- Include production trade-offs, failure modes, and no more than three important mistakes
+- Explain non-obvious logic, correctness conditions, key design decisions, production trade-offs, failure modes, and important pitfalls; do not narrate code line by line.
 - Do not invent project metrics or claim hands-on experience I do not have; use placeholders or label conceptual knowledge clearly
 ```
 
@@ -2775,8 +2735,7 @@ Mandatory output format:
 - Begin with a concise, beginner-friendly summary, then teach at senior interview depth
 - Include one concise ASCII architecture/workflow diagram; use a second only when it shows a genuinely different view
 - Give thought process and pseudocode before code
-- Provide runnable Python, SQL, Go, YAML, or configuration examples appropriate to the topic
-- Explain only non-obvious logic, correctness conditions, and key design decisions; do not narrate code line by line.- Include production trade-offs, failure modes, and no more than three important mistakes
+- Explain non-obvious logic, correctness conditions, key design decisions, production trade-offs, failure modes, and important pitfalls; do not narrate code line by line.
 - Do not invent project metrics or claim hands-on experience I do not have; use placeholders or label conceptual knowledge clearly
 ```
 
@@ -2819,8 +2778,7 @@ Mandatory output format:
 - Begin with a concise, beginner-friendly summary, then teach at senior interview depth
 - Include one concise ASCII architecture/workflow diagram; use a second only when it shows a genuinely different view
 - Give thought process and pseudocode before code
-- Provide runnable Python, SQL, Go, YAML, or configuration examples appropriate to the topic
-- Explain only non-obvious logic, correctness conditions, and key design decisions; do not narrate code line by line.- Include production trade-offs, failure modes, and no more than three important mistakes
+- Explain non-obvious logic, correctness conditions, key design decisions, production trade-offs, failure modes, and important pitfalls; do not narrate code line by line.
 - Do not invent project metrics or claim hands-on experience I do not have; use placeholders or label conceptual knowledge clearly
 ```
 
@@ -2934,7 +2892,7 @@ Act as a final Google Senior Applied AI/ML interview readiness coach.
 Today is Day 63 of my 63-day preparation for the Google Senior Applied AI/ML Engineer role.
 
 Goal:
-Consolidate all 56 days into a practical final interview pack.
+Consolidate all 63 days into a practical final interview pack.
 
 Cover:
 1. Python backend, FastAPI, API contracts, Go awareness, databases, Redis, analytical SQL, async, testing, and logging
@@ -2958,7 +2916,7 @@ Mandatory output format:
 - Review the weekly PoC for correctness, reproducibility, tests, evaluation, and explanation quality
 - Identify misunderstandings and create a weak-area recovery list
 - Provide concise interview answers, not a full reteaching of every topic
-- End with a weekly scorecard and next-week priorities
+- End with a final-readiness scorecard and seven-day maintenance priorities
 - Do not invent metrics or experience
 ```
 
