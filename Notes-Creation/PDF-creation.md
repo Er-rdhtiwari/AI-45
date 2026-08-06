@@ -1,7 +1,7 @@
 SOURCE_FOLDER="Notes/Week-1"
 PDF_OUTPUT_FOLDER="${SOURCE_FOLDER}/pdfs"
 SOURCE_FILE_PATTERN="*.md"
-EXPECTED_FILE_COUNT=3
+EXPECTED_FILE_COUNT=7
 VALIDATION_REPORT="${PDF_OUTPUT_FOLDER}/pdf-validation-report.md"
 INDEX_PDF="${PDF_OUTPUT_FOLDER}/Day-00-Notes-Index.pdf"
 
@@ -47,6 +47,7 @@ day-01.md → day-01.pdf
 * special characters
 * blank-line structure
 * section order
+* Detect LaTeX math before normal Markdown rendering; typeset all `$$...$$`, `$...$`, `\(...\)`, and `\[...\]` expressions using KaTeX, MathJax, or a real TeX engine—never as literal code—and apply renderer-required escapes such as `%` → `\%` only in a temporary rendering copy; fail validation if raw math delimiters or LaTeX commands remain visible in the PDF.
 
 For Mermaid code fences:
 

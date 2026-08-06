@@ -1,4 +1,5 @@
-# Problem statement
+# Day 6 — Finance Analytics Service PoC
+## Problem statement
 
 The PoC helps FP&A analysts and finance controllers compare budget against actual expenditure, identify high-priority expense exceptions, analyse trends, and drill down to individual transactions. It combines the Week 1 backend, API, SQL, caching, testing, observability, and statistical-reasoning topics into one executable project.
 
