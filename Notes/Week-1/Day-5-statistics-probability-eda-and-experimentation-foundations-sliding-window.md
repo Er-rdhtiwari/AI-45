@@ -51,11 +51,11 @@ Decision, risks, and recommended next action
 
 ---
 
-# 1. Descriptive statistics and distributions
+## 1. Descriptive statistics and distributions
 
 Descriptive statistics summarize the data you observed. They do not, by themselves, tell you whether the pattern generalizes or is causal.
 
-## Measures of location
+### Measures of location
 
 | Measure    | Meaning                              | Best used when                                      |
 | ---------- | ------------------------------------ | --------------------------------------------------- |
@@ -71,67 +71,67 @@ For monthly expenses:
 * The difference suggests a right-skewed distribution caused by a few large expenses.
 * The 95th percentile may be ₹140,000, which is important for liquidity or exception-management decisions.
 
-## Measures of spread
+### Measures of spread
 
-### Range
+#### Range
 
-[
+$$
 \text{Range}=\max(X)-\min(X)
-]
+$$
 
 It is easy to understand but highly sensitive to outliers.
 
-### Variance
+#### Variance
 
 Population variance:
 
-[
+$$
 \sigma^2=E[(X-\mu)^2]
-]
+$$
 
 Sample variance:
 
-[
+$$
 s^2=\frac{1}{n-1}\sum_{i=1}^{n}(x_i-\bar{x})^2
-]
+$$
 
-The (n-1) denominator corrects the tendency of a sample to underestimate population variance.
+The \(n-1\) denominator corrects the tendency of a sample to underestimate population variance.
 
-### Standard deviation
+#### Standard deviation
 
-[
+$$
 s=\sqrt{s^2}
-]
+$$
 
 It is expressed in the original units and measures typical dispersion around the mean.
 
-### Interquartile range
+#### Interquartile range
 
-[
+$$
 IQR=Q_{75}-Q_{25}
-]
+$$
 
 A common outlier-screening rule is:
 
-[
+$$
 x<Q_1-1.5IQR
-]
+$$
 
 or
 
-[
+$$
 x>Q_3+1.5IQR
-]
+$$
 
 This is an investigation rule, not an automatic deletion rule.
 
-## Distribution shape
+### Distribution shape
 
-### Symmetric distribution
+#### Symmetric distribution
 
 Mean and median are usually close.
 
-### Right-skewed distribution
+#### Right-skewed distribution
 
 A small number of high observations pull the mean upward.
 
@@ -153,15 +153,14 @@ Possible analytical responses include:
 
 Never remove large financial values simply because they are inconvenient. They may represent fraud, duplicate payments, real tail risk, or a data defect.
 
-## Covariance
+### Covariance
 
-[
+$$
 \operatorname{Cov}(X,Y)
-=======================
-
+=
 \frac{1}{n-1}
 \sum_{i=1}^{n}(x_i-\bar{x})(y_i-\bar{y})
-]
+$$
 
 * Positive covariance: the variables tend to increase together.
 * Negative covariance: one tends to decrease as the other increases.
@@ -169,15 +168,15 @@ Never remove large financial values simply because they are inconvenient. They m
 
 Its magnitude depends on the variables’ units, making it difficult to compare across variable pairs.
 
-## Correlation
+### Correlation
 
 Pearson correlation standardizes covariance:
 
-[
+$$
 r_{XY}=\frac{\operatorname{Cov}(X,Y)}{s_Xs_Y}
-]
+$$
 
-It lies between (-1) and (1).
+It lies between \(-1\) and \(1\).
 
 Important limitations:
 
@@ -191,30 +190,30 @@ For non-linear or ordinal relationships, Spearman rank correlation may be more a
 
 ---
 
-# 2. Conditional probability, Bayes, expected value, and uncertainty
+## 2. Conditional probability, Bayes, expected value, and uncertainty
 
-## Conditional probability
+### Conditional probability
 
-[
+$$
 P(A\mid B)=\frac{P(A\cap B)}{P(B)}
-]
+$$
 
-This asks: “What is the probability of (A), given that (B) has occurred?”
+This asks: “What is the probability of \(A\), given that \(B\) has occurred?”
 
 For example:
 
-* (A): a transaction is fraudulent
-* (B): the fraud detector raises an alert
+* \(A\): a transaction is fraudulent
+* \(B\): the fraud detector raises an alert
 
-The useful probability is usually (P(\text{fraud}\mid\text{alert})), not merely the detector’s sensitivity.
+The useful probability is usually \(P(\text{fraud}\mid\text{alert})\), not merely the detector’s sensitivity.
 
-## Bayes’ theorem
+### Bayes’ theorem
 
-[
+$$
 P(A\mid B)=
 \frac{P(B\mid A)P(A)}
 {P(B)}
-]
+$$
 
 Suppose:
 
@@ -224,26 +223,25 @@ Suppose:
 
 Then:
 
-[
+$$
 P(\text{fraud}\mid\text{alert})
-===============================
-
+=
 \frac{0.90\times0.01}
 {0.90\times0.01+0.05\times0.99}
 \approx 15.4%
-]
+$$
 
 Although the model detects 90% of fraudulent transactions, most alerts may still be false because fraud is rare.
 
 This is the **base-rate effect**, a common applied-science interview topic.
 
-## Expected value
+### Expected value
 
-For possible outcomes (x_i) with probabilities (p_i):
+For possible outcomes \(x_i\) with probabilities \(p_i\):
 
-[
+$$
 E[X]=\sum_i p_ix_i
-]
+$$
 
 Suppose a review action:
 
@@ -252,19 +250,19 @@ Suppose a review action:
 
 Expected benefit:
 
-[
+$$
 0.10\times100{,}000=₹10{,}000
-]
+$$
 
 Expected net value:
 
-[
+$$
 ₹10{,}000-₹2{,}000=₹8{,}000
-]
+$$
 
 A decision can have positive expected value even when success is not guaranteed.
 
-## Variance and decision risk
+### Variance and decision risk
 
 Expected value alone is insufficient.
 
@@ -286,11 +284,11 @@ A senior answer should therefore distinguish:
 
 ---
 
-# 3. Sampling and bias
+## 3. Sampling and bias
 
 A statistically sophisticated test cannot repair an unrepresentative dataset.
 
-## Selection bias
+### Selection bias
 
 Selection bias occurs when inclusion in the dataset is related to the outcome.
 
@@ -300,7 +298,7 @@ You evaluate an expense-management feature only among departments that voluntari
 
 The feature group could appear better even if the feature had no effect.
 
-## Survivorship bias
+### Survivorship bias
 
 You analyze only entities that remain active.
 
@@ -313,7 +311,7 @@ Examples:
 
 Failures and exits often contain the most important information.
 
-## Non-response bias
+### Non-response bias
 
 People who respond may differ systematically from those who do not.
 
@@ -321,7 +319,7 @@ For example, employees with strong opinions may be more likely to answer a finan
 
 A large sample does not eliminate this bias.
 
-## Representative datasets
+### Representative datasets
 
 A representative dataset should reflect the deployment population across relevant dimensions:
 
@@ -339,27 +337,27 @@ For temporal ML systems, random row-level splitting may create an unrealistic da
 
 ---
 
-# 4. Confidence intervals
+## 4. Confidence intervals
 
 A confidence interval provides a range of values compatible with the observed data and statistical procedure.
 
 Suppose an estimated treatment effect is:
 
-[
+$$
 -3.25\text{ percentage points}
-]
+$$
 
 with a 95% confidence interval:
 
-[
-[-4.61,,-1.90]
-]
+$$
+[-4.61, -1.90]
+$$
 
 The operational interpretation is:
 
 > The data supports a reduction somewhere around 1.90 to 4.61 percentage points, assuming the sampling, independence, and model assumptions are valid.
 
-## What a frequentist 95% confidence interval means
+### What a frequentist 95% confidence interval means
 
 Across many hypothetical repetitions of the same procedure, approximately 95% of the resulting intervals would contain the true population parameter.
 
@@ -369,7 +367,7 @@ It does **not technically mean**:
 
 That probability statement belongs more naturally to a Bayesian credible interval, conditional on its model and prior.
 
-## What a confidence interval does not protect against
+### What a confidence interval does not protect against
 
 A narrow interval can still be misleading when there is:
 
@@ -387,27 +385,27 @@ Confidence intervals quantify sampling uncertainty under assumptions. They do no
 
 ---
 
-# 5. Hypothesis testing
+## 5. Hypothesis testing
 
-## Null and alternative hypotheses
+### Null and alternative hypotheses
 
 Suppose a budget-alert system is intended to reduce department overspending.
 
 The null hypothesis might be:
 
-[
+$$
 H_0:\mu_{\text{alert}}-\mu_{\text{control}}=0
-]
+$$
 
 The alternative:
 
-[
+$$
 H_1:\mu_{\text{alert}}-\mu_{\text{control}}\neq0
-]
+$$
 
 A two-sided alternative is generally safer unless directionality was justified and pre-specified before seeing the data.
 
-## P-value
+### P-value
 
 A p-value is:
 
@@ -420,33 +418,33 @@ It is not:
 * The probability the experiment will reproduce
 * The size of the business impact
 
-## Type I error
+### Type I error
 
 A Type I error is a false positive:
 
 * You conclude the intervention has an effect.
 * In reality, it does not.
 
-Its probability is controlled by (\alpha), commonly 0.05.
+Its probability is controlled by \(\alpha\), commonly 0.05.
 
-## Type II error
+### Type II error
 
 A Type II error is a false negative:
 
 * You fail to detect an effect.
 * A meaningful effect really exists.
 
-Its probability is (\beta).
+Its probability is \(\beta\).
 
 Power is:
 
-[
+$$
 1-\beta
-]
+$$
 
 A common target is 80% or 90% power.
 
-## Failing to reject is not proving no effect
+### Failing to reject is not proving no effect
 
 A non-significant result could mean:
 
@@ -457,11 +455,11 @@ A non-significant result could mean:
 * The metric is noisy.
 * The experiment is poorly implemented.
 
-For an equivalence or non-inferiority claim, use a test designed for that purpose rather than interpreting (p>0.05) as equality.
+For an equivalence or non-inferiority claim, use a test designed for that purpose rather than interpreting \(p>0.05\) as equality.
 
 ---
 
-# 6. Selecting the statistical test
+## 6. Selecting the statistical test
 
 | Situation                              | Common method                      | Key considerations                                             |
 | -------------------------------------- | ---------------------------------- | -------------------------------------------------------------- |
@@ -476,7 +474,7 @@ For an equivalence or non-inferiority claim, use a test designed for that purpos
 | Multiple related observations per unit | Mixed model, GEE, cluster analysis | Ordinary tests underestimate uncertainty                       |
 | Time series or interrupted rollout     | Time-series or causal time methods | Observations are autocorrelated                                |
 
-## Welch t-test
+### Welch t-test
 
 Welch’s test compares group means without assuming equal variances.
 
@@ -492,7 +490,7 @@ Conditions:
 
 The raw observations do not have to be perfectly normally distributed, particularly with moderate samples, but severe skew and influential observations require sensitivity checks.
 
-## Proportion test
+### Proportion test
 
 Use when the metric is binary, such as:
 
@@ -509,7 +507,7 @@ Possible effect measures:
 
 For stakeholders, absolute risk difference is often easiest to interpret.
 
-## Chi-square test
+### Chi-square test
 
 Used for association between categorical variables.
 
@@ -522,7 +520,7 @@ Example:
 
 Chi-square evaluates whether group and outcome are independent.
 
-## Permutation test
+### Permutation test
 
 The procedure:
 
@@ -540,7 +538,7 @@ It is particularly useful when:
 
 The permutation must respect the original design. For cluster randomization, shuffle clusters—not individual rows.
 
-## Bootstrap
+### Bootstrap
 
 The bootstrap estimates uncertainty by repeatedly resampling observed units with replacement.
 
@@ -557,7 +555,7 @@ For repeated transactions within customers, resampling transaction rows independ
 
 ---
 
-# 7. Statistical significance versus business significance
+## 7. Statistical significance versus business significance
 
 A sufficiently large sample can make a tiny, unimportant effect statistically significant.
 
@@ -571,25 +569,25 @@ Always report:
 4. Business threshold
 5. Operational cost and risk
 
-## Common effect sizes
+### Common effect sizes
 
-### Mean difference
+#### Mean difference
 
-[
-\Delta=\bar{x}*{T}-\bar{x}*{C}
-]
+$$
+\Delta=\bar{x}_{T}-\bar{x}_{C}
+$$
 
 Most interpretable when units have direct business meaning.
 
-### Standardized mean difference
+#### Standardized mean difference
 
-Cohen’s (d):
+Cohen’s \(d\):
 
-[
-d=\frac{\bar{x}_T-\bar{x}*C}{s*{\text{pooled}}}
-]
+$$
+d=\frac{\bar{x}_T-\bar{x}_C}{s_{\text{pooled}}}
+$$
 
-Hedges’ (g) applies a small-sample correction.
+Hedges’ \(g\) applies a small-sample correction.
 
 Approximate historical conventions:
 
@@ -599,23 +597,23 @@ Approximate historical conventions:
 
 These are not universal business thresholds. Domain economics should determine meaningfulness.
 
-### Absolute risk difference
+#### Absolute risk difference
 
-[
+$$
 P(Y=1\mid T)-P(Y=1\mid C)
-]
+$$
 
-### Relative risk
+#### Relative risk
 
-[
+$$
 \frac{P(Y=1\mid T)}{P(Y=1\mid C)}
-]
+$$
 
 A relative reduction can sound impressive while representing a tiny absolute change, so both should be reported.
 
 ---
 
-# 8. Power, minimum detectable effect, and sample size
+## 8. Power, minimum detectable effect, and sample size
 
 Power is the probability of detecting a specified effect when it truly exists.
 
@@ -630,25 +628,25 @@ Power increases with:
 
 For two equal-sized independent groups, a rough sample-size approximation is:
 
-[
+$$
 n_{\text{per group}}
 \approx
 \frac{2(z_{1-\alpha/2}+z_{1-\beta})^2\sigma^2}
 {\delta^2}
-]
+$$
 
 Where:
 
-* (\delta): minimum detectable difference
-* (\sigma): outcome standard deviation
-* (\alpha): Type I error rate
-* (1-\beta): desired power
+* \(\delta\): minimum detectable difference
+* \(\sigma\): outcome standard deviation
+* \(\alpha\): Type I error rate
+* \(1-\beta\): desired power
 
-Using standardized effect (d=\delta/\sigma), 5% two-sided significance, and 80% power:
+Using standardized effect \(d=\delta/\sigma\), 5% two-sided significance, and 80% power:
 
-[
+$$
 n_{\text{per group}}\approx\frac{15.7}{d^2}
-]
+$$
 
 Approximate examples:
 
@@ -660,7 +658,7 @@ Approximate examples:
 
 These are planning approximations, not substitutes for a design-specific power calculation.
 
-## Minimum detectable effect
+### Minimum detectable effect
 
 The MDE is the smallest effect the planned experiment can reliably detect.
 
@@ -670,28 +668,28 @@ A useful stakeholder conversation is:
 
 This is better than discovering after the experiment that it was incapable of answering the business question.
 
-## Clustering
+### Clustering
 
 When departments are randomized but invoices are analyzed, invoice observations are not independent.
 
 A rough design-effect correction is:
 
-[
+$$
 DE=1+(m-1)\rho
-]
+$$
 
 Where:
 
-* (m): average observations per cluster
-* (\rho): intra-cluster correlation
+* \(m\): average observations per cluster
+* \(\rho\): intra-cluster correlation
 
 Effective sample size is reduced approximately by the design effect.
 
 ---
 
-# 9. A/B test design
+## 9. A/B test design
 
-## Define the experiment precisely
+### Define the experiment precisely
 
 Before launch, specify:
 
@@ -710,7 +708,7 @@ Before launch, specify:
 * Statistical method
 * Practical significance threshold
 
-## Randomization unit
+### Randomization unit
 
 Choose the unit at which treatment can be assigned without contamination.
 
@@ -726,23 +724,22 @@ Examples:
 
 If a department-wide alert affects everyone, randomizing individual expense claims would create contamination and invalid independence assumptions.
 
-## Primary metric
+### Primary metric
 
 Choose one primary success metric.
 
 For a budget-alert experiment:
 
-[
+$$
 \text{Overspend rate}
-=====================
-
+=
 \frac{\text{Actual spend}-\text{Budget}}
 {\text{Budget}}
-]
+$$
 
 A normalized rate may be preferable to raw overspend when department budgets vary substantially.
 
-## Guardrail metrics
+### Guardrail metrics
 
 A treatment may improve the primary metric while harming the organization.
 
@@ -757,7 +754,7 @@ Potential guardrails:
 * Missing documentation
 * System latency or failures
 
-## Novelty effects
+### Novelty effects
 
 Users may initially respond strongly to a new alert, but the response may fade.
 
@@ -768,7 +765,7 @@ Use:
 * Post-novelty analysis
 * Long-term holdouts where appropriate
 
-## Sample-ratio mismatch
+### Sample-ratio mismatch
 
 If a 50/50 experiment produces 60/40 assignment or exposure, investigate before interpreting outcomes.
 
@@ -785,9 +782,9 @@ An SRM test commonly compares observed assignment counts with expected counts us
 
 A strong outcome p-value does not compensate for unresolved SRM.
 
-## Peeking
+### Peeking
 
-Repeatedly testing every day and stopping when (p<0.05) inflates the false-positive rate.
+Repeatedly testing every day and stopping when \(p<0.05\) inflates the false-positive rate.
 
 Safer approaches:
 
@@ -799,25 +796,25 @@ Safer approaches:
 
 ---
 
-# 10. Multiple comparisons and sequential awareness
+## 10. Multiple comparisons and sequential awareness
 
-If you test 10 independent metrics at (\alpha=0.05), the probability of at least one false positive under all nulls is approximately:
+If you test 10 independent metrics at \(\alpha=0.05\), the probability of at least one false positive under all nulls is approximately:
 
-[
+$$
 1-(1-0.05)^{10}\approx40%
-]
+$$
 
-## Bonferroni correction
+### Bonferroni correction
 
 Use:
 
-[
+$$
 \alpha^*=\frac{\alpha}{m}
-]
+$$
 
 It controls family-wise error but can be conservative.
 
-## False discovery rate
+### False discovery rate
 
 Methods such as Benjamini–Hochberg control the expected proportion of false discoveries among rejected hypotheses.
 
@@ -829,7 +826,7 @@ FDR is useful when exploring many:
 * Financial anomalies
 * Biomarkers or scientific hypotheses
 
-## Good experimentation hierarchy
+### Good experimentation hierarchy
 
 * One pre-specified primary metric
 * A small set of guardrails
@@ -839,9 +836,9 @@ FDR is useful when exploring many:
 
 ---
 
-# 11. Causal reasoning basics
+## 11. Causal reasoning basics
 
-## Correlation versus causation
+### Correlation versus causation
 
 Correlation means variables move together.
 
@@ -865,52 +862,52 @@ It is a confounder.
 
 Comparing voluntary adopters with non-adopters may therefore be biased.
 
-## Randomization
+### Randomization
 
 Random assignment makes treatment independent of measured and unmeasured pre-treatment characteristics in expectation.
 
 It does not guarantee that every observed sample is perfectly balanced, but it makes remaining imbalance attributable to random variation rather than systematic selection.
 
-## Treatment effect
+### Treatment effect
 
 Potential-outcomes notation:
 
-* (Y_i(1)): unit (i)’s outcome under treatment
-* (Y_i(0)): unit (i)’s outcome under control
+* \(Y_i(1)\): unit \(i\)’s outcome under treatment
+* \(Y_i(0)\): unit \(i\)’s outcome under control
 
 Individual treatment effect:
 
-[
+$$
 Y_i(1)-Y_i(0)
-]
+$$
 
 But only one potential outcome is observed for each unit. This is the fundamental causal-inference problem.
 
 Average treatment effect:
 
-[
+$$
 ATE=E[Y(1)-Y(0)]
-]
+$$
 
 Randomized experiments estimate this by comparing treatment and control averages under appropriate conditions.
 
-## Important causal assumptions
+### Important causal assumptions
 
-### Consistency
+#### Consistency
 
 The treatment must be well-defined. “Received an alert” should not describe radically different interventions across units.
 
-### No interference
+#### No interference
 
 One department’s treatment should not affect another department’s outcome.
 
 This may fail if departments share budgets, managers, or policies.
 
-### Correct assignment and exposure
+#### Correct assignment and exposure
 
 Analyze assignment consistently, usually with intention-to-treat as the primary analysis.
 
-### No post-treatment conditioning
+#### No post-treatment conditioning
 
 Do not control for variables caused by treatment unless the causal estimand specifically requires it.
 
@@ -918,11 +915,11 @@ For example, excluding departments that “did not engage with the alert” may 
 
 ---
 
-# 12. Finance-oriented exploratory data analysis
+## 12. Finance-oriented exploratory data analysis
 
 Finance EDA must establish both statistical usability and accounting correctness.
 
-## Data structure and grain
+### Data structure and grain
 
 First establish:
 
@@ -934,7 +931,7 @@ First establish:
 
 A test at the wrong grain is often more dangerous than choosing the wrong test.
 
-## Missingness
+### Missingness
 
 Classify missing values:
 
@@ -959,7 +956,7 @@ Investigate missingness by:
 
 Do not automatically mean-impute finance outcomes. Mean imputation distorts variance and relationships.
 
-## Anomalies
+### Anomalies
 
 Check for:
 
@@ -982,7 +979,7 @@ Anomalies should be categorized as:
 4. Integration or extraction defects
 5. Accounting adjustments
 
-## Leakage
+### Leakage
 
 Leakage occurs when a feature contains information unavailable at prediction time.
 
@@ -997,7 +994,7 @@ Always ask:
 
 > “At what exact timestamp would this variable have been known?”
 
-## Temporal effects
+### Temporal effects
 
 Look for:
 
@@ -1013,42 +1010,39 @@ Look for:
 
 A treatment-control comparison can be biased if groups are observed over different periods.
 
-## Reconciliation checks
+### Reconciliation checks
 
 Useful invariants include:
 
-[
+$$
 \text{Opening balance}
 +
 \text{Credits}
---------------
-
-# \text{Debits}
-
+-
+\text{Debits}
+=
 \text{Closing balance}
-]
+$$
 
-[
+$$
 \text{Total header amount}
-==========================
-
+=
 \sum \text{line-item amounts}
-]
+$$
 
-[
+$$
 \text{General ledger total}
-===========================
-
+=
 \text{subledger total}
 +
 \text{approved adjustments}
-]
+$$
 
 Statistical analysis should not proceed while material reconciliation gaps remain unexplained.
 
 ---
 
-# 13. Communicating uncertainty to finance stakeholders
+## 13. Communicating uncertainty to finance stakeholders
 
 Avoid saying:
 
@@ -1070,9 +1064,9 @@ A strong executive explanation contains:
 
 ---
 
-# Practical task: synthetic budget-alert experiment
+## Practical task: synthetic budget-alert experiment
 
-## Business problem
+### Business problem
 
 A finance team introduces automated budget alerts for departments approaching their monthly budget.
 
@@ -1089,7 +1083,7 @@ The department is the randomization and analysis unit.
 
 Analyzing individual invoices would be incorrect because invoices within the same department share managers, approval behavior, and budget pressure.
 
-## Dataset fields
+### Dataset fields
 
 | Field                      | Description                             |
 | -------------------------- | --------------------------------------- |
@@ -1106,33 +1100,32 @@ Analyzing individual invoices would be incorrect because invoices within the sam
 | `reconciled_spend`         | Spend after approved corrections        |
 | `overspend_rate`           | Primary outcome                         |
 
-## Hypotheses
+### Hypotheses
 
 Primary null hypothesis:
 
-[
+$$
 H_0:
 \mu_{\text{alert}}-\mu_{\text{control}}=0
-]
+$$
 
 Alternative:
 
-[
+$$
 H_1:
 \mu_{\text{alert}}-\mu_{\text{control}}\neq0
-]
+$$
 
 A one-sided alternative could be used only if it were pre-specified and an increase in overspending would not require a different decision framework. A two-sided test is used here.
 
-## Primary metric
+### Primary metric
 
-[
+$$
 \text{Overspend rate}
-=====================
-
+=
 \frac{\text{Reconciled spend}-\text{Budget}}
 {\text{Budget}}
-]
+$$
 
 Reasons for using a rate:
 
@@ -1140,7 +1133,7 @@ Reasons for using a rate:
 * Raw overspend amounts would partly reflect budget scale.
 * The rate directly measures deviation from the approved budget.
 
-## Secondary and guardrail metrics
+### Secondary and guardrail metrics
 
 Potential secondary metrics:
 
@@ -1161,7 +1154,7 @@ Only the overspend rate is treated as the primary confirmatory metric.
 
 ---
 
-# Analysis reasoning
+## Analysis reasoning
 
 The analysis should follow these decisions:
 
@@ -1175,13 +1168,13 @@ The analysis should follow these decisions:
 8. Compare treatment and control distributions.
 9. Use Welch’s t-test for the primary mean comparison.
 10. Report the mean difference and its 95% confidence interval.
-11. Report Hedges’ (g) as a standardized effect size.
+11. Report Hedges’ \(g\) as a standardized effect size.
 12. Use bootstrap and permutation analyses as sensitivity checks.
 13. Separate statistical evidence from causal and operational limitations.
 
 ---
 
-# Pseudocode
+## Pseudocode
 
 ```text
 SET deterministic random seed
@@ -1237,7 +1230,7 @@ REPORT:
 
 ---
 
-# Python implementation
+## Python implementation
 
 ```python
 from __future__ import annotations
@@ -1689,9 +1682,9 @@ if __name__ == "__main__":
 
 ---
 
-# Practical EDA findings
+## Practical EDA findings
 
-## Data-quality findings
+### Data-quality findings
 
 The synthetic EDA finds:
 
@@ -1710,7 +1703,7 @@ The important distinction is:
 
 The missing late-posting value affects a guardrail metric, not the primary overspending outcome. It should still be investigated, especially if missingness differs by treatment group.
 
-## Group-level descriptive results
+### Group-level descriptive results
 
 After documented reconciliation:
 
@@ -1729,13 +1722,13 @@ The similar mean and median within each group suggest that the result is not bei
 
 ---
 
-# Statistical results
+## Statistical results
 
 The estimated treatment-control difference is:
 
-[
+$$
 2.64%-5.90%=-3.25\text{ percentage points}
-]
+$$
 
 Results:
 
@@ -1744,20 +1737,20 @@ Results:
 | Mean difference     |                        −3.25 percentage points |
 | 95% Welch interval  |               −4.61 to −1.90 percentage points |
 | Welch p-value       |                         Approximately 0.000011 |
-| Hedges’ (g)         |                                          −1.23 |
+| Hedges’ \(g\)       |                                          −1.23 |
 | Bootstrap interval  | Approximately −4.56 to −1.98 percentage points |
 | Permutation p-value |                          Approximately 0.00006 |
 
 The parametric, bootstrap, and permutation analyses point in the same direction.
 
-Hedges’ (g=-1.23) is a large standardized difference in this synthetic dataset. The business interpretation should nevertheless use the original percentage-point scale rather than relying on a generic “large effect” label.
+Hedges’ \(g=-1.23\) is a large standardized difference in this synthetic dataset. The business interpretation should nevertheless use the original percentage-point scale rather than relying on a generic “large effect” label.
 
 The average budget across the synthetic departments is approximately ₹19.56 lakh. Applying the estimated 3.25-percentage-point difference gives an indicative amount of roughly:
 
-[
+$$
 ₹19.56\text{ lakh}\times3.25%
 \approx ₹63{,}600
-]
+$$
 
 per department per period.
 
@@ -1772,7 +1765,7 @@ This conversion is approximate. A production financial estimate should account f
 
 ---
 
-# Why Welch’s t-test was selected
+## Why Welch’s t-test was selected
 
 Welch’s test is appropriate because:
 
@@ -1791,22 +1784,22 @@ A proportion test would be appropriate only if the primary outcome were binary, 
 
 ---
 
-# Correctness conditions
+## Correctness conditions
 
 The causal interpretation depends on the following conditions.
 
-## Randomization was implemented correctly
+### Randomization was implemented correctly
 
 Assignment must not have been changed after observing department characteristics.
 
-## Treatment assignment is the analysis basis
+### Treatment assignment is the analysis basis
 
 The primary analysis should normally be intention-to-treat:
 
 * Departments are analyzed according to assignment.
 * Departments should not be removed because they ignored the alerts.
 
-## Department outcomes are independent across departments
+### Department outcomes are independent across departments
 
 This may fail if:
 
@@ -1815,7 +1808,7 @@ This may fail if:
 * Alerts cause organization-wide policy changes.
 * Departments communicate and copy behavior.
 
-## Outcomes are measured consistently
+### Outcomes are measured consistently
 
 Treatment should not change how spend is recorded rather than how much is spent.
 
@@ -1823,19 +1816,19 @@ For example, departments might delay invoices into the next period. Overspending
 
 That is why late-posting and future-period spending are important guardrails.
 
-## Reconciliation rules are treatment-blind
+### Reconciliation rules are treatment-blind
 
 Accounting corrections should not be more aggressive in one group than another.
 
 Ideally, the reconciliation team should not know treatment assignment.
 
-## The primary metric was pre-specified
+### The primary metric was pre-specified
 
 Selecting overspend rate only after observing that it produced the strongest result would increase false-positive risk.
 
 ---
 
-# False-positive and multiple-testing limitations
+## False-positive and multiple-testing limitations
 
 The primary p-value is small, but it should not be interpreted in isolation.
 
@@ -1868,7 +1861,7 @@ The analysis should identify:
 
 ---
 
-# Causal limitations
+## Causal limitations
 
 The randomized design supports a causal interpretation for the departments and period studied, assuming correct execution.
 
@@ -1902,9 +1895,9 @@ A stronger follow-up would examine:
 
 ---
 
-# Production trade-offs and failure modes
+## Production trade-offs and failure modes
 
-## Mean versus median
+### Mean versus median
 
 The mean aligns with total financial impact but is sensitive to high values.
 
@@ -1912,7 +1905,7 @@ The median is robust but may hide costly tail events.
 
 A finance analysis should usually report both and include tail percentiles.
 
-## Rate versus amount
+### Rate versus amount
 
 Overspend rate normalizes departments of different sizes.
 
@@ -1920,7 +1913,7 @@ Overspend amount aligns more directly with currency impact.
 
 A good analysis uses one as the primary metric and the other as supportive context rather than switching opportunistically.
 
-## Outlier removal
+### Outlier removal
 
 Removing extreme departments can reduce variance but may remove the exact risk finance cares about.
 
@@ -1935,7 +1928,7 @@ Do not use:
 
 * “Remove everything above three standard deviations” without investigation
 
-## Small number of clusters
+### Small number of clusters
 
 Sixty departments can produce strong evidence for a large synthetic effect, but it may be insufficient for:
 
@@ -1944,21 +1937,21 @@ Sixty departments can produce strong evidence for a large synthetic effect, but 
 * Estimating treatment heterogeneity
 * Rare guardrail events
 
-## Temporal leakage
+### Temporal leakage
 
 Do not use future reconciliation data when designing a real-time alert model unless that information would genuinely be available at alert time.
 
-## Delayed spending
+### Delayed spending
 
 A short experiment may confuse delayed spending with avoided spending.
 
 A post-experiment observation window is necessary.
 
-## Treatment contamination
+### Treatment contamination
 
 Managers controlling both treatment and control departments may apply alert-inspired practices to control departments, biasing the result toward zero.
 
-## Operational non-compliance
+### Operational non-compliance
 
 If many assigned departments never receive alerts because of system failures, report:
 
@@ -1970,13 +1963,13 @@ A per-protocol result can be supportive but may be selection-biased.
 
 ---
 
-# Executive-friendly conclusion
+## Executive-friendly conclusion
 
 > In this synthetic pilot, departments assigned to automated budget alerts overspent by an average of 2.64%, compared with 5.90% for control departments. The estimated reduction was 3.25 percentage points, with a 95% confidence interval of approximately 1.90 to 4.61 percentage points. The result exceeds a plausible business threshold and was consistent across parametric, bootstrap, and permutation analyses.
 >
 > The result supports a monitored expansion, but not an unconditional organization-wide savings assumption. Before full rollout, finance should confirm that the reduction represents avoided spending rather than delayed posting or cost-center shifting, monitor operational guardrails, and evaluate whether the effect persists over additional financial periods.
 
-## Recommended decision
+### Recommended decision
 
 Proceed with a controlled expansion when:
 
@@ -1989,9 +1982,10 @@ Proceed with a controlled expansion when:
 This is the central senior-level principle:
 
 > Make the decision using the estimated effect, uncertainty, economics, causal credibility, and downside risk—not the p-value alone.
-# Day 5 DSA — Sliding Window
 
-## Beginner-friendly summary
+## Day 5 DSA — Sliding Window
+
+### Beginner-friendly summary
 
 A **sliding window** maintains a contiguous section of an array or string while moving through the input.
 
@@ -2002,11 +1996,11 @@ Instead of recalculating information for every possible subarray or substring, w
 3. Maintain only the information needed for the current window.
 4. Update the answer.
 
-This often reduces an (O(n^2)) brute-force solution to (O(n)).
+This often reduces an \(O(n^2)\) brute-force solution to \(O(n)\).
 
 ---
 
-# 1. Recognition signals
+## 1. Recognition signals
 
 Consider sliding window when the problem asks about a:
 
@@ -2014,7 +2008,7 @@ Consider sliding window when the problem asks about a:
 * Contiguous substring
 * Consecutive sequence
 * Maximum or minimum window
-* Window of exactly size (k)
+* Window of exactly size \(k\)
 * Longest substring satisfying a condition
 * Shortest subarray satisfying a condition
 * Number of distinct elements within a range
@@ -2024,8 +2018,8 @@ Typical phrases include:
 
 * “Longest substring…”
 * “Smallest subarray…”
-* “Maximum sum of (k) consecutive elements…”
-* “At most (k) distinct characters…”
+* “Maximum sum of \(k\) consecutive elements…”
+* “At most \(k\) distinct characters…”
 * “Without repeating characters…”
 * “Contains all required characters…”
 
@@ -2033,22 +2027,22 @@ Sliding window is usually applicable when removing elements from the left can re
 
 ---
 
-# 2. Fixed versus variable windows
+## 2. Fixed versus variable windows
 
 | Window type          |                  Window size | Common examples                               |
 | -------------------- | ---------------------------: | --------------------------------------------- |
-| Fixed window         |                   Always (k) | Maximum sum of (k) elements                   |
+| Fixed window         |                 Always \(k\) | Maximum sum of \(k\) elements                 |
 | Variable window      |          Expands and shrinks | Longest substring without duplicates          |
 | Frequency-map window |  Tracks counts inside window | Anagrams, distinct characters, minimum window |
 | Monotonic window     | Maintains ordered candidates | Sliding-window maximum                        |
 
 ---
 
-# 3. Fixed-size sliding window
+## 3. Fixed-size sliding window
 
-## Example problem
+### Example problem
 
-Find the maximum sum of any (k) consecutive elements.
+Find the maximum sum of any \(k\) consecutive elements.
 
 ```text
 Input:  [2, 1, 5, 1, 3, 2]
@@ -2063,17 +2057,17 @@ Windows:
 Answer: 9
 ```
 
-## Brute-force reasoning
+### Brute-force reasoning
 
-Generate every window of size (k) and calculate its sum independently.
+Generate every window of size \(k\) and calculate its sum independently.
 
-There are approximately (n-k+1) windows, and each sum requires (k) operations.
+There are approximately \(n-k+1\) windows, and each sum requires \(k\) operations.
 
-[
+$$
 O((n-k+1)k)\approx O(nk)
-]
+$$
 
-## Sliding-window reasoning
+### Sliding-window reasoning
 
 Calculate the first window sum once.
 
@@ -2086,9 +2080,9 @@ When moving one position:
 new_sum = old_sum - outgoing_element + incoming_element
 ```
 
-This makes the total complexity (O(n)).
+This makes the total complexity \(O(n)\).
 
-## Fixed-window template
+### Fixed-window template
 
 ```python
 def fixed_window(values: list[int], k: int) -> int:
@@ -2111,23 +2105,23 @@ def fixed_window(values: list[int], k: int) -> int:
 
 ---
 
-# 4. Variable-size sliding window
+## 4. Variable-size sliding window
 
 A variable window grows while valid or while searching for a condition, then shrinks when necessary.
 
 The most important skill is defining the **window invariant**.
 
-## What is an invariant?
+### What is an invariant?
 
 An invariant is a condition that must remain true whenever we use the current window to update the answer.
 
 Examples:
 
 * Window contains no repeated characters.
-* Window contains at most (k) distinct values.
+* Window contains at most \(k\) distinct values.
 * Window sum is at least the target.
 * Window contains all required characters.
-* Number of zeroes in the window is at most (k).
+* Number of zeroes in the window is at most \(k\).
 
 The algorithm normally follows this structure:
 
@@ -2144,13 +2138,13 @@ for each right boundary:
 
 ---
 
-# Medium problem: Longest Substring Without Repeating Characters
+## Medium problem: Longest Substring Without Repeating Characters
 
-## Problem statement
+### Problem statement
 
 Given a string `s`, return the length of the longest substring that contains no repeating characters.
 
-### Example 1
+#### Example 1
 
 ```text
 Input:  "abcabcbb"
@@ -2160,14 +2154,14 @@ Explanation:
 "abc" is the longest substring without repeated characters.
 ```
 
-### Example 2
+#### Example 2
 
 ```text
 Input:  "bbbbb"
 Output: 1
 ```
 
-### Example 3
+#### Example 3
 
 ```text
 Input:  "pwwkew"
@@ -2180,7 +2174,7 @@ Explanation:
 
 ---
 
-# 5. Recognition signals
+## 5. Recognition signals
 
 The important signals are:
 
@@ -2194,7 +2188,7 @@ Therefore, use a variable sliding window with a frequency map.
 
 ---
 
-# 6. Brute-force reasoning
+## 6. Brute-force reasoning
 
 Generate every possible substring.
 
@@ -2205,15 +2199,15 @@ For each starting index:
 3. Stop when a duplicate is encountered.
 4. Record the longest valid length.
 
-There can be (O(n^2)) substrings.
+There can be \(O(n^2)\) substrings.
 
 Checking duplicates with a set while extending each start still results in:
 
-[
+$$
 O(n^2)
-]
+$$
 
-## Brute-force pseudocode
+### Brute-force pseudocode
 
 ```text
 best = 0
@@ -2231,7 +2225,7 @@ for start from 0 to n - 1:
 return best
 ```
 
-## Brute-force implementation
+### Brute-force implementation
 
 ```python
 def longest_unique_substring_brute_force(s: str) -> int:
@@ -2252,16 +2246,16 @@ def longest_unique_substring_brute_force(s: str) -> int:
     return best
 ```
 
-### Complexity
+#### Complexity
 
-* Time: (O(n^2))
-* Space: (O(m))
+* Time: \(O(n^2)\)
+* Space: \(O(m)\)
 
-Here, (m) is the number of distinct characters stored in the set.
+Here, \(m\) is the number of distinct characters stored in the set.
 
 ---
 
-# 7. Optimized reasoning
+## 7. Optimized reasoning
 
 Maintain a window:
 
@@ -2279,7 +2273,7 @@ For every `right`:
 4. The window is now valid.
 5. Update the maximum length.
 
-## Window invariant
+### Window invariant
 
 After the shrinking loop finishes:
 
@@ -2289,7 +2283,7 @@ Because the window satisfies this invariant, its length can safely be considered
 
 ---
 
-# 8. Example walkthrough
+## 8. Example walkthrough
 
 Input:
 
@@ -2314,7 +2308,7 @@ Answer:
 
 ---
 
-# 9. Optimized pseudocode
+## 9. Optimized pseudocode
 
 ```text
 left = 0
@@ -2338,7 +2332,7 @@ return best
 
 ---
 
-# 10. Python solution
+## 10. Python solution
 
 ```python
 from collections import defaultdict
@@ -2370,7 +2364,7 @@ def length_of_longest_substring(s: str) -> int:
     return best_length
 ```
 
-## Example usage
+### Example usage
 
 ```python
 print(length_of_longest_substring("abcabcbb"))  # 3
@@ -2381,9 +2375,9 @@ print(length_of_longest_substring(""))          # 0
 
 ---
 
-# 11. Why the algorithm is (O(n))
+## 11. Why the algorithm is \(O(n)\)
 
-The nested `while` loop can make the algorithm appear to be (O(n^2)), but it is not.
+The nested `while` loop can make the algorithm appear to be \(O(n^2)\), but it is not.
 
 Each character:
 
@@ -2392,28 +2386,28 @@ Each character:
 
 Both pointers move only forward.
 
-Therefore, the total number of pointer movements is at most approximately (2n):
+Therefore, the total number of pointer movements is at most approximately \(2n\):
 
-[
+$$
 O(n)
-]
+$$
 
-## Complexity
+### Complexity
 
 | Measure | Complexity |
 | ------- | ---------: |
-| Time    |     (O(n)) |
-| Space   |     (O(m)) |
+| Time    |   \(O(n)\) |
+| Space   |   \(O(m)\) |
 
-Where (m) is the number of distinct characters in the current window.
+Where \(m\) is the number of distinct characters in the current window.
 
-For a fixed-size character set such as standard ASCII, the auxiliary space can be considered (O(1)).
+For a fixed-size character set such as standard ASCII, the auxiliary space can be considered \(O(1)\).
 
 ---
 
-# 12. Edge cases
+## 12. Edge cases
 
-## Empty string
+### Empty string
 
 ```text
 Input: ""
@@ -2422,14 +2416,14 @@ Output: 0
 
 The loop never runs, so the initial result `0` is returned.
 
-## One character
+### One character
 
 ```text
 Input: "a"
 Output: 1
 ```
 
-## All characters identical
+### All characters identical
 
 ```text
 Input: "aaaa"
@@ -2438,7 +2432,7 @@ Output: 1
 
 The window repeatedly shrinks until only one `a` remains.
 
-## All characters unique
+### All characters unique
 
 ```text
 Input: "abcdef"
@@ -2447,7 +2441,7 @@ Output: 6
 
 The left pointer never moves.
 
-## Duplicate at the end
+### Duplicate at the end
 
 ```text
 Input: "abcdca"
@@ -2456,7 +2450,7 @@ Output: 4
 
 Valid longest windows include `"abcd"` and `"bdca"`.
 
-## Spaces and punctuation
+### Spaces and punctuation
 
 ```text
 Input: "a b!a"
@@ -2464,7 +2458,7 @@ Input: "a b!a"
 
 Spaces and punctuation are characters unless the problem says to normalize them.
 
-## Unicode characters
+### Unicode characters
 
 Python strings support Unicode characters:
 
@@ -2477,9 +2471,9 @@ The algorithm works without modification.
 
 ---
 
-# 13. Important pitfalls
+## 13. Important pitfalls
 
-## Pitfall 1: Updating the answer before restoring validity
+### Pitfall 1: Updating the answer before restoring validity
 
 Incorrect ordering:
 
@@ -2490,7 +2484,7 @@ best = max(best, right - left + 1)  # Window may contain duplicates.
 
 Update the answer only after the window satisfies the invariant.
 
-## Pitfall 2: Shrinking only once
+### Pitfall 2: Shrinking only once
 
 Incorrect:
 
@@ -2502,13 +2496,13 @@ if frequency[character] > 1:
 
 One removal may not restore validity. Use `while`.
 
-## Pitfall 3: Resetting the entire window
+### Pitfall 3: Resetting the entire window
 
 When a duplicate appears, do not restart from `right`.
 
-That repeats work and can degrade toward (O(n^2)).
+That repeats work and can degrade toward \(O(n^2)\).
 
-## Pitfall 4: Confusing substring and subsequence
+### Pitfall 4: Confusing substring and subsequence
 
 A substring is contiguous.
 
@@ -2517,11 +2511,11 @@ For `"pwwkew"`:
 * `"wke"` is a substring.
 * `"pwke"` is a subsequence, not a substring.
 
-## Pitfall 5: Maintaining stale counts
+### Pitfall 5: Maintaining stale counts
 
 Every element removed from the left must have its frequency decremented.
 
-## Pitfall 6: Using the wrong validity condition
+### Pitfall 6: Using the wrong validity condition
 
 For this problem:
 
@@ -2539,7 +2533,7 @@ number of satisfied requirements
 
 ---
 
-# 14. Alternative optimized solution using last-seen positions
+## 14. Alternative optimized solution using last-seen positions
 
 Instead of storing counts, store the last index of each character.
 
@@ -2580,7 +2574,7 @@ left = max(left, last_seen[character] + 1)
 
 prevents that error.
 
-## Comparison
+### Comparison
 
 | Approach        | State maintained        | Advantage                                |
 | --------------- | ----------------------- | ---------------------------------------- |
@@ -2590,7 +2584,7 @@ prevents that error.
 
 The frequency-map version is the best learning choice because the same pattern extends to:
 
-* At most (k) distinct characters
+* At most \(k\) distinct characters
 * Longest repeating-character replacement
 * Permutation in string
 * Find all anagrams
@@ -2598,9 +2592,9 @@ The frequency-map version is the best learning choice because the same pattern e
 
 ---
 
-# 15. General variable-window templates
+## 15. General variable-window templates
 
-## Longest valid window
+### Longest valid window
 
 ```python
 def longest_valid_window(values: list[int]) -> int:
@@ -2624,10 +2618,10 @@ def longest_valid_window(values: list[int]) -> int:
 Use this pattern for:
 
 * Longest substring without duplicates
-* Longest subarray with at most (k) distinct values
-* Longest sequence with at most (k) replacements
+* Longest subarray with at most \(k\) distinct values
+* Longest sequence with at most \(k\) replacements
 
-## Shortest valid window
+### Shortest valid window
 
 ```python
 def shortest_valid_window(values: list[int]) -> int:
@@ -2661,15 +2655,15 @@ The key distinction is:
 
 ---
 
-# 16. Interview explanation
+## 16. Interview explanation
 
 A concise interview explanation would be:
 
-> “Because the problem asks for the longest contiguous substring satisfying a local constraint, I use a variable sliding window. A frequency map tracks characters in the current window. After adding the right character, I move the left boundary until that character is no longer duplicated. The invariant is that the resulting window contains each character at most once. Both pointers move only forward, so each character enters and leaves the window at most once, giving (O(n)) time and (O(m)) space.”
+> “Because the problem asks for the longest contiguous substring satisfying a local constraint, I use a variable sliding window. A frequency map tracks characters in the current window. After adding the right character, I move the left boundary until that character is no longer duplicated. The invariant is that the resulting window contains each character at most once. Both pointers move only forward, so each character enters and leaves the window at most once, giving \(O(n)\) time and \(O(m)\) space.”
 
 ---
 
-# 17. Final takeaway
+## 17. Final takeaway
 
 For sliding-window problems, identify four things:
 

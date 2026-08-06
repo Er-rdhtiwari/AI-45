@@ -40,9 +40,9 @@ In standard CPython builds, the GIL normally permits only one thread to execute 
 
 ---
 
-# 2. Synchronous versus asynchronous execution
+## 2. Synchronous versus asynchronous execution
 
-## Synchronous
+### Synchronous
 
 A synchronous function keeps control until it finishes:
 
@@ -53,7 +53,7 @@ result_b = call_metadata_service()
 
 If each operation waits one second, the total is roughly two seconds.
 
-## Asynchronous
+### Asynchronous
 
 Independent operations can overlap:
 
@@ -66,7 +66,7 @@ result_a, result_b = await asyncio.gather(
 
 The elapsed time approaches the slower operation rather than their sum, assuming both are truly asynchronous and there is sufficient downstream capacity.
 
-## I/O-bound work
+### I/O-bound work
 
 Typical I/O-bound operations include:
 
@@ -78,7 +78,7 @@ Typical I/O-bound operations include:
 * Tool or microservice HTTP calls
 * Reading network-mounted files
 
-## CPU-bound work
+### CPU-bound work
 
 Typical CPU-bound operations include:
 
@@ -93,7 +93,7 @@ Some native libraries release the GIL, so measurement is more reliable than assu
 
 ---
 
-# 3. Understanding the event loop
+## 3. Understanding the event loop
 
 The event loop executes one runnable coroutine at a time in its thread. A coroutine cooperatively yields control when it reaches an `await` whose operation is not ready.
 
@@ -109,7 +109,7 @@ task = asyncio.create_task(fetch_document("doc-123"))
 document = await task
 ```
 
-## Task
+### Task
 
 A task is a scheduled coroutine with lifecycle state:
 
@@ -129,9 +129,9 @@ Always retain or await tasks you create. Fire-and-forget tasks commonly cause:
 
 ---
 
-# 4. `gather`, semaphores, queues, and bounded concurrency
+## 4. `gather`, semaphores, queues, and bounded concurrency
 
-## `asyncio.gather`
+### `asyncio.gather`
 
 Use `gather` when you have a known, reasonably small group of independent operations:
 
@@ -154,7 +154,7 @@ await asyncio.gather(
 
 It can create a very large number of tasks and consume excessive memory before downstream calls even begin.
 
-## Semaphore
+### Semaphore
 
 A semaphore limits how many coroutines enter a protected section:
 
@@ -170,7 +170,7 @@ A semaphore decrements its counter when acquired and waits when the counter reac
 
 However, one task per input can still create a large number of waiting tasks.
 
-## Bounded queue
+### Bounded queue
 
 A bounded queue controls both:
 
@@ -179,7 +179,7 @@ A bounded queue controls both:
 
 When an `asyncio.Queue` reaches its configured `maxsize`, `await queue.put()` blocks until a consumer removes an item. This creates backpressure naturally. `queue.join()` waits until every queued item has received a matching `task_done()`. ([Python documentation][4])
 
-### Preferred production pattern
+#### Preferred production pattern
 
 * Fixed number of consumer tasks.
 * Bounded input queue.
@@ -189,7 +189,7 @@ When an `asyncio.Queue` reaches its configured `maxsize`, `await queue.put()` bl
 
 ---
 
-# 5. Architecture
+## 5. Architecture
 
 ```text
              request / batch producer
@@ -222,7 +222,7 @@ When an `asyncio.Queue` reaches its configured `maxsize`, `await queue.put()` bl
 
 ---
 
-# 6. Concurrent LLM, retrieval, database, and tool calls
+## 6. Concurrent LLM, retrieval, database, and tool calls
 
 Only independent operations should run concurrently.
 
@@ -248,7 +248,7 @@ async def answer_question(query: str, customer_id: str) -> dict:
     )
 ```
 
-## Good fan-out examples
+### Good fan-out examples
 
 * Vector retrieval and metadata lookup
 * Independent tools such as pricing and inventory
@@ -256,7 +256,7 @@ async def answer_question(query: str, customer_id: str) -> dict:
 * Parallel model calls for an ensemble
 * Parallel evaluation metrics
 
-## Incorrect fan-out examples
+### Incorrect fan-out examples
 
 * Calling the LLM before retrieval completes
 * Launching 500 tools when only two are relevant
@@ -264,7 +264,7 @@ async def answer_question(query: str, customer_id: str) -> dict:
 * Running ten retries concurrently for one failed request
 * Exceeding the database connection pool with application concurrency
 
-## Downstream-specific limits
+### Downstream-specific limits
 
 One global concurrency value is often insufficient:
 
@@ -289,7 +289,7 @@ For example, 10 application replicas × 20 LLM calls per replica means the provi
 
 ---
 
-# 7. Blocking work inside async code
+## 7. Blocking work inside async code
 
 This blocks the event loop:
 
@@ -335,7 +335,7 @@ Do not create a new thread or process pool per request. Pools should normally be
 
 ---
 
-# 8. Cancellation
+## 8. Cancellation
 
 Cancellation is a control signal, not an ordinary processing failure.
 
@@ -363,7 +363,7 @@ async def process():
 
 ---
 
-# 9. Timeout budgets
+## 9. Timeout budgets
 
 A timeout should be treated as a budget, not independently reset at every layer.
 
@@ -394,7 +394,7 @@ attempt_timeout = min(per_attempt_timeout, remaining)
 
 Use a monotonic clock such as `loop.time()`, not wall-clock time, because wall-clock time can change due to clock synchronization or manual adjustment.
 
-## Timeout layers
+### Timeout layers
 
 * Client connection timeout
 * Client read timeout
@@ -408,9 +408,9 @@ The inner timeout should normally be shorter than the outer timeout so cleanup a
 
 ---
 
-# 10. Retry classification
+## 10. Retry classification
 
-## Usually retryable
+### Usually retryable
 
 | Failure                         | Condition                                 |
 | ------------------------------- | ----------------------------------------- |
@@ -421,7 +421,7 @@ The inner timeout should normally be shorter than the outer timeout so cleanup a
 | Database serialization conflict | Retry the complete transaction            |
 | Provider timeout                | Only when the operation is safe to repeat |
 
-## Usually permanent
+### Usually permanent
 
 | Failure                                 | Reason                                |
 | --------------------------------------- | ------------------------------------- |
@@ -432,14 +432,14 @@ The inner timeout should normally be shorter than the outer timeout so cleanup a
 | Missing required field                  | Caller must correct input             |
 | Programming error                       | Retrying hides a defect               |
 
-## Conditional
+### Conditional
 
 * HTTP 409 may represent either conflict or temporary contention.
 * HTTP 404 may be eventually consistent or genuinely missing.
 * HTTP 401 may be retryable once after credential refresh.
 * A timeout may be unsafe to retry when the server could have completed a write.
 
-### Critical rule
+#### Critical rule
 
 Retrying a write is safe only when at least one is true:
 
@@ -450,7 +450,7 @@ Retrying a write is safe only when at least one is true:
 
 ---
 
-# 11. Exponential backoff and jitter
+## 11. Exponential backoff and jitter
 
 Basic exponential backoff:
 
@@ -481,7 +481,7 @@ all retry at t=7
 
 That synchronized retry pattern can prevent a recovering dependency from stabilizing.
 
-## Preventing retry storms
+### Preventing retry storms
 
 Use several controls together:
 
@@ -498,7 +498,7 @@ Use several controls together:
 
 ---
 
-# 12. Testing strategy
+## 12. Testing strategy
 
 | Test type       | Purpose                                    | Example                                          |
 | --------------- | ------------------------------------------ | ------------------------------------------------ |
@@ -509,9 +509,9 @@ Use several controls together:
 | End-to-end      | Whole deployed path                        | Upload → ingestion → retrieval → answer          |
 | Load/resilience | Behavior under stress and failure          | Provider latency, queue saturation, cancellation |
 
-## Pytest techniques
+### Pytest techniques
 
-### Fixtures
+#### Fixtures
 
 Use fixtures for reusable setup:
 
@@ -521,7 +521,7 @@ def document():
     return Document(...)
 ```
 
-### Parametrization
+#### Parametrization
 
 Use parametrization when the same behavior must hold across several inputs:
 
@@ -536,7 +536,7 @@ def test_not_retried(exception):
 
 Pytest supports fixture parametrization and `@pytest.mark.parametrize` for running a test with multiple argument sets. ([pytest][5])
 
-### Mocking
+#### Mocking
 
 Prefer dependency injection:
 
@@ -548,7 +548,7 @@ over globally patching an SDK.
 
 Use `monkeypatch` when code depends on environment variables, module attributes, or difficult global dependencies. Pytest automatically restores monkeypatched changes after the test. ([pytest][6])
 
-### Deterministic async tests
+#### Deterministic async tests
 
 Avoid:
 
@@ -569,9 +569,9 @@ Inject:
 
 ---
 
-# 13. Testing RAG and AI workflows
+## 13. Testing RAG and AI workflows
 
-## Ingestion
+### Ingestion
 
 Test:
 
@@ -583,7 +583,7 @@ Test:
 * Partial processing cleanup
 * Reprocessing after model-version change
 
-## Retrieval
+### Retrieval
 
 Test:
 
@@ -595,7 +595,7 @@ Test:
 * Empty retrieval
 * Timeout behavior
 
-## Generation
+### Generation
 
 Test:
 
@@ -607,7 +607,7 @@ Test:
 * Cancellation
 * Idempotency for tool side effects
 
-## Asynchronous workers
+### Asynchronous workers
 
 Test:
 
@@ -622,7 +622,7 @@ Test:
 
 ---
 
-# 14. Structured logging and tracing
+## 14. Structured logging and tracing
 
 A useful request log contains stable fields:
 
@@ -639,7 +639,7 @@ A useful request log contains stable fields:
 }
 ```
 
-## Identifier roles
+### Identifier roles
 
 * **Correlation ID:** Connects logs belonging to one business request.
 * **Trace ID:** Connects distributed spans across services.
@@ -649,7 +649,7 @@ A useful request log contains stable fields:
 
 Python’s standard logging system supports contextual logging, including `LoggerAdapter`; structured systems commonly add the same context through adapters, filters, context variables, or `extra` fields. ([Python documentation][7])
 
-## Never log by default
+### Never log by default
 
 * Raw document contents
 * Complete prompts
@@ -665,9 +665,9 @@ The strongest redaction strategy is not to emit sensitive data in the first plac
 
 ---
 
-# 15. Common production concurrency failures
+## 15. Common production concurrency failures
 
-## Check-then-act race
+### Check-then-act race
 
 ```python
 if not await repository.exists(request_id):
@@ -678,7 +678,7 @@ Two workers can both observe “not found” and both insert.
 
 Use a unique database constraint and handle the conflict.
 
-## Lost update
+### Lost update
 
 ```python
 balance = await read_balance()
@@ -689,7 +689,7 @@ Concurrent updates can overwrite one another.
 
 Use transactions, atomic updates, row locks, or optimistic version checking.
 
-## Shared mutable state
+### Shared mutable state
 
 ```python
 current_request_id = None
@@ -697,7 +697,7 @@ current_request_id = None
 
 A module-level value is shared across requests. Use request-local arguments or `contextvars`.
 
-## Resource leaks
+### Resource leaks
 
 Common causes:
 
@@ -708,7 +708,7 @@ Common causes:
 * Queue item retrieved without `task_done`
 * Process or thread pool never shut down
 
-## Backpressure failure
+### Backpressure failure
 
 Without backpressure:
 
@@ -730,9 +730,9 @@ A bounded queue converts uncontrolled memory growth into waiting, rejection, or 
 
 ---
 
-# 16. Practical task design
+## 16. Practical task design
 
-## Thought process
+### Thought process
 
 We need a worker with these properties:
 
@@ -748,7 +748,7 @@ We need a worker with these properties:
 10. **Testability:** Inject processor, sleep, randomness, and logger.
 11. **Stable output ordering:** Results correspond to input order, even though completion is concurrent.
 
-## Correctness conditions
+### Correctness conditions
 
 For `N` configured consumers:
 
@@ -761,7 +761,7 @@ For `N` configured consumers:
 * `CancelledError` is never converted into an ordinary failure.
 * Raw document content never appears in logs.
 
-## Pseudocode
+### Pseudocode
 
 ```text
 function run(documents):
@@ -824,9 +824,9 @@ function process_with_retry(document):
 
 ---
 
-# 17. Implementation
+## 17. Implementation
 
-## `document_worker.py`
+### `document_worker.py`
 
 ```python
 from __future__ import annotations
@@ -1364,11 +1364,11 @@ class BoundedDocumentWorker:
 
 ---
 
-# 18. Pytest suite
+## 18. Pytest suite
 
 The tests use `asyncio.run()`, so `pytest-asyncio` is not required.
 
-## `test_document_worker.py`
+### `test_document_worker.py`
 
 ```python
 import asyncio
@@ -1560,21 +1560,21 @@ Validated result:
 
 ---
 
-# 19. Why the non-obvious parts matter
+## 19. Why the non-obvious parts matter
 
-## The queue is bounded
+### The queue is bounded
 
 `queue_size` limits waiting work. When full, the producer pauses instead of creating more in-memory tasks.
 
-## Consumers are fixed
+### Consumers are fixed
 
 Only `concurrency` consumer tasks exist, so active document processing is bounded.
 
-## Retries share one deadline
+### Retries share one deadline
 
 The deadline is created once outside the retry loop. A new attempt cannot reset the total budget.
 
-## Attempt timeout is capped by remaining time
+### Attempt timeout is capped by remaining time
 
 ```python
 attempt_timeout = min(
@@ -1585,11 +1585,11 @@ attempt_timeout = min(
 
 This prevents the inner operation from outliving the outer deadline.
 
-## Cancellation is re-raised
+### Cancellation is re-raised
 
 Cancellation causes cleanup but is not classified as timeout, permanent failure, or retryable failure.
 
-## Unknown errors fail closed
+### Unknown errors fail closed
 
 Blindly retrying every exception can retry programming defects, invalid data, and deterministic schema errors.
 
@@ -1603,21 +1603,21 @@ RetryDecision = Literal[
 ]
 ```
 
-## Sleep and randomness are injected
+### Sleep and randomness are injected
 
 Tests do not wait for real backoff and do not depend on random numbers.
 
-## Results preserve input order
+### Results preserve input order
 
 Workers may finish out of order, but each result is written into the input index.
 
-## Content is excluded from logs
+### Content is excluded from logs
 
 The worker logs `document_id`, not `document.content`. The formatter also provides defensive redaction, but omission remains the primary control.
 
 ---
 
-# 20. Production extensions
+## 20. Production extensions
 
 For a real AI ingestion platform, extend this design with:
 
@@ -1642,7 +1642,7 @@ For durable jobs, the in-process queue should be replaced or preceded by a persi
 
 ---
 
-# 21. Senior interview questions
+## 21. Senior interview questions
 
 ### Why not use `asyncio.gather` over all documents?
 
@@ -1678,7 +1678,7 @@ Calling blocking code from the event-loop thread. One blocking SDK call can stal
 
 ---
 
-# Day 4 final checklist
+## Day 4 final checklist
 
 You should now be able to explain and implement:
 
@@ -1701,9 +1701,10 @@ You should now be able to explain and implement:
 [5]: https://docs.pytest.org/en/stable/how-to/parametrize.html "How to parametrize fixtures and test functions - pytest documentation"
 [6]: https://docs.pytest.org/en/stable/how-to/monkeypatch.html "How to monkeypatch/mock modules and environments - pytest documentation"
 [7]: https://docs.python.org/3/library/logging.html?highlight=filemode&utm_source=chatgpt.com "logging — Logging facility for Python — Python 3.14.6 documentation"
-# Day 4 DSA — Two Pointers
 
-## Beginner-friendly summary
+## Day 4 DSA — Two Pointers
+
+### Beginner-friendly summary
 
 The **two-pointers technique** uses two indexes that move through an array or string according to a rule.
 
@@ -1720,7 +1721,7 @@ The most important question is:
 
 ---
 
-# 1. Main two-pointer patterns
+## 1. Main two-pointer patterns
 
 | Pattern              | Pointer movement                         | Typical use                                     |
 | -------------------- | ---------------------------------------- | ----------------------------------------------- |
@@ -1732,11 +1733,11 @@ The most important question is:
 
 ---
 
-# 2. Recognition signals
+## 2. Recognition signals
 
 Consider two pointers when you see one or more of these signals.
 
-## Signal 1: The input is sorted
+### Signal 1: The input is sorted
 
 Examples:
 
@@ -1760,7 +1761,7 @@ If `array[L] + array[R]` is too small, moving `R` left would make the sum even s
 
 ---
 
-## Signal 2: The problem asks about pairs or triplets
+### Signal 2: The problem asks about pairs or triplets
 
 Keywords include:
 
@@ -1774,7 +1775,7 @@ Keywords include:
 
 ---
 
-## Signal 3: You are repeatedly scanning remaining elements
+### Signal 3: You are repeatedly scanning remaining elements
 
 A brute-force solution may contain:
 
@@ -1788,7 +1789,7 @@ Ask whether ordering allows one pointer movement to discard an entire group of p
 
 ---
 
-## Signal 4: Elements must be modified in place
+### Signal 4: Elements must be modified in place
 
 Examples:
 
@@ -1804,7 +1805,7 @@ This commonly uses:
 
 ---
 
-## Signal 5: You compare symmetrical positions
+### Signal 5: You compare symmetrical positions
 
 Examples:
 
@@ -1815,7 +1816,7 @@ Examples:
 
 ---
 
-# 3. Opposite-direction pointers
+## 3. Opposite-direction pointers
 
 One pointer begins at the start and another at the end.
 
@@ -1827,7 +1828,7 @@ while left < right:
     ...
 ```
 
-## Common movement rule
+### Common movement rule
 
 For a sorted pair-sum problem:
 
@@ -1842,7 +1843,7 @@ else:
     return True
 ```
 
-### Why this works
+#### Why this works
 
 Suppose the sum is too small.
 
@@ -1856,11 +1857,11 @@ This is the correctness argument—not merely a coding trick.
 
 ---
 
-# 4. Same-direction pointers
+## 4. Same-direction pointers
 
 Both pointers move from left to right, but they have different responsibilities.
 
-## Example: remove duplicates from a sorted array
+### Example: remove duplicates from a sorted array
 
 ```text
 read pointer:  inspects each value
@@ -1882,7 +1883,7 @@ def remove_duplicates(values: list[int]) -> int:
     return write
 ```
 
-### Invariant
+#### Invariant
 
 Before each iteration:
 
@@ -1892,18 +1893,18 @@ values[0:write]
 
 contains all unique values found so far.
 
-### Complexity
+#### Complexity
 
 * Time: `O(n)`
 * Extra space: `O(1)`
 
 ---
 
-# 5. Partitioning pointers
+## 5. Partitioning pointers
 
 Partitioning divides an array into logical regions.
 
-## Example: move zeros to the end
+### Example: move zeros to the end
 
 ```python
 def move_zeroes(values: list[int]) -> None:
@@ -1925,7 +1926,7 @@ During execution:
                     write          read
 ```
 
-## Correctness invariant
+### Correctness invariant
 
 Before each iteration:
 
@@ -1935,9 +1936,9 @@ Before each iteration:
 
 ---
 
-# 6. Medium problem — 3Sum
+## 6. Medium problem — 3Sum
 
-## Problem statement
+### Problem statement
 
 Given an integer array `nums`, return all unique triplets:
 
@@ -1961,7 +1962,7 @@ nums[i] + nums[j] + nums[k] == 0
 
 The returned triplets must not contain duplicates.
 
-## Example
+### Example
 
 ```text
 Input:
@@ -1973,7 +1974,7 @@ Output:
 
 ---
 
-# 7. Recognition signals
+## 7. Recognition signals
 
 This problem strongly suggests sorting plus two pointers because:
 
@@ -1999,9 +2000,9 @@ Now solve a two-sum problem using opposite-direction pointers.
 
 ---
 
-# 8. Brute-force reasoning
+## 8. Brute-force reasoning
 
-## Basic idea
+### Basic idea
 
 Try every possible triplet.
 
@@ -2013,7 +2014,7 @@ for i in range(n):
                 ...
 ```
 
-## Duplicate problem
+### Duplicate problem
 
 Different index combinations may produce the same values.
 
@@ -2035,7 +2036,7 @@ We could place sorted triplets into a set:
 triplets.add(tuple(sorted((nums[i], nums[j], nums[k]))))
 ```
 
-## Brute-force complexity
+### Brute-force complexity
 
 * Number of triplets: approximately `n³ / 6`
 * Time: `O(n³)`
@@ -2043,7 +2044,7 @@ triplets.add(tuple(sorted((nums[i], nums[j], nums[k]))))
 
 Here, `m` is the number of result triplets.
 
-## Why brute force is inadequate
+### Why brute force is inadequate
 
 For `n = 3,000`:
 
@@ -2055,9 +2056,9 @@ The exact number of combinations is smaller, but still impractical.
 
 ---
 
-# 9. Optimized reasoning
+## 9. Optimized reasoning
 
-## Step 1: Sort the array
+### Step 1: Sort the array
 
 ```text
 Original:
@@ -2075,7 +2076,7 @@ Sorting provides:
 
 ---
 
-## Step 2: Fix the first number
+### Step 2: Fix the first number
 
 For every index `i`, treat `nums[i]` as the first number.
 
@@ -2091,7 +2092,7 @@ Then search for two numbers to the right whose sum equals:
 
 ---
 
-## Step 3: Place two pointers
+### Step 3: Place two pointers
 
 ```python
 left = i + 1
@@ -2106,9 +2107,9 @@ nums[i] + nums[left] + nums[right]
 
 ---
 
-## Step 4: Move based on the sum
+### Step 4: Move based on the sum
 
-### Sum is too small
+#### Sum is too small
 
 ```python
 if current_sum < 0:
@@ -2117,7 +2118,7 @@ if current_sum < 0:
 
 We need a larger sum. Since the array is sorted, moving `left` right increases or preserves its value.
 
-### Sum is too large
+#### Sum is too large
 
 ```python
 elif current_sum > 0:
@@ -2126,17 +2127,17 @@ elif current_sum > 0:
 
 We need a smaller sum. Moving `right` left decreases or preserves its value.
 
-### Sum equals zero
+#### Sum equals zero
 
 Record the triplet, then move both pointers and skip duplicates.
 
 ---
 
-# 10. Duplicate handling
+## 10. Duplicate handling
 
 Duplicate handling is the most important non-obvious part of `3Sum`.
 
-## Skip duplicate fixed values
+### Skip duplicate fixed values
 
 After processing one `-1`, processing another identical `-1` as the fixed value would produce the same triplets.
 
@@ -2145,7 +2146,7 @@ if i > 0 and nums[i] == nums[i - 1]:
     continue
 ```
 
-## Skip duplicate left and right values
+### Skip duplicate left and right values
 
 After finding a valid triplet:
 
@@ -2168,7 +2169,7 @@ We skip duplicates only **after recording a valid triplet**, because repeating t
 
 ---
 
-# 11. Early stopping
+## 11. Early stopping
 
 Because the array is sorted, once the fixed value becomes positive:
 
@@ -2191,7 +2192,7 @@ This optimization is correct specifically because the target is zero and the arr
 
 ---
 
-# 12. Pseudocode
+## 12. Pseudocode
 
 ```text
 sort nums
@@ -2229,7 +2230,7 @@ return results
 
 ---
 
-# 13. Python solution
+## 13. Python solution
 
 ```python
 def three_sum(nums: list[int]) -> list[list[int]]:
@@ -2284,7 +2285,7 @@ def three_sum(nums: list[int]) -> list[list[int]]:
 
 ---
 
-# 14. Dry run
+## 14. Dry run
 
 Input:
 
@@ -2298,7 +2299,7 @@ After sorting:
 [-4, -1, -1, 0, 1, 2]
 ```
 
-## Fixed value: `-4`
+### Fixed value: `-4`
 
 ```text
 i = 0
@@ -2314,7 +2315,7 @@ All subsequent sums remain below zero, so no result is found for `-4`.
 
 ---
 
-## Fixed value: first `-1`
+### Fixed value: first `-1`
 
 ```text
 [-4, -1, -1, 0, 1, 2]
@@ -2352,7 +2353,7 @@ Record:
 
 ---
 
-## Fixed value: second `-1`
+### Fixed value: second `-1`
 
 It equals the previous fixed value, so skip it.
 
@@ -2360,7 +2361,7 @@ This prevents duplicate triplets.
 
 ---
 
-## Final result
+### Final result
 
 ```python
 [
@@ -2371,11 +2372,11 @@ This prevents duplicate triplets.
 
 ---
 
-# 15. Correctness reasoning
+## 15. Correctness reasoning
 
 A senior-level explanation should establish why the algorithm cannot miss a valid triplet.
 
-## Invariant
+### Invariant
 
 For a fixed `i`, all candidate pairs lie between `left` and `right`.
 
@@ -2396,16 +2397,16 @@ Duplicate skipping removes repeated value combinations, not distinct triplets.
 
 ---
 
-# 16. Edge cases
+## 16. Edge cases
 
-## Empty input
+### Empty input
 
 ```python
 three_sum([])
 # []
 ```
 
-## Fewer than three values
+### Fewer than three values
 
 ```python
 three_sum([1, -1])
@@ -2414,7 +2415,7 @@ three_sum([1, -1])
 
 The loop does not execute.
 
-## All positive
+### All positive
 
 ```python
 three_sum([1, 2, 3])
@@ -2423,7 +2424,7 @@ three_sum([1, 2, 3])
 
 The early positive check stops immediately.
 
-## All negative
+### All negative
 
 ```python
 three_sum([-5, -3, -1])
@@ -2432,7 +2433,7 @@ three_sum([-5, -3, -1])
 
 All sums remain negative.
 
-## All zeros
+### All zeros
 
 ```python
 three_sum([0, 0, 0, 0])
@@ -2441,21 +2442,21 @@ three_sum([0, 0, 0, 0])
 
 Duplicate skipping prevents repeated `[0, 0, 0]`.
 
-## Many duplicates
+### Many duplicates
 
 ```python
 three_sum([-2, -2, 0, 0, 2, 2])
 # [[-2, 0, 2]]
 ```
 
-## No valid triplet
+### No valid triplet
 
 ```python
 three_sum([1, 2, -2, -1])
 # []
 ```
 
-## Input mutation
+### Input mutation
 
 The function calls:
 
@@ -2475,9 +2476,9 @@ That creates another list and requires `O(n)` additional space.
 
 ---
 
-# 17. Complexity
+## 17. Complexity
 
-## Time complexity
+### Time complexity
 
 Sorting:
 
@@ -2509,7 +2510,7 @@ Since `O(n²)` dominates `O(n log n)`:
 Final time complexity: O(n²)
 ```
 
-## Space complexity
+### Space complexity
 
 Ignoring the returned output:
 
@@ -2530,9 +2531,9 @@ where `m` is the number of returned triplets.
 
 ---
 
-# 18. Common mistakes
+## 18. Common mistakes
 
-## Mistake 1: Using a set instead of proper duplicate handling
+### Mistake 1: Using a set instead of proper duplicate handling
 
 A set may produce correct results but:
 
@@ -2545,7 +2546,7 @@ Skipping duplicates directly is more efficient and demonstrates mastery.
 
 ---
 
-## Mistake 2: Moving only one pointer after finding a triplet
+### Mistake 2: Moving only one pointer after finding a triplet
 
 After a valid triplet:
 
@@ -2558,7 +2559,7 @@ Both should move because retaining either current value cannot create a new uniq
 
 ---
 
-## Mistake 3: Skipping duplicates before evaluating the first occurrence
+### Mistake 3: Skipping duplicates before evaluating the first occurrence
 
 Incorrect duplicate logic can skip valid triplets.
 
@@ -2572,7 +2573,7 @@ This preserves the first occurrence.
 
 ---
 
-## Mistake 4: Forgetting that sorting mutates the input
+### Mistake 4: Forgetting that sorting mutates the input
 
 Use:
 
@@ -2584,7 +2585,7 @@ when mutation is not allowed.
 
 ---
 
-## Mistake 5: Using `left <= right`
+### Mistake 5: Using `left <= right`
 
 A triplet requires three distinct indexes.
 
@@ -2598,7 +2599,7 @@ When `left == right`, the same array element would be used twice.
 
 ---
 
-## Mistake 6: Moving pointers without using sorted-order reasoning
+### Mistake 6: Moving pointers without using sorted-order reasoning
 
 Two pointers are not automatically valid just because an array contains numbers. The movement must eliminate impossible choices.
 
@@ -2606,7 +2607,7 @@ Without sorted order, moving left or right based on the sum is not logically jus
 
 ---
 
-# 19. Independent practice version
+## 19. Independent practice version
 
 Before reviewing the solution again, try implementing it from this reduced prompt:
 
@@ -2654,6 +2655,6 @@ assert three_sum(
 
 ---
 
-# 20. Interview-ready explanation
+## 20. Interview-ready explanation
 
 > I first sort the array. I then fix one number and reduce the remaining problem to finding two numbers whose sum equals the negative of the fixed number. I use a left and right pointer because the sorted order tells me how to move: if the total is too small, I move left to increase it; if it is too large, I move right to decrease it. I skip repeated fixed, left, and right values to avoid duplicate triplets. Sorting costs `O(n log n)`, and the fixed-number plus linear two-pointer scan costs `O(n²)` overall.

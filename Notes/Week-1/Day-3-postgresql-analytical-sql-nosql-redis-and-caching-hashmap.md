@@ -38,7 +38,7 @@ For many enterprise AI systems:
 
 ---
 
-# 2. Reference architecture
+## 2. Reference architecture
 
 ```text
                          ┌─────────────────────┐
@@ -75,9 +75,9 @@ The important separation is:
 
 ---
 
-# 3. SQL versus NoSQL at senior interview depth
+## 3. SQL versus NoSQL at senior interview depth
 
-## 3.1 PostgreSQL
+### 3.1 PostgreSQL
 
 Use PostgreSQL when the system requires:
 
@@ -104,13 +104,13 @@ Typical AI-platform data:
 
 PostgreSQL also supports `JSONB`, allowing limited schema flexibility without giving up relational guarantees.
 
-### Interview insight
+#### Interview insight
 
 Do not choose NoSQL merely because the system contains JSON. PostgreSQL can store JSON while retaining transactions, constraints, indexing, and joins.
 
 ---
 
-## 3.2 DynamoDB
+### 3.2 DynamoDB
 
 DynamoDB is strongest when access patterns are known before schema design.
 
@@ -136,7 +136,7 @@ PK = TENANT#{tenant_id}#JOB#{job_id}
 SK = EVENT#{timestamp}
 ```
 
-### Important trade-off
+#### Important trade-off
 
 In DynamoDB, you usually model around queries rather than normalizing entities first.
 
@@ -148,7 +148,7 @@ A DynamoDB designer asks:
 
 > Which exact reads and writes must execute efficiently?
 
-### Common failure
+#### Common failure
 
 A team chooses DynamoDB and later needs:
 
@@ -162,7 +162,7 @@ That often leads to scans, duplicated records, secondary-index proliferation, or
 
 ---
 
-## 3.3 MongoDB
+### 3.3 MongoDB
 
 MongoDB fits data that naturally belongs together as one document.
 
@@ -196,15 +196,15 @@ Referencing messages separately is preferable when:
 * Pagination by message is required.
 * Concurrent updates are frequent.
 
-### Common failure
+#### Common failure
 
 Unbounded arrays create increasingly large documents, expensive updates, and hot records.
 
 ---
 
-# 4. Relational design principles
+## 4. Relational design principles
 
-## 4.1 Entity identifiers
+### 4.1 Entity identifiers
 
 A practical pattern is:
 
@@ -226,7 +226,7 @@ UNIQUE (tenant_id, external_request_id)
 
 ---
 
-## 4.2 Money
+### 4.2 Money
 
 Never use `FLOAT` or `REAL` for financial values.
 
@@ -249,7 +249,7 @@ A more advanced system may use different decimal scales for currencies or store 
 
 ---
 
-## 4.3 Timestamps
+### 4.3 Timestamps
 
 Prefer:
 
@@ -270,7 +270,7 @@ Do not use timestamps to represent every business period.
 
 ---
 
-## 4.4 Tenant isolation
+### 4.4 Tenant isolation
 
 Most tenant-owned tables should include:
 
@@ -294,11 +294,11 @@ Indexes should frequently begin with `tenant_id` because most queries are tenant
 
 ---
 
-# 5. Core production schemas
+## 5. Core production schemas
 
 The following entities cover documents, predictions, forecasts, approvals, audit events, and model versions.
 
-## 5.1 Model versions and prediction records
+### 5.1 Model versions and prediction records
 
 ```sql
 CREATE TABLE model_versions (
@@ -357,7 +357,7 @@ CREATE INDEX idx_prediction_requests_tenant_status_created
     ON prediction_requests (tenant_id, status, created_at DESC);
 ```
 
-### Design decisions
+#### Design decisions
 
 * The idempotency constraint prevents the same client request from producing duplicate predictions.
 * The output is separated from request metadata because unsuccessful requests have no output.
@@ -366,7 +366,7 @@ CREATE INDEX idx_prediction_requests_tenant_status_created
 
 ---
 
-## 5.2 Forecast runs and values
+### 5.2 Forecast runs and values
 
 ```sql
 CREATE TABLE forecast_runs (
@@ -422,7 +422,7 @@ CREATE INDEX idx_forecast_values_series_period
     ON forecast_values (series_key, period_start);
 ```
 
-### Correctness conditions
+#### Correctness conditions
 
 * A forecast run must point to an immutable model version.
 * A series can have only one prediction per run and period.
@@ -431,7 +431,7 @@ CREATE INDEX idx_forecast_values_series_period
 
 ---
 
-## 5.3 Audit events
+### 5.3 Audit events
 
 ```sql
 CREATE TABLE audit_events (
@@ -465,9 +465,9 @@ Do not update an old audit record to describe a new event. Insert a new event.
 
 ---
 
-# 6. Keys, constraints, indexes, and transactions
+## 6. Keys, constraints, indexes, and transactions
 
-## 6.1 Primary keys
+### 6.1 Primary keys
 
 A primary key provides:
 
@@ -480,7 +480,7 @@ It does not necessarily represent a business identifier.
 
 ---
 
-## 6.2 Foreign keys
+### 6.2 Foreign keys
 
 Foreign keys prevent invalid relationships.
 
@@ -491,7 +491,7 @@ model_version_id UUID NOT NULL
 
 Without the foreign key, a prediction might reference a model version that does not exist.
 
-### Delete behaviour
+#### Delete behaviour
 
 Choose deliberately:
 
@@ -503,7 +503,7 @@ Use cascade carefully for finance, audit, and compliance data. Accidental parent
 
 ---
 
-## 6.3 Check constraints
+### 6.3 Check constraints
 
 Application validation is not sufficient because:
 
@@ -527,7 +527,7 @@ CHECK (lower_bound <= upper_bound)
 
 ---
 
-## 6.4 Index selection
+### 6.4 Index selection
 
 An index should support a real access pattern.
 
@@ -553,7 +553,7 @@ CREATE INDEX idx_prediction_pending_queue
     );
 ```
 
-### Composite-index ordering
+#### Composite-index ordering
 
 For a B-tree index:
 
@@ -569,7 +569,7 @@ PostgreSQL can efficiently use the leading columns:
 
 It is generally less useful for filtering only on `created_at`.
 
-### Partial indexes
+#### Partial indexes
 
 When only a small subset is queried frequently:
 
@@ -581,7 +581,7 @@ CREATE INDEX idx_pending_predictions
 
 This can be smaller and more selective than indexing every status.
 
-### Other useful PostgreSQL index types
+#### Other useful PostgreSQL index types
 
 | Index  | Typical use                                        |
 | ------ | -------------------------------------------------- |
@@ -593,7 +593,7 @@ This can be smaller and more selective than indexing every status.
 
 ---
 
-## 6.5 Transactions
+### 6.5 Transactions
 
 A transaction protects a set of operations that must succeed or fail together.
 
@@ -608,9 +608,9 @@ If the audit insert fails, the state transition should normally roll back.
 
 ---
 
-## 6.6 Isolation levels
+### 6.6 Isolation levels
 
-### Read Committed
+#### Read Committed
 
 PostgreSQL's usual default.
 
@@ -626,7 +626,7 @@ Potential issue:
 
 * The same query can return different results later in the same transaction.
 
-### Repeatable Read
+#### Repeatable Read
 
 The transaction sees a stable snapshot.
 
@@ -639,7 +639,7 @@ Potential issue:
 
 * Serialization failures can occur and require retries.
 
-### Serializable
+#### Serializable
 
 Provides behaviour equivalent to transactions executing sequentially.
 
@@ -654,13 +654,13 @@ Trade-off:
 * Greater contention.
 * Higher implementation complexity.
 
-### Senior-level answer
+#### Senior-level answer
 
 Use the weakest isolation level that still protects the business invariant. Add constraints, atomic updates, or targeted locks before making every transaction serializable.
 
 ---
 
-## 6.7 Optimistic locking
+### 6.7 Optimistic locking
 
 Optimistic locking works well when conflicts are uncommon.
 
@@ -690,9 +690,9 @@ The application should return a conflict response, usually HTTP `409`, or re-rea
 
 ---
 
-# 7. Practical task A — Budget versus actual
+## 7. Practical task A — Budget versus actual
 
-## 7.1 Thought process
+### 7.1 Thought process
 
 We need to support:
 
@@ -714,7 +714,7 @@ Important decisions:
 5. Normalize invoice numbers for matching, while preserving the original value.
 6. Aggregate actual transactions at query time or into a materialized summary when volume becomes high.
 
-## 7.2 Pseudocode
+### 7.2 Pseudocode
 
 ```text
 For every tenant, month, department, and account:
@@ -732,7 +732,7 @@ For every tenant, month, department, and account:
         variance percentage = variance / budget * 100
 ```
 
-## 7.3 Schema
+### 7.3 Schema
 
 ```sql
 CREATE TABLE departments (
@@ -834,7 +834,7 @@ CREATE INDEX idx_actual_invoice_detection
 
 ---
 
-## 7.4 Budget-versus-actual query
+### 7.4 Budget-versus-actual query
 
 ```sql
 WITH budget AS (
@@ -902,7 +902,7 @@ ORDER BY
     account_id;
 ```
 
-### Non-obvious logic
+#### Non-obvious logic
 
 A `FULL OUTER JOIN` is intentional.
 
@@ -917,7 +917,7 @@ Variance percentage is `NULL` when the budget is zero. Returning `0%` would inco
 
 ---
 
-## 7.5 Ranking the largest overspending departments
+### 7.5 Ranking the largest overspending departments
 
 ```sql
 WITH department_variance AS (
@@ -951,7 +951,7 @@ FROM department_variance
 ORDER BY overspend_rank;
 ```
 
-### `RANK` versus `ROW_NUMBER`
+#### `RANK` versus `ROW_NUMBER`
 
 * `RANK()` gives equal rank to ties and leaves gaps.
 * `DENSE_RANK()` gives equal rank without gaps.
@@ -961,7 +961,7 @@ Use `RANK()` when equal overspending should produce equal business rank.
 
 ---
 
-## 7.6 Rolling three-month actual total
+### 7.6 Rolling three-month actual total
 
 ```sql
 WITH monthly_actual AS (
@@ -992,7 +992,7 @@ FROM monthly_actual
 ORDER BY department_id, month_start;
 ```
 
-### Correctness warning
+#### Correctness warning
 
 This is a rolling total over the previous three **rows**, not necessarily three calendar months.
 
@@ -1002,7 +1002,7 @@ For strict calendar windows, generate a complete month series and left join the 
 
 ---
 
-## 7.7 Period-over-period comparison
+### 7.7 Period-over-period comparison
 
 ```sql
 WITH monthly_actual AS (
@@ -1047,7 +1047,7 @@ FROM with_previous;
 
 ---
 
-## 7.8 Duplicate invoice detection
+### 7.8 Duplicate invoice detection
 
 ```sql
 SELECT
@@ -1072,7 +1072,7 @@ HAVING COUNT(*) > 1
 ORDER BY duplicate_count DESC;
 ```
 
-### Production trade-off
+#### Production trade-off
 
 Matching only on invoice number may create false positives because:
 
@@ -1090,7 +1090,7 @@ This identifies candidates, not guaranteed fraud. A human or reconciliation work
 
 ---
 
-## 7.9 Deduplicating imported rows
+### 7.9 Deduplicating imported rows
 
 Suppose repeated ingestion created multiple versions of the same external transaction.
 
@@ -1115,7 +1115,7 @@ That policy should be explicit rather than relying on arbitrary database order.
 
 ---
 
-## 7.10 Reconciliation schema and exception report
+### 7.10 Reconciliation schema and exception report
 
 ```sql
 CREATE TABLE bank_transactions (
@@ -1171,9 +1171,9 @@ For real payment reconciliation, matching may require:
 
 ---
 
-# 8. Practical task B — Approval workflow
+## 8. Practical task B — Approval workflow
 
-## 8.1 Thought process
+### 8.1 Thought process
 
 An approval request is not merely a row with an `approved` Boolean.
 
@@ -1203,7 +1203,7 @@ WAITING → PENDING → APPROVED
                     ↘ SKIPPED
 ```
 
-## 8.2 Correctness conditions
+### 8.2 Correctness conditions
 
 * Only the current pending step can be decided.
 * A rejected request cannot later become approved without an explicit restart.
@@ -1212,7 +1212,7 @@ WAITING → PENDING → APPROVED
 * Every decision must produce an audit event.
 * Concurrent decisions must not overwrite one another.
 
-## 8.3 Pseudocode
+### 8.3 Pseudocode
 
 ```text
 begin transaction
@@ -1243,7 +1243,7 @@ insert audit event
 commit transaction
 ```
 
-## 8.4 Schema
+### 8.4 Schema
 
 ```sql
 CREATE TABLE approval_requests (
@@ -1326,7 +1326,7 @@ CREATE INDEX idx_approval_entity
 
 ---
 
-## 8.5 Optimistic-locking transition
+### 8.5 Optimistic-locking transition
 
 First, claim the request version:
 
@@ -1360,7 +1360,7 @@ Again, exactly one row must be updated.
 
 All statements must execute inside the same database transaction.
 
-### Failure mode
+#### Failure mode
 
 Do not:
 
@@ -1374,7 +1374,7 @@ A crash after step 1 could leave the request and step inconsistent.
 
 ---
 
-## 8.6 Pending approvals query
+### 8.6 Pending approvals query
 
 ```sql
 SELECT
@@ -1397,7 +1397,7 @@ ORDER BY r.requested_at;
 
 ---
 
-## 8.7 Approval history query
+### 8.7 Approval history query
 
 ```sql
 SELECT
@@ -1421,7 +1421,7 @@ ORDER BY s.step_number;
 
 ---
 
-## 8.8 Pessimistic locking alternative
+### 8.8 Pessimistic locking alternative
 
 You can lock the request row:
 
@@ -1450,15 +1450,15 @@ Never hold a database transaction open while waiting for a user, external API, o
 
 ---
 
-# 9. Practical task C — RAG document catalog
+## 9. Practical task C — RAG document catalog
 
-## 9.1 Source-of-truth separation
+### 9.1 Source-of-truth separation
 
 A vector database should normally not be the only record of document state.
 
 A robust design uses:
 
-### Object storage
+#### Object storage
 
 Stores:
 
@@ -1467,7 +1467,7 @@ Stores:
 * Extracted tables or images.
 * Large intermediate files.
 
-### PostgreSQL
+#### PostgreSQL
 
 Stores:
 
@@ -1480,7 +1480,7 @@ Stores:
 * Parser and embedding versions.
 * Audit and lineage.
 
-### Vector database
+#### Vector database
 
 Stores:
 
@@ -1493,7 +1493,7 @@ The vector index should be rebuildable from authoritative metadata and source co
 
 ---
 
-## 9.2 Thought process
+### 9.2 Thought process
 
 We need to distinguish:
 
@@ -1506,7 +1506,7 @@ We need to distinguish:
 
 A content checksum enables deduplication and idempotent ingestion.
 
-## 9.3 Pseudocode
+### 9.3 Pseudocode
 
 ```text
 receive upload
@@ -1543,7 +1543,7 @@ if any operation fails:
 
 ---
 
-## 9.4 Schema
+### 9.4 Schema
 
 ```sql
 CREATE TABLE documents (
@@ -1655,7 +1655,7 @@ CREATE TABLE ingestion_jobs (
 
 ---
 
-## 9.5 Active document-version query
+### 9.5 Active document-version query
 
 ```sql
 SELECT
@@ -1682,7 +1682,7 @@ The tenant predicate is mandatory. Fetching only by document ID can create a cro
 
 ---
 
-## 9.6 Detecting stale embeddings
+### 9.6 Detecting stale embeddings
 
 Suppose the production embedding model is `$3`.
 
@@ -1717,7 +1717,7 @@ it also returns rows where `embedding_model_version_id` is `NULL`.
 
 ---
 
-## 9.7 Avoiding dual-write inconsistency
+### 9.7 Avoiding dual-write inconsistency
 
 A dangerous flow is:
 
@@ -1751,7 +1751,7 @@ A publisher later sends the event to the worker system and marks it published.
 
 This does not make PostgreSQL and the vector database one atomic transaction. It makes retries and recovery explicit.
 
-### Required idempotency
+#### Required idempotency
 
 Vector writes should use a deterministic identifier such as:
 
@@ -1763,11 +1763,11 @@ Retrying the write then replaces or confirms the same vector record instead of c
 
 ---
 
-# 10. Analytical SQL concepts
+## 10. Analytical SQL concepts
 
-## 10.1 Joins
+### 10.1 Joins
 
-### Inner join
+#### Inner join
 
 Returns only matching records.
 
@@ -1777,7 +1777,7 @@ JOIN departments d
   ON d.id = b.department_id
 ```
 
-### Left join
+#### Left join
 
 Preserves every row from the left side.
 
@@ -1790,13 +1790,13 @@ LEFT JOIN bank_transactions b
 WHERE b.id IS NULL
 ```
 
-### Full outer join
+#### Full outer join
 
 Preserves unmatched records from both sides.
 
 Useful for budget-versus-actual comparisons.
 
-### Cross join
+#### Cross join
 
 Produces combinations.
 
@@ -1810,7 +1810,7 @@ Be careful because result size grows multiplicatively.
 
 ---
 
-## 10.2 Common table expressions
+### 10.2 Common table expressions
 
 CTEs improve readability:
 
@@ -1832,7 +1832,7 @@ Do not assume a CTE automatically improves performance. Modern PostgreSQL may in
 
 ---
 
-## 10.3 Window functions
+### 10.3 Window functions
 
 Window functions preserve row-level detail while computing values across related rows.
 
@@ -1861,9 +1861,9 @@ The key difference from `GROUP BY`:
 
 ---
 
-# 11. Query plans and performance diagnosis
+## 11. Query plans and performance diagnosis
 
-## 11.1 Starting command
+### 11.1 Starting command
 
 ```sql
 EXPLAIN (
@@ -1886,9 +1886,9 @@ against production data. Use a safe environment or wrap carefully in a transacti
 
 ---
 
-## 11.2 What to inspect
+### 11.2 What to inspect
 
-### Estimated versus actual rows
+#### Estimated versus actual rows
 
 Example problem:
 
@@ -1917,7 +1917,7 @@ or increase statistics for important columns.
 
 ---
 
-### Sequential scan
+#### Sequential scan
 
 A sequential scan is not automatically bad.
 
@@ -1932,7 +1932,7 @@ A sequential scan is suspicious when a query returns a tiny fraction of a large 
 
 ---
 
-### Nested-loop join
+#### Nested-loop join
 
 Good when:
 
@@ -1946,7 +1946,7 @@ Bad when:
 
 ---
 
-### Hash join
+#### Hash join
 
 Often good for joining larger unordered datasets using equality.
 
@@ -1954,7 +1954,7 @@ Watch for memory pressure and disk spilling.
 
 ---
 
-### Sort operation
+#### Sort operation
 
 Look for:
 
@@ -1964,7 +1964,7 @@ Look for:
 
 ---
 
-### Buffers
+#### Buffers
 
 `BUFFERS` shows whether pages came from:
 
@@ -1976,7 +1976,7 @@ High execution time with many buffer reads can indicate excessive I/O.
 
 ---
 
-## 11.3 Functions on indexed columns
+### 11.3 Functions on indexed columns
 
 This query may prevent a normal index on `posting_date` from being used efficiently:
 
@@ -1995,7 +1995,7 @@ Alternatively, use an expression index when that expression is a common query pa
 
 ---
 
-## 11.4 N+1 query problem
+### 11.4 N+1 query problem
 
 Suppose the application loads 100 documents:
 
@@ -2036,9 +2036,9 @@ The problem is not merely query count. It also causes:
 
 ---
 
-# 12. Redis caching
+## 12. Redis caching
 
-## 12.1 Cache-aside
+### 12.1 Cache-aside
 
 The application controls the cache.
 
@@ -2061,13 +2061,13 @@ invalidate cache
 
 This is common because it keeps PostgreSQL authoritative.
 
-### Strengths
+#### Strengths
 
 * Simple.
 * Cache only useful records.
 * Cache failure does not need to block database access.
 
-### Weaknesses
+#### Weaknesses
 
 * First request is slow.
 * Stale data can exist.
@@ -2075,7 +2075,7 @@ This is common because it keeps PostgreSQL authoritative.
 
 ---
 
-## 12.2 Read-through
+### 12.2 Read-through
 
 The application requests data through a cache abstraction, and the cache layer loads missing values from the database.
 
@@ -2089,7 +2089,7 @@ This can simplify callers, but the loading library or infrastructure becomes mor
 
 ---
 
-## 12.3 Write-through
+### 12.3 Write-through
 
 Writes are sent through the cache layer, which updates both cache and persistent storage.
 
@@ -2106,7 +2106,7 @@ The ordering and failure semantics must be explicit.
 
 ---
 
-## 12.4 TTL
+### 12.4 TTL
 
 TTL limits how long a cached record can remain stale.
 
@@ -2125,11 +2125,11 @@ TTL should be based on business staleness tolerance, not selected arbitrarily.
 
 ---
 
-## 12.5 Invalidation
+### 12.5 Invalidation
 
 Common strategies:
 
-### Delete on write
+#### Delete on write
 
 After the database commit:
 
@@ -2139,7 +2139,7 @@ DEL document cache key
 
 The next read repopulates it.
 
-### Versioned keys
+#### Versioned keys
 
 ```text
 rag:document:v5:{tenant}:{document_id}
@@ -2149,13 +2149,13 @@ When the representation changes, increment `v5` to `v6`.
 
 This is particularly useful when deploying incompatible serialization changes.
 
-### Event-driven invalidation
+#### Event-driven invalidation
 
 A committed database event triggers cache invalidation.
 
 Use when multiple services maintain caches.
 
-### Short TTL only
+#### Short TTL only
 
 Acceptable when:
 
@@ -2165,7 +2165,7 @@ Acceptable when:
 
 ---
 
-## 12.6 Cache stampede
+### 12.6 Cache stampede
 
 A stampede occurs when a popular key expires and many requests query the database simultaneously.
 
@@ -2179,7 +2179,7 @@ Prevention techniques:
 * Prewarming.
 * Negative caching for repeated misses.
 
-### TTL jitter
+#### TTL jitter
 
 Instead of every key expiring after exactly 300 seconds:
 
@@ -2191,17 +2191,17 @@ This avoids many related keys expiring simultaneously.
 
 ---
 
-# 13. Cache key design
+## 13. Cache key design
 
 A cache key must encode every factor that changes the result.
 
-## 13.1 Document metadata
+### 13.1 Document metadata
 
 ```text
 rag:document:v1:{tenant_id}:{document_id}:active
 ```
 
-## 13.2 Retrieval results
+### 13.2 Retrieval results
 
 ```text
 rag:retrieval:v3:
@@ -2227,7 +2227,7 @@ Omitting filters can return results for the wrong department, business unit, or 
 
 ---
 
-## 13.3 Prompt cache
+### 13.3 Prompt cache
 
 ```text
 prompt:v2:
@@ -2249,7 +2249,7 @@ A non-deterministic model response may be inappropriate to cache unless the prod
 
 ---
 
-## 13.4 Model-output cache
+### 13.4 Model-output cache
 
 ```text
 model-output:v4:
@@ -2263,7 +2263,7 @@ Do not cache only by raw user message. The same message under a different system
 
 ---
 
-## 13.5 Security condition
+### 13.5 Security condition
 
 Tenant identity must be inside the key and must also be validated in the underlying database query.
 
@@ -2271,7 +2271,7 @@ Cache key isolation is not a substitute for database authorization.
 
 ---
 
-# 14. Repository-plus-cache Python example
+## 14. Repository-plus-cache Python example
 
 This example uses:
 
@@ -2283,7 +2283,7 @@ This example uses:
 * A lightweight distributed lock for stampede reduction.
 * Safe lock release using a token.
 
-## 14.1 Thought process
+### 14.1 Thought process
 
 The repository abstraction should hide storage details from the service layer.
 
@@ -2309,7 +2309,7 @@ The cache wrapper should:
 8. Release only the lock it owns.
 9. Fall back safely if Redis is unavailable.
 
-## 14.2 Pseudocode
+### 14.2 Pseudocode
 
 ```text
 function get_active_document(tenant, document):
@@ -2343,7 +2343,7 @@ function get_active_document(tenant, document):
         query postgres directly
 ```
 
-## 14.3 Code
+### 14.3 Code
 
 ```python
 from __future__ import annotations
@@ -2667,21 +2667,21 @@ class CachedDocumentRepository:
             pass
 ```
 
-## 14.4 Non-obvious correctness details
+### 14.4 Non-obvious correctness details
 
-### Tenant-aware cache key
+#### Tenant-aware cache key
 
 This prevents two tenants with the same document ID from sharing a key.
 
 The SQL still validates `tenant_id`; both layers enforce isolation.
 
-### Negative caching
+#### Negative caching
 
 Repeated requests for a nonexistent document can overload the database.
 
 A short missing-record TTL reduces repeated misses without hiding newly created data for too long.
 
-### Lock token
+#### Lock token
 
 Deleting a lock unconditionally is unsafe.
 
@@ -2696,13 +2696,13 @@ Example:
 
 The Lua script deletes the lock only when the stored token matches Request A's token.
 
-### Redis failure
+#### Redis failure
 
 Redis is treated as an optimization. A Redis failure falls back to PostgreSQL.
 
 This is often preferable to making a metadata API unavailable because its cache is down.
 
-### Remaining limitation
+#### Remaining limitation
 
 The lock TTL must exceed the expected repository load time. If database loading takes longer than the lock TTL, more than one request may still access PostgreSQL.
 
@@ -2716,9 +2716,9 @@ A production system may add:
 
 ---
 
-# 15. Consistency across database, cache, object storage, and vector store
+## 15. Consistency across database, cache, object storage, and vector store
 
-## PostgreSQL and Redis
+### PostgreSQL and Redis
 
 Typical guarantee:
 
@@ -2743,7 +2743,7 @@ Mitigations:
 
 ---
 
-## PostgreSQL and object storage
+### PostgreSQL and object storage
 
 An object-store upload and database transaction cannot normally share one ACID transaction.
 
@@ -2765,7 +2765,7 @@ Both approaches require cleanup and retry handling.
 
 ---
 
-## PostgreSQL and vector store
+### PostgreSQL and vector store
 
 Treat vector indexing as an asynchronous projection.
 
@@ -2787,7 +2787,7 @@ For partial failure:
 
 ---
 
-## Object storage and vector store
+### Object storage and vector store
 
 Do not derive document identity from a temporary file path.
 
@@ -2803,9 +2803,9 @@ The vector store should contain these IDs as metadata so retrieval results can b
 
 ---
 
-# 16. Important production failure modes
+## 16. Important production failure modes
 
-## Over-indexing
+### Over-indexing
 
 Every index:
 
@@ -2818,7 +2818,7 @@ Create indexes from access patterns and query-plan evidence.
 
 ---
 
-## Missing tenant filter
+### Missing tenant filter
 
 This is both a correctness and security problem.
 
@@ -2843,7 +2843,7 @@ PostgreSQL row-level security can provide another protection layer, but applicat
 
 ---
 
-## Caching authorization-sensitive results
+### Caching authorization-sensitive results
 
 A retrieval result may depend on:
 
@@ -2857,7 +2857,7 @@ A key that omits authorization scope may leak restricted information.
 
 ---
 
-## Caching failed model responses
+### Caching failed model responses
 
 Do not cache transient failures as successful output.
 
@@ -2869,7 +2869,7 @@ If failures are cached at all, use:
 
 ---
 
-## Unbounded JSONB
+### Unbounded JSONB
 
 JSONB is useful but can become a dumping ground.
 
@@ -2883,7 +2883,7 @@ Promote a JSON field into a typed column when it is:
 
 ---
 
-## Mutable model versions
+### Mutable model versions
 
 Once a model version is used for predictions, its configuration and artifact reference should be immutable.
 
@@ -2893,7 +2893,7 @@ Register a new model version instead.
 
 ---
 
-## Long-running transactions
+### Long-running transactions
 
 Long transactions:
 
@@ -2912,7 +2912,7 @@ Do not keep transactions open during:
 
 ---
 
-# 17. Senior interview decision framework
+## 17. Senior interview decision framework
 
 When asked, “Which database would you choose?”, answer in this order:
 
@@ -2944,7 +2944,7 @@ A strong answer might be:
 
 ---
 
-# 18. Interview drill
+## 18. Interview drill
 
 ### 1. Why is PostgreSQL often preferred for approval workflows?
 
@@ -2988,7 +2988,7 @@ Start from common equality predicates, then range or sorting columns, while cons
 
 ---
 
-# 19. Day 3 completion checklist
+## 19. Day 3 completion checklist
 
 You should now be able to explain and implement:
 
@@ -3004,9 +3004,10 @@ You should now be able to explain and implement:
 * Tenant-safe cache keys.
 * Cache-aside with TTL, negative caching, invalidation, and stampede protection.
 * Outbox-based recovery for cross-system workflows.
-# Day 3 DSA — HashMap / Dictionary
 
-## 1. Beginner-friendly summary
+## Day 3 DSA — HashMap / Dictionary
+
+### 1. Beginner-friendly summary
 
 A hash map stores values using keys:
 
@@ -3030,7 +3031,7 @@ Average lookup, insertion, and deletion are **O(1)**, although pathological coll
 
 ---
 
-# 2. Recognition signals
+## 2. Recognition signals
 
 Think of a hash map when the problem includes phrases such as:
 
@@ -3054,9 +3055,9 @@ If that information can be stored by a key, a hash map is often appropriate.
 
 ---
 
-# 3. Core hash-map patterns
+## 3. Core hash-map patterns
 
-## 3.1 Counting
+### 3.1 Counting
 
 Count how often each item appears.
 
@@ -3091,7 +3092,7 @@ Typical uses:
 
 ---
 
-## 3.2 Grouping
+### 3.2 Grouping
 
 Map a derived key to multiple related values.
 
@@ -3127,7 +3128,7 @@ Typical uses:
 
 ---
 
-## 3.3 Indexing
+### 3.3 Indexing
 
 Store where a value appeared.
 
@@ -3170,7 +3171,7 @@ for index, value in enumerate(numbers):
 
 ---
 
-## 3.4 Complement lookup
+### 3.4 Complement lookup
 
 Suppose the target is `10` and the current number is `4`.
 
@@ -3196,7 +3197,7 @@ required previous prefix = current prefix - target
 
 ---
 
-# 4. Collision intuition
+## 4. Collision intuition
 
 A hash map uses a hash function to convert a key into an internal bucket location.
 
@@ -3227,7 +3228,7 @@ Hash-map implementations resolve collisions using mechanisms such as:
 * Probing.
 * Bucket expansion and table resizing.
 
-## Interview-level intuition
+### Interview-level intuition
 
 Hash-map operations are typically:
 
@@ -3240,7 +3241,7 @@ The worst case can occur when many keys collide or the table becomes badly distr
 
 You generally do not implement collision handling yourself in interview problems. Python and Go manage it internally.
 
-## Keys must be hashable
+### Keys must be hashable
 
 Python dictionary keys must have a stable hash and equality behaviour.
 
@@ -3262,13 +3263,13 @@ A list is mutable and therefore cannot be used as a dictionary key.
 
 ---
 
-# 5. Medium problem — Subarray Sum Equals K
+## 5. Medium problem — Subarray Sum Equals K
 
-## Problem statement
+### Problem statement
 
 Given an integer array `nums` and an integer `k`, return the total number of continuous subarrays whose sum equals `k`.
 
-### Example
+#### Example
 
 ```text
 Input:
@@ -3288,7 +3289,7 @@ indexes 1..2 → [1, 1]
 
 ---
 
-# 6. Recognition signals
+## 6. Recognition signals
 
 This problem contains several signals:
 
@@ -3311,9 +3312,9 @@ prefix sum + hash-map frequency counting
 
 ---
 
-# 7. Brute-force reasoning
+## 7. Brute-force reasoning
 
-## Approach
+### Approach
 
 Start every possible subarray at index `left`.
 
@@ -3330,7 +3331,7 @@ for every left index:
             increment answer
 ```
 
-## Pseudocode
+### Pseudocode
 
 ```text
 answer = 0
@@ -3347,7 +3348,7 @@ for left from 0 to n - 1:
 return answer
 ```
 
-## Complexity
+### Complexity
 
 * Time: **O(n²)**
 * Extra space: **O(1)**
@@ -3356,9 +3357,9 @@ This is correct, but too slow for large arrays.
 
 ---
 
-# 8. Optimized reasoning
+## 8. Optimized reasoning
 
-## 8.1 Prefix-sum idea
+### 8.1 Prefix-sum idea
 
 Let:
 
@@ -3392,7 +3393,7 @@ That is a complement lookup.
 
 ---
 
-## 8.2 Why store frequencies rather than only existence?
+### 8.2 Why store frequencies rather than only existence?
 
 Consider:
 
@@ -3419,7 +3420,7 @@ prefix sum → True
 
 ---
 
-## 8.3 Why initialize `{0: 1}`?
+### 8.3 Why initialize `{0: 1}`?
 
 Before processing any number, the prefix sum is conceptually zero once.
 
@@ -3449,7 +3450,7 @@ Without `{0: 1}`, valid subarrays beginning at the first element would be missed
 
 ---
 
-# 9. Optimized pseudocode
+## 9. Optimized pseudocode
 
 ```text
 prefix_frequency = map containing 0 → 1
@@ -3477,7 +3478,7 @@ This ensures the current prefix is not incorrectly treated as a previous prefix.
 
 ---
 
-# 10. Step-by-step example
+## 10. Step-by-step example
 
 ```text
 nums = [1, 2, 1, 2]
@@ -3509,7 +3510,7 @@ Valid subarrays:
 
 ---
 
-# 11. Python solution
+## 11. Python solution
 
 ```python
 from collections import defaultdict
@@ -3570,9 +3571,9 @@ if __name__ == "__main__":
 
 ---
 
-# 12. Non-obvious logic
+## 12. Non-obvious logic
 
-## The map stores previous prefixes
+### The map stores previous prefixes
 
 At the start of each iteration, `prefix_frequency` represents prefix sums observed before the current position.
 
@@ -3580,7 +3581,7 @@ That invariant is why lookup happens before insertion.
 
 ---
 
-## Multiple equal prefixes create multiple subarrays
+### Multiple equal prefixes create multiple subarrays
 
 Suppose the required prefix appeared three times.
 
@@ -3601,7 +3602,7 @@ if required_prefix in prefix_frequency:
 
 ---
 
-## Negative numbers are supported
+### Negative numbers are supported
 
 Unlike a standard sliding window, this solution remains correct with negative numbers.
 
@@ -3622,7 +3623,7 @@ Adding a new element can decrease the sum, so normal sliding-window decisions be
 
 ---
 
-# 13. Correctness argument
+## 13. Correctness argument
 
 At each ending position `j`, let the current prefix sum be `P`.
 
@@ -3658,9 +3659,9 @@ Repeating this for every ending position counts all valid subarrays.
 
 ---
 
-# 14. Edge cases
+## 14. Edge cases
 
-## Empty array
+### Empty array
 
 ```text
 nums = []
@@ -3670,7 +3671,7 @@ There are no non-empty subarrays, so the answer is `0`.
 
 ---
 
-## Entire array equals target
+### Entire array equals target
 
 ```text
 nums = [1, 2, 3]
@@ -3681,7 +3682,7 @@ The initial `0 → 1` entry makes this count correctly.
 
 ---
 
-## Target is zero
+### Target is zero
 
 ```text
 nums = [1, -1, 0]
@@ -3700,7 +3701,7 @@ Repeated prefix sums must be counted.
 
 ---
 
-## Multiple zeros
+### Multiple zeros
 
 ```text
 nums = [0, 0]
@@ -3719,7 +3720,7 @@ Answer: `3`.
 
 ---
 
-## Negative target
+### Negative target
 
 ```text
 nums = [-1, -2, 1]
@@ -3730,7 +3731,7 @@ The same algorithm works without modification.
 
 ---
 
-## Large answer
+### Large answer
 
 For many zeros, the number of matching subarrays can grow quadratically.
 
@@ -3746,14 +3747,14 @@ In Go, use `int64` if input constraints can produce answers larger than a 32-bit
 
 ---
 
-# 15. Complexity
+## 15. Complexity
 
-## Brute force
+### Brute force
 
 * Time: **O(n²)**
 * Extra space: **O(1)**
 
-## Optimized prefix map
+### Optimized prefix map
 
 * Time: **O(n)** average
 * Space: **O(n)**
@@ -3762,7 +3763,7 @@ The map can contain up to `n + 1` distinct prefix sums.
 
 ---
 
-# 16. Go solution
+## 16. Go solution
 
 ```go
 package main
@@ -3829,7 +3830,7 @@ func main() {
 
 ---
 
-# 17. Python versus Go comparison
+## 17. Python versus Go comparison
 
 | Area                | Python                                                      | Go                                                   |
 | ------------------- | ----------------------------------------------------------- | ---------------------------------------------------- |
@@ -3840,7 +3841,7 @@ func main() {
 | Generic readability | Very concise                                                | Explicit types improve production clarity            |
 | Concurrency safety  | Normal `dict` is not generally safe for concurrent mutation | Normal `map` is not safe for concurrent reads/writes |
 
-## Go-specific backend note
+### Go-specific backend note
 
 A normal Go map must not be concurrently mutated by multiple goroutines without synchronization.
 
@@ -3857,9 +3858,9 @@ For this interview algorithm, concurrency is unnecessary. Adding goroutines woul
 
 ---
 
-# 18. Common mistakes
+## 18. Common mistakes
 
-## Mistake 1: Storing only existence
+### Mistake 1: Storing only existence
 
 Incorrect:
 
@@ -3877,7 +3878,7 @@ prefix_frequency: dict[int, int]
 
 ---
 
-## Mistake 2: Forgetting the initial zero prefix
+### Mistake 2: Forgetting the initial zero prefix
 
 Incorrect:
 
@@ -3893,7 +3894,7 @@ prefix_frequency = {0: 1}
 
 ---
 
-## Mistake 3: Updating before lookup
+### Mistake 3: Updating before lookup
 
 Risky order:
 
@@ -3911,25 +3912,25 @@ prefix_frequency[prefix_sum] += 1
 
 ---
 
-## Mistake 4: Using sliding window with negative numbers
+### Mistake 4: Using sliding window with negative numbers
 
 Sliding window is generally not reliable here because array values may be negative.
 
 ---
 
-## Mistake 5: Returning a Boolean
+### Mistake 5: Returning a Boolean
 
 The problem asks for the total number of subarrays, so every matching previous prefix must contribute to the answer.
 
 ---
 
-# 19. Interview-ready explanation
+## 19. Interview-ready explanation
 
 > I first considered an `O(n²)` solution that fixes each starting position and expands the ending position while maintaining a running sum. To optimize it, I use prefix sums. If the current prefix is `P`, a previous prefix must equal `P-k` for the intervening subarray to sum to `k`. I store the frequency of every previous prefix in a hash map, initialized with `{0: 1}` so subarrays beginning at index zero are counted. For each number, I update the prefix, add the frequency of `prefix-k` to the result, and then record the current prefix. This gives average `O(n)` time and `O(n)` space and works with negative numbers.
 
 ---
 
-# 20. Day 3 DSA checklist
+## 20. Day 3 DSA checklist
 
 You should now be able to explain:
 

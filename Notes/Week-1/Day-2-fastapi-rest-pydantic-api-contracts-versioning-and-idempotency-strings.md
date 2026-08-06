@@ -72,7 +72,7 @@ For work accepted but not completed, HTTP `202 Accepted` is appropriate. It indi
 
 ---
 
-# 2. High-level architecture
+## 2. High-level architecture
 
 ```text
  Client / SDK / UI
@@ -103,7 +103,7 @@ The critical boundary is between the HTTP layer and application services. Router
 
 ---
 
-# 3. Recommended FastAPI application structure
+## 3. Recommended FastAPI application structure
 
 ```text
 app/
@@ -153,9 +153,9 @@ app/
 
 FastAPI supports larger applications through `APIRouter`, reusable dependencies, ASGI middleware, and application lifespan handlers. The lifespan context is the preferred place to initialize and close shared resources such as model clients, database pools, HTTP clients, and queue connections. ([FastAPI][3])
 
-## Layer responsibilities
+### Layer responsibilities
 
-### Router
+#### Router
 
 Responsible for:
 
@@ -168,7 +168,7 @@ Responsible for:
 
 It should not implement substantial business logic.
 
-### Service
+#### Service
 
 Responsible for:
 
@@ -179,7 +179,7 @@ Responsible for:
 * job creation;
 * transaction boundaries.
 
-### Repository
+#### Repository
 
 Responsible for:
 
@@ -189,7 +189,7 @@ Responsible for:
 * idempotency records;
 * stable pagination.
 
-### Client
+#### Client
 
 Responsible for:
 
@@ -201,11 +201,11 @@ Responsible for:
 
 ---
 
-# 4. Pydantic request and response contracts
+## 4. Pydantic request and response contracts
 
 Pydantic performs runtime validation and generates JSON Schema that FastAPI incorporates into OpenAPI.
 
-## Required, optional, and nullable fields
+### Required, optional, and nullable fields
 
 In Pydantic v2, `Optional[T]` or `T | None` means **nullable**, not necessarily optional. A default must be provided to make the field omittable. ([Pydantic Docs][4])
 
@@ -234,7 +234,7 @@ class ForecastRequest(BaseModel):
     quantiles: list[float] = Field(default_factory=lambda: [0.1, 0.5, 0.9])
 ```
 
-## Field validation versus model validation
+### Field validation versus model validation
 
 Use a field validator when the rule concerns one field:
 
@@ -260,7 +260,7 @@ def validate_time_range(self):
 
 Pydantic supports field and model validators for both individual constraints and cross-field invariants. ([Pydantic Docs][5])
 
-## Strict input design
+### Strict input design
 
 For external requests, consider:
 
@@ -287,9 +287,9 @@ A common policy is:
 
 ---
 
-# 5. Status codes and consistent errors
+## 5. Status codes and consistent errors
 
-## Suggested status-code policy
+### Suggested status-code policy
 
 |                       Status | Meaning in this platform                                    |
 | ---------------------------: | ----------------------------------------------------------- |
@@ -311,7 +311,7 @@ A common policy is:
 |    `503 Service Unavailable` | Model or dependency temporarily unavailable                 |
 |        `504 Gateway Timeout` | Upstream operation exceeded its time budget                 |
 
-## Problem-details error envelope
+### Problem-details error envelope
 
 RFC 9457 defines a machine-readable problem-details representation and supersedes the older RFC 7807. Its core fields include `type`, `title`, `status`, `detail`, and `instance`; applications may add extension fields. ([RFC Editor][6])
 
@@ -336,7 +336,7 @@ Example:
 }
 ```
 
-### Correctness conditions
+#### Correctness conditions
 
 * The HTTP status and body `status` must agree.
 * `code` should be stable and machine-readable.
@@ -347,9 +347,9 @@ Example:
 
 ---
 
-# 6. Endpoint contracts
+## 6. Endpoint contracts
 
-## `/v1/predict`
+### `/v1/predict`
 
 ```http
 POST /v1/predict
@@ -392,7 +392,7 @@ Response:
 }
 ```
 
-### Contract decisions
+#### Contract decisions
 
 * Batch input is a list even when only one instance is sent.
 * Preserve output order relative to input order.
@@ -403,7 +403,7 @@ Response:
 
 ---
 
-## `/v1/chat`
+### `/v1/chat`
 
 Request:
 
@@ -438,7 +438,7 @@ Response:
 }
 ```
 
-### Senior-level considerations
+#### Senior-level considerations
 
 * Decide whether the server or client owns conversation history.
 * Do not accept trusted system prompts from untrusted clients.
@@ -450,7 +450,7 @@ Response:
 
 ---
 
-## Forecasting contract
+### Forecasting contract
 
 A forecasting endpoint needs stronger temporal semantics than a normal prediction endpoint.
 
@@ -507,7 +507,7 @@ Correctness conditions:
 
 ---
 
-## `/v1/documents`
+### `/v1/documents`
 
 Use multipart upload:
 
@@ -559,7 +559,7 @@ Production validation should include:
 
 ---
 
-## `/v1/approvals`
+### `/v1/approvals`
 
 Request:
 
@@ -598,7 +598,7 @@ Important design decisions:
 
 ---
 
-## `/v1/jobs/{id}`
+### `/v1/jobs/{id}`
 
 Response:
 
@@ -626,11 +626,11 @@ Avoid ambiguous states such as `done`, which do not distinguish success from fai
 
 ---
 
-# 7. Idempotency keys
+## 7. Idempotency keys
 
 An idempotency key allows a client to retry a non-idempotent request without accidentally executing the operation twice. The IETF idempotency-key draft describes using an `Idempotency-Key` request header for making operations such as `POST` fault-tolerant. ([IETF][8])
 
-## Required algorithm
+### Required algorithm
 
 ```text
 scope = tenant + endpoint + authenticated principal
@@ -667,7 +667,7 @@ on transient failure:
     classify whether retry is safe
 ```
 
-## Financial action requirement
+### Financial action requirement
 
 For a financial action, this is insufficient:
 
@@ -690,7 +690,7 @@ idempotency record
 
 If the external payment provider owns the final side effect, propagate a stable idempotency key to that provider as well.
 
-## Key scope
+### Key scope
 
 Do not treat the key as globally unique without context. A safer identity is:
 
@@ -701,7 +701,7 @@ tenant_id
 + idempotency_key
 ```
 
-## Fingerprint
+### Fingerprint
 
 The same key with a different body must return `409 Conflict`.
 
@@ -712,7 +712,7 @@ Include business-relevant fields in the fingerprint, but exclude:
 * transport-level metadata;
 * fields normalized by the server.
 
-## Expiration
+### Expiration
 
 Document:
 
@@ -725,9 +725,9 @@ Document:
 
 ---
 
-# 8. Pagination, filtering, sorting, and stable cursors
+## 8. Pagination, filtering, sorting, and stable cursors
 
-## Offset pagination
+### Offset pagination
 
 ```http
 GET /v1/jobs?offset=1000&limit=20
@@ -744,7 +744,7 @@ Problems:
 * inserts or deletions can cause duplicates or missing items;
 * unstable under concurrent changes.
 
-## Cursor pagination
+### Cursor pagination
 
 ```http
 GET /v1/jobs?limit=20&cursor=<opaque-value>
@@ -775,7 +775,7 @@ LIMIT 21;
 
 Fetch `limit + 1` records to determine whether another page exists.
 
-## Correctness conditions
+### Correctness conditions
 
 * Sorting must include a unique tie-breaker.
 * Cursor fields must match the active sort.
@@ -796,9 +796,9 @@ Example response:
 
 ---
 
-# 9. API versioning and schema evolution
+## 9. API versioning and schema evolution
 
-## Recommended policy
+### Recommended policy
 
 Use URL major versions:
 
@@ -830,7 +830,7 @@ Potentially breaking:
 * changing idempotency scope or expiration;
 * changing a synchronous operation into an asynchronous one.
 
-## Enum evolution trap
+### Enum evolution trap
 
 A client may write:
 
@@ -855,7 +855,7 @@ Handle known values explicitly.
 Treat unknown values safely.
 ```
 
-## Deprecation lifecycle
+### Deprecation lifecycle
 
 1. Introduce replacement.
 2. Mark the old operation deprecated in OpenAPI.
@@ -869,7 +869,7 @@ The standardized `Deprecation` response header is defined by RFC 9745, and `Suns
 
 ---
 
-# 10. SSE streaming and cancellation
+## 10. SSE streaming and cancellation
 
 A typical event stream:
 
@@ -899,7 +899,7 @@ error
 heartbeat
 ```
 
-## POST plus SSE nuance
+### POST plus SSE nuance
 
 Native browser `EventSource` establishes a URL-based event stream and is naturally suited to GET-style connections. For a `POST /v1/chat` that streams its response, browser clients commonly consume the response through streaming `fetch`, not native `EventSource`.
 
@@ -913,7 +913,7 @@ GET /v1/chat-streams/{stream_id}
 Accept: text/event-stream
 ```
 
-## Cancellation algorithm
+### Cancellation algorithm
 
 ```text
 while generating:
@@ -935,7 +935,7 @@ except asyncio.CancelledError:
     raise
 ```
 
-## Important streaming failure condition
+### Important streaming failure condition
 
 After response headers and stream bytes have been sent, the server cannot replace the response with an HTTP `500`.
 
@@ -949,7 +949,7 @@ data: {
 }
 ```
 
-## Proxy considerations
+### Proxy considerations
 
 For streams:
 
@@ -963,9 +963,9 @@ For streams:
 
 ---
 
-# 11. Thought process for the practical implementation
+## 11. Thought process for the practical implementation
 
-## Design decisions
+### Design decisions
 
 1. Use `/v1` URL versioning.
 2. Use Pydantic models with forbidden unknown fields for the demonstration.
@@ -980,7 +980,7 @@ For streams:
 11. add `GET /v1/jobs` to demonstrate cursor pagination;
 12. expose OpenAPI for contract review.
 
-## Pseudocode
+### Pseudocode
 
 ```text
 APPLICATION START
@@ -1045,7 +1045,7 @@ FOR CHAT STREAM
 
 ---
 
-# 12. Compact runnable FastAPI implementation
+## 12. Compact runnable FastAPI implementation
 
 This is a **single-file learning implementation**. It demonstrates the contracts and control flow, but its stores and background task are in memory.
 
@@ -2296,7 +2296,7 @@ GET /docs
 
 ---
 
-# 13. Contract tests
+## 13. Contract tests
 
 FastAPI provides a test client through Starlette/httpx, enabling API tests without opening an external network socket. ([FastAPI][11])
 
@@ -2521,13 +2521,13 @@ def test_required_paths_exist_in_openapi(
 
 ---
 
-# 14. OpenAPI-based contract review
+## 14. OpenAPI-based contract review
 
 OpenAPI is a language-independent API description that lets humans and tooling understand an HTTP API without inspecting its implementation. ([OpenAPI Initiative Publications][12])
 
 A senior-level review should check:
 
-## Request schemas
+### Request schemas
 
 * Are required and nullable fields correct?
 * Are minimum and maximum values documented?
@@ -2536,7 +2536,7 @@ A senior-level review should check:
 * Are enum values evolvable?
 * Are timestamps and units explicit?
 
-## Responses
+### Responses
 
 * Does every successful response have a schema?
 * Are `202`, `409`, `413`, `415`, `422`, `429`, and `5xx` cases documented?
@@ -2544,7 +2544,7 @@ A senior-level review should check:
 * Are streaming and JSON alternatives both documented?
 * Is the job status model finite and explicit?
 
-## Compatibility automation
+### Compatibility automation
 
 In CI:
 
@@ -2579,7 +2579,7 @@ Do not rely only on schema-diff tooling. Some semantic changes, such as changing
 
 ---
 
-# 15. Production trade-offs and failure modes
+## 15. Production trade-offs and failure modes
 
 The reference implementation deliberately omits production infrastructure.
 
@@ -2595,9 +2595,9 @@ The reference implementation deliberately omits production infrastructure.
 | Process-local logging            | Structured logs, traces and metrics                                 |
 | Single service state             | Multi-replica-safe persistence                                      |
 
-## Major pitfalls
+### Major pitfalls
 
-### Running CPU-bound inference in the event loop
+#### Running CPU-bound inference in the event loop
 
 An `async def` endpoint does not make CPU-bound model inference non-blocking. Heavy local inference should run through:
 
@@ -2607,7 +2607,7 @@ An `async def` endpoint does not make CPU-bound model inference non-blocking. He
 * process pool for appropriate CPU workloads;
 * asynchronous remote model client.
 
-### Using `BackgroundTasks` for durable work
+#### Using `BackgroundTasks` for durable work
 
 In-process background tasks can disappear during:
 
@@ -2618,7 +2618,7 @@ In-process background tasks can disappear during:
 
 Use a durable queue for document ingestion, evaluation, batch forecasting, or long-running agent workflows.
 
-### Retrying every provider failure
+#### Retrying every provider failure
 
 Retry only when:
 
@@ -2637,7 +2637,7 @@ Do not automatically retry:
 * deterministic tool failure;
 * non-idempotent external actions without a key.
 
-### Holding a database transaction during LLM generation
+#### Holding a database transaction during LLM generation
 
 Never keep a database transaction open while waiting for:
 
@@ -2648,7 +2648,7 @@ Never keep a database transaction open while waiting for:
 
 Read required state, close the transaction, perform external work, and then persist through a new transaction using version checks.
 
-### Conflating model success with business success
+#### Conflating model success with business success
 
 An LLM successfully returning text does not mean:
 
@@ -2662,7 +2662,7 @@ Represent these as separate states and resources.
 
 ---
 
-# Day 2 interview takeaway
+## Day 2 interview takeaway
 
 A strong senior answer is:
 
@@ -2680,9 +2680,10 @@ A strong senior answer is:
 [10]: https://www.starlette.io/requests/ "https://www.starlette.io/requests/"
 [11]: https://fastapi.tiangolo.com/tutorial/testing/ "https://fastapi.tiangolo.com/tutorial/testing/"
 [12]: https://spec.openapis.org/oas/v3.2.0.html "https://spec.openapis.org/oas/v3.2.0.html"
-# Day 2 DSA Add-on — Strings
 
-## Core string patterns
+## Day 2 DSA Add-on — Strings
+
+### Core string patterns
 
 String interview problems are usually not about complicated string APIs. They test whether you can convert a textual requirement into one of a few reusable patterns.
 
@@ -2698,7 +2699,7 @@ String interview problems are usually not about complicated string APIs. They te
 
 ---
 
-## 1. Frequency counting
+### 1. Frequency counting
 
 Frequency counting maps each character to the number of times it appears.
 
@@ -2736,7 +2737,7 @@ The array is usually faster and has predictable memory usage, but a dictionary i
 
 ---
 
-## 2. Normalization
+### 2. Normalization
 
 Normalization removes representational differences that should not affect the answer.
 
@@ -2756,7 +2757,7 @@ normalized = "".join(
 
 However, creating a normalized copy requires additional memory. A two-pointer solution can often normalize characters while traversing the original string.
 
-### Important production consideration
+#### Important production consideration
 
 `lower()` and `casefold()` are not identical.
 
@@ -2768,11 +2769,11 @@ is more aggressive and better suited to case-insensitive Unicode comparison. Int
 
 ---
 
-## 3. Two-pointer string processing
+### 3. Two-pointer string processing
 
 Two pointers commonly appear in two forms.
 
-### Opposite-direction pointers
+#### Opposite-direction pointers
 
 ```text
 left  ->  "racecar"  <- right
@@ -2785,7 +2786,7 @@ Used for:
 * comparing prefixes and suffixes;
 * skipping invalid characters.
 
-### Same-direction pointers
+#### Same-direction pointers
 
 ```text
 left ----> right
@@ -2802,7 +2803,7 @@ A sliding window is a specialized two-pointer technique where `[left, right]` re
 
 ---
 
-## 4. Substring reasoning
+### 4. Substring reasoning
 
 A **substring** must be contiguous.
 
@@ -2826,13 +2827,13 @@ This distinction is an important recognition signal:
 
 ---
 
-# Medium problem — Longest Substring Without Repeating Characters
+## Medium problem — Longest Substring Without Repeating Characters
 
-## Problem statement
+### Problem statement
 
 Given a string `s`, return the length of the longest substring containing no repeated characters.
 
-### Examples
+#### Examples
 
 ```text
 Input:  "abcabcbb"
@@ -2856,7 +2857,7 @@ Explanation: "wke" is a valid substring.
 
 ---
 
-# 1. Recognition signals
+## 1. Recognition signals
 
 The problem contains several strong signals:
 
@@ -2874,7 +2875,7 @@ The last-seen-index approach is especially efficient because `left` can jump dir
 
 ---
 
-# 2. Brute-force reasoning
+## 2. Brute-force reasoning
 
 Generate every possible substring and check whether it contains duplicate characters.
 
@@ -2885,7 +2886,7 @@ For every starting index:
 3. Stop when a repeated character is found.
 4. Record the largest valid length.
 
-## Brute-force pseudocode
+### Brute-force pseudocode
 
 ```text
 maximum_length = 0
@@ -2912,7 +2913,7 @@ A fully naive version that separately checks every generated substring can reach
 
 ---
 
-# 3. Optimized reasoning
+## 3. Optimized reasoning
 
 Maintain a window:
 
@@ -2953,7 +2954,7 @@ left = max(left, last_seen[character] + 1)
 
 ---
 
-## Window invariant
+### Window invariant
 
 Before calculating the current length:
 
@@ -2970,7 +2971,7 @@ When a duplicate appears:
 
 ---
 
-# 4. Edge cases
+## 4. Edge cases
 
 Consider these before coding:
 
@@ -2991,7 +2992,7 @@ At the final `"a"`, its previous occurrence is outside the current window. Setti
 
 ---
 
-# 5. Complexity
+## 5. Complexity
 
 Let `n` be the number of characters.
 
@@ -3009,7 +3010,7 @@ Each character is processed once by `right`, and the dictionary lookup is averag
 
 ---
 
-# 6. Optimized pseudocode
+## 6. Optimized pseudocode
 
 ```text
 last_seen = empty map
@@ -3038,7 +3039,7 @@ return maximum_length
 
 ---
 
-# 7. Python solution
+## 7. Python solution
 
 ```python
 def length_of_longest_substring(text: str) -> int:
@@ -3062,7 +3063,7 @@ def length_of_longest_substring(text: str) -> int:
     return maximum_length
 ```
 
-## Example usage
+### Example usage
 
 ```python
 test_cases = [
@@ -3084,7 +3085,7 @@ for text, expected in test_cases:
 
 ---
 
-## Dry run for `"abba"`
+### Dry run for `"abba"`
 
 Initial state:
 
@@ -3104,7 +3105,7 @@ Without `max(left, previous_index + 1)`, the final step would incorrectly move `
 
 ---
 
-## Returning the actual substring
+### Returning the actual substring
 
 Sometimes the interviewer extends the requirement from length to substring.
 
@@ -3133,7 +3134,7 @@ def longest_unique_substring(text: str) -> str:
     return text[best_start : best_start + best_length]
 ```
 
-### Correctness condition
+#### Correctness condition
 
 Update `best_start` only when a strictly longer window is found. Using `>=` would return the latest maximum-length substring instead of the earliest one.
 
@@ -3141,7 +3142,7 @@ That behavior is not inherently wrong, but it must match the specified tie-break
 
 ---
 
-# 8. Frequency-map alternative
+## 8. Frequency-map alternative
 
 Another solution stores character counts.
 
@@ -3170,7 +3171,7 @@ def length_of_longest_substring_with_counts(
     return maximum_length
 ```
 
-## Comparison
+### Comparison
 
 | Approach        | Advantage                              | Trade-off                                  |
 | --------------- | -------------------------------------- | ------------------------------------------ |
@@ -3187,7 +3188,7 @@ The frequency-map pattern generalizes better to problems such as:
 
 ---
 
-# 9. Go comparison
+## 9. Go comparison
 
 ```go
 package main
@@ -3250,9 +3251,9 @@ func main() {
 }
 ```
 
-## Python versus Go considerations
+### Python versus Go considerations
 
-### Python
+#### Python
 
 ```python
 for right, character in enumerate(text):
@@ -3260,7 +3261,7 @@ for right, character in enumerate(text):
 
 Python strings behave as sequences of Unicode code points for typical iteration, and dictionary syntax is concise.
 
-### Go
+#### Go
 
 Go strings are byte sequences. A loop using:
 
@@ -3316,9 +3317,9 @@ That decision affects both memory representation and indexing behavior.
 
 ---
 
-# 10. Non-obvious design lessons
+## 10. Non-obvious design lessons
 
-## Why `left` only moves forward
+### Why `left` only moves forward
 
 The current window is already valid before adding the new rightmost character.
 
@@ -3332,11 +3333,11 @@ left is monotonically non-decreasing
 
 This monotonic movement is one reason the algorithm is linear.
 
-## Why we update `last_seen` after adjusting `left`
+### Why we update `last_seen` after adjusting `left`
 
 The map should record the newest occurrence for future windows. The old occurrence is used to repair the current window, and then it is replaced.
 
-## Why this is a substring algorithm
+### Why this is a substring algorithm
 
 At every step, the candidate is:
 
@@ -3348,7 +3349,7 @@ That is one continuous interval. We never skip internal characters.
 
 ---
 
-# 11. Common interview mistakes
+## 11. Common interview mistakes
 
 1. Confusing substring with subsequence.
 2. Restarting the scan after finding a duplicate, causing `O(n²)` behavior.
@@ -3369,6 +3370,6 @@ O(min(n, number of possible characters))
 
 ---
 
-# Interview-ready explanation
+## Interview-ready explanation
 
 > “The words ‘longest substring’ suggest a sliding window because the answer must be contiguous. I maintain a valid window containing no duplicate characters and store each character’s most recent index. When a repeated character occurs inside the current window, I move the left boundary directly after its previous occurrence. The left boundary never moves backward, so each character is processed once, giving `O(n)` time and `O(min(n, alphabet size))` space.”

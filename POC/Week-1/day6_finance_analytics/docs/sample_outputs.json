@@ -1,0 +1,152 @@
+{
+  "note": "Generated from the deterministic seed through the actual FastAPI routes; truncated for readability.",
+  "variance_first_3": [
+    {
+      "department_code": "ENG",
+      "department_name": "Engineering",
+      "period": "2025-01-01",
+      "budget": "583124.18",
+      "actual": "646600.3",
+      "variance": "63476.12",
+      "variance_pct": "10.89"
+    },
+    {
+      "department_code": "ENG",
+      "department_name": "Engineering",
+      "period": "2025-02-01",
+      "budget": "587770.12",
+      "actual": "508268.76",
+      "variance": "-79501.36",
+      "variance_pct": "-13.53"
+    },
+    {
+      "department_code": "ENG",
+      "department_name": "Engineering",
+      "period": "2025-03-01",
+      "budget": "684439.12",
+      "actual": "774054.03",
+      "variance": "89614.91",
+      "variance_pct": "13.09"
+    }
+  ],
+  "trend_first_3": [
+    {
+      "period": "2025-01-01",
+      "budget": "583124.18",
+      "actual": "646600.3",
+      "variance": "63476.12",
+      "rolling_3m_actual": "646600.3"
+    },
+    {
+      "period": "2025-02-01",
+      "budget": "587770.12",
+      "actual": "508268.76",
+      "variance": "-79501.36",
+      "rolling_3m_actual": "1154869.06"
+    },
+    {
+      "period": "2025-03-01",
+      "budget": "684439.12",
+      "actual": "774054.03",
+      "variance": "89614.91",
+      "rolling_3m_actual": "1928923.09"
+    }
+  ],
+  "exceptions_first_page": {
+    "items": [
+      {
+        "expense_id": "d0546807-fb3c-4082-821a-202292e57afc",
+        "period": "2025-06-01",
+        "transaction_date": "2025-06-23",
+        "department_code": "FIN",
+        "cost_centre_code": "FIN-03",
+        "vendor_code": "V004",
+        "vendor_name": "Delta Supplies",
+        "vendor_risk_tier": "MEDIUM",
+        "invoice_number": "INV-202506-000209",
+        "amount": "91528.24",
+        "approval_status": "REJECTED",
+        "monthly_budget": "145771.38",
+        "budget_share_pct": "62.79",
+        "exception_score": "122.79",
+        "exception_reasons": [
+          "approval_rejected",
+          "medium_risk_vendor",
+          "large_share_of_monthly_budget"
+        ]
+      },
+      {
+        "expense_id": "c27a99ee-1e45-4468-a9c6-ff0f94c5b3cf",
+        "period": "2025-12-01",
+        "transaction_date": "2025-12-05",
+        "department_code": "LEGAL",
+        "cost_centre_code": "LEGAL-02",
+        "vendor_code": "V027",
+        "vendor_name": "Acorn Services",
+        "vendor_risk_tier": "LOW",
+        "invoice_number": "INV-202512-002231",
+        "amount": "57909.23",
+        "approval_status": "REJECTED",
+        "monthly_budget": "86225.7",
+        "budget_share_pct": "67.16",
+        "exception_score": "117.16",
+        "exception_reasons": [
+          "approval_rejected",
+          "large_share_of_monthly_budget"
+        ]
+      },
+      {
+        "expense_id": "56757267-2af9-4925-8df5-741b80f17705",
+        "period": "2025-09-01",
+        "transaction_date": "2025-09-03",
+        "department_code": "FIN",
+        "cost_centre_code": "FIN-02",
+        "vendor_code": "V007",
+        "vendor_name": "Granite Services",
+        "vendor_risk_tier": "LOW",
+        "invoice_number": "INV-202509-000150",
+        "amount": "60354.97",
+        "approval_status": "REJECTED",
+        "monthly_budget": "111987.5",
+        "budget_share_pct": "53.89",
+        "exception_score": "103.89",
+        "exception_reasons": [
+          "approval_rejected",
+          "large_share_of_monthly_budget"
+        ]
+      }
+    ],
+    "next_cursor": "eyJzY29yZSI6IjEwMy44OSIsImlkIjoiNTY3NTcyNjctMmFmOS00OTI1LThkZjUtNzQxYjgwZjE3NzA1In0"
+  },
+  "statistics": {
+    "approved_n": 1841,
+    "non_approved_n": 489,
+    "approved_mean": 15821.35,
+    "non_approved_mean": 22665.22,
+    "mean_difference": 6843.87,
+    "ci_95_low": 4836.35,
+    "ci_95_high": 8851.39,
+    "t_statistic": 6.694,
+    "p_value": 0.0,
+    "cohen_d": 0.3879,
+    "interpretation": "The synthetic data shows a statistically detectable difference in mean expense amounts between non-approved and approved transactions. This is association, not causation.",
+    "limitations": [
+      "The dataset is synthetic and intentionally contains approval-related patterns.",
+      "Expenses are clustered by department, cost centre, period, and vendor, so observations are not fully independent.",
+      "A t-test compares means and does not prove that approval status causes amount differences.",
+      "Heavy tails and outliers can affect both the mean difference and confidence interval.",
+      "Repeated slicing or multiple tests would require multiplicity control."
+    ]
+  },
+  "operational_metrics_snapshot": {
+    "requests_total": 4,
+    "errors_total": 0,
+    "average_request_latency_ms": 4.72857950001071,
+    "cache_hits": 0,
+    "cache_misses": 2,
+    "cache_hit_ratio": 0.0,
+    "status_counts": {
+      "200": 4
+    }
+  }
+}
