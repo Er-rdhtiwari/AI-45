@@ -1,8 +1,9 @@
-SOURCE_FOLDER="<provide folder name>"
+SOURCE_FOLDER="Notes/Week-1"
 PDF_OUTPUT_FOLDER="${SOURCE_FOLDER}/pdfs"
-SOURCE_FILE_PATTERN="Day*.md"
-EXPECTED_FILE_COUNT=<provide count>
+SOURCE_FILE_PATTERN="*.md"
+EXPECTED_FILE_COUNT=3
 VALIDATION_REPORT="${PDF_OUTPUT_FOLDER}/pdf-validation-report.md"
+INDEX_PDF="${PDF_OUTPUT_FOLDER}/Day-00-Notes-Index.pdf"
 
 Create one PDF for each Markdown note matching `${SOURCE_FILE_PATTERN}` inside `${SOURCE_FOLDER}`.
 
@@ -21,10 +22,10 @@ day-01.md → day-01.pdf
 
 7. Use A4 portrait formatting by default:
 
-* Body font: 11 pt
+* Body font: 12 pt
 * H1: 16 pt bold
 * H2: 14 pt bold
-* H3: 12 pt bold
+* H3: 13 pt bold
 * Code blocks and tables: 10.5 pt
 * Line spacing: 1.3
 * Margins: 18 mm on all sides
@@ -94,6 +95,8 @@ For Mermaid code fences:
 
 14. If the number of matching Markdown files differs from `${EXPECTED_FILE_COUNT}`, record the difference in `${VALIDATION_REPORT}` and process all matching files without inventing or deleting files.
 
+15. After all note PDFs are created and validated, create and validate `${INDEX_PDF}` from the actual generated PDFs. Follow the structure and visual style of `output/pdf/Day-00-Notes-Index.pdf`, adapting its topic entries, grouping, quick locator, page counts, and collection summary to the generated collection without inventing content.
+
 Follow this order:
 
 1. Discover all matching Markdown files
@@ -102,14 +105,16 @@ Follow this order:
 4. Generate each PDF separately, rendering Mermaid blocks independently
 5. Validate each generated PDF
 6. Compare the source-file checksums to confirm they are unchanged
-7. Create `${VALIDATION_REPORT}`
-8. Report the final result
+7. Create and validate `${INDEX_PDF}`
+8. Create `${VALIDATION_REPORT}`
+9. Report the final result
 
 At the end, confirm:
 
 * number of Markdown files discovered
 * number of PDFs generated
 * number of successfully validated PDFs
+* index PDF location and validation status
 * validation report location
 * whether all original Markdown files remained unchanged
 * any unresolved rendering issues
