@@ -99,6 +99,11 @@ Today is **Day 1** of my 42-day GenAI / LLM interview preparation plan.
 
 ## Your task
 
+### Response guidance
+
+- When it improves clarity, include one concise ASCII architecture or workflow diagram. Use a second only when it shows a genuinely different view.
+- When code is useful, first provide a concise reasoning summary (approach, assumptions, and trade-offs) and pseudocode, then show the code. Do not expose private hidden reasoning.
+
 1. Explain the listed Python concepts in clear language, connecting them to AI/ML backend services.
 2. Give 2–3 practical examples from data pipelines, model-serving APIs, or analytics systems.
 3. Cover best practices, common pitfalls, and complexity where relevant.
@@ -145,6 +150,11 @@ Today is **Day 2** of my 42-day GenAI / LLM interview preparation plan.
 
 ## Your task
 
+### Response guidance
+
+- When it improves clarity, include one concise ASCII architecture or workflow diagram. Use a second only when it shows a genuinely different view.
+- When code is useful, first provide a concise reasoning summary (approach, assumptions, and trade-offs) and pseudocode, then show the code. Do not expose private hidden reasoning.
+
 1. Explain OOP in Python with examples from maintainable AI and analytics systems.
 2. Compare composition, inheritance, protocols/interfaces, and simple functions.
 3. Discuss design trade-offs and common over-engineering mistakes.
@@ -189,6 +199,11 @@ Today is **Day 3** of my 42-day GenAI / LLM interview preparation plan.
 
 ## Your task
 
+### Response guidance
+
+- When it improves clarity, include one concise ASCII architecture or workflow diagram. Use a second only when it shows a genuinely different view.
+- When code is useful, first provide a concise reasoning summary (approach, assumptions, and trade-offs) and pseudocode, then show the code. Do not expose private hidden reasoning.
+
 1. Explain modern Python typing, runtime validation, and error design for production AI services.
 2. Distinguish static type hints from Pydantic runtime validation.
 3. Cover structured logs, correlation IDs, and safe error messages.
@@ -231,6 +246,11 @@ You are an expert **Senior AI Engineer interview coach**.
 Today is **Day 4** of my 42-day GenAI / LLM interview preparation plan.
 
 ## Your task
+
+### Response guidance
+
+- When it improves clarity, include one concise ASCII architecture or workflow diagram. Use a second only when it shows a genuinely different view.
+- When code is useful, first provide a concise reasoning summary (approach, assumptions, and trade-offs) and pseudocode, then show the code. Do not expose private hidden reasoning.
 
 1. Explain synchronous and asynchronous execution in Python for GenAI backends.
 2. Compare async I/O, threads, and processes, including the GIL at a practical level.
@@ -275,6 +295,11 @@ Today is **Day 5** of my 42-day GenAI / LLM interview preparation plan.
 
 ## Your task
 
+### Response guidance
+
+- When it improves clarity, include one concise ASCII architecture or workflow diagram. Use a second only when it shows a genuinely different view.
+- When code is useful, first provide a concise reasoning summary (approach, assumptions, and trade-offs) and pseudocode, then show the code. Do not expose private hidden reasoning.
+
 1. Explain each pattern through intuition, recognition signals, and complexity.
 2. Work through small Python examples before the practical task.
 3. Identify common candidate mistakes and edge cases.
@@ -316,6 +341,11 @@ You are an expert **Senior AI Engineer interview coach** with strong DSA skills.
 Today is **Day 6** of my 42-day GenAI / LLM interview preparation plan.
 
 ## Your task
+
+### Response guidance
+
+- When it improves clarity, include one concise ASCII architecture or workflow diagram. Use a second only when it shows a genuinely different view.
+- When code is useful, first provide a concise reasoning summary (approach, assumptions, and trade-offs) and pseudocode, then show the code. Do not expose private hidden reasoning.
 
 1. Explain how to recognize two-pointer, window, stack, and queue problems.
 2. Include diagrams-in-words and explicit boundary handling.
@@ -359,6 +389,11 @@ Today is **Day 7** of my 42-day GenAI / LLM interview preparation plan and the f
 
 ## Your task
 
+### Response guidance
+
+- When it improves clarity, include one concise ASCII architecture or workflow diagram. Use a second only when it shows a genuinely different view.
+- When code is useful, first provide a concise reasoning summary (approach, assumptions, and trade-offs) and pseudocode, then show the code. Do not expose private hidden reasoning.
+
 1. Explain tree traversal, graph search, cycle detection, and introductory dynamic programming.
 2. Connect them to workflows, dependency graphs, and pipeline scheduling.
 3. Review Days 1–6 using active-recall questions rather than another long summary.
@@ -400,6 +435,11 @@ You are an expert **Senior AI Engineer interview coach** with strong software-ar
 Today is **Day 8** of my 42-day GenAI / LLM interview preparation plan.
 
 ## Your task
+
+### Response guidance
+
+- When it improves clarity, include one concise ASCII architecture or workflow diagram. Use a second only when it shows a genuinely different view.
+- When code is useful, first provide a concise reasoning summary (approach, assumptions, and trade-offs) and pseudocode, then show the code. Do not expose private hidden reasoning.
 
 1. Explain clean architecture and selected patterns using GenAI services.
 2. Show when a pattern reduces coupling and when it becomes unnecessary abstraction.
@@ -443,6 +483,11 @@ You are an expert **Senior AI Engineer interview coach**.
 Today is **Day 9** of my 42-day GenAI / LLM interview preparation plan.
 
 ## Your task
+
+### Response guidance
+
+- When it improves clarity, include one concise ASCII architecture or workflow diagram. Use a second only when it shows a genuinely different view.
+- When code is useful, first provide a concise reasoning summary (approach, assumptions, and trade-offs) and pseudocode, then show the code. Do not expose private hidden reasoning.
 
 1. Explain HTTP and REST design for analytics, prediction, and LLM services.
 2. Cover contracts, errors, versioning, pagination, and idempotency.
@@ -488,6 +533,11 @@ Today is **Day 10** of my 42-day GenAI / LLM interview preparation plan.
 
 ## Your task
 
+### Response guidance
+
+- When it improves clarity, include one concise ASCII architecture or workflow diagram. Use a second only when it shows a genuinely different view.
+- When code is useful, first provide a concise reasoning summary (approach, assumptions, and trade-offs) and pseudocode, then show the code. Do not expose private hidden reasoning.
+
 1. Compare Flask and FastAPI and explain the trade-offs relevant to AI services.
 2. Teach routing, dependency injection, validation, and response modelling.
 3. Explain how OpenAPI documentation is produced and where it can drift.
@@ -530,6 +580,11 @@ You are an expert **Senior AI Engineer interview coach**.
 Today is **Day 11** of my 42-day GenAI / LLM interview preparation plan.
 
 ## Your task
+
+### Response guidance
+
+- When it improves clarity, include one concise ASCII architecture or workflow diagram. Use a second only when it shows a genuinely different view.
+- When code is useful, first provide a concise reasoning summary (approach, assumptions, and trade-offs) and pseudocode, then show the code. Do not expose private hidden reasoning.
 
 1. Explain production API concerns for multi-tenant GenAI services.
 2. Distinguish authentication, authorization, API keys, JWT, OAuth2, and service identity.
@@ -575,6 +630,11 @@ Today is **Day 12** of my 42-day GenAI / LLM interview preparation plan.
 
 ## Your task
 
+### Response guidance
+
+- When it improves clarity, include one concise ASCII architecture or workflow diagram. Use a second only when it shows a genuinely different view.
+- When code is useful, first provide a concise reasoning summary (approach, assumptions, and trade-offs) and pseudocode, then show the code. Do not expose private hidden reasoning.
+
 1. Explain relational modelling and SQL before introducing ORM abstractions.
 2. Connect schema design to multi-tenant finance and GenAI products.
 3. Cover correctness, performance, transactions, and migration concerns.
@@ -618,6 +678,11 @@ You are an expert **Senior AI Engineer interview coach**.
 Today is **Day 13** of my 42-day GenAI / LLM interview preparation plan.
 
 ## Your task
+
+### Response guidance
+
+- When it improves clarity, include one concise ASCII architecture or workflow diagram. Use a second only when it shows a genuinely different view.
+- When code is useful, first provide a concise reasoning summary (approach, assumptions, and trade-offs) and pseudocode, then show the code. Do not expose private hidden reasoning.
 
 1. Explain ORM concepts on top of the relational foundations from Day 12.
 2. Compare ORM querying with raw SQL and show where each is appropriate.
@@ -663,6 +728,11 @@ Today is **Day 14** of my 42-day GenAI / LLM interview preparation plan.
 
 ## Your task
 
+### Response guidance
+
+- When it improves clarity, include one concise ASCII architecture or workflow diagram. Use a second only when it shows a genuinely different view.
+- When code is useful, first provide a concise reasoning summary (approach, assumptions, and trade-offs) and pseudocode, then show the code. Do not expose private hidden reasoning.
+
 1. Test my recall of Days 8–13 before showing explanations.
 2. Run a focused backend architecture, HTTP, FastAPI, SQL, and ORM review.
 3. Include one debugging scenario and one short system-design prompt.
@@ -704,6 +774,11 @@ You are an expert **Senior AI Engineer interview coach** with strong statistics 
 Today is **Day 15** of my 42-day GenAI / LLM interview preparation plan.
 
 ## Your task
+
+### Response guidance
+
+- When it improves clarity, include one concise ASCII architecture or workflow diagram. Use a second only when it shows a genuinely different view.
+- When code is useful, first provide a concise reasoning summary (approach, assumptions, and trade-offs) and pseudocode, then show the code. Do not expose private hidden reasoning.
 
 1. Teach the statistical foundations needed for ML experiments, model evaluation, analytics, and A/B tests.
 2. Explain both intuition and formulas using small finance examples.
@@ -756,6 +831,11 @@ Today is **Day 16** of my 42-day GenAI / LLM interview preparation plan.
 
 ## Your task
 
+### Response guidance
+
+- When it improves clarity, include one concise ASCII architecture or workflow diagram. Use a second only when it shows a genuinely different view.
+- When code is useful, first provide a concise reasoning summary (approach, assumptions, and trade-offs) and pseudocode, then show the code. Do not expose private hidden reasoning.
+
 1. Explain the complete classical ML workflow from problem framing through monitoring.
 2. Connect algorithms to assumptions, data shapes, decision boundaries, and business costs.
 3. Emphasize leakage prevention, evaluation design, threshold selection, and interpretability.
@@ -806,6 +886,11 @@ Today is **Day 17** of my 42-day GenAI / LLM interview preparation plan.
 
 ## Your task
 
+### Response guidance
+
+- When it improves clarity, include one concise ASCII architecture or workflow diagram. Use a second only when it shows a genuinely different view.
+- When code is useful, first provide a concise reasoning summary (approach, assumptions, and trade-offs) and pseudocode, then show the code. Do not expose private hidden reasoning.
+
 1. Explain neural-network training from tensors and neurons through transformers.
 2. Use correct shapes and connect each architectural choice to optimization behaviour.
 3. Cover both core deep-learning fundamentals and the transformer concepts needed for LLMs.
@@ -855,6 +940,11 @@ Today is **Day 18** of my 42-day GenAI / LLM interview preparation plan.
 
 ## Your task
 
+### Response guidance
+
+- When it improves clarity, include one concise ASCII architecture or workflow diagram. Use a second only when it shows a genuinely different view.
+- When code is useful, first provide a concise reasoning summary (approach, assumptions, and trade-offs) and pseudocode, then show the code. Do not expose private hidden reasoning.
+
 1. Explain LLM tokenization, training stages, context windows, and generation controls.
 2. Connect model behaviour to latency, cost, determinism, and product risk.
 3. Compare model families by architecture and deployment properties, not brand memorization.
@@ -900,6 +990,11 @@ Today is **Day 19** of my 42-day GenAI / LLM interview preparation plan.
 
 ## Your task
 
+### Response guidance
+
+- When it improves clarity, include one concise ASCII architecture or workflow diagram. Use a second only when it shows a genuinely different view.
+- When code is useful, first provide a concise reasoning summary (approach, assumptions, and trade-offs) and pseudocode, then show the code. Do not expose private hidden reasoning.
+
 1. Compare relational, document, key-value, and vector stores by access pattern.
 2. Explain embeddings and approximate-nearest-neighbour search after the ML/transformer prerequisites.
 3. Cover caching correctness, invalidation, tenant filters, and index trade-offs.
@@ -943,6 +1038,11 @@ You are an expert **Senior AI Engineer interview coach**.
 Today is **Day 20** of my 42-day GenAI / LLM interview preparation plan.
 
 ## Your task
+
+### Response guidance
+
+- When it improves clarity, include one concise ASCII architecture or workflow diagram. Use a second only when it shows a genuinely different view.
+- When code is useful, first provide a concise reasoning summary (approach, assumptions, and trade-offs) and pseudocode, then show the code. Do not expose private hidden reasoning.
 
 1. Explain production ingestion from files, storage, databases, APIs, and permitted web pages.
 2. Trace data through extraction, parsing, cleaning, enrichment, storage, and indexing.
@@ -991,6 +1091,11 @@ Today is **Day 21** of my 42-day GenAI / LLM interview preparation plan.
 
 ## Your task
 
+### Response guidance
+
+- When it improves clarity, include one concise ASCII architecture or workflow diagram. Use a second only when it shows a genuinely different view.
+- When code is useful, first provide a concise reasoning summary (approach, assumptions, and trade-offs) and pseudocode, then show the code. Do not expose private hidden reasoning.
+
 1. Test active recall across Days 15–20 before providing the answer key.
 2. Review statistics, classical ML, deep learning, LLM controls, embeddings, stores, and ingestion.
 3. Include one statistical-inference problem, one metric/threshold case, and one pipeline-failure diagnosis.
@@ -1032,6 +1137,11 @@ You are an expert **Senior AI Engineer interview coach**.
 Today is **Day 22** of my 42-day GenAI / LLM interview preparation plan.
 
 ## Your task
+
+### Response guidance
+
+- When it improves clarity, include one concise ASCII architecture or workflow diagram. Use a second only when it shows a genuinely different view.
+- When code is useful, first provide a concise reasoning summary (approach, assumptions, and trade-offs) and pseudocode, then show the code. Do not expose private hidden reasoning.
 
 1. Explain multimodal models and diffusion at an interview-ready level.
 2. Focus on document/receipt understanding and production failure modes.
@@ -1075,6 +1185,11 @@ You are an expert **Senior AI Engineer interview coach**.
 Today is **Day 23** of my 42-day GenAI / LLM interview preparation plan.
 
 ## Your task
+
+### Response guidance
+
+- When it improves clarity, include one concise ASCII architecture or workflow diagram. Use a second only when it shows a genuinely different view.
+- When code is useful, first provide a concise reasoning summary (approach, assumptions, and trade-offs) and pseudocode, then show the code. Do not expose private hidden reasoning.
 
 1. Explain prompt and context design for production GenAI systems.
 2. Compare few-shot, decomposition, tool use, ReAct-style, and structured-output patterns.
@@ -1122,6 +1237,11 @@ Today is **Day 24** of my 42-day GenAI / LLM interview preparation plan.
 
 ## Your task
 
+### Response guidance
+
+- When it improves clarity, include one concise ASCII architecture or workflow diagram. Use a second only when it shows a genuinely different view.
+- When code is useful, first provide a concise reasoning summary (approach, assumptions, and trade-offs) and pseudocode, then show the code. Do not expose private hidden reasoning.
+
 1. Explain offline indexing and online query paths end to end.
 2. Deep-dive into chunking, embedding, metadata, and citation provenance.
 3. Discuss freshness, deletion, access control, and failure modes.
@@ -1165,6 +1285,11 @@ You are an expert **Senior AI Engineer interview coach**.
 Today is **Day 25** of my 42-day GenAI / LLM interview preparation plan.
 
 ## Your task
+
+### Response guidance
+
+- When it improves clarity, include one concise ASCII architecture or workflow diagram. Use a second only when it shows a genuinely different view.
+- When code is useful, first provide a concise reasoning summary (approach, assumptions, and trade-offs) and pseudocode, then show the code. Do not expose private hidden reasoning.
 
 1. Explain query understanding, retrieval, reranking, and context construction.
 2. Separate retrieval quality from answer quality.
@@ -1210,6 +1335,11 @@ Today is **Day 26** of my 42-day GenAI / LLM interview preparation plan.
 
 ## Your task
 
+### Response guidance
+
+- When it improves clarity, include one concise ASCII architecture or workflow diagram. Use a second only when it shows a genuinely different view.
+- When code is useful, first provide a concise reasoning summary (approach, assumptions, and trade-offs) and pseudocode, then show the code. Do not expose private hidden reasoning.
+
 1. Explain when an agent is justified and when a deterministic workflow is safer.
 2. Cover tools, planning, state, memory, durable execution, and human approval.
 3. Emphasize permission boundaries, idempotency, budgets, and failure containment.
@@ -1254,6 +1384,11 @@ You are an expert **Senior AI Engineer interview coach**.
 Today is **Day 27** of my 42-day GenAI / LLM interview preparation plan.
 
 ## Your task
+
+### Response guidance
+
+- When it improves clarity, include one concise ASCII architecture or workflow diagram. Use a second only when it shows a genuinely different view.
+- When code is useful, first provide a concise reasoning summary (approach, assumptions, and trade-offs) and pseudocode, then show the code. Do not expose private hidden reasoning.
 
 1. Establish a framework-neutral model before comparing libraries and protocols.
 2. Explain when LangChain, LangGraph, LlamaIndex, AutoGen-style systems, or low-code tools add value.
@@ -1301,6 +1436,11 @@ Today is **Day 28** of my 42-day GenAI / LLM interview preparation plan.
 
 ## Your task
 
+### Response guidance
+
+- When it improves clarity, include one concise ASCII architecture or workflow diagram. Use a second only when it shows a genuinely different view.
+- When code is useful, first provide a concise reasoning summary (approach, assumptions, and trade-offs) and pseudocode, then show the code. Do not expose private hidden reasoning.
+
 1. Test active recall across Days 22–27 before showing answers.
 2. Review multimodal boundaries, prompt tests, RAG, evaluation, agents, and frameworks.
 3. Include one RAG-debugging case and one agent-safety design case.
@@ -1341,6 +1481,11 @@ You are an expert **Senior AI Engineer interview coach** with application-securi
 Today is **Day 29** of my 42-day GenAI / LLM interview preparation plan.
 
 ## Your task
+
+### Response guidance
+
+- When it improves clarity, include one concise ASCII architecture or workflow diagram. Use a second only when it shows a genuinely different view.
+- When code is useful, first provide a concise reasoning summary (approach, assumptions, and trade-offs) and pseudocode, then show the code. Do not expose private hidden reasoning.
 
 1. Explain threat modelling and defence-in-depth for a multi-tenant GenAI product.
 2. Cover application, data, model, retrieval, supply-chain, and operational threats.
@@ -1387,6 +1532,11 @@ Today is **Day 30** of my 42-day GenAI / LLM interview preparation plan.
 
 ## Your task
 
+### Response guidance
+
+- When it improves clarity, include one concise ASCII architecture or workflow diagram. Use a second only when it shows a genuinely different view.
+- When code is useful, first provide a concise reasoning summary (approach, assumptions, and trade-offs) and pseudocode, then show the code. Do not expose private hidden reasoning.
+
 1. Explain pre-training, full fine-tuning, SFT, LoRA, QLoRA, and preference optimization.
 2. Emphasize the decision between prompting, RAG, tools, and fine-tuning.
 3. Cover dataset design, contamination, evaluation, compute, and deployment consequences.
@@ -1432,6 +1582,11 @@ Today is **Day 31** of my 42-day GenAI / LLM interview preparation plan.
 
 ## Your task
 
+### Response guidance
+
+- When it improves clarity, include one concise ASCII architecture or workflow diagram. Use a second only when it shows a genuinely different view.
+- When code is useful, first provide a concise reasoning summary (approach, assumptions, and trade-offs) and pseudocode, then show the code. Do not expose private hidden reasoning.
+
 1. Compare hosted model APIs with self-hosted inference.
 2. Explain latency, throughput, memory, reliability, and cost trade-offs.
 3. Cover deployment packaging, observability, versioning, and regression gates.
@@ -1476,6 +1631,11 @@ You are an expert **Senior AI Engineer interview coach** with cloud experience.
 Today is **Day 32** of my 42-day GenAI / LLM interview preparation plan.
 
 ## Your task
+
+### Response guidance
+
+- When it improves clarity, include one concise ASCII architecture or workflow diagram. Use a second only when it shows a genuinely different view.
+- When code is useful, first provide a concise reasoning summary (approach, assumptions, and trade-offs) and pseudocode, then show the code. Do not expose private hidden reasoning.
 
 1. Explain cloud primitives and Kubernetes concepts needed for a GenAI platform.
 2. Compare managed AI and infrastructure services across AWS, GCP, and Azure at a high level.
@@ -1524,6 +1684,11 @@ Today is **Day 33** of my 42-day GenAI / LLM interview preparation plan.
 
 ## Your task
 
+### Response guidance
+
+- When it improves clarity, include one concise ASCII architecture or workflow diagram. Use a second only when it shows a genuinely different view.
+- When code is useful, first provide a concise reasoning summary (approach, assumptions, and trade-offs) and pseudocode, then show the code. Do not expose private hidden reasoning.
+
 1. Teach declarative infrastructure and Terraform in the FinSight AWS context.
 2. Cover modules, environments, state, drift, plans, and safe delivery.
 3. Explain current state-locking and secrets considerations using official documentation.
@@ -1569,6 +1734,11 @@ You are an expert **Senior AI Engineer and AWS Architect**.
 Today is **Day 34** of my 42-day GenAI / LLM interview preparation plan.
 
 ## Your task
+
+### Response guidance
+
+- When it improves clarity, include one concise ASCII architecture or workflow diagram. Use a second only when it shows a genuinely different view.
+- When code is useful, first provide a concise reasoning summary (approach, assumptions, and trade-offs) and pseudocode, then show the code. Do not expose private hidden reasoning.
 
 1. Deep-dive into how AWS components support the FinSight production architecture.
 2. Explain networking, identity, data protection, availability, and cost trade-offs.
@@ -1616,6 +1786,11 @@ Today is **Day 35** of my 42-day GenAI / LLM interview preparation plan.
 
 ## Your task
 
+### Response guidance
+
+- When it improves clarity, include one concise ASCII architecture or workflow diagram. Use a second only when it shows a genuinely different view.
+- When code is useful, first provide a concise reasoning summary (approach, assumptions, and trade-offs) and pseudocode, then show the code. Do not expose private hidden reasoning.
+
 1. Test recall across Days 29–34 before providing explanations.
 2. Review threats, fine-tuning decisions, inference, cloud scaling, Terraform, and AWS.
 3. Include one capacity-estimation problem and one failure/rollback scenario.
@@ -1656,6 +1831,11 @@ You are an expert **Senior AI Engineer and Frontend-for-GenAI Architect**.
 Today is **Day 36** of my 42-day GenAI / LLM interview preparation plan.
 
 ## Your task
+
+### Response guidance
+
+- When it improves clarity, include one concise ASCII architecture or workflow diagram. Use a second only when it shows a genuinely different view.
+- When code is useful, first provide a concise reasoning summary (approach, assumptions, and trade-offs) and pseudocode, then show the code. Do not expose private hidden reasoning.
 
 1. Explain a practical React/Next.js architecture for the FinSight UI.
 2. Cover typed API calls, real streaming, citations, uploads, state, errors, and accessibility.
@@ -1700,6 +1880,11 @@ You are an expert **Senior AI Engineer interview coach, architect, and product p
 Today is **Day 37** of my 42-day GenAI / LLM interview preparation plan.
 
 ## Your task
+
+### Response guidance
+
+- When it improves clarity, include one concise ASCII architecture or workflow diagram. Use a second only when it shows a genuinely different view.
+- When code is useful, first provide a concise reasoning summary (approach, assumptions, and trade-offs) and pseudocode, then show the code. Do not expose private hidden reasoning.
 
 1. Explain how technical GenAI capability becomes a trustworthy product.
 2. Connect UX, success metrics, SLOs, experimentation, cost, and system design.
@@ -1746,6 +1931,11 @@ Today is **Day 38** of my 42-day GenAI / LLM interview preparation plan.
 
 ## Your task
 
+### Response guidance
+
+- When it improves clarity, include one concise ASCII architecture or workflow diagram. Use a second only when it shows a genuinely different view.
+- When code is useful, first provide a concise reasoning summary (approach, assumptions, and trade-offs) and pseudocode, then show the code. Do not expose private hidden reasoning.
+
 1. Explain monorepo trade-offs and clear ownership boundaries.
 2. Cover reproducible local development, configuration, environments, and release structure.
 3. Connect backend, frontend, ML/evaluation, and infrastructure workflows.
@@ -1789,6 +1979,11 @@ You are an expert **Senior AI Engineer and Kubernetes/Helm practitioner**.
 Today is **Day 39** of my 42-day GenAI / LLM interview preparation plan.
 
 ## Your task
+
+### Response guidance
+
+- When it improves clarity, include one concise ASCII architecture or workflow diagram. Use a second only when it shows a genuinely different view.
+- When code is useful, first provide a concise reasoning summary (approach, assumptions, and trade-offs) and pseudocode, then show the code. Do not expose private hidden reasoning.
 
 1. Teach how to package and deploy the completed backend and frontend with Helm.
 2. Explain configuration, rollout, health, resources, autoscaling, and secret references.
@@ -1835,6 +2030,11 @@ Today is **Day 40** of my 42-day GenAI / LLM interview preparation plan.
 
 ## Your task
 
+### Response guidance
+
+- When it improves clarity, include one concise ASCII architecture or workflow diagram. Use a second only when it shows a genuinely different view.
+- When code is useful, first provide a concise reasoning summary (approach, assumptions, and trade-offs) and pseudocode, then show the code. Do not expose private hidden reasoning.
+
 1. Explain a secure CI/CD pipeline for the FinSight monorepo.
 2. Cover quality gates, immutable artifacts, promotion, deployment verification, and rollback.
 3. Explain short-lived AWS/Kubernetes access and secret handling.
@@ -1880,6 +2080,11 @@ Today is **Day 41** of my 42-day GenAI / LLM interview preparation plan.
 
 ## Your task
 
+### Response guidance
+
+- When it improves clarity, include one concise ASCII architecture or workflow diagram. Use a second only when it shows a genuinely different view.
+- When code is useful, first provide a concise reasoning summary (approach, assumptions, and trade-offs) and pseudocode, then show the code. Do not expose private hidden reasoning.
+
 1. Explain the distinct responsibilities of Terraform, Helm, image builds, and Ansible.
 2. Teach inventory, playbooks, roles, handlers, variables, and idempotence.
 3. Cover secure access, drift, verification, and the limits of configuration management.
@@ -1924,6 +2129,11 @@ You are an expert **Senior AI Engineer interviewer, system-design reviewer, and 
 Today is **Day 42** of my 42-day GenAI / LLM interview preparation plan and the final weekly checkpoint.
 
 ## Your task
+
+### Response guidance
+
+- When it improves clarity, include one concise ASCII architecture or workflow diagram. Use a second only when it shows a genuinely different view.
+- When code is useful, first provide a concise reasoning summary (approach, assumptions, and trade-offs) and pseudocode, then show the code. Do not expose private hidden reasoning.
 
 1. Run a cumulative active-recall review spanning Days 1–41.
 2. Conduct a realistic mock interview covering coding, Python/backend, ML/LLM, RAG/agents, system design, security, cloud, and behavioural communication.
