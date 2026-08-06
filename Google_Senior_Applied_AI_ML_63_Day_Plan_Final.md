@@ -104,15 +104,10 @@ Design a small, layered Python skeleton for a finance analytics service. Include
 
 Mandatory output format:
 - Begin with a concise, beginner-friendly summary, then teach at senior interview depth
-- Use a concept/trade-off table where useful
-- Use at most two practical examples
 - Include one concise ASCII architecture/workflow diagram; use a second only when it shows a genuinely different view
 - Give thought process and pseudocode before code
 - Provide runnable Python, SQL, Go, YAML, or configuration examples appropriate to the topic
-- Explain only the important logic line by line
-- Include production trade-offs, failure modes, and no more than three important mistakes
-- End with 5–10 interview questions and concise answers
-- End with an end-of-day checklist and a 2-minute verbal explanation prompt
+- Explain only non-obvious logic, correctness conditions, and key design decisions; do not narrate code line by line.- Include production trade-offs, failure modes, and no more than three important mistakes
 - Do not invent project metrics or claim hands-on experience I do not have; use placeholders or label conceptual knowledge clearly
 ```
 
@@ -121,7 +116,6 @@ Mandatory output format:
 ```text
 - Arrays: traversal, in-place operations, prefix/suffix ideas, time and space complexity; solve one medium problem independently in Python, then review a Go solution.
 - First provide recognition signals, brute-force reasoning, optimized reasoning, edge cases, and complexity.
-- I must attempt the problem before seeing the full solution.
 - Use Python as the primary solution. Include Go only where the day explicitly asks for it or where it adds useful backend/concurrency perspective.
 ```
 
@@ -152,16 +146,12 @@ Practical task:
 Implement a FastAPI API with `/v1/predict`, `/v1/chat`, `/v1/documents`, `/v1/approvals`, and `/v1/jobs/{id}` using Pydantic, validation, idempotency, and consistent errors.
 
 Mandatory output format:
+- Include a concise comparison table for the main alternatives and their selection criteria.
 - Begin with a concise, beginner-friendly summary, then teach at senior interview depth
-- Use a concept/trade-off table where useful
-- Use at most two practical examples
 - Include one concise ASCII architecture/workflow diagram; use a second only when it shows a genuinely different view
 - Give thought process and pseudocode before code
 - Provide runnable Python, SQL, Go, YAML, or configuration examples appropriate to the topic
-- Explain only the important logic line by line
-- Include production trade-offs, failure modes, and no more than three important mistakes
-- End with 5–10 interview questions and concise answers
-- End with an end-of-day checklist and a 2-minute verbal explanation prompt
+- Explain only non-obvious logic, correctness conditions, and key design decisions; do not narrate code line by line.- Include production trade-offs, failure modes, and no more than three important mistakes
 - Do not invent project metrics or claim hands-on experience I do not have; use placeholders or label conceptual knowledge clearly
 ```
 
@@ -170,7 +160,6 @@ Mandatory output format:
 ```text
 - Strings: frequency counting, normalization, two-pointer string processing, substring reasoning; solve one medium problem in Python and compare with Go.
 - First provide recognition signals, brute-force reasoning, optimized reasoning, edge cases, and complexity.
-- I must attempt the problem before seeing the full solution.
 - Use Python as the primary solution. Include Go only where the day explicitly asks for it or where it adds useful backend/concurrency perspective.
 ```
 
@@ -201,16 +190,12 @@ Practical task:
 Create SQL schemas and queries for a budget-versus-actual dataset, an approval workflow, and a RAG document catalog. Add a repository-plus-cache Python example.
 
 Mandatory output format:
+- Include a concise comparison table for the main alternatives and their selection criteria.
 - Begin with a concise, beginner-friendly summary, then teach at senior interview depth
-- Use a concept/trade-off table where useful
-- Use at most two practical examples
 - Include one concise ASCII architecture/workflow diagram; use a second only when it shows a genuinely different view
 - Give thought process and pseudocode before code
 - Provide runnable Python, SQL, Go, YAML, or configuration examples appropriate to the topic
-- Explain only the important logic line by line
-- Include production trade-offs, failure modes, and no more than three important mistakes
-- End with 5–10 interview questions and concise answers
-- End with an end-of-day checklist and a 2-minute verbal explanation prompt
+- Explain only non-obvious logic, correctness conditions, and key design decisions; do not narrate code line by line.- Include production trade-offs, failure modes, and no more than three important mistakes
 - Do not invent project metrics or claim hands-on experience I do not have; use placeholders or label conceptual knowledge clearly
 ```
 
@@ -219,7 +204,6 @@ Mandatory output format:
 ```text
 - HashMap/Dictionary: counting, grouping, indexing, complement lookup, collision intuition; solve one medium problem in Python and Go.
 - First provide recognition signals, brute-force reasoning, optimized reasoning, edge cases, and complexity.
-- I must attempt the problem before seeing the full solution.
 - Use Python as the primary solution. Include Go only where the day explicitly asks for it or where it adds useful backend/concurrency perspective.
 ```
 
@@ -250,16 +234,12 @@ Practical task:
 Implement a bounded-concurrency document-processing worker with timeout, retry, cancellation, structured logs, and pytest tests for success, timeout, retryable failure, and permanent failure.
 
 Mandatory output format:
+- Include a concise comparison table for the main alternatives and their selection criteria.
 - Begin with a concise, beginner-friendly summary, then teach at senior interview depth
-- Use a concept/trade-off table where useful
-- Use at most two practical examples
 - Include one concise ASCII architecture/workflow diagram; use a second only when it shows a genuinely different view
 - Give thought process and pseudocode before code
 - Provide runnable Python, SQL, Go, YAML, or configuration examples appropriate to the topic
-- Explain only the important logic line by line
-- Include production trade-offs, failure modes, and no more than three important mistakes
-- End with 5–10 interview questions and concise answers
-- End with an end-of-day checklist and a 2-minute verbal explanation prompt
+- Explain only non-obvious logic, correctness conditions, and key design decisions; do not narrate code line by line.- Include production trade-offs, failure modes, and no more than three important mistakes
 - Do not invent project metrics or claim hands-on experience I do not have; use placeholders or label conceptual knowledge clearly
 ```
 
@@ -268,7 +248,6 @@ Mandatory output format:
 ```text
 - Two Pointers: opposite-direction, same-direction, partitioning, sorted input; solve one medium problem independently.
 - First provide recognition signals, brute-force reasoning, optimized reasoning, edge cases, and complexity.
-- I must attempt the problem before seeing the full solution.
 - Use Python as the primary solution. Include Go only where the day explicitly asks for it or where it adds useful backend/concurrency perspective.
 ```
 
@@ -303,15 +282,10 @@ Perform EDA on a small synthetic expense or budget dataset. Form one business hy
 
 Mandatory output format:
 - Begin with a concise, beginner-friendly summary, then teach at senior interview depth
-- Use a concept/trade-off table where useful
-- Use at most two practical examples
 - Include one concise ASCII architecture/workflow diagram; use a second only when it shows a genuinely different view
 - Give thought process and pseudocode before code
 - Provide runnable Python, SQL, Go, YAML, or configuration examples appropriate to the topic
-- Explain only the important logic line by line
-- Include production trade-offs, failure modes, and no more than three important mistakes
-- End with 5–10 interview questions and concise answers
-- End with an end-of-day checklist and a 2-minute verbal explanation prompt
+- Explain only non-obvious logic, correctness conditions, and key design decisions; do not narrate code line by line.- Include production trade-offs, failure modes, and no more than three important mistakes
 - Do not invent project metrics or claim hands-on experience I do not have; use placeholders or label conceptual knowledge clearly
 ```
 
@@ -320,7 +294,6 @@ Mandatory output format:
 ```text
 - Sliding Window: fixed and variable windows, frequency maps, invariant maintenance; solve one medium problem.
 - First provide recognition signals, brute-force reasoning, optimized reasoning, edge cases, and complexity.
-- I must attempt the problem before seeing the full solution.
 - Use Python as the primary solution. Include Go only where the day explicitly asks for it or where it adds useful backend/concurrency perspective.
 ```
 
@@ -369,7 +342,6 @@ Mandatory output format:
 ```text
 - Stack: monotonic/non-monotonic basics, parsing, undo/state; solve one medium stack problem.
 - First provide recognition signals, brute-force reasoning, optimized reasoning, edge cases, and complexity.
-- I must attempt the problem before seeing the full solution.
 - Use Python as the primary solution. Include Go only where the day explicitly asks for it or where it adds useful backend/concurrency perspective.
 ```
 
@@ -415,7 +387,6 @@ Mandatory output format:
 ```text
 - Queue: FIFO, deque, BFS usage, producer-consumer concepts; solve one medium queue problem.
 - First provide recognition signals, brute-force reasoning, optimized reasoning, edge cases, and complexity.
-- I must attempt the problem before seeing the full solution.
 - Use Python as the primary solution. Include Go only where the day explicitly asks for it or where it adds useful backend/concurrency perspective.
 ```
 
@@ -453,15 +424,10 @@ Create a reproducible scikit-learn pipeline on a synthetic finance dataset, incl
 
 Mandatory output format:
 - Begin with a concise, beginner-friendly summary, then teach at senior interview depth
-- Use a concept/trade-off table where useful
-- Use at most two practical examples
 - Include one concise ASCII architecture/workflow diagram; use a second only when it shows a genuinely different view
 - Give thought process and pseudocode before code
 - Provide runnable Python, SQL, Go, YAML, or configuration examples appropriate to the topic
-- Explain only the important logic line by line
-- Include production trade-offs, failure modes, and no more than three important mistakes
-- End with 5–10 interview questions and concise answers
-- End with an end-of-day checklist and a 2-minute verbal explanation prompt
+- Explain only non-obvious logic, correctness conditions, and key design decisions; do not narrate code line by line.- Include production trade-offs, failure modes, and no more than three important mistakes
 - Do not invent project metrics or claim hands-on experience I do not have; use placeholders or label conceptual knowledge clearly
 ```
 
@@ -470,7 +436,6 @@ Mandatory output format:
 ```text
 - Linked List: pointer manipulation, fast/slow pointers, reversal, cycle detection; solve one medium problem.
 - First provide recognition signals, brute-force reasoning, optimized reasoning, edge cases, and complexity.
-- I must attempt the problem before seeing the full solution.
 - Use Python as the primary solution. Include Go only where the day explicitly asks for it or where it adds useful backend/concurrency perspective.
 ```
 
@@ -501,16 +466,12 @@ Practical task:
 Train regression and classification baselines, compare metrics, select a threshold using a cost matrix, and produce a segment-level error report.
 
 Mandatory output format:
+- Include a concise comparison table for the main alternatives and their selection criteria.
 - Begin with a concise, beginner-friendly summary, then teach at senior interview depth
-- Use a concept/trade-off table where useful
-- Use at most two practical examples
 - Include one concise ASCII architecture/workflow diagram; use a second only when it shows a genuinely different view
 - Give thought process and pseudocode before code
 - Provide runnable Python, SQL, Go, YAML, or configuration examples appropriate to the topic
-- Explain only the important logic line by line
-- Include production trade-offs, failure modes, and no more than three important mistakes
-- End with 5–10 interview questions and concise answers
-- End with an end-of-day checklist and a 2-minute verbal explanation prompt
+- Explain only non-obvious logic, correctness conditions, and key design decisions; do not narrate code line by line.- Include production trade-offs, failure modes, and no more than three important mistakes
 - Do not invent project metrics or claim hands-on experience I do not have; use placeholders or label conceptual knowledge clearly
 ```
 
@@ -519,7 +480,6 @@ Mandatory output format:
 ```text
 - Binary Search: exact match, boundaries, lower/upper bound, search on monotonic condition; solve one medium problem.
 - First provide recognition signals, brute-force reasoning, optimized reasoning, edge cases, and complexity.
-- I must attempt the problem before seeing the full solution.
 - Use Python as the primary solution. Include Go only where the day explicitly asks for it or where it adds useful backend/concurrency perspective.
 ```
 
@@ -550,16 +510,12 @@ Practical task:
 Train and compare a decision tree, random forest, and gradient-boosted model. Explain why the winning model wins and what could invalidate the conclusion.
 
 Mandatory output format:
+- Include a concise comparison table for the main alternatives and their selection criteria.
 - Begin with a concise, beginner-friendly summary, then teach at senior interview depth
-- Use a concept/trade-off table where useful
-- Use at most two practical examples
 - Include one concise ASCII architecture/workflow diagram; use a second only when it shows a genuinely different view
 - Give thought process and pseudocode before code
 - Provide runnable Python, SQL, Go, YAML, or configuration examples appropriate to the topic
-- Explain only the important logic line by line
-- Include production trade-offs, failure modes, and no more than three important mistakes
-- End with 5–10 interview questions and concise answers
-- End with an end-of-day checklist and a 2-minute verbal explanation prompt
+- Explain only non-obvious logic, correctness conditions, and key design decisions; do not narrate code line by line.- Include production trade-offs, failure modes, and no more than three important mistakes
 - Do not invent project metrics or claim hands-on experience I do not have; use placeholders or label conceptual knowledge clearly
 ```
 
@@ -568,7 +524,6 @@ Mandatory output format:
 ```text
 - Recursion: call stack, base cases, divide-and-conquer, recursion-to-iteration conversion; solve one medium problem.
 - First provide recognition signals, brute-force reasoning, optimized reasoning, edge cases, and complexity.
-- I must attempt the problem before seeing the full solution.
 - Use Python as the primary solution. Include Go only where the day explicitly asks for it or where it adds useful backend/concurrency perspective.
 ```
 
@@ -603,15 +558,10 @@ Create a leakage-safe feature pipeline, compare one supervised risk model with a
 
 Mandatory output format:
 - Begin with a concise, beginner-friendly summary, then teach at senior interview depth
-- Use a concept/trade-off table where useful
-- Use at most two practical examples
 - Include one concise ASCII architecture/workflow diagram; use a second only when it shows a genuinely different view
 - Give thought process and pseudocode before code
 - Provide runnable Python, SQL, Go, YAML, or configuration examples appropriate to the topic
-- Explain only the important logic line by line
-- Include production trade-offs, failure modes, and no more than three important mistakes
-- End with 5–10 interview questions and concise answers
-- End with an end-of-day checklist and a 2-minute verbal explanation prompt
+- Explain only non-obvious logic, correctness conditions, and key design decisions; do not narrate code line by line.- Include production trade-offs, failure modes, and no more than three important mistakes
 - Do not invent project metrics or claim hands-on experience I do not have; use placeholders or label conceptual knowledge clearly
 ```
 
@@ -620,7 +570,6 @@ Mandatory output format:
 ```text
 - BFS: graph/tree level order, shortest path in unweighted graphs, queue invariants; solve one medium problem.
 - First provide recognition signals, brute-force reasoning, optimized reasoning, edge cases, and complexity.
-- I must attempt the problem before seeing the full solution.
 - Use Python as the primary solution. Include Go only where the day explicitly asks for it or where it adds useful backend/concurrency perspective.
 ```
 
@@ -656,15 +605,10 @@ Design an offline, shadow, and online evaluation plan for an expense-risk model,
 
 Mandatory output format:
 - Begin with a concise, beginner-friendly summary, then teach at senior interview depth
-- Use a concept/trade-off table where useful
-- Use at most two practical examples
 - Include one concise ASCII architecture/workflow diagram; use a second only when it shows a genuinely different view
 - Give thought process and pseudocode before code
 - Provide runnable Python, SQL, Go, YAML, or configuration examples appropriate to the topic
-- Explain only the important logic line by line
-- Include production trade-offs, failure modes, and no more than three important mistakes
-- End with 5–10 interview questions and concise answers
-- End with an end-of-day checklist and a 2-minute verbal explanation prompt
+- Explain only non-obvious logic, correctness conditions, and key design decisions; do not narrate code line by line.- Include production trade-offs, failure modes, and no more than three important mistakes
 - Do not invent project metrics or claim hands-on experience I do not have; use placeholders or label conceptual knowledge clearly
 ```
 
@@ -673,7 +617,6 @@ Mandatory output format:
 ```text
 - DFS: recursive and iterative traversal, connected components, cycle detection; solve one medium problem.
 - First provide recognition signals, brute-force reasoning, optimized reasoning, edge cases, and complexity.
-- I must attempt the problem before seeing the full solution.
 - Use Python as the primary solution. Include Go only where the day explicitly asks for it or where it adds useful backend/concurrency perspective.
 ```
 
@@ -722,7 +665,6 @@ Mandatory output format:
 ```text
 - Heap/Priority Queue: top-K, streaming selection, scheduling; solve one medium heap problem.
 - First provide recognition signals, brute-force reasoning, optimized reasoning, edge cases, and complexity.
-- I must attempt the problem before seeing the full solution.
 - Use Python as the primary solution. Include Go only where the day explicitly asks for it or where it adds useful backend/concurrency perspective.
 ```
 
@@ -768,7 +710,6 @@ Mandatory output format:
 ```text
 - Sorting: comparison sorts, stability, custom keys, partitioning, complexity; solve one medium sorting problem.
 - First provide recognition signals, brute-force reasoning, optimized reasoning, edge cases, and complexity.
-- I must attempt the problem before seeing the full solution.
 - Use Python as the primary solution. Include Go only where the day explicitly asks for it or where it adds useful backend/concurrency perspective.
 ```
 
@@ -803,15 +744,11 @@ Implement a small multilayer perceptron forward pass using NumPy without a deep-
 
 Mandatory output format:
 - Begin with a concise, beginner-friendly summary, then teach at senior interview depth
-- Use a concept/trade-off table where useful
 - Include one concise ASCII diagram of a multilayer network and forward pass
 - Explain tensor shapes at every important operation
 - Give thought process and pseudocode before code
 - Provide runnable NumPy code without using PyTorch/TensorFlow for the core forward pass
-- Explain only the important logic line by line
-- Include production implications, failure modes, and no more than three important mistakes
-- End with 5–10 interview questions and concise answers
-- End with an end-of-day checklist and a 2-minute verbal explanation prompt
+- Explain only non-obvious logic, correctness conditions, and key design decisions; do not narrate code line by line.- Include production implications, failure modes, and no more than three important mistakes
 - Do not invent project metrics or claim hands-on experience I do not have
 ```
 
@@ -820,7 +757,6 @@ Mandatory output format:
 ```text
 - Matrix traversal and simulation: row/column iteration, boundaries, direction vectors, and complexity; solve one medium matrix problem independently in Python.
 - First provide recognition signals, brute-force reasoning, optimized reasoning, edge cases, and complexity.
-- I must attempt the problem before seeing the full solution.
 - Use Python as the primary solution; include Go only if it adds useful implementation perspective.
 ```
 
@@ -857,10 +793,7 @@ Mandatory output format:
 - Give pseudocode before implementation
 - Provide runnable NumPy and small PyTorch examples
 - Include a gradient-comparison check with tolerances
-- Explain only the important logic line by line
-- Include optimizer trade-offs and no more than three important mistakes
-- End with 5–10 interview questions and concise answers
-- End with an end-of-day checklist and a 2-minute verbal explanation prompt
+- Explain only non-obvious logic, correctness conditions, and key design decisions; do not narrate code line by line.- Include optimizer trade-offs and no more than three important mistakes
 ```
 
 ### Day 16 DSA Track
@@ -868,7 +801,6 @@ Mandatory output format:
 ```text
 - HashMap and sliding-window revision: frequency maps, last-seen indexes, fixed/variable windows, invariants, and complexity; solve one medium problem independently in Python.
 - Explain the invariant before coding and test empty, duplicate-heavy, and boundary inputs.
-- I must attempt the problem before seeing the full solution.
 ```
 
 ---
@@ -905,8 +837,6 @@ Mandatory output format:
 - Provide runnable PyTorch code and a compact Keras comparison
 - Explain only the important training-loop logic line by line
 - Include reproducibility and production trade-offs and no more than three important mistakes
-- End with 5–10 interview questions and concise answers
-- End with an end-of-day checklist and a 2-minute verbal explanation prompt
 ```
 
 ### Day 17 DSA Track
@@ -914,7 +844,6 @@ Mandatory output format:
 ```text
 - Trees and recursion revision: recursive contracts, base cases, traversal state, stack depth, and complexity; solve one medium tree problem independently in Python.
 - State the recursive invariant and iterative alternative before reading the solution.
-- I must attempt the problem before seeing the full solution.
 ```
 
 ---
@@ -944,6 +873,7 @@ Practical task:
 Build a compact CNN in PyTorch for a small image dataset or synthetic image classification task. Calculate output shapes manually, train briefly, and compare training from scratch with a transfer-learning design at conceptual level.
 
 Mandatory output format:
+- Include a concise comparison table for the main alternatives and their selection criteria.
 - Begin with a concise summary and practical image analogy
 - Include one concise CNN architecture diagram
 - Show convolution output-shape calculations
@@ -951,8 +881,6 @@ Mandatory output format:
 - Provide runnable PyTorch code with a small data pipeline
 - Explain only the important model and training logic line by line
 - Include architecture trade-offs and no more than three important mistakes
-- End with 5–10 interview questions and concise answers
-- End with an end-of-day checklist and a 2-minute verbal explanation prompt
 ```
 
 ### Day 18 DSA Track
@@ -960,7 +888,6 @@ Mandatory output format:
 ```text
 - Matrix problems: boundary handling, connected components, flood fill, and direction arrays; solve one medium matrix/graph problem independently in Python.
 - Compare DFS, BFS, and iterative traversal trade-offs.
-- I must attempt the problem before seeing the full solution.
 ```
 
 ---
@@ -990,6 +917,7 @@ Practical task:
 Implement a small sequence classifier or next-step predictor using an LSTM/GRU in PyTorch. Compare it conceptually with a fixed-window MLP baseline and explain how attention changes the architecture.
 
 Mandatory output format:
+- Include a concise comparison table for the main alternatives and their selection criteria.
 - Begin with a concise summary, then connect RNN → LSTM/GRU → attention
 - Include one sequence-flow ASCII diagram
 - Provide a comparison table for RNN, LSTM, GRU, CNN and transformer choices
@@ -997,8 +925,6 @@ Mandatory output format:
 - Provide runnable PyTorch code with masking/length handling where practical
 - Explain only the important model and training logic line by line
 - Include production trade-offs and no more than three important mistakes
-- End with 5–10 interview questions and concise answers
-- End with an end-of-day checklist and a 2-minute verbal explanation prompt
 ```
 
 ### Day 19 DSA Track
@@ -1006,7 +932,6 @@ Mandatory output format:
 ```text
 - Sequence dynamic-programming revision: state definition, transition, base cases, iteration order, and space optimization; solve one medium sequence-DP problem independently in Python.
 - Explain the recurrence before coding and compare memoization with tabulation.
-- I must attempt the problem before seeing the full solution.
 ```
 
 ---
@@ -1061,7 +986,6 @@ Mandatory output format:
 ```text
 - Heap and Top-K revision: min/max heap selection, streaming Top-K, complexity, and tie handling; solve one medium heap problem independently in Python.
 - Explain why a heap is preferable to sorting for the chosen constraints.
-- I must attempt the problem before seeing the full solution.
 ```
 
 ---
@@ -1146,15 +1070,10 @@ Create a baseline forecasting notebook with fiscal/calendar and exogenous featur
 
 Mandatory output format:
 - Begin with a concise, beginner-friendly summary, then teach at senior interview depth
-- Use a concept/trade-off table where useful
-- Use at most two practical examples
 - Include one concise ASCII architecture/workflow diagram; use a second only when it shows a genuinely different view
 - Give thought process and pseudocode before code
 - Provide runnable Python, SQL, Go, YAML, or configuration examples appropriate to the topic
-- Explain only the important logic line by line
-- Include production trade-offs, failure modes, and no more than three important mistakes
-- End with 5–10 interview questions and concise answers
-- End with an end-of-day checklist and a 2-minute verbal explanation prompt
+- Explain only non-obvious logic, correctness conditions, and key design decisions; do not narrate code line by line.- Include production trade-offs, failure modes, and no more than three important mistakes
 - Do not invent project metrics or claim hands-on experience I do not have; use placeholders or label conceptual knowledge clearly
 ```
 
@@ -1163,7 +1082,6 @@ Mandatory output format:
 ```text
 - Intervals: merging, overlap, scheduling, sweep intuition; solve one medium problem.
 - First provide recognition signals, brute-force reasoning, optimized reasoning, edge cases, and complexity.
-- I must attempt the problem before seeing the full solution.
 - Use Python as the primary solution. Include Go only where the day explicitly asks for it or where it adds useful backend/concurrency perspective.
 ```
 
@@ -1196,16 +1114,12 @@ Practical task:
 Compare seasonal naive, a statistical model, and a gradient-boosted lag model; reconcile a small hierarchy, add and validate prediction intervals, and design a monitoring/recalibration policy.
 
 Mandatory output format:
+- Include a concise comparison table for the main alternatives and their selection criteria.
 - Begin with a concise, beginner-friendly summary, then teach at senior interview depth
-- Use a concept/trade-off table where useful
-- Use at most two practical examples
 - Include one concise ASCII architecture/workflow diagram; use a second only when it shows a genuinely different view
 - Give thought process and pseudocode before code
 - Provide runnable Python, SQL, Go, YAML, or configuration examples appropriate to the topic
-- Explain only the important logic line by line
-- Include production trade-offs, failure modes, and no more than three important mistakes
-- End with 5–10 interview questions and concise answers
-- End with an end-of-day checklist and a 2-minute verbal explanation prompt
+- Explain only non-obvious logic, correctness conditions, and key design decisions; do not narrate code line by line.- Include production trade-offs, failure modes, and no more than three important mistakes
 - Do not invent project metrics or claim hands-on experience I do not have; use placeholders or label conceptual knowledge clearly
 ```
 
@@ -1214,7 +1128,6 @@ Mandatory output format:
 ```text
 - Binary Tree Basics: traversals, height, recursion, level order; solve one medium problem.
 - First provide recognition signals, brute-force reasoning, optimized reasoning, edge cases, and complexity.
-- I must attempt the problem before seeing the full solution.
 - Use Python as the primary solution. Include Go only where the day explicitly asks for it or where it adds useful backend/concurrency perspective.
 ```
 
@@ -1245,16 +1158,12 @@ Practical task:
 Implement a small two-stage candidate-generation and ranking simulation or an ads-inventory forecast, then define offline and online metrics.
 
 Mandatory output format:
+- Include a concise comparison table for the main alternatives and their selection criteria.
 - Begin with a concise, beginner-friendly summary, then teach at senior interview depth
-- Use a concept/trade-off table where useful
-- Use at most two practical examples
 - Include one concise ASCII architecture/workflow diagram; use a second only when it shows a genuinely different view
 - Give thought process and pseudocode before code
 - Provide runnable Python, SQL, Go, YAML, or configuration examples appropriate to the topic
-- Explain only the important logic line by line
-- Include production trade-offs, failure modes, and no more than three important mistakes
-- End with 5–10 interview questions and concise answers
-- End with an end-of-day checklist and a 2-minute verbal explanation prompt
+- Explain only non-obvious logic, correctness conditions, and key design decisions; do not narrate code line by line.- Include production trade-offs, failure modes, and no more than three important mistakes
 - Do not invent project metrics or claim hands-on experience I do not have; use placeholders or label conceptual knowledge clearly
 ```
 
@@ -1263,7 +1172,6 @@ Mandatory output format:
 ```text
 - Binary Search Tree: search, insert, validation, order statistics intuition; solve one medium problem.
 - First provide recognition signals, brute-force reasoning, optimized reasoning, edge cases, and complexity.
-- I must attempt the problem before seeing the full solution.
 - Use Python as the primary solution. Include Go only where the day explicitly asks for it or where it adds useful backend/concurrency perspective.
 ```
 
@@ -1296,16 +1204,12 @@ Practical task:
 Draw equivalent secure AWS and GCP architectures for a finance document and forecasting service. Include identity, network, storage, encryption, residency, service perimeters, compute, and monitoring.
 
 Mandatory output format:
+- Include a concise comparison table for the main alternatives and their selection criteria.
 - Begin with a concise, beginner-friendly summary, then teach at senior interview depth
-- Use a concept/trade-off table where useful
-- Use at most two practical examples
 - Include one concise ASCII architecture/workflow diagram; use a second only when it shows a genuinely different view
 - Give thought process and pseudocode before code
 - Provide runnable Python, SQL, Go, YAML, or configuration examples appropriate to the topic
-- Explain only the important logic line by line
-- Include production trade-offs, failure modes, and no more than three important mistakes
-- End with 5–10 interview questions and concise answers
-- End with an end-of-day checklist and a 2-minute verbal explanation prompt
+- Explain only non-obvious logic, correctness conditions, and key design decisions; do not narrate code line by line.- Include production trade-offs, failure modes, and no more than three important mistakes
 - Do not invent project metrics or claim hands-on experience I do not have; use placeholders or label conceptual knowledge clearly
 ```
 
@@ -1314,7 +1218,6 @@ Mandatory output format:
 ```text
 - Trie: prefix search, autocomplete, memory trade-offs; solve one medium problem.
 - First provide recognition signals, brute-force reasoning, optimized reasoning, edge cases, and complexity.
-- I must attempt the problem before seeing the full solution.
 - Use Python as the primary solution. Include Go only where the day explicitly asks for it or where it adds useful backend/concurrency perspective.
 ```
 
@@ -1349,15 +1252,10 @@ Implement a local producer-consumer simulation for upload → event → queue/st
 
 Mandatory output format:
 - Begin with a concise, beginner-friendly summary, then teach at senior interview depth
-- Use a concept/trade-off table where useful
-- Use at most two practical examples
 - Include one concise ASCII architecture/workflow diagram; use a second only when it shows a genuinely different view
 - Give thought process and pseudocode before code
 - Provide runnable Python, SQL, Go, YAML, or configuration examples appropriate to the topic
-- Explain only the important logic line by line
-- Include production trade-offs, failure modes, and no more than three important mistakes
-- End with 5–10 interview questions and concise answers
-- End with an end-of-day checklist and a 2-minute verbal explanation prompt
+- Explain only non-obvious logic, correctness conditions, and key design decisions; do not narrate code line by line.- Include production trade-offs, failure modes, and no more than three important mistakes
 - Do not invent project metrics or claim hands-on experience I do not have; use placeholders or label conceptual knowledge clearly
 ```
 
@@ -1366,7 +1264,6 @@ Mandatory output format:
 ```text
 - Graph Basics: adjacency lists, directed/undirected graphs, traversal, components; solve one medium problem.
 - First provide recognition signals, brute-force reasoning, optimized reasoning, edge cases, and complexity.
-- I must attempt the problem before seeing the full solution.
 - Use Python as the primary solution. Include Go only where the day explicitly asks for it or where it adds useful backend/concurrency perspective.
 ```
 
@@ -1415,7 +1312,6 @@ Mandatory output format:
 ```text
 - Topological Sort: dependencies, DAG ordering, cycle detection; solve one medium problem.
 - First provide recognition signals, brute-force reasoning, optimized reasoning, edge cases, and complexity.
-- I must attempt the problem before seeing the full solution.
 - Use Python as the primary solution. Include Go only where the day explicitly asks for it or where it adds useful backend/concurrency perspective.
 ```
 
@@ -1461,7 +1357,6 @@ Mandatory output format:
 ```text
 - Union Find: disjoint sets, path compression, union by rank; solve one medium problem.
 - First provide recognition signals, brute-force reasoning, optimized reasoning, edge cases, and complexity.
-- I must attempt the problem before seeing the full solution.
 - Use Python as the primary solution. Include Go only where the day explicitly asks for it or where it adds useful backend/concurrency perspective.
 ```
 
@@ -1497,16 +1392,12 @@ Practical task:
 Build a provider-neutral LLM client abstraction with mocked Bedrock and Gemini adapters, structured output validation, retries, streaming/context-cache awareness, safety checks, deterministic numerical post-checks, and usage tracking.
 
 Mandatory output format:
+- Include a concise comparison table for the main alternatives and their selection criteria.
 - Begin with a concise, beginner-friendly summary, then teach at senior interview depth
-- Use a concept/trade-off table where useful
-- Use at most two practical examples
 - Include one concise ASCII architecture/workflow diagram; use a second only when it shows a genuinely different view
 - Give thought process and pseudocode before code
 - Provide runnable Python, SQL, Go, YAML, or configuration examples appropriate to the topic
-- Explain only the important logic line by line
-- Include production trade-offs, failure modes, and no more than three important mistakes
-- End with 5–10 interview questions and concise answers
-- End with an end-of-day checklist and a 2-minute verbal explanation prompt
+- Explain only non-obvious logic, correctness conditions, and key design decisions; do not narrate code line by line.- Include production trade-offs, failure modes, and no more than three important mistakes
 - Do not invent project metrics or claim hands-on experience I do not have; use placeholders or label conceptual knowledge clearly
 ```
 
@@ -1515,7 +1406,6 @@ Mandatory output format:
 ```text
 - Greedy Algorithms: local choice, exchange arguments, scheduling; solve one medium problem.
 - First provide recognition signals, brute-force reasoning, optimized reasoning, edge cases, and complexity.
-- I must attempt the problem before seeing the full solution.
 - Use Python as the primary solution. Include Go only where the day explicitly asks for it or where it adds useful backend/concurrency perspective.
 ```
 
@@ -1548,16 +1438,12 @@ Practical task:
 Implement document chunking with lineage/ACL metadata, embeddings or deterministic vectors, vector similarity, filtering, versioned indexing, and demonstrations of freshness, deletion, and re-index behavior.
 
 Mandatory output format:
+- Include a concise comparison table for the main alternatives and their selection criteria.
 - Begin with a concise, beginner-friendly summary, then teach at senior interview depth
-- Use a concept/trade-off table where useful
-- Use at most two practical examples
 - Include one concise ASCII architecture/workflow diagram; use a second only when it shows a genuinely different view
 - Give thought process and pseudocode before code
 - Provide runnable Python, SQL, Go, YAML, or configuration examples appropriate to the topic
-- Explain only the important logic line by line
-- Include production trade-offs, failure modes, and no more than three important mistakes
-- End with 5–10 interview questions and concise answers
-- End with an end-of-day checklist and a 2-minute verbal explanation prompt
+- Explain only non-obvious logic, correctness conditions, and key design decisions; do not narrate code line by line.- Include production trade-offs, failure modes, and no more than three important mistakes
 - Do not invent project metrics or claim hands-on experience I do not have; use placeholders or label conceptual knowledge clearly
 ```
 
@@ -1566,7 +1452,6 @@ Mandatory output format:
 ```text
 - Backtracking: decision trees, choose-explore-unchoose, pruning; solve one medium problem.
 - First provide recognition signals, brute-force reasoning, optimized reasoning, edge cases, and complexity.
-- I must attempt the problem before seeing the full solution.
 - Use Python as the primary solution. Include Go only where the day explicitly asks for it or where it adds useful backend/concurrency perspective.
 ```
 
@@ -1599,16 +1484,12 @@ Practical task:
 Implement a small hybrid retriever with BM25-like and vector scores, query routing/decomposition, reciprocal-rank or weighted fusion, metadata/security filtering, reranking, structured lookup, context assembly, cited answers, and abstention.
 
 Mandatory output format:
+- Include a concise comparison table for the main alternatives and their selection criteria.
 - Begin with a concise, beginner-friendly summary, then teach at senior interview depth
-- Use a concept/trade-off table where useful
-- Use at most two practical examples
 - Include one concise ASCII architecture/workflow diagram; use a second only when it shows a genuinely different view
 - Give thought process and pseudocode before code
 - Provide runnable Python, SQL, Go, YAML, or configuration examples appropriate to the topic
-- Explain only the important logic line by line
-- Include production trade-offs, failure modes, and no more than three important mistakes
-- End with 5–10 interview questions and concise answers
-- End with an end-of-day checklist and a 2-minute verbal explanation prompt
+- Explain only non-obvious logic, correctness conditions, and key design decisions; do not narrate code line by line.- Include production trade-offs, failure modes, and no more than three important mistakes
 - Do not invent project metrics or claim hands-on experience I do not have; use placeholders or label conceptual knowledge clearly
 ```
 
@@ -1617,7 +1498,6 @@ Mandatory output format:
 ```text
 - Dynamic Programming Basics: state, recurrence, memoization, tabulation; solve one medium problem.
 - First provide recognition signals, brute-force reasoning, optimized reasoning, edge cases, and complexity.
-- I must attempt the problem before seeing the full solution.
 - Use Python as the primary solution. Include Go only where the day explicitly asks for it or where it adds useful backend/concurrency perspective.
 ```
 
@@ -1649,15 +1529,10 @@ Build a tiny code-search index over sample Python files using lexical tokens, sy
 
 Mandatory output format:
 - Begin with a concise, beginner-friendly summary, then teach at senior interview depth
-- Use a concept/trade-off table where useful
-- Use at most two practical examples
 - Include one concise ASCII architecture/workflow diagram; use a second only when it shows a genuinely different view
 - Give thought process and pseudocode before code
 - Provide runnable Python, SQL, Go, YAML, or configuration examples appropriate to the topic
-- Explain only the important logic line by line
-- Include production trade-offs, failure modes, and no more than three important mistakes
-- End with 5–10 interview questions and concise answers
-- End with an end-of-day checklist and a 2-minute verbal explanation prompt
+- Explain only non-obvious logic, correctness conditions, and key design decisions; do not narrate code line by line.- Include production trade-offs, failure modes, and no more than three important mistakes
 - Do not invent project metrics or claim hands-on experience I do not have; use placeholders or label conceptual knowledge clearly
 ```
 
@@ -1666,7 +1541,6 @@ Mandatory output format:
 ```text
 - 1D Dynamic Programming: linear state transitions, house robber/coin-change patterns; solve one medium problem.
 - First provide recognition signals, brute-force reasoning, optimized reasoning, edge cases, and complexity.
-- I must attempt the problem before seeing the full solution.
 - Use Python as the primary solution. Include Go only where the day explicitly asks for it or where it adds useful backend/concurrency perspective.
 ```
 
@@ -1701,15 +1575,10 @@ Create metric functions for retrieval/answers, inspect failed queries, calibrate
 
 Mandatory output format:
 - Begin with a concise, beginner-friendly summary, then teach at senior interview depth
-- Use a concept/trade-off table where useful
-- Use at most two practical examples
 - Include one concise ASCII architecture/workflow diagram; use a second only when it shows a genuinely different view
 - Give thought process and pseudocode before code
 - Provide runnable Python, SQL, Go, YAML, or configuration examples appropriate to the topic
-- Explain only the important logic line by line
-- Include production trade-offs, failure modes, and no more than three important mistakes
-- End with 5–10 interview questions and concise answers
-- End with an end-of-day checklist and a 2-minute verbal explanation prompt
+- Explain only non-obvious logic, correctness conditions, and key design decisions; do not narrate code line by line.- Include production trade-offs, failure modes, and no more than three important mistakes
 - Do not invent project metrics or claim hands-on experience I do not have; use placeholders or label conceptual knowledge clearly
 ```
 
@@ -1718,7 +1587,6 @@ Mandatory output format:
 ```text
 - 2D Dynamic Programming: grid and sequence states, edit-distance/LCS patterns; solve one medium problem.
 - First provide recognition signals, brute-force reasoning, optimized reasoning, edge cases, and complexity.
-- I must attempt the problem before seeing the full solution.
 - Use Python as the primary solution. Include Go only where the day explicitly asks for it or where it adds useful backend/concurrency perspective.
 ```
 
@@ -1768,7 +1636,6 @@ Mandatory output format:
 ```text
 - Bit Manipulation: masks, XOR, set/clear/test bits, subset enumeration intuition; solve one medium problem.
 - First provide recognition signals, brute-force reasoning, optimized reasoning, edge cases, and complexity.
-- I must attempt the problem before seeing the full solution.
 - Use Python as the primary solution. Include Go only where the day explicitly asks for it or where it adds useful backend/concurrency perspective.
 ```
 
@@ -1814,7 +1681,6 @@ Mandatory output format:
 ```text
 - Mixed DSA Revision: one timed problem combining two patterns, with full complexity and edge-case discussion.
 - First provide recognition signals, brute-force reasoning, optimized reasoning, edge cases, and complexity.
-- I must attempt the problem before seeing the full solution.
 - Use Python as the primary solution. Include Go only where the day explicitly asks for it or where it adds useful backend/concurrency perspective.
 ```
 
@@ -1850,16 +1716,12 @@ Practical task:
 Implement a provider-neutral tool-calling loop using LangChain, ADK-style, or a custom abstraction with typed schemas, validation, deterministic finance checks, timeout, retry, fallback, provenance, tracing, and tests. Compare the framework choices.
 
 Mandatory output format:
+- Include a concise comparison table for the main alternatives and their selection criteria.
 - Begin with a concise, beginner-friendly summary, then teach at senior interview depth
-- Use a concept/trade-off table where useful
-- Use at most two practical examples
 - Include one concise ASCII architecture/workflow diagram; use a second only when it shows a genuinely different view
 - Give thought process and pseudocode before code
 - Provide runnable Python, SQL, Go, YAML, or configuration examples appropriate to the topic
-- Explain only the important logic line by line
-- Include production trade-offs, failure modes, and no more than three important mistakes
-- End with 5–10 interview questions and concise answers
-- End with an end-of-day checklist and a 2-minute verbal explanation prompt
+- Explain only non-obvious logic, correctness conditions, and key design decisions; do not narrate code line by line.- Include production trade-offs, failure modes, and no more than three important mistakes
 - Do not invent project metrics or claim hands-on experience I do not have; use placeholders or label conceptual knowledge clearly
 ```
 
@@ -1868,7 +1730,6 @@ Mandatory output format:
 ```text
 - Matrix Problems: traversal, boundaries, rotation, prefix sums; solve one medium problem.
 - First provide recognition signals, brute-force reasoning, optimized reasoning, edge cases, and complexity.
-- I must attempt the problem before seeing the full solution.
 - Use Python as the primary solution. Include Go only where the day explicitly asks for it or where it adds useful backend/concurrency perspective.
 ```
 
@@ -1901,16 +1762,12 @@ Practical task:
 Build a graph-style expense-review workflow with automated classification, evidence retrieval, deterministic checks, human approval, resumable/replay-safe state, and final action. Explain how it could run locally, on Kubernetes, or in Vertex AI Agent Engine.
 
 Mandatory output format:
+- Include a concise comparison table for the main alternatives and their selection criteria.
 - Begin with a concise, beginner-friendly summary, then teach at senior interview depth
-- Use a concept/trade-off table where useful
-- Use at most two practical examples
 - Include one concise ASCII architecture/workflow diagram; use a second only when it shows a genuinely different view
 - Give thought process and pseudocode before code
 - Provide runnable Python, SQL, Go, YAML, or configuration examples appropriate to the topic
-- Explain only the important logic line by line
-- Include production trade-offs, failure modes, and no more than three important mistakes
-- End with 5–10 interview questions and concise answers
-- End with an end-of-day checklist and a 2-minute verbal explanation prompt
+- Explain only non-obvious logic, correctness conditions, and key design decisions; do not narrate code line by line.- Include production trade-offs, failure modes, and no more than three important mistakes
 - Do not invent project metrics or claim hands-on experience I do not have; use placeholders or label conceptual knowledge clearly
 ```
 
@@ -1919,7 +1776,6 @@ Mandatory output format:
 ```text
 - Monotonic Stack: next greater/smaller, histogram, invariant reasoning; solve one medium problem.
 - First provide recognition signals, brute-force reasoning, optimized reasoning, edge cases, and complexity.
-- I must attempt the problem before seeing the full solution.
 - Use Python as the primary solution. Include Go only where the day explicitly asks for it or where it adds useful backend/concurrency perspective.
 ```
 
@@ -1950,16 +1806,12 @@ Practical task:
 Simulate a planner–executor workflow with router, critic, deterministic verifier, step budget, and memory boundary.
 
 Mandatory output format:
+- Include a concise comparison table for the main alternatives and their selection criteria.
 - Begin with a concise, beginner-friendly summary, then teach at senior interview depth
-- Use a concept/trade-off table where useful
-- Use at most two practical examples
 - Include one concise ASCII architecture/workflow diagram; use a second only when it shows a genuinely different view
 - Give thought process and pseudocode before code
 - Provide runnable Python, SQL, Go, YAML, or configuration examples appropriate to the topic
-- Explain only the important logic line by line
-- Include production trade-offs, failure modes, and no more than three important mistakes
-- End with 5–10 interview questions and concise answers
-- End with an end-of-day checklist and a 2-minute verbal explanation prompt
+- Explain only non-obvious logic, correctness conditions, and key design decisions; do not narrate code line by line.- Include production trade-offs, failure modes, and no more than three important mistakes
 - Do not invent project metrics or claim hands-on experience I do not have; use placeholders or label conceptual knowledge clearly
 ```
 
@@ -1968,7 +1820,6 @@ Mandatory output format:
 ```text
 - Shortest Path: unweighted versus weighted, BFS, Dijkstra selection; solve one medium problem.
 - First provide recognition signals, brute-force reasoning, optimized reasoning, edge cases, and complexity.
-- I must attempt the problem before seeing the full solution.
 - Use Python as the primary solution. Include Go only where the day explicitly asks for it or where it adds useful backend/concurrency perspective.
 ```
 
@@ -2002,15 +1853,10 @@ Implement an MCP-style tool server simulation with allowlisted tools, auth conte
 
 Mandatory output format:
 - Begin with a concise, beginner-friendly summary, then teach at senior interview depth
-- Use a concept/trade-off table where useful
-- Use at most two practical examples
 - Include one concise ASCII architecture/workflow diagram; use a second only when it shows a genuinely different view
 - Give thought process and pseudocode before code
 - Provide runnable Python, SQL, Go, YAML, or configuration examples appropriate to the topic
-- Explain only the important logic line by line
-- Include production trade-offs, failure modes, and no more than three important mistakes
-- End with 5–10 interview questions and concise answers
-- End with an end-of-day checklist and a 2-minute verbal explanation prompt
+- Explain only non-obvious logic, correctness conditions, and key design decisions; do not narrate code line by line.- Include production trade-offs, failure modes, and no more than three important mistakes
 - Do not invent project metrics or claim hands-on experience I do not have; use placeholders or label conceptual knowledge clearly
 ```
 
@@ -2019,7 +1865,6 @@ Mandatory output format:
 ```text
 - Dijkstra Algorithm: priority queue, relaxation, stale entries, complexity; solve one medium problem.
 - First provide recognition signals, brute-force reasoning, optimized reasoning, edge cases, and complexity.
-- I must attempt the problem before seeing the full solution.
 - Use Python as the primary solution. Include Go only where the day explicitly asks for it or where it adds useful backend/concurrency perspective.
 ```
 
@@ -2054,15 +1899,10 @@ Create a threat model and implement prompt/document screening, permission and ac
 
 Mandatory output format:
 - Begin with a concise, beginner-friendly summary, then teach at senior interview depth
-- Use a concept/trade-off table where useful
-- Use at most two practical examples
 - Include one concise ASCII architecture/workflow diagram; use a second only when it shows a genuinely different view
 - Give thought process and pseudocode before code
 - Provide runnable Python, SQL, Go, YAML, or configuration examples appropriate to the topic
-- Explain only the important logic line by line
-- Include production trade-offs, failure modes, and no more than three important mistakes
-- End with 5–10 interview questions and concise answers
-- End with an end-of-day checklist and a 2-minute verbal explanation prompt
+- Explain only non-obvious logic, correctness conditions, and key design decisions; do not narrate code line by line.- Include production trade-offs, failure modes, and no more than three important mistakes
 - Do not invent project metrics or claim hands-on experience I do not have; use placeholders or label conceptual knowledge clearly
 ```
 
@@ -2071,7 +1911,6 @@ Mandatory output format:
 ```text
 - Prefix Sum: one- and two-dimensional prefix sums, range queries, subarray counts; solve one medium problem.
 - First provide recognition signals, brute-force reasoning, optimized reasoning, edge cases, and complexity.
-- I must attempt the problem before seeing the full solution.
 - Use Python as the primary solution. Include Go only where the day explicitly asks for it or where it adds useful backend/concurrency perspective.
 ```
 
@@ -2120,7 +1959,6 @@ Mandatory output format:
 ```text
 - LRU Cache: hash map plus doubly linked list, eviction, complexity; solve one medium implementation problem.
 - First provide recognition signals, brute-force reasoning, optimized reasoning, edge cases, and complexity.
-- I must attempt the problem before seeing the full solution.
 - Use Python as the primary solution. Include Go only where the day explicitly asks for it or where it adds useful backend/concurrency perspective.
 ```
 
@@ -2166,7 +2004,6 @@ Mandatory output format:
 ```text
 - Coding Design Patterns: strategy, factory, adapter, repository, circuit breaker, state, observer; solve one design-pattern coding question in Python and review Go.
 - First provide recognition signals, brute-force reasoning, optimized reasoning, edge cases, and complexity.
-- I must attempt the problem before seeing the full solution.
 - Use Python as the primary solution. Include Go only where the day explicitly asks for it or where it adds useful backend/concurrency perspective.
 ```
 
@@ -2203,16 +2040,12 @@ Practical task:
 Design a lineage-aware model registry and serving decision flow supporting data contracts, batch/real-time/asynchronous inference, shadow/canary/champion-challenger rollout, metrics, drift monitoring, kill switch, and reproducible rollback.
 
 Mandatory output format:
+- Include a concise comparison table for the main alternatives and their selection criteria.
 - Begin with a concise, beginner-friendly summary, then teach at senior interview depth
-- Use a concept/trade-off table where useful
-- Use at most two practical examples
 - Include one concise ASCII architecture/workflow diagram; use a second only when it shows a genuinely different view
 - Give thought process and pseudocode before code
 - Provide runnable Python, SQL, Go, YAML, or configuration examples appropriate to the topic
-- Explain only the important logic line by line
-- Include production trade-offs, failure modes, and no more than three important mistakes
-- End with 5–10 interview questions and concise answers
-- End with an end-of-day checklist and a 2-minute verbal explanation prompt
+- Explain only non-obvious logic, correctness conditions, and key design decisions; do not narrate code line by line.- Include production trade-offs, failure modes, and no more than three important mistakes
 - Do not invent project metrics or claim hands-on experience I do not have; use placeholders or label conceptual knowledge clearly
 ```
 
@@ -2221,7 +2054,6 @@ Mandatory output format:
 ```text
 - Rate Limiting Algorithms: fixed window, sliding window, token bucket, leaky bucket, distributed concerns; solve one implementation problem.
 - First provide recognition signals, brute-force reasoning, optimized reasoning, edge cases, and complexity.
-- I must attempt the problem before seeing the full solution.
 - Use Python as the primary solution. Include Go only where the day explicitly asks for it or where it adds useful backend/concurrency perspective.
 ```
 
@@ -2255,16 +2087,12 @@ Practical task:
 Create side-by-side lifecycle diagrams and a decision matrix for SageMaker, Vertex AI, Bedrock, Gemini APIs, Vertex AI Agent Engine, and Kubernetes-based serving. Include a simulated Google-native training/agent → registry/evaluation → approval → deployment → monitoring flow with Gen AI Evaluation and Model-Armor-style controls.
 
 Mandatory output format:
+- Include a concise comparison table for the main alternatives and their selection criteria.
 - Begin with a concise, beginner-friendly summary, then teach at senior interview depth
-- Use a concept/trade-off table where useful
-- Use at most two practical examples
 - Include one concise ASCII architecture/workflow diagram; use a second only when it shows a genuinely different view
 - Give thought process and pseudocode before code
 - Provide runnable Python, SQL, Go, YAML, or configuration examples appropriate to the topic
-- Explain only the important logic line by line
-- Include production trade-offs, failure modes, and no more than three important mistakes
-- End with 5–10 interview questions and concise answers
-- End with an end-of-day checklist and a 2-minute verbal explanation prompt
+- Explain only non-obvious logic, correctness conditions, and key design decisions; do not narrate code line by line.- Include production trade-offs, failure modes, and no more than three important mistakes
 - Do not invent project metrics or claim hands-on experience I do not have; use placeholders or label conceptual knowledge clearly
 ```
 
@@ -2273,7 +2101,6 @@ Mandatory output format:
 ```text
 - Concurrency Coding: producer-consumer, worker pools, synchronization, cancellation; solve one concurrency problem in Python and Go.
 - First provide recognition signals, brute-force reasoning, optimized reasoning, edge cases, and complexity.
-- I must attempt the problem before seeing the full solution.
 - Use Python as the primary solution. Include Go only where the day explicitly asks for it or where it adds useful backend/concurrency perspective.
 ```
 
@@ -2304,16 +2131,12 @@ Practical task:
 Prepare a small instruction dataset, data-quality report, evaluation plan, and pseudo-training configuration. Use a tiny model only if practical.
 
 Mandatory output format:
+- Include a concise comparison table for the main alternatives and their selection criteria.
 - Begin with a concise, beginner-friendly summary, then teach at senior interview depth
-- Use a concept/trade-off table where useful
-- Use at most two practical examples
 - Include one concise ASCII architecture/workflow diagram; use a second only when it shows a genuinely different view
 - Give thought process and pseudocode before code
 - Provide runnable Python, SQL, Go, YAML, or configuration examples appropriate to the topic
-- Explain only the important logic line by line
-- Include production trade-offs, failure modes, and no more than three important mistakes
-- End with 5–10 interview questions and concise answers
-- End with an end-of-day checklist and a 2-minute verbal explanation prompt
+- Explain only non-obvious logic, correctness conditions, and key design decisions; do not narrate code line by line.- Include production trade-offs, failure modes, and no more than three important mistakes
 - Do not invent project metrics or claim hands-on experience I do not have; use placeholders or label conceptual knowledge clearly
 ```
 
@@ -2322,7 +2145,6 @@ Mandatory output format:
 ```text
 - Advanced Hashing: rolling hash intuition, hash design, collisions, randomized hashing; solve one medium problem.
 - First provide recognition signals, brute-force reasoning, optimized reasoning, edge cases, and complexity.
-- I must attempt the problem before seeing the full solution.
 - Use Python as the primary solution. Include Go only where the day explicitly asks for it or where it adds useful backend/concurrency perspective.
 ```
 
@@ -2353,16 +2175,12 @@ Practical task:
 Create a serving simulator that models batching, queueing, streaming, cache hits, fallback routing, and cost/latency metrics.
 
 Mandatory output format:
+- Include a concise comparison table for the main alternatives and their selection criteria.
 - Begin with a concise, beginner-friendly summary, then teach at senior interview depth
-- Use a concept/trade-off table where useful
-- Use at most two practical examples
 - Include one concise ASCII architecture/workflow diagram; use a second only when it shows a genuinely different view
 - Give thought process and pseudocode before code
 - Provide runnable Python, SQL, Go, YAML, or configuration examples appropriate to the topic
-- Explain only the important logic line by line
-- Include production trade-offs, failure modes, and no more than three important mistakes
-- End with 5–10 interview questions and concise answers
-- End with an end-of-day checklist and a 2-minute verbal explanation prompt
+- Explain only non-obvious logic, correctness conditions, and key design decisions; do not narrate code line by line.- Include production trade-offs, failure modes, and no more than three important mistakes
 - Do not invent project metrics or claim hands-on experience I do not have; use placeholders or label conceptual knowledge clearly
 ```
 
@@ -2371,7 +2189,6 @@ Mandatory output format:
 ```text
 - System Design Coding: implement a small extensible component such as a job scheduler, cache, or workflow state store with clear interfaces.
 - First provide recognition signals, brute-force reasoning, optimized reasoning, edge cases, and complexity.
-- I must attempt the problem before seeing the full solution.
 - Use Python as the primary solution. Include Go only where the day explicitly asks for it or where it adds useful backend/concurrency perspective.
 ```
 
@@ -2404,16 +2221,12 @@ Practical task:
 Create a reproducible Dockerfile, SBOM/signing/provenance plan, Helm chart skeleton, deployment YAML, health API, and CI pipeline that blocks release when data/model/RAG/agent/security tests regress and supports progressive delivery/rollback.
 
 Mandatory output format:
+- Include a concise comparison table for the main alternatives and their selection criteria.
 - Begin with a concise, beginner-friendly summary, then teach at senior interview depth
-- Use a concept/trade-off table where useful
-- Use at most two practical examples
 - Include one concise ASCII architecture/workflow diagram; use a second only when it shows a genuinely different view
 - Give thought process and pseudocode before code
 - Provide runnable Python, SQL, Go, YAML, or configuration examples appropriate to the topic
-- Explain only the important logic line by line
-- Include production trade-offs, failure modes, and no more than three important mistakes
-- End with 5–10 interview questions and concise answers
-- End with an end-of-day checklist and a 2-minute verbal explanation prompt
+- Explain only non-obvious logic, correctness conditions, and key design decisions; do not narrate code line by line.- Include production trade-offs, failure modes, and no more than three important mistakes
 - Do not invent project metrics or claim hands-on experience I do not have; use placeholders or label conceptual knowledge clearly
 ```
 
@@ -2422,7 +2235,6 @@ Mandatory output format:
 ```text
 - Graph Revision: BFS, DFS, topological sort, union-find, shortest path; solve one timed graph problem.
 - First provide recognition signals, brute-force reasoning, optimized reasoning, edge cases, and complexity.
-- I must attempt the problem before seeing the full solution.
 - Use Python as the primary solution. Include Go only where the day explicitly asks for it or where it adds useful backend/concurrency perspective.
 ```
 
@@ -2471,7 +2283,6 @@ Mandatory output format:
 ```text
 - DP Revision: solve one timed dynamic-programming problem and explain state, recurrence, complexity, and optimization.
 - First provide recognition signals, brute-force reasoning, optimized reasoning, edge cases, and complexity.
-- I must attempt the problem before seeing the full solution.
 - Use Python as the primary solution. Include Go only where the day explicitly asks for it or where it adds useful backend/concurrency perspective.
 ```
 
@@ -2517,7 +2328,6 @@ Mandatory output format:
 ```text
 - Mixed DSA Mock: one 40-minute medium problem under interview conditions, followed by review.
 - First provide recognition signals, brute-force reasoning, optimized reasoning, edge cases, and complexity.
-- I must attempt the problem before seeing the full solution.
 - Use Python as the primary solution. Include Go only where the day explicitly asks for it or where it adds useful backend/concurrency perspective.
 ```
 
@@ -2554,15 +2364,10 @@ Instrument a simplified request flow with structured logs, OpenTelemetry-style t
 
 Mandatory output format:
 - Begin with a concise, beginner-friendly summary, then teach at senior interview depth
-- Use a concept/trade-off table where useful
-- Use at most two practical examples
 - Include one concise ASCII architecture/workflow diagram; use a second only when it shows a genuinely different view
 - Give thought process and pseudocode before code
 - Provide runnable Python, SQL, Go, YAML, or configuration examples appropriate to the topic
-- Explain only the important logic line by line
-- Include production trade-offs, failure modes, and no more than three important mistakes
-- End with 5–10 interview questions and concise answers
-- End with an end-of-day checklist and a 2-minute verbal explanation prompt
+- Explain only non-obvious logic, correctness conditions, and key design decisions; do not narrate code line by line.- Include production trade-offs, failure modes, and no more than three important mistakes
 - Do not invent project metrics or claim hands-on experience I do not have; use placeholders or label conceptual knowledge clearly
 ```
 
@@ -2571,7 +2376,6 @@ Mandatory output format:
 ```text
 - Weak-Area Recovery: choose the lowest-scoring DSA pattern from Weeks 1–6 and solve one targeted medium problem.
 - First provide recognition signals, brute-force reasoning, optimized reasoning, edge cases, and complexity.
-- I must attempt the problem before seeing the full solution.
 - Use Python as the primary solution. Include Go only where the day explicitly asks for it or where it adds useful backend/concurrency perspective.
 ```
 
@@ -2603,16 +2407,12 @@ Practical task:
 Implement retry, circuit breaker, bulkhead, fallback, and metrics in a request simulator. Write an incident runbook and postmortem template.
 
 Mandatory output format:
+- Include a concise comparison table for the main alternatives and their selection criteria.
 - Begin with a concise, beginner-friendly summary, then teach at senior interview depth
-- Use a concept/trade-off table where useful
-- Use at most two practical examples
 - Include one concise ASCII architecture/workflow diagram; use a second only when it shows a genuinely different view
 - Give thought process and pseudocode before code
 - Provide runnable Python, SQL, Go, YAML, or configuration examples appropriate to the topic
-- Explain only the important logic line by line
-- Include production trade-offs, failure modes, and no more than three important mistakes
-- End with 5–10 interview questions and concise answers
-- End with an end-of-day checklist and a 2-minute verbal explanation prompt
+- Explain only non-obvious logic, correctness conditions, and key design decisions; do not narrate code line by line.- Include production trade-offs, failure modes, and no more than three important mistakes
 - Do not invent project metrics or claim hands-on experience I do not have; use placeholders or label conceptual knowledge clearly
 ```
 
@@ -2621,7 +2421,6 @@ Mandatory output format:
 ```text
 - Full Coding Mock: one 45-minute Google-style medium problem with clarification, brute force, optimized solution, tests, and complexity.
 - First provide recognition signals, brute-force reasoning, optimized reasoning, edge cases, and complexity.
-- I must attempt the problem before seeing the full solution.
 - Use Python as the primary solution. Include Go only where the day explicitly asks for it or where it adds useful backend/concurrency perspective.
 ```
 
@@ -2654,16 +2453,12 @@ Practical task:
 Design a tenant-aware request path and implement middleware enforcing trusted identity, row/document/index scope, quotas, tool permissions, encryption/residency policy metadata, immutable audit events, and cost tracking.
 
 Mandatory output format:
+- Include a concise comparison table for the main alternatives and their selection criteria.
 - Begin with a concise, beginner-friendly summary, then teach at senior interview depth
-- Use a concept/trade-off table where useful
-- Use at most two practical examples
 - Include one concise ASCII architecture/workflow diagram; use a second only when it shows a genuinely different view
 - Give thought process and pseudocode before code
 - Provide runnable Python, SQL, Go, YAML, or configuration examples appropriate to the topic
-- Explain only the important logic line by line
-- Include production trade-offs, failure modes, and no more than three important mistakes
-- End with 5–10 interview questions and concise answers
-- End with an end-of-day checklist and a 2-minute verbal explanation prompt
+- Explain only non-obvious logic, correctness conditions, and key design decisions; do not narrate code line by line.- Include production trade-offs, failure modes, and no more than three important mistakes
 - Do not invent project metrics or claim hands-on experience I do not have; use placeholders or label conceptual knowledge clearly
 ```
 
@@ -2672,7 +2467,6 @@ Mandatory output format:
 ```text
 - Final DSA Revision Table: review every original pattern, complexity, recognition signal, and one canonical problem.
 - First provide recognition signals, brute-force reasoning, optimized reasoning, edge cases, and complexity.
-- I must attempt the problem before seeing the full solution.
 - Use Python as the primary solution. Include Go only where the day explicitly asks for it or where it adds useful backend/concurrency perspective.
 ```
 
@@ -2703,16 +2497,12 @@ Practical task:
 Create a Python cost and capacity calculator for a multi-model RAG/agent API and evaluate at least three architecture scenarios.
 
 Mandatory output format:
+- Include a concise comparison table for the main alternatives and their selection criteria.
 - Begin with a concise, beginner-friendly summary, then teach at senior interview depth
-- Use a concept/trade-off table where useful
-- Use at most two practical examples
 - Include one concise ASCII architecture/workflow diagram; use a second only when it shows a genuinely different view
 - Give thought process and pseudocode before code
 - Provide runnable Python, SQL, Go, YAML, or configuration examples appropriate to the topic
-- Explain only the important logic line by line
-- Include production trade-offs, failure modes, and no more than three important mistakes
-- End with 5–10 interview questions and concise answers
-- End with an end-of-day checklist and a 2-minute verbal explanation prompt
+- Explain only non-obvious logic, correctness conditions, and key design decisions; do not narrate code line by line.- Include production trade-offs, failure modes, and no more than three important mistakes
 - Do not invent project metrics or claim hands-on experience I do not have; use placeholders or label conceptual knowledge clearly
 ```
 
@@ -2721,7 +2511,6 @@ Mandatory output format:
 ```text
 - Binary Search on Answer: identify monotonic feasibility, choose bounds, implement predicate; solve one medium problem.
 - First provide recognition signals, brute-force reasoning, optimized reasoning, edge cases, and complexity.
-- I must attempt the problem before seeing the full solution.
 - Use Python as the primary solution. Include Go only where the day explicitly asks for it or where it adds useful backend/concurrency perspective.
 ```
 
@@ -2756,15 +2545,10 @@ Design one AI-native finance workflow from ambiguous request to requirements, SQ
 
 Mandatory output format:
 - Begin with a concise, beginner-friendly summary, then teach at senior interview depth
-- Use a concept/trade-off table where useful
-- Use at most two practical examples
 - Include one concise ASCII architecture/workflow diagram; use a second only when it shows a genuinely different view
 - Give thought process and pseudocode before code
 - Provide runnable Python, SQL, Go, YAML, or configuration examples appropriate to the topic
-- Explain only the important logic line by line
-- Include production trade-offs, failure modes, and no more than three important mistakes
-- End with 5–10 interview questions and concise answers
-- End with an end-of-day checklist and a 2-minute verbal explanation prompt
+- Explain only non-obvious logic, correctness conditions, and key design decisions; do not narrate code line by line.- Include production trade-offs, failure modes, and no more than three important mistakes
 - Do not invent project metrics or claim hands-on experience I do not have; use placeholders or label conceptual knowledge clearly
 ```
 
@@ -2773,7 +2557,6 @@ Mandatory output format:
 ```text
 - Sweep Line / Advanced Intervals: event sorting, concurrent intervals, resource overlap; solve one medium problem.
 - First provide recognition signals, brute-force reasoning, optimized reasoning, edge cases, and complexity.
-- I must attempt the problem before seeing the full solution.
 - Use Python as the primary solution. Include Go only where the day explicitly asks for it or where it adds useful backend/concurrency perspective.
 ```
 
@@ -2822,7 +2605,6 @@ Mandatory output format:
 ```text
 - Advanced Graph: choose one of minimum spanning tree, strongly connected components, or advanced shortest path and solve one medium problem.
 - First provide recognition signals, brute-force reasoning, optimized reasoning, edge cases, and complexity.
-- I must attempt the problem before seeing the full solution.
 - Use Python as the primary solution. Include Go only where the day explicitly asks for it or where it adds useful backend/concurrency perspective.
 ```
 
@@ -2868,7 +2650,6 @@ Mandatory output format:
 ```text
 - Concurrency Mock: solve a bounded-worker or thread-safe design problem in Python; discuss the Go goroutine/channel version.
 - First provide recognition signals, brute-force reasoning, optimized reasoning, edge cases, and complexity.
-- I must attempt the problem before seeing the full solution.
 - Use Python as the primary solution. Include Go only where the day explicitly asks for it or where it adds useful backend/concurrency perspective.
 ```
 
@@ -2902,16 +2683,12 @@ Practical task:
 Build a small Go HTTP service or worker that calls a Python model API, propagates context, handles timeout, and exposes health metrics.
 
 Mandatory output format:
+- Include a concise comparison table for the main alternatives and their selection criteria.
 - Begin with a concise, beginner-friendly summary, then teach at senior interview depth
-- Use a concept/trade-off table where useful
-- Use at most two practical examples
 - Include one concise ASCII architecture/workflow diagram; use a second only when it shows a genuinely different view
 - Give thought process and pseudocode before code
 - Provide runnable Python, SQL, Go, YAML, or configuration examples appropriate to the topic
-- Explain only the important logic line by line
-- Include production trade-offs, failure modes, and no more than three important mistakes
-- End with 5–10 interview questions and concise answers
-- End with an end-of-day checklist and a 2-minute verbal explanation prompt
+- Explain only non-obvious logic, correctness conditions, and key design decisions; do not narrate code line by line.- Include production trade-offs, failure modes, and no more than three important mistakes
 - Do not invent project metrics or claim hands-on experience I do not have; use placeholders or label conceptual knowledge clearly
 ```
 
@@ -2920,7 +2697,6 @@ Mandatory output format:
 ```text
 - Go Concurrency: solve one worker-pool or fan-out/fan-in problem in Go and explain a Python asyncio equivalent.
 - First provide recognition signals, brute-force reasoning, optimized reasoning, edge cases, and complexity.
-- I must attempt the problem before seeing the full solution.
 - Use Python as the primary solution. Include Go only where the day explicitly asks for it or where it adds useful backend/concurrency perspective.
 ```
 
@@ -2952,15 +2728,10 @@ Create a requirement brief, architecture decision record, milestone plan, risk r
 
 Mandatory output format:
 - Begin with a concise, beginner-friendly summary, then teach at senior interview depth
-- Use a concept/trade-off table where useful
-- Use at most two practical examples
 - Include one concise ASCII architecture/workflow diagram; use a second only when it shows a genuinely different view
 - Give thought process and pseudocode before code
 - Provide runnable Python, SQL, Go, YAML, or configuration examples appropriate to the topic
-- Explain only the important logic line by line
-- Include production trade-offs, failure modes, and no more than three important mistakes
-- End with 5–10 interview questions and concise answers
-- End with an end-of-day checklist and a 2-minute verbal explanation prompt
+- Explain only non-obvious logic, correctness conditions, and key design decisions; do not narrate code line by line.- Include production trade-offs, failure modes, and no more than three important mistakes
 - Do not invent project metrics or claim hands-on experience I do not have; use placeholders or label conceptual knowledge clearly
 ```
 
@@ -2969,7 +2740,6 @@ Mandatory output format:
 ```text
 - ML Coding: implement a metric, data split, feature transform, or simple model component without relying on high-level library shortcuts.
 - First provide recognition signals, brute-force reasoning, optimized reasoning, edge cases, and complexity.
-- I must attempt the problem before seeing the full solution.
 - Use Python as the primary solution. Include Go only where the day explicitly asks for it or where it adds useful backend/concurrency perspective.
 ```
 
@@ -3003,15 +2773,10 @@ Sketch or implement a minimal accessible review UI/CLI for the governed agent, c
 
 Mandatory output format:
 - Begin with a concise, beginner-friendly summary, then teach at senior interview depth
-- Use a concept/trade-off table where useful
-- Use at most two practical examples
 - Include one concise ASCII architecture/workflow diagram; use a second only when it shows a genuinely different view
 - Give thought process and pseudocode before code
 - Provide runnable Python, SQL, Go, YAML, or configuration examples appropriate to the topic
-- Explain only the important logic line by line
-- Include production trade-offs, failure modes, and no more than three important mistakes
-- End with 5–10 interview questions and concise answers
-- End with an end-of-day checklist and a 2-minute verbal explanation prompt
+- Explain only non-obvious logic, correctness conditions, and key design decisions; do not narrate code line by line.- Include production trade-offs, failure modes, and no more than three important mistakes
 - Do not invent project metrics or claim hands-on experience I do not have; use placeholders or label conceptual knowledge clearly
 ```
 
@@ -3020,7 +2785,6 @@ Mandatory output format:
 ```text
 - SQL Coding: solve a finance analytics problem using joins, CTEs, window functions, and period comparison under timed conditions.
 - First provide recognition signals, brute-force reasoning, optimized reasoning, edge cases, and complexity.
-- I must attempt the problem before seeing the full solution.
 - Use Python as the primary solution. Include Go only where the day explicitly asks for it or where it adds useful backend/concurrency perspective.
 ```
 
@@ -3051,16 +2815,12 @@ Practical task:
 Answer the full design aloud in 45–60 minutes, then write a concise architecture decision summary and implement one important component.
 
 Mandatory output format:
+- Include a concise comparison table for the main alternatives and their selection criteria.
 - Begin with a concise, beginner-friendly summary, then teach at senior interview depth
-- Use a concept/trade-off table where useful
-- Use at most two practical examples
 - Include one concise ASCII architecture/workflow diagram; use a second only when it shows a genuinely different view
 - Give thought process and pseudocode before code
 - Provide runnable Python, SQL, Go, YAML, or configuration examples appropriate to the topic
-- Explain only the important logic line by line
-- Include production trade-offs, failure modes, and no more than three important mistakes
-- End with 5–10 interview questions and concise answers
-- End with an end-of-day checklist and a 2-minute verbal explanation prompt
+- Explain only non-obvious logic, correctness conditions, and key design decisions; do not narrate code line by line.- Include production trade-offs, failure modes, and no more than three important mistakes
 - Do not invent project metrics or claim hands-on experience I do not have; use placeholders or label conceptual knowledge clearly
 ```
 
@@ -3069,7 +2829,6 @@ Mandatory output format:
 ```text
 - API Design Coding: implement a versioned, idempotent job/approval API with validation and clear state transitions.
 - First provide recognition signals, brute-force reasoning, optimized reasoning, edge cases, and complexity.
-- I must attempt the problem before seeing the full solution.
 - Use Python as the primary solution. Include Go only where the day explicitly asks for it or where it adds useful backend/concurrency perspective.
 ```
 
@@ -3115,7 +2874,6 @@ Mandatory output format:
 ```text
 - Full Coding Mock: one unseen medium problem, plus a shorter follow-up requiring modification or optimization.
 - First provide recognition signals, brute-force reasoning, optimized reasoning, edge cases, and complexity.
-- I must attempt the problem before seeing the full solution.
 - Use Python as the primary solution. Include Go only where the day explicitly asks for it or where it adds useful backend/concurrency perspective.
 ```
 
@@ -3164,7 +2922,6 @@ Mandatory output format:
 ```text
 - System Design Coding Mock: implement one capstone component under time pressure, such as approval state machine, tool registry, feature cache, or audit-event store.
 - First provide recognition signals, brute-force reasoning, optimized reasoning, edge cases, and complexity.
-- I must attempt the problem before seeing the full solution.
 - Use Python as the primary solution. Include Go only where the day explicitly asks for it or where it adds useful backend/concurrency perspective.
 ```
 
@@ -3210,7 +2967,6 @@ Mandatory output format:
 ```text
 - Final Mixed DSA: one timed mixed problem, a complete pattern revision table, and a final strategy for coding interviews.
 - First provide recognition signals, brute-force reasoning, optimized reasoning, edge cases, and complexity.
-- I must attempt the problem before seeing the full solution.
 - Use Python as the primary solution. Include Go only where the day explicitly asks for it or where it adds useful backend/concurrency perspective.
 ```
 
