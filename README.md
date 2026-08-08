@@ -1,2167 +1,3071 @@
-# 42-Day Senior AI Engineer Interview Preparation Plan
+# 6-Day Lead Software Engineer / VP Network Automation Study Plan
 
-This plan preserves the original daily prompt format while improving prerequisite order, adding missing production topics, and introducing one directly related practical task every day.
+## Overall learning instructions for every day
 
-The practical tasks build one cumulative capstone: **FinSight**, a multi-tenant finance analytics and policy-assistant platform with a Python/FastAPI backend, analytics and ML components, RAG and agent capabilities, a React/Next.js UI, and production-style infrastructure.
+Act as an experienced Senior/Staff/Principal Engineer and technical mentor.
 
-Each seventh day is a revision and integration checkpoint. Practical tasks should be completed in the same repository so that Day 42 finishes with a demonstrable project rather than disconnected exercises.
+Teach the material for **deep, reusable engineering understanding**, not for memorising interview answers.
 
-## Plan summary
+For every important concept:
 
-The curriculum progresses through six connected stages:
+1. Explain it first in simple language.
+2. Explain what problem it solves and why it exists.
+3. Explain how it works technically.
+4. Connect it to related concepts.
+5. Give a simple practical example.
+6. Explain important design trade-offs and failure modes where relevant.
+7. Progress gradually from beginner understanding to Lead/Staff/VP engineering depth.
 
-`Python and DSA → Backend and databases → Statistics/ML/data → GenAI/RAG/agents → Security/cloud → UI/deployment/interview`
+Use concise ASCII diagrams whenever they materially improve understanding.
 
-Every day contains a focused lesson, one directly related FinSight practical task, completion evidence, and interview Q&A. Days 7, 14, 21, 28, 35, and 42 are cumulative revision and integration checkpoints.
+Prefer examples from:
 
-### Week 1 – Python, software design, and DSA
+* Network automation
+* Distributed systems
+* Kubernetes
+* Cloud platforms
+* Enterprise infrastructure
+* Banking/regulated systems
+* Backend services
 
-- **Day 1:** Python core, environments, packaging, logging, and project bootstrap.
-- **Day 2:** OOP, data classes, protocols, and finance-domain modelling.
-- **Day 3:** Modern typing, Pydantic validation, exceptions, and structured logging.
-- **Day 4:** Async I/O, concurrency, timeouts, retries, cancellation, and backpressure.
-- **Day 5:** Arrays, strings, hashing, prefix sums, and complexity.
-- **Day 6:** Two pointers, sliding windows, stacks, queues, and deques.
-- **Day 7:** Trees, graphs, introductory DP, and the Week 1 workflow-DAG checkpoint.
+Avoid certification-style memorisation and unnecessary vendor-specific syntax.
 
-### Week 2 – Architecture, APIs, and relational data
+Do not include:
 
-- **Day 8:** SOLID, clean architecture, ports/adapters, repositories, and provider abstractions.
-- **Day 9:** HTTP, REST contracts, versioning, pagination, idempotency, and streaming choices.
-- **Day 10:** FastAPI routing, validation, dependency injection, OpenAPI, and tests.
-- **Day 11:** Authentication, authorization, middleware, tracing, SSE, and resilient APIs.
-- **Day 12:** SQL, relational modelling, indexes, transactions, isolation, and migrations.
-- **Day 13:** SQLAlchemy/SQLModel, sessions, repositories, Alembic, and DB testing.
-- **Day 14:** Backend integration checkpoint from authenticated API through SQL persistence.
+* Interview questions or answers
+* Mock interviews
+* Interview do/don’t advice
+* Revision checklists
+* Daily checklists
+* DSA
+* Coding exercises
+* Java preparation
+* React/frontend preparation
 
-### Week 3 – Statistics, machine learning, deep learning, and data
-
-- **Day 15:** Descriptive/inferential statistics, probability, confidence intervals, tests, and A/B experiments.
-- **Day 16:** Classical ML workflow, preprocessing, cross-validation, metrics, calibration, and interpretation.
-- **Day 17:** Neural networks, optimization, regularization, attention, and transformer foundations.
-- **Day 18:** LLM tokenization, training stages, inference controls, context, cost, and model selection.
-- **Day 19:** NoSQL, Redis, embeddings, similarity search, vector indexes, and caching.
-- **Day 20:** Multi-source ETL, APIs/web, data quality, lineage, PII, updates, and recovery.
-- **Day 21:** Statistics/model/data checkpoint with an index-ready corpus and model report.
-
-### Week 4 – Multimodal GenAI, prompting, RAG, and agents
-
-- **Day 22:** Multimodal systems, document extraction, diffusion, limitations, and evaluation.
-- **Day 23:** Prompt design, structured outputs, citations, guardrails, and regression testing.
-- **Day 24:** RAG architecture, chunking, embeddings, metadata, ACLs, and provenance.
-- **Day 25:** Lexical/vector/hybrid retrieval, reranking, context assembly, and RAG evaluation.
-- **Day 26:** Tool-using agents, state, memory, permissions, budgets, and human approval.
-- **Day 27:** Framework-neutral orchestration, LangGraph/LlamaIndex, MCP, A2A, and workflow tools.
-- **Day 28:** GenAI application checkpoint demonstrating grounded analytics plus policy retrieval.
-
-### Week 5 – Security, model operations, cloud, and infrastructure
-
-- **Day 29:** Threat modelling, privacy, prompt injection, secrets, and multi-tenant isolation.
-- **Day 30:** Fine-tuning, SFT, LoRA/QLoRA, dataset preparation, evaluation, and decision criteria.
-- **Day 31:** LLM inference, TTFT, batching, KV cache, Docker, observability, and LLMOps.
-- **Day 32:** Cloud architecture, Kubernetes fundamentals, scaling, failure domains, SLOs, and cost.
-- **Day 33:** Terraform fundamentals, modules, state, locking, environments, and secret handling.
-- **Day 34:** AWS VPC, EKS, RDS, Redis, S3, ECR, IAM, DNS, TLS, and Terraform integration.
-- **Day 35:** Production-readiness checkpoint covering security, reliability, performance, cost, and operations.
-
-### Week 6 – Product, frontend, delivery, and final interview
-
-- **Day 36:** React/Next.js chat UI, real SSE streaming, citations, uploads, and browser security.
-- **Day 37:** Productization, requirements, metrics, SLOs, HLD/LLD, and STAR storytelling.
-- **Day 38:** Monorepo organization, environments, local development, quality commands, and DevEx.
-- **Day 39:** Kubernetes and Helm deployments, probes, resources, autoscaling, secrets, and rollbacks.
-- **Day 40:** Jenkins CI/CD, tests, image builds, ECR, Helm delivery, smoke tests, and rollback.
-- **Day 41:** Ansible configuration management for disposable CI agents and operations hosts.
-- **Day 42:** Clean-checkout capstone dry run, complete revision, presentation, and scored mock interview.
-
-### Expected outcome
-
-By completing the plan, I should have a demonstrable multi-tenant finance analytics and policy-assistant system containing:
-
-- A typed, layered Python/FastAPI backend with SQL persistence.
-- Statistical analysis, a classical ML baseline, and a small deep-learning experiment.
-- Governed ingestion, vector retrieval, RAG evaluation, and a constrained tool-using assistant.
-- Tenant-isolation, prompt-injection, PII, and operational safety tests.
-- A streaming React/Next.js interface with citations and document ingestion.
-- Docker, Terraform, AWS architecture, Helm, Jenkins, and Ansible artifacts.
-- Architecture documentation, evaluation evidence, readiness reviews, and an honest interview project story.
+The goal is to become a fundamentally stronger Lead/VP-level engineer whose knowledge remains useful beyond this specific role.
 
 ---
-
-### ✅ Day 1 – Python Core, Environment & Project Bootstrap
-
-```markdown
-# Day 1 – Python Core, Environment & Project Bootstrap
-
-You are an expert **Senior AI Engineer interview coach**.
-
-Today is **Day 1** of my 42-day GenAI / LLM interview preparation plan.
-
-## Your task
-
-### Response guidance
-
-- When it improves clarity, include one concise ASCII architecture or workflow diagram. Use a second only when it shows a genuinely different view.
-- When code is useful, first provide a concise reasoning summary (approach, assumptions, and trade-offs) and pseudocode, then show the code. Do not expose private hidden reasoning.
-
-1. Explain the listed Python concepts in clear language, connecting them to AI/ML backend services.
-2. Give 2–3 practical examples from data pipelines, model-serving APIs, or analytics systems.
-3. Cover best practices, common pitfalls, and complexity where relevant.
-4. Guide me through the practical task, but make me implement the core logic.
-5. End with 5–10 interview questions and concise answers.
-
-Comment code clearly, especially edge cases and design choices.
-
----
-
-## Today’s topics – cover ALL of these
-
-- Python scalar types and mutability
-- `list`, `dict`, `set`, and `tuple`
-- Comprehensions, iteration, unpacking, and slicing
-- Functions, `*args`, `**kwargs`, and imports
-- Modules and packages
-- Python version management with `pyenv`
-- Virtual environments and dependency management with `venv` and `uv`
-- `pyproject.toml`, dependency locking, and `.env.example`
-- Basic logging, exceptions, and `pytest`
-
-## Practical task – Bootstrap FinSight
-
-Create the initial `finsight` Python project with `src/` and `tests/` layouts. Add a CLI function that accepts a small list of transaction dictionaries, validates required keys without a validation library, calculates total income and spending, and logs a summary.
-
-### Completion evidence
-
-- The project runs in an isolated environment.
-- At least three tests cover normal input, an empty list, and a missing key.
-- No real secrets are committed; only `.env.example` is present.
 ```
+# DAY1 — Networking Foundations for Software and Platform Engineers
+
+Act as a senior networking, cloud, backend, and distributed-systems mentor.
+
+Today is Day 1.
+
+## Goal
+
+Build networking fundamentals from first principles so I can reason correctly about application communication, microservices, Kubernetes, cloud networking, enterprise networking, and network automation.
+
+Do not assume that I am a network specialist.
 
 ---
 
-### ✅ Day 2 – OOP, Data Classes & Domain Modelling
+## 1. What a computer network actually does
 
-```markdown
-# Day 2 – OOP, Data Classes & Domain Modelling
+Explain:
 
-You are an expert **Senior AI Engineer interview coach**.
+* Host
+* Client
+* Server
+* Network interface/NIC
+* MAC address
+* IP address
+* Port
+* Socket
+* Packet
+* Ethernet frame
+* Connection
+* Protocol
+* Link
+* Hop
 
-Today is **Day 2** of my 42-day GenAI / LLM interview preparation plan.
+Explain:
 
-## Your task
+* Bandwidth
+* Throughput
+* Latency
+* Jitter
+* Packet loss
 
-### Response guidance
+Clearly differentiate concepts that are commonly confused.
 
-- When it improves clarity, include one concise ASCII architecture or workflow diagram. Use a second only when it shows a genuinely different view.
-- When code is useful, first provide a concise reasoning summary (approach, assumptions, and trade-offs) and pseudocode, then show the code. Do not expose private hidden reasoning.
+Use:
 
-1. Explain OOP in Python with examples from maintainable AI and analytics systems.
-2. Compare composition, inheritance, protocols/interfaces, and simple functions.
-3. Discuss design trade-offs and common over-engineering mistakes.
-4. Guide the practical task with well-commented examples.
-5. End with 5–10 conceptual and design interview Q&As.
+Browser → API → backend → database
+
+to explain how communication happens across a network.
 
 ---
 
-## Today’s topics – cover ALL of these
+## 2. OSI and TCP/IP models
 
-- Classes, objects, attributes, and methods
-- Encapsulation, abstraction, inheritance, and polymorphism
-- Composition vs inheritance
-- Instance and class variables
-- `@staticmethod`, `@classmethod`, and `@property`
-- `@dataclass`, immutability, and value objects
-- `__repr__`, `__str__`, `__len__`, and `__eq__`
-- Abstract base classes and `Protocol` at a conceptual level
-- Domain modelling and responsibility boundaries
+Explain the layers conceptually rather than as memorisation.
 
-## Practical task – Model the finance domain
+Cover:
 
-Implement `Money`, `Transaction`, `Account`, and `AnalyticsSummary` domain models. Use data classes and value validation, make invalid monetary operations explicit, and define a repository interface for loading transactions without implementing a database.
+* Physical
+* Data link
+* Network
+* Transport
+* Application
 
-### Completion evidence
+Place these correctly:
 
-- Models have useful equality and representation behaviour.
-- Currency mismatches and invalid transaction values are tested.
-- Domain classes do not import database or web-framework code.
+* Ethernet
+* MAC
+* ARP
+* IP
+* ICMP
+* TCP
+* UDP
+* DNS
+* HTTP
+* HTTPS/TLS
+
+Explain:
+
+* Encapsulation
+* Decapsulation
+* Headers
+* Payload
+
+Include a concise ASCII packet-flow diagram.
+
+---
+
+## 3. Layer 2 networking
+
+Explain:
+
+* Ethernet
+* Ethernet frames
+* MAC addresses
+* Switches
+* MAC/CAM tables
+* Unicast
+* Broadcast
+* Broadcast domains
+* ARP
+* ARP cache
+
+Explain VLANs:
+
+* Why VLANs exist
+* Network segmentation
+* Access ports
+* Trunk ports
+* 802.1Q concept
+* VLAN IDs
+
+Explain Layer-2 loops and why mechanisms such as STP exist at a conceptual level.
+
+Use an office or data-centre example.
+
+---
+
+## 4. Layer 3 networking
+
+Explain:
+
+* IPv4 addressing
+* Network portion vs host portion
+* Subnet
+* Subnet mask
+* CIDR
+* Default gateway
+* Router
+* Routing table
+* Next hop
+* Longest-prefix matching
+* Default route
+
+Use practical examples of:
+
+* /16
+* /24
+* /30
+* /32
+
+Explain subnetting as an architecture concept rather than an exam calculation exercise.
+
+Connect subnet design to:
+
+* Enterprise networks
+* Cloud VPC/VNet design
+* Kubernetes
+* Security segmentation
+
+---
+
+## 5. ICMP
+
+Explain:
+
+* What ICMP is
+* Why networks need it
+* Echo request/reply
+* Destination unreachable
+* Time exceeded
+
+Explain conceptually how tools such as ping and traceroute use network behaviour without turning this into command memorisation.
+
+---
+
+## 6. TCP
+
+Explain:
+
+* Connection-oriented communication
+* Three-way handshake
+* Sequence numbers
+* Acknowledgements
+* Retransmission
+* Ordering
+* Flow control
+* Congestion control at a conceptual level
+* Connection close
+
+Explain why backend/platform engineers care about:
+
+* Connect timeout
+* Read timeout
+* Idle timeout
+* Connection pooling
+* Retries
+* Broken connections
+
+---
+
+## 7. UDP
+
+Explain:
+
+* Connectionless communication
+* Lack of built-in retransmission/ordering
+* Lower overhead
+
+Compare TCP and UDP.
+
+Give examples of situations where UDP is useful.
+
+---
+
+## 8. MTU, MSS and fragmentation
+
+Explain:
+
+* MTU
+* Why MTU exists
+* Packet fragmentation concept
+* Path MTU
+* TCP MSS
+* Problems caused by MTU mismatches
+
+Connect this to:
+
+* VPNs
+* Overlays
+* VXLAN
+* Cloud networks
+
+Keep packet-header details minimal.
+
+---
+
+## 9. DNS
+
+Explain:
+
+* Domain names
+* DNS resolver
+* Recursive resolver
+* Root servers
+* TLD servers
+* Authoritative DNS
+
+Cover:
+
+* A
+* AAAA
+* CNAME
+* TTL
+* DNS caching
+
+Show what happens when an application accesses:
+
+`api.example.com`
+
+Explain production issues caused by:
+
+* Incorrect DNS
+* Stale cache
+* DNS outage
+* Excessively long or short TTLs
+
+---
+
+## 10. DHCP
+
+Explain:
+
+* Why DHCP exists
+* Dynamic IP allocation
+* Address leases
+* Gateway information
+* DNS information
+
+Explain its role in enterprise networks.
+
+---
+
+## 11. NAT
+
+Explain:
+
+* Private vs public IP addresses
+* NAT
+* SNAT
+* DNAT
+* Port address translation at a conceptual level
+
+Connect NAT to:
+
+* Enterprise internet connectivity
+* Cloud networks
+* Kubernetes
+* Firewalls
+
+---
+
+## 12. Firewalls and ACL concepts
+
+Explain:
+
+* Network firewall
+* Stateful firewall
+* Stateless filtering
+* Access-control lists
+* Source
+* Destination
+* Protocol
+* Port
+* Ingress
+* Egress
+
+Explain:
+
+* Network segmentation
+* Security zones
+* DMZ
+* East-west vs north-south traffic
+
+---
+
+## 13. TLS from a network/application perspective
+
+Explain:
+
+* Plain HTTP vs HTTPS
+* TLS purpose
+* Encryption in transit
+* Certificates
+* Server identity
+* High-level TLS handshake
+
+Do not go deep into cryptographic algorithms.
+
+---
+
+## 14. Load balancers and proxies
+
+Explain:
+
+* Forward proxy
+* Reverse proxy
+* Load balancer
+* Layer 4 load balancing
+* Layer 7 load balancing
+* Health checks
+* TLS termination
+* Session persistence
+* Connection distribution
+
+Connect this to microservices and Kubernetes.
+
+---
+
+## 15. QoS basics
+
+Explain:
+
+* Why all network traffic cannot always be treated equally
+* Classification
+* Prioritisation
+* Queuing
+* Shaping
+* Policing
+
+Use voice/video/business-critical traffic examples.
+
+Keep detailed algorithms out.
+
+---
+
+## 16. LAN, WLAN, WAN, Internet and intranet
+
+Clearly explain:
+
+* LAN
+* WLAN
+* WAN
+* Internet
+* Intranet
+
+Show how an enterprise might connect:
+
+Office
+→ WAN
+→ data centre
+→ cloud
+→ Internet.
+
+Include an ASCII diagram.
+
+---
+
+## 17. Physical networking vs cloud networking
+
+Compare:
+
+Physical:
+
+* Switch
+* Router
+* Firewall
+* Physical link
+
+Cloud:
+
+* VPC/VNet
+* Subnet
+* Route table
+* Security group
+* Network ACL
+* Internet/NAT gateway
+* Cloud load balancer
+
+Explain which underlying networking principles remain unchanged.
+
+---
+
+## 18. Network failure reasoning
+
+Teach how to reason conceptually about:
+
+* Host failure
+* Link failure
+* Switch failure
+* Router failure
+* DNS failure
+* Firewall blocking
+* Routing problem
+* Packet loss
+* High latency
+* MTU issue
+* Connection timeout
+* Service listening on wrong port
+
+Use layered reasoning rather than troubleshooting-command lists.
+
+---
+
+## ASCII diagrams
+
+Include diagrams for:
+
+1. Application request across network layers
+2. Basic switch/router/subnet topology
+3. Enterprise office → data centre → cloud connectivity
+
+Finish by tying Layer 2, Layer 3, transport, DNS, security and application communication together into one coherent mental model.
+
+---
+
 ```
-
----
-
-### ✅ Day 3 – Modern Typing, Pydantic, Errors & Structured Logging
-
-```markdown
-# Day 3 – Modern Typing, Pydantic, Errors & Structured Logging
-
-You are an expert **Senior AI Engineer interview coach**.
-
-Today is **Day 3** of my 42-day GenAI / LLM interview preparation plan.
-
-## Your task
-
-### Response guidance
-
-- When it improves clarity, include one concise ASCII architecture or workflow diagram. Use a second only when it shows a genuinely different view.
-- When code is useful, first provide a concise reasoning summary (approach, assumptions, and trade-offs) and pseudocode, then show the code. Do not expose private hidden reasoning.
-
-1. Explain modern Python typing, runtime validation, and error design for production AI services.
-2. Distinguish static type hints from Pydantic runtime validation.
-3. Cover structured logs, correlation IDs, and safe error messages.
-4. Guide the directly related practical task.
-5. End with 5–10 interview questions and concise answers.
-
----
-
-## Today’s topics – cover ALL of these
-
-- Built-in generics such as `list[str]` and union syntax such as `str | None`
-- `TypedDict`, `Literal`, `Callable`, generics, and `Protocol`
-- Compatibility awareness for `List`, `Dict`, `Optional`, and `Union`
-- Static checking with `mypy` or `pyright`
-- Pydantic models, field constraints, and model-level validation
-- API, configuration, and LLM tool-I/O schemas
-- Custom exception hierarchies
-- Structured logging, levels, trace/correlation IDs, and PII redaction
-
-## Practical task – Create validated service boundaries
-
-Add Pydantic input/output schemas for transaction ingestion and analytics requests. Create `FinSightError`, `ValidationError`, and `ProviderError` classes, then emit JSON-style structured logs containing a correlation ID without exposing account numbers.
-
-### Completion evidence
-
-- Static type checking passes for the new code.
-- Tests cover invalid dates, unsupported currencies, and redacted logs.
-- Domain models remain independent from API schemas.
 ```
+# DAY2 — Routing, Data-Centre Networking, VXLAN/EVPN, WAN and SD-WAN
+
+Act as a senior enterprise, cloud, and data-centre network architect.
+
+Today is Day 2.
+
+## Goal
+
+Understand how modern enterprise and data-centre networks are constructed and why technologies such as BGP, leaf-spine, VRF, MPLS, VXLAN, EVPN and SD-WAN exist.
+
+Teach every technology through:
+
+Problem → earlier solution → limitation → modern solution.
 
 ---
 
-### ✅ Day 4 – Async, Concurrency & Resilient I/O
+## 1. Routing fundamentals
 
-```markdown
-# Day 4 – Async, Concurrency & Resilient I/O
+Explain:
 
-You are an expert **Senior AI Engineer interview coach**.
+* Routing
+* Routing table
+* Route
+* Prefix
+* Next hop
+* Metric
+* Administrative preference concept
+* Default route
+* Static route
+* Dynamic route
+* Route convergence
 
-Today is **Day 4** of my 42-day GenAI / LLM interview preparation plan.
-
-## Your task
-
-### Response guidance
-
-- When it improves clarity, include one concise ASCII architecture or workflow diagram. Use a second only when it shows a genuinely different view.
-- When code is useful, first provide a concise reasoning summary (approach, assumptions, and trade-offs) and pseudocode, then show the code. Do not expose private hidden reasoning.
-
-1. Explain synchronous and asynchronous execution in Python for GenAI backends.
-2. Compare async I/O, threads, and processes, including the GIL at a practical level.
-3. Cover failure, cancellation, timeout, concurrency-limit, and backpressure behaviour.
-4. Guide the practical task and explain how to test asynchronous code.
-5. End with 5–10 interview Q&As.
+Explain what happens when multiple routes could match a destination.
 
 ---
 
-## Today’s topics – cover ALL of these
+## 2. Dynamic routing
 
-- Event loop, coroutines, `async`, and `await`
-- `asyncio.gather`, tasks, and task groups
-- Threads vs processes vs async I/O
-- Blocking calls inside async functions
-- Timeouts, cancellation, semaphores, and bounded concurrency
-- Race conditions and shared mutable state
-- Retries with backoff and jitter
-- Async testing and observability
+Explain why dynamic routing protocols exist.
 
-## Practical task – Build a concurrent analytics aggregator
+Compare conceptually:
 
-Create asynchronous mock clients for exchange rates, a risk-scoring model, and an account repository. Aggregate their results concurrently with individual timeouts, a concurrency limit, and a defined partial-failure policy.
+* OSPF
+* BGP
 
-### Completion evidence
+Cover:
 
-- Tests prove calls run concurrently rather than sequentially.
-- Timeout and partial-failure paths are deterministic.
-- No blocking sleep or synchronous network call appears in async code.
+* Neighbour/peer
+* Route advertisement
+* Route learning
+* Route withdrawal
+* Path selection
+* Convergence
+
+Do not teach configuration commands.
+
+---
+
+## 3. OSPF
+
+Explain:
+
+* Purpose
+* Link-state concept
+* Internal routing
+* Topology awareness
+* Shortest-path calculation concept
+
+Explain where OSPF is typically useful.
+
+---
+
+## 4. BGP
+
+Explain:
+
+* Autonomous System
+* BGP peers
+* eBGP
+* iBGP
+* Path advertisement
+* Policy-driven routing
+* Path attributes conceptually
+
+Explain why BGP is important in:
+
+* Internet routing
+* Large enterprise networks
+* Data-centre fabrics
+* EVPN
+* Cloud networking
+
+---
+
+## 5. ECMP and fast failure detection
+
+Explain:
+
+* Equal-Cost Multi-Path routing
+* Using multiple network paths
+* Load distribution
+* Resilience
+
+Explain BFD conceptually:
+
+* Fast detection of failed network paths
+
+Avoid protocol packet details.
+
+---
+
+## 6. Traditional data-centre architecture
+
+Explain:
+
+* Access
+* Aggregation/distribution
+* Core
+
+Explain scaling and east-west traffic challenges.
+
+---
+
+## 7. Leaf-spine architecture
+
+Explain:
+
+* Leaf switches
+* Spine switches
+* East-west traffic
+* North-south traffic
+* ECMP
+* Predictable hop count
+* Horizontal scaling
+
+Include an ASCII diagram.
+
+Explain why leaf-spine became common in modern data centres.
+
+---
+
+## 8. Control plane, data plane and management plane
+
+Clearly differentiate:
+
+### Control plane
+
+Learns topology and determines forwarding information.
+
+### Data plane
+
+Actually forwards packets.
+
+### Management plane
+
+Allows configuration, monitoring and administration.
+
+Connect this distinction to network automation.
+
+---
+
+## 9. VRF
+
+Explain:
+
+* Virtual Routing and Forwarding
+* Multiple isolated routing tables
+* Tenant/network segmentation
+
+Explain why VRFs are useful in:
+
+* Enterprises
+* Service providers
+* Multi-tenant data centres
+
+---
+
+## 10. MPLS fundamentals
+
+Explain at a high level:
+
+* Why MPLS exists
+* Label-based forwarding
+* Enterprise/service-provider WAN use
+* MPLS VPN concept
+
+Do not teach label-stack internals.
+
+Connect MPLS to traditional enterprise WANs.
+
+---
+
+## 11. Underlay and overlay networks
+
+Explain deeply:
+
+### Underlay
+
+Physical/IP connectivity.
+
+### Overlay
+
+Logical connectivity built over that infrastructure.
+
+Explain:
+
+* Why separation is useful
+* Operational benefits
+* Scaling benefits
+
+Use both analogy and technical example.
+
+---
+
+## 12. VLAN scaling limitations
+
+Explain:
+
+* VLAN segmentation
+* VLAN ID space
+* Large Layer-2 domains
+* Broadcast/flooding
+* Mobility
+* Multi-tenancy
+* Data-centre scale
+
+Use these limitations to introduce VXLAN.
+
+---
+
+## 13. VXLAN
+
+Explain:
+
+* Why VXLAN exists
+* VXLAN Network Identifier / VNI
+* VTEP
+* Tunnel
+* Encapsulation
+* Overlay
+* IP underlay
+* Layer-2-over-Layer-3 concept
+* Multi-tenancy
+
+Explain how VXLAN increases logical network scale.
+
+Include an ASCII VTEP-to-VTEP diagram.
+
+---
+
+## 14. EVPN
+
+Explain:
+
+* Why an overlay needs endpoint reachability information
+* EVPN as a control-plane approach
+* MAC/IP advertisement
+* BGP EVPN
+* Reduced dependency on flooding
+
+Keep individual EVPN route types high-level.
+
+---
+
+## 15. VXLAN + EVPN
+
+Clearly differentiate:
+
+VXLAN = data-plane encapsulation
+
+EVPN = control-plane distribution of reachability information
+
+Explain how they work together.
+
+Walk through communication between workloads attached to different leaf switches.
+
+Include an ASCII architecture.
+
+---
+
+## 16. Anycast concept
+
+Explain:
+
+* Multiple systems advertising/reaching the same logical address
+* Traffic reaching an appropriate nearby/available instance
+
+Give data-centre or DNS examples.
+
+Keep routing internals high level.
+
+---
+
+## 17. WAN fundamentals
+
+Explain:
+
+* Branch connectivity
+* Data-centre connectivity
+* Long-distance network links
+* Private circuits
+* MPLS WAN
+* Internet-based connectivity
+* VPNs
+* Redundant paths
+
+---
+
+## 18. VPN concepts
+
+Explain conceptually:
+
+* Site-to-site VPN
+* Remote-access VPN
+* Encrypted tunnel
+
+Explain why overlays/tunnels are common across untrusted networks.
+
+---
+
+## 19. SD-WAN
+
+Explain:
+
+* Problems with traditional WAN management
+* Centralised control
+* Policy
+* Application awareness
+* Multiple transport options
+* Dynamic path selection
+* Central controller
+* Resilience
+
+Compare:
+
+Traditional WAN vs SD-WAN.
+
+Include an ASCII diagram.
+
+---
+
+## 20. WLAN fundamentals
+
+Explain:
+
+* Access point
+* SSID
+* Wireless controller
+* Authentication
+* Roaming
+* Enterprise WLAN architecture
+
+Keep radio-frequency theory minimal.
+
+---
+
+## 21. High availability
+
+Explain:
+
+* Device redundancy
+* Link redundancy
+* Multi-path routing
+* Active/active
+* Active/passive
+* Failover
+* Convergence
+* ECMP
+
+Explain the trade-off between greater resilience and increased complexity.
+
+---
+
+## 22. Hybrid and multi-cloud networking
+
+Explain how an enterprise might connect:
+
+* Offices
+* Private data centres
+* AWS
+* Azure
+* GCP
+* SaaS
+* Internet-facing services
+
+Cover conceptually:
+
+* Private connectivity
+* Site-to-site VPN
+* Dedicated cloud links
+* Routing
+* Segmentation
+* Security boundaries
+* Centralised vs distributed connectivity
+
+Include one coherent ASCII enterprise architecture.
+
+Finish by showing how routing, BGP, VRFs, MPLS, overlays, VXLAN/EVPN and SD-WAN fit into one mental model.
+
+---
+
 ```
-
----
-
-### ✅ Day 5 – DSA I: Arrays, Strings, Hashing & Prefix Sums
-
-```markdown
-# Day 5 – DSA I: Arrays, Strings, Hashing & Prefix Sums
-
-You are an expert **Senior AI Engineer interview coach** with strong DSA skills.
-
-Today is **Day 5** of my 42-day GenAI / LLM interview preparation plan.
-
-## Your task
-
-### Response guidance
-
-- When it improves clarity, include one concise ASCII architecture or workflow diagram. Use a second only when it shows a genuinely different view.
-- When code is useful, first provide a concise reasoning summary (approach, assumptions, and trade-offs) and pseudocode, then show the code. Do not expose private hidden reasoning.
-
-1. Explain each pattern through intuition, recognition signals, and complexity.
-2. Work through small Python examples before the practical task.
-3. Identify common candidate mistakes and edge cases.
-4. Provide practice guidance without hiding the main solution in prose.
-5. End with 5–10 interview questions and concise reasoning.
-
----
-
-## Today’s topics – cover ALL of these
-
-- Big-O time and space complexity
-- Array and string traversal
-- Subarrays and substrings
-- Hash maps and sets
-- Frequency counting, duplicate detection, and two-sum
-- Prefix sums and range-sum queries
-- Anagram and normalization patterns
-
-## Practical task – Implement transaction analysis patterns
-
-Given an in-memory transaction stream, implement duplicate-ID detection, category-frequency counts, running-balance prefix sums, and detection of two transactions whose combined value matches a review threshold.
-
-### Completion evidence
-
-- Each function documents time and space complexity.
-- Tests include empty input, duplicates, negative values, and no-match cases.
-- At least one naive implementation is compared with an optimized version.
 ```
+# DAY3 — Network Automation, APIs, Orchestration and Infrastructure as Code
+
+Act as a senior network automation, distributed-systems, and infrastructure-platform architect.
+
+Today is Day 3.
+
+## Goal
+
+Understand how large network estates are automated safely and reliably using software-engineering, distributed-system and declarative-infrastructure principles.
+
+Treat network automation as a platform-engineering discipline, not merely scripting devices.
 
 ---
 
-### ✅ Day 6 – DSA II: Two Pointers, Sliding Windows, Stacks & Queues
+## 1. Evolution of network automation
 
-```markdown
-# Day 6 – DSA II: Two Pointers, Sliding Windows, Stacks & Queues
+Explain progression:
 
-You are an expert **Senior AI Engineer interview coach** with strong DSA skills.
+Manual CLI
+→ scripts
+→ reusable automation
+→ workflow orchestration
+→ declarative automation
+→ policy/intent-driven automation
+→ closed-loop automation.
 
-Today is **Day 6** of my 42-day GenAI / LLM interview preparation plan.
-
-## Your task
-
-### Response guidance
-
-- When it improves clarity, include one concise ASCII architecture or workflow diagram. Use a second only when it shows a genuinely different view.
-- When code is useful, first provide a concise reasoning summary (approach, assumptions, and trade-offs) and pseudocode, then show the code. Do not expose private hidden reasoning.
-
-1. Explain how to recognize two-pointer, window, stack, and queue problems.
-2. Include diagrams-in-words and explicit boundary handling.
-3. Compare fixed and variable windows and introduce monotonic stacks.
-4. Guide the practical task with complexity analysis.
-5. End with 5–10 interview questions and answers.
+Explain what problems each stage solves and what new complexity it introduces.
 
 ---
 
-## Today’s topics – cover ALL of these
+## 2. Core automation architecture
 
-- Inward and same-direction two pointers
-- Fixed-size and variable-size sliding windows
-- Stack and queue semantics
-- `collections.deque`
-- Balanced delimiters
-- Monotonic-stack intuition and next-greater-element problems
-- Off-by-one errors and window invariants
+Explain components such as:
 
-## Practical task – Detect spending patterns
+* Northbound API
+* Authentication/authorization
+* Inventory
+* Source of truth
+* IPAM
+* CMDB integration
+* Configuration repository
+* Policy engine
+* Workflow engine
+* Scheduler
+* Durable job queue
+* Worker fleet
+* Device adapters
+* Controllers
+* Audit store
+* Telemetry pipeline
 
-Implement a seven-day rolling-spend calculator, the shortest transaction window whose total exceeds a threshold, a bracket validator for a small finance-filter expression, and a bounded FIFO ingestion buffer.
+Include a detailed ASCII architecture.
 
-### Completion evidence
+---
 
-- Window invariants are written as comments.
-- Tests cover single-element, exact-boundary, and impossible cases.
-- Queue operations avoid inefficient removal from the front of a list.
+## 3. Inventory, IPAM, CMDB and source of truth
+
+Explain:
+
+* Device inventory
+* Sites
+* Interfaces
+* IP addresses
+* Networks/subnets
+* Ownership
+* Software versions
+* Device capabilities
+* Topology
+* Configuration intent
+
+Explain:
+
+* What makes a system authoritative
+* Why duplicate/conflicting sources create risk
+* Synchronisation between systems
+
+---
+
+## 4. Desired state and actual state
+
+Explain:
+
+* Declarative configuration
+* Desired state
+* Observed state
+* Drift
+* Reconciliation
+* Convergence
+
+Connect this to:
+
+* Kubernetes controllers
+* Infrastructure as Code
+* Network automation
+
+Include an ASCII reconciliation loop.
+
+---
+
+## 5. Idempotency
+
+Explain idempotency deeply.
+
+Compare:
+
+"Ensure VLAN 100 exists"
+
+with
+
+"Create VLAN 100."
+
+Explain importance for:
+
+* Retries
+* Workflow restarts
+* Partial failure
+* Automation recovery
+* Repeated requests
+
+---
+
+## 6. Network-management interfaces
+
+Compare conceptually:
+
+* SSH/CLI
+* SNMP
+* NETCONF
+* RESTCONF
+* REST APIs
+* gNMI
+
+For each explain:
+
+* Purpose
+* Configuration vs telemetry use
+* Structured vs unstructured interaction
+* Strengths
+* Limitations
+
+---
+
+## 7. Model-driven networking
+
+Explain:
+
+* Why structured data models matter
+* YANG
+* OpenConfig at a conceptual level
+* Schema validation
+* Device capability models
+
+Explain how YANG relates to:
+
+* NETCONF
+* RESTCONF
+
+and how OpenConfig/gNMI are used in modern environments.
+
+---
+
+## 8. Configuration templating
+
+Explain:
+
+* Template
+* Variables
+* Reusable configuration
+* Environment/site-specific parameters
+
+Explain dangers:
+
+* Invalid assumptions
+* Template drift
+* Vendor differences
+* Inadequate validation
+
+---
+
+## 9. Infrastructure as Code
+
+Explain:
+
+* Declarative infrastructure
+* Version control
+* Reproducibility
+* Review
+* Change history
+* Automated validation
+
+Connect IaC principles to networking.
+
+---
+
+## 10. GitOps
+
+Explain:
+
+* Git as desired-state source
+* Pull-request-based change
+* Reconciliation
+* Automated deployment
+
+Explain strengths and limitations of GitOps for network infrastructure.
+
+---
+
+## 11. Policy as Code
+
+Explain:
+
+* Expressing governance/security rules in machine-evaluable form
+* Automated policy validation
+* Guardrails
+* Consistent enforcement
+
+Give network-change examples.
+
+---
+
+## 12. Workflow orchestration
+
+Design the lifecycle:
+
+Request
+→ validate
+→ authorise
+→ determine scope
+→ pre-check
+→ generate intended change
+→ execute
+→ verify
+→ record result.
+
+Explain:
+
+* Workflow
+* Step
+* Dependency
+* State
+* Retry
+* Compensation
+* Pause/resume
+
+Include an ASCII workflow.
+
+---
+
+## 13. Workflow state machines
+
+Explain job states such as:
+
+Pending
+Running
+Partially completed
+Succeeded
+Failed
+Rolling back
+Cancelled.
+
+Explain why explicit state modelling is important in long-running automation.
+
+---
+
+## 14. Asynchronous job execution
+
+Explain why network operations usually should not remain tied to an HTTP request.
+
+Cover:
+
+* Job ID
+* Queue
+* Worker
+* Durable execution
+* Status API
+* Polling
+* Events/callbacks
+
+---
+
+## 15. Queues and backpressure
+
+Explain:
+
+* Producer
+* Consumer
+* Queue depth
+* Worker fleet
+* Concurrency
+* Rate limiting
+* Backpressure
+
+Explain what happens when incoming work exceeds processing capacity.
+
+---
+
+## 16. Failure handling
+
+Explain:
+
+* Retryable failure
+* Permanent failure
+* Timeout
+* Device unavailable
+* Partial success
+* Worker crash
+* Dependency outage
+* Stale data
+
+Explain:
+
+* Exponential backoff
+* Jitter
+* Dead-letter handling
+* Manual escalation
+* Compensation
+* Rollback
+
+---
+
+## 17. Exactly-once and deduplication
+
+Explain why "exactly once" is difficult in distributed systems.
+
+Teach practical approaches:
+
+* At-least-once processing
+* Idempotent operations
+* Unique operation IDs
+* Deduplication
+
+Use network-change examples.
+
+---
+
+## 18. Concurrency and conflicting changes
+
+Explain when two workflows touch the same device/resource.
+
+Cover:
+
+* Locks
+* Leases
+* Optimistic concurrency
+* Version checking
+* Compare-and-set idea
+* Resource ownership
+
+Explain trade-offs.
+
+---
+
+## 19. Transactions and compensation
+
+Explain why a distributed network change across hundreds of devices cannot usually behave like one ACID database transaction.
+
+Explain:
+
+* Partial completion
+* Compensating action
+* Rollback
+* Forward recovery
+
+Connect this to saga-style thinking conceptually.
+
+---
+
+## 20. Safe rollout
+
+Explain:
+
+* Dry run
+* Pre-check
+* Canary
+* Batch
+* Progressive rollout
+* Blast-radius limits
+* Pause/resume
+* Maintenance windows
+* Automated rollback
+
+---
+
+## 21. Validation
+
+### Pre-change
+
+* Reachability
+* Current state
+* Device capability
+* Dependency state
+* Policy compliance
+* Capacity
+
+### Post-change
+
+* Intended config applied
+* Connectivity remains healthy
+* Expected routes/state present
+* Telemetry healthy
+
+---
+
+## 22. Topology and dependency awareness
+
+Explain why changing one device can affect:
+
+* Adjacent switches
+* Routing peers
+* Sites
+* Applications
+* Redundant paths
+
+Explain how topology data improves safe automation.
+
+---
+
+## 23. Event-driven automation
+
+Explain:
+
+* Polling
+* Events
+* Webhooks
+* Message brokers
+* Streaming telemetry
+
+Explain when reactive automation is useful.
+
+---
+
+## 24. Streaming telemetry
+
+Explain:
+
+* Traditional polling vs streamed state updates
+* Near-real-time telemetry
+* Metrics/state subscriptions
+* gNMI/OpenConfig relationship conceptually
+
+---
+
+## 25. Closed-loop automation
+
+Explain:
+
+Observe
+→ detect deviation
+→ decide
+→ change
+→ verify
+→ continue observing.
+
+Discuss benefits and risks of autonomous remediation.
+
+---
+
+## 26. API architecture for automation
+
+Explain:
+
+* Resource-oriented APIs
+* Synchronous vs asynchronous APIs
+* Job endpoints
+* Idempotency keys
+* Pagination
+* Filtering
+* API versioning
+* Error models
+* Authentication/authorization
+
+No code required.
+
+---
+
+## 27. Secrets and privileged access
+
+Explain handling of:
+
+* Device credentials
+* API credentials
+* SSH keys
+* Certificates
+
+Cover:
+
+* Central secret stores
+* Rotation
+* Short-lived credentials
+* Least privilege
+* Auditability
+
+---
+
+## 28. Audit trail
+
+Every infrastructure action should identify:
+
+* Who
+* What
+* When
+* Why
+* Previous state
+* Intended state
+* Systems/devices affected
+* Approval
+* Result
+
+Finish with a complete architecture for a safe enterprise network-automation platform.
+
+---
+
 ```
-
----
-
-### ✅ Day 7 – Trees, Graphs, DP & Week 1 Revision
-
-```markdown
-# Day 7 – Trees, Graphs, DP & Week 1 Revision
-
-You are an expert **Senior AI Engineer interview coach**.
-
-Today is **Day 7** of my 42-day GenAI / LLM interview preparation plan and the first weekly checkpoint.
-
-## Your task
-
-### Response guidance
-
-- When it improves clarity, include one concise ASCII architecture or workflow diagram. Use a second only when it shows a genuinely different view.
-- When code is useful, first provide a concise reasoning summary (approach, assumptions, and trade-offs) and pseudocode, then show the code. Do not expose private hidden reasoning.
-
-1. Explain tree traversal, graph search, cycle detection, and introductory dynamic programming.
-2. Connect them to workflows, dependency graphs, and pipeline scheduling.
-3. Review Days 1–6 using active-recall questions rather than another long summary.
-4. Guide one integrated practical checkpoint.
-5. End with a scored 10-question Week 1 interview quiz and an answer key after the questions.
-
----
-
-## Today’s topics – cover ALL of these
-
-- DFS and BFS
-- Pre-order, in-order, and post-order traversal
-- Directed graphs and DAGs
-- Cycle detection and topological ordering
-- Memoization vs bottom-up dynamic programming
-- 0/1 knapsack intuition
-- Week 1: Python, modelling, typing, async, testing, and DSA patterns
-
-## Practical task – Validate an analytics workflow DAG
-
-Model FinSight jobs such as `ingest`, `normalize`, `categorize`, `aggregate`, and `report` as a dependency graph. Detect cycles, produce a valid execution order, and identify which independent jobs could run concurrently.
-
-### Completion evidence
-
-- DFS and BFS are both exercised by tests.
-- A cyclic workflow fails with a useful domain error.
-- Write a short Week 1 gap log containing mistakes, not just completed topics.
 ```
+# DAY4 — Kubernetes, Cloud, Distributed Platforms, CI/CD and Data
+
+Act as a senior cloud-platform, Kubernetes, DevOps, and distributed-systems architect.
+
+Today is Day 4.
+
+## Goal
+
+Understand how a highly available network-automation platform is built, deployed, scaled and operated across Kubernetes, private infrastructure and public cloud.
 
 ---
 
-### ✅ Day 8 – Design Patterns & Clean Architecture for GenAI Systems
+## 1. Runtime evolution
 
-```markdown
-# Day 8 – Design Patterns & Clean Architecture for GenAI Systems
+Explain:
 
-You are an expert **Senior AI Engineer interview coach** with strong software-architecture experience.
+Bare metal
+→ virtual machines
+→ containers.
 
-Today is **Day 8** of my 42-day GenAI / LLM interview preparation plan.
+Cover:
 
-## Your task
+* Hypervisor
+* VM
+* Container
+* Image
+* Container runtime
 
-### Response guidance
-
-- When it improves clarity, include one concise ASCII architecture or workflow diagram. Use a second only when it shows a genuinely different view.
-- When code is useful, first provide a concise reasoning summary (approach, assumptions, and trade-offs) and pseudocode, then show the code. Do not expose private hidden reasoning.
-
-1. Explain clean architecture and selected patterns using GenAI services.
-2. Show when a pattern reduces coupling and when it becomes unnecessary abstraction.
-3. Connect domain, application, adapter, and infrastructure boundaries.
-4. Guide the practical task as a small design exercise.
-5. End with 5–10 design-focused interview Q&As.
+Compare isolation, density, portability and operational complexity.
 
 ---
 
-## Today’s topics – cover ALL of these
+## 2. Kubernetes architecture
 
-- SOLID principles in practical Python
-- Ports-and-adapters and dependency inversion
-- Factory, Strategy, Adapter, Decorator, and Facade
-- Dependency injection without framework coupling
-- API, application/service, domain, and infrastructure layers
-- Repository and model-provider interfaces
-- Configuration and logging as cross-cutting concerns
-- Testing at architectural boundaries
+Explain:
 
-## Practical task – Create the layered FinSight skeleton
+### Control plane
 
-Design a small layered Python skeleton for the finance analytics service. Include domain models, analytics service interfaces, repository interfaces, configuration, structured logging, and one mocked model-provider call.
+* API server
+* Scheduler
+* Controller manager
+* etcd
 
-### Completion evidence
+### Worker
 
-- Dependency arrows point inward toward domain/application code.
-- The mocked provider can be replaced without changing domain logic.
-- Unit tests run without a database, HTTP server, or real model API.
+* Node
+* Kubelet
+* Container runtime
+* Pod
+
+Include an ASCII architecture.
+
+---
+
+## 3. Kubernetes declarative model
+
+Explain:
+
+Desired state
+→ API
+→ controller
+→ reconciliation
+→ actual state.
+
+Connect this directly to Day 3 network-automation reconciliation.
+
+---
+
+## 4. Kubernetes workloads
+
+Explain:
+
+* Pod
+* ReplicaSet
+* Deployment
+* StatefulSet
+* DaemonSet
+* Job
+* CronJob
+
+Map these to:
+
+* API service
+* Network worker
+* Telemetry collector
+* Scheduled discovery
+* Stateful infrastructure
+
+---
+
+## 5. Kubernetes networking
+
+Explain:
+
+* Pod networking
+* Pod IP
+* CNI concept
+* Service
+* ClusterIP
+* NodePort concept
+* LoadBalancer
+* Ingress
+* Egress
+* DNS/service discovery
+* NetworkPolicy
+
+Connect these concepts to networking fundamentals from Days 1–2.
+
+---
+
+## 6. Kubernetes controllers and operators
+
+Explain:
+
+* Controller pattern
+* Custom Resource Definition
+* Operator
+
+Explain why operators are useful for automating complex lifecycle management.
+
+---
+
+## 7. Configuration and secrets
+
+Explain:
+
+* ConfigMap
+* Kubernetes Secret
+* External secret manager
+* Credential rotation
+* Configuration separation
+
+Explain why infrastructure platforms have high secret-management requirements.
+
+---
+
+## 8. Resource management and scheduling
+
+Explain:
+
+* CPU request
+* CPU limit
+* Memory request
+* Memory limit
+* Scheduling
+* Resource pressure
+* Eviction concept
+* HPA
+
+---
+
+## 9. Health and lifecycle
+
+Explain:
+
+* Startup probe
+* Readiness probe
+* Liveness probe
+* Graceful shutdown
+* Rolling restart
+* Pod disruption
+
+---
+
+## 10. Persistent storage
+
+Explain:
+
+* Stateless workloads
+* Stateful workloads
+* Persistent volume concept
+* Storage class concept
+
+Explain which network-automation components should remain stateless and which require durable state.
+
+---
+
+## 11. High availability
+
+Explain HA for:
+
+* API
+* Workflow engine
+* Workers
+* Queue
+* Database
+* Cache
+* Kubernetes control plane
+
+Cover:
+
+* Redundancy
+* Replication
+* Failure domains
+* Availability zones
+
+---
+
+## 12. Distributed-system foundations
+
+Explain:
+
+* Stateless vs stateful
+* Horizontal scaling
+* Replication
+* Partitioning
+* Strong consistency
+* Eventual consistency
+* Durable messaging
+* Distributed locking
+* Leader election concept
+* Failure isolation
+
+Tie every concept to a practical platform example.
+
+---
+
+## 13. Data-store choices
+
+Explain appropriate use of:
+
+### Relational database
+
+Inventory, workflows, audit metadata.
+
+### NoSQL/key-value
+
+Flexible/high-scale state where appropriate.
+
+### Cache
+
+Frequently accessed/temporary data.
+
+### Object storage
+
+Large immutable files/config snapshots.
+
+### Search/index platform
+
+Fast log/audit/document search.
+
+Explain trade-offs rather than declaring one universally best.
+
+---
+
+## 14. Database engineering
+
+Cover:
+
+* Transactions
+* Isolation concept
+* Indexes
+* Connection pools
+* Optimistic locking
+* Schema migrations
+* Query scalability
+* Pagination
+
+---
+
+## 15. Caching
+
+Explain:
+
+* Cache-aside
+* TTL
+* Invalidation
+* Stale data
+* Cache stampede concept
+
+Explain what should and should not be cached in infrastructure automation.
+
+---
+
+## 16. CI/CD fundamentals
+
+Explain:
+
+Commit
+→ build
+→ test
+→ scan
+→ package
+→ publish artifact
+→ deploy
+→ validate
+→ promote.
+
+Include an ASCII pipeline.
+
+Explain principles common to:
+
+* GitHub Actions
+* Jenkins
+* GitLab CI
+* Tekton
+
+without tool-specific syntax.
+
+---
+
+## 17. Software artifact management
+
+Explain:
+
+* Container registry
+* Artifact immutability
+* Versioning
+* Provenance
+* Environment promotion
+
+---
+
+## 18. Deployment strategies
+
+Explain:
+
+* Rolling
+* Blue/green
+* Canary
+* Progressive delivery
+* Rollback
+
+Clearly distinguish:
+
+Application deployment
+
+from
+
+Network configuration rollout.
+
+---
+
+## 19. Testing architecture
+
+Explain:
+
+* Unit
+* Integration
+* Component
+* Contract
+* End-to-end
+* Infrastructure testing
+* Failure testing
+* Network-device simulators/mocks
+
+Explain what each type proves.
+
+---
+
+## 20. TDD as an engineering discipline
+
+Explain:
+
+* Test first
+* Small design feedback loops
+* Behaviour specification
+* Regression protection
+
+Focus on design value rather than coding exercises.
+
+---
+
+## 21. Infrastructure as Code in platform deployment
+
+Explain how IaC manages:
+
+* Networks
+* Kubernetes clusters
+* Cloud resources
+* Permissions
+* Storage
+* Databases
+
+Connect to versioning and repeatability.
+
+---
+
+## 22. Public, private, hybrid and multi-cloud
+
+Clearly explain:
+
+* Public cloud
+* Private cloud
+* On-premises
+* Hybrid cloud
+* Multi-cloud
+
+Explain why banks commonly operate hybrid environments.
+
+---
+
+## 23. Cloud conceptual mapping
+
+Compare common constructs across AWS/Azure/GCP:
+
+* Virtual network
+* Subnet
+* Compute
+* Kubernetes
+* IAM
+* Object storage
+* Load balancer
+* Monitoring
+
+Focus on portable architecture concepts.
+
+---
+
+## 24. Performance engineering
+
+Explain:
+
+* Latency
+* Throughput
+* CPU-bound
+* I/O-bound
+* Bottleneck
+* Profiling
+* Connection pooling
+* Caching
+* Batching
+* Pagination
+* Lazy loading
+* Rate limiting
+* Backpressure
+
+Use network inventory/automation examples.
+
+---
+
+## 25. Data engineering fundamentals
+
+Explain:
+
+* ETL
+* ELT
+* Batch
+* Streaming
+* Data lake
+* Data warehouse
+* Operational database vs analytical database
+
+Show:
+
+Network devices
+→ telemetry ingestion
+→ raw storage
+→ transform
+→ warehouse
+→ analytics.
+
+Mention conceptually:
+
+* Redshift
+* BigQuery
+* Snowflake
+
+without product-specific detail.
+
+---
+
+## 26. Schema evolution and data quality
+
+Explain:
+
+* Changing event schemas
+* Backward compatibility
+* Validation
+* Missing values
+* Duplicate events
+* Data-quality monitoring
+
+Finish with one complete architecture for a highly available Kubernetes-based global network automation platform.
+
+---
+
 ```
-
----
-
-### ✅ Day 9 – HTTP & API Design Fundamentals
-
-```markdown
-# Day 9 – HTTP & API Design Fundamentals for AI Services
-
-You are an expert **Senior AI Engineer interview coach**.
-
-Today is **Day 9** of my 42-day GenAI / LLM interview preparation plan.
-
-## Your task
-
-### Response guidance
-
-- When it improves clarity, include one concise ASCII architecture or workflow diagram. Use a second only when it shows a genuinely different view.
-- When code is useful, first provide a concise reasoning summary (approach, assumptions, and trade-offs) and pseudocode, then show the code. Do not expose private hidden reasoning.
-
-1. Explain HTTP and REST design for analytics, prediction, and LLM services.
-2. Cover contracts, errors, versioning, pagination, and idempotency.
-3. Discuss synchronous jobs versus long-running asynchronous operations.
-4. Guide the practical API-design task.
-5. End with 5–10 interview Q&As.
-
----
-
-## Today’s topics – cover ALL of these
-
-- HTTP methods, headers, bodies, and status codes
-- Path, query, and body parameters
-- Resource modelling and clean URLs
-- Idempotency keys and safe retries
-- Offset vs cursor pagination, filtering, and sorting
-- JSON Schema and OpenAPI concepts
-- Error-envelope design
-- API versioning, health, readiness, and long-running jobs
-- REST, SSE, WebSocket, and gRPC use-case boundaries
-
-## Practical task – Specify the FinSight API contract
-
-Design endpoint contracts for transaction ingestion, analytics summaries, document ingestion, chat, job status, health, and readiness. Include request/response examples, error envelopes, pagination, and idempotency behaviour.
-
-### Completion evidence
-
-- Status codes and retry behaviour are explicit.
-- Tenant identity is not accepted blindly from an untrusted body field.
-- The contract distinguishes immediate responses from background jobs.
 ```
+# DAY5 — SRE, Observability, Security, Risk, Controls and Resilience
+
+Act as a senior SRE, security architect, technology-risk architect and platform-reliability engineer.
+
+Today is Day 5.
+
+## Goal
+
+Understand how critical infrastructure platforms are made reliable, observable, secure, recoverable and governable.
 
 ---
 
-### ✅ Day 10 – FastAPI Basics: Routing, Validation & OpenAPI
+## 1. Reliability vocabulary
 
-```markdown
-# Day 10 – FastAPI Basics: Routing, Validation & OpenAPI
+Clearly differentiate:
 
-You are an expert **Senior AI Engineer interview coach** familiar with Flask and FastAPI.
+* Availability
+* Reliability
+* Resilience
+* Durability
+* Fault tolerance
+* Recoverability
 
-Today is **Day 10** of my 42-day GenAI / LLM interview preparation plan.
-
-## Your task
-
-### Response guidance
-
-- When it improves clarity, include one concise ASCII architecture or workflow diagram. Use a second only when it shows a genuinely different view.
-- When code is useful, first provide a concise reasoning summary (approach, assumptions, and trade-offs) and pseudocode, then show the code. Do not expose private hidden reasoning.
-
-1. Compare Flask and FastAPI and explain the trade-offs relevant to AI services.
-2. Teach routing, dependency injection, validation, and response modelling.
-3. Explain how OpenAPI documentation is produced and where it can drift.
-4. Guide the practical implementation task.
-5. End with 5–10 interview Q&As.
+Use practical examples.
 
 ---
 
-## Today’s topics – cover ALL of these
+## 2. Failure domains and blast radius
 
-- Application setup and router organization
-- Path and query parameters
-- JSON request bodies and responses
-- Pydantic request/response models
-- Dependency injection
-- OpenAPI and Swagger UI
-- HTTP error handling
-- Test clients and basic endpoint tests
+Explain failures at:
 
-## Practical task – Implement the first FinSight API
+* Process
+* Pod
+* Node
+* Cluster
+* Database
+* Queue
+* Network
+* Device
+* Data centre
+* Cloud region
+* External dependency
 
-Implement `POST /api/v1/transactions`, `GET /api/v1/analytics/summary`, and `/health` using the existing application service and an in-memory repository adapter.
+Explain blast radius and failure containment.
 
-### Completion evidence
+---
 
-- OpenAPI shows accurate request and response schemas.
-- Endpoint tests cover success, validation failure, and missing data.
-- Route handlers contain no finance-calculation business logic.
+## 3. SRE fundamentals
+
+Explain:
+
+* SLI
+* SLO
+* SLA
+* Error budget
+
+Use simple numerical examples where useful.
+
+Explain why aiming for 100% availability can create poor engineering decisions.
+
+---
+
+## 4. Golden signals and service health
+
+Explain:
+
+* Latency
+* Traffic
+* Errors
+* Saturation
+
+Also introduce RED and USE approaches conceptually.
+
+Explain when each mental model is useful.
+
+---
+
+## 5. Monitoring vs observability
+
+Clearly explain the difference.
+
+Then teach:
+
+* Logs
+* Metrics
+* Traces
+
+Include an ASCII telemetry flow.
+
+---
+
+## 6. Structured logging
+
+Explain:
+
+* Structured fields
+* Severity
+* Timestamp
+* Correlation ID
+* Trace ID
+* Job/workflow ID
+* Device ID
+* Context propagation
+* Redaction
+
+---
+
+## 7. Metrics
+
+Explain:
+
+* Counter
+* Gauge
+* Histogram
+* Rate
+* Percentile
+
+Use metrics such as:
+
+* Request rate
+* API latency
+* Queue depth
+* Worker utilisation
+* Automation success rate
+* Device failure rate
+* Rollback rate
+* Drift count
+
+---
+
+## 8. Distributed tracing
+
+Explain:
+
+* Trace
+* Span
+* Parent/child span
+* Trace context
+
+Show a change request passing through:
+
+API
+→ workflow
+→ queue
+→ worker
+→ device.
+
+---
+
+## 9. Observability ecosystem
+
+Explain conceptual roles of:
+
+* Prometheus
+* Grafana
+* Elasticsearch
+* Logstash
+* Kibana
+* OpenTelemetry
+
+Focus on integration rather than installation.
+
+---
+
+## 10. Alerting
+
+Explain:
+
+* Symptom-based alerts
+* Thresholds
+* Error-rate alerts
+* Saturation alerts
+* Deduplication
+* Alert severity
+* Alert fatigue
+* Actionability
+
+---
+
+## 11. Incident lifecycle
+
+Explain:
+
+Detect
+→ triage
+→ contain
+→ mitigate
+→ recover
+→ analyse
+→ improve.
+
+Cover:
+
+* MTTR
+* Root-cause analysis
+* Post-incident review
+* Corrective actions
+
+---
+
+## 12. Resilience patterns
+
+Explain:
+
+* Timeout
+* Retry
+* Exponential backoff
+* Jitter
+* Circuit breaker
+* Bulkhead
+* Rate limiter
+* Backpressure
+* Graceful degradation
+
+Explain how retries can amplify an outage.
+
+---
+
+## 13. Capacity and saturation
+
+Explain:
+
+* Resource headroom
+* Queue growth
+* Connection limits
+* Worker saturation
+* Database saturation
+
+Connect capacity problems to reliability.
+
+---
+
+## 14. Failure testing
+
+Explain conceptually:
+
+* Fault injection
+* Chaos engineering
+* Dependency failure simulation
+* Recovery validation
+
+Explain why controlled failure testing improves confidence.
+
+---
+
+## 15. Security principles
+
+Explain:
+
+* Confidentiality
+* Integrity
+* Availability
+* Authentication
+* Authorization
+* Audit/accountability
+* Least privilege
+* Defence in depth
+* Zero trust
+
+---
+
+## 16. Threat modelling
+
+Explain:
+
+* Asset
+* Threat
+* Attack surface
+* Trust boundary
+* Threat actor
+* Mitigation
+
+Use a network-automation platform example.
+
+Introduce STRIDE only at a high level if useful.
+
+---
+
+## 17. OAuth2, OIDC and tokens
+
+Explain:
+
+OAuth2:
+Authorisation delegation.
+
+OIDC:
+Authentication/identity layer.
+
+Cover:
+
+* Access token
+* Refresh token
+* Scope
+* JWT concept
+
+Avoid frontend implementation detail.
+
+---
+
+## 18. PKI, certificates and mTLS
+
+Explain:
+
+* Public/private key concept
+* Certificate
+* Certificate authority
+* Trust chain
+* TLS
+* Mutual TLS
+* Certificate rotation
+
+Connect this to service-to-service communication and network devices.
+
+---
+
+## 19. Identity for machines
+
+Explain:
+
+* Service accounts
+* Workload identity
+* Short-lived credentials
+* API keys
+* Certificates
+
+Explain why human credentials should not be embedded in automation.
+
+---
+
+## 20. Secure coding
+
+Explain:
+
+* Input validation
+* SQL injection
+* Command injection
+* SSRF
+* Path traversal
+* XSS concept
+* CSRF concept
+* Secrets leakage
+* Dependency vulnerabilities
+
+Prioritise backend/infrastructure implications.
+
+---
+
+## 21. Kubernetes security
+
+Explain:
+
+* RBAC
+* Service accounts
+* NetworkPolicy
+* Pod security
+* Secrets
+* Admission control
+* Image security
+* Least privilege
+
+---
+
+## 22. Software supply-chain security
+
+Explain:
+
+* Dependency scanning
+* Image scanning
+* SAST
+* DAST concept
+* SBOM
+* Artifact signing
+* Provenance
+* Trusted registries
+
+Explain why CI/CD itself is a security boundary.
+
+---
+
+## 23. Vulnerability management
+
+Explain lifecycle:
+
+Discover
+→ assess severity
+→ prioritise
+→ remediate
+→ verify
+→ track exceptions.
+
+---
+
+## 24. Technology and operational risk
+
+Explain:
+
+Technology risk = possibility that technology failure, misuse, vulnerability or uncontrolled change harms the organisation.
+
+Cover:
+
+* Availability risk
+* Cybersecurity risk
+* Data risk
+* Change risk
+* Operational risk
+* Third-party risk
+
+---
+
+## 25. Risk assessment
+
+Explain conceptually:
+
+* Likelihood
+* Impact
+* Inherent risk
+* Mitigation
+* Residual risk
+
+Avoid excessive formal risk mathematics.
+
+---
+
+## 26. Controls
+
+Explain:
+
+### Preventive
+
+Stop undesirable events.
+
+### Detective
+
+Discover undesirable events.
+
+### Corrective
+
+Restore/recover after events.
+
+Use network automation examples.
+
+---
+
+## 27. Control design and effectiveness
+
+Explain the difference between:
+
+Having a control
+
+and
+
+Having an effective control.
+
+Cover:
+
+* Ownership
+* Evidence
+* Frequency
+* Automation
+* Exceptions
+
+---
+
+## 28. Change governance
+
+Explain:
+
+* Change request
+* Peer review
+* Risk classification
+* Approval
+* Segregation of duties
+* Maintenance window
+* Emergency change concept
+* Validation
+* Rollback
+* Evidence
+
+Explain how strong controls can coexist with fast engineering.
+
+---
+
+## 29. Auditability
+
+Explain why critical actions require:
+
+* Identity
+* Timestamp
+* Reason
+* Approval
+* Old state
+* New state
+* Execution outcome
+* Evidence
+
+---
+
+## 30. Data protection
+
+Explain:
+
+* Data classification
+* Encryption in transit
+* Encryption at rest
+* Key management
+* Secret management
+* Retention
+* Redaction
+
+---
+
+## 31. Business continuity and disaster recovery
+
+Explain:
+
+* High availability vs disaster recovery
+* Business continuity
+* Backup
+* Restore
+* RTO
+* RPO
+* Regional failure
+* Recovery procedures
+* Recovery testing
+
+---
+
+## 32. Integrated safe-change architecture
+
+Build one ASCII workflow:
+
+Request
+→ authenticate
+→ authorise
+→ validate
+→ policy/control check
+→ approve if required
+→ execute progressively
+→ observe
+→ verify
+→ audit
+→ rollback/recover when necessary.
+
+Finish by connecting reliability, security, observability and controls into one engineering model rather than treating them as separate disciplines.
+
+---
+
 ```
-
----
-
-### ✅ Day 11 – Production API: Auth, Middleware, Streaming & Failure Handling
-
-```markdown
-# Day 11 – Production API: Auth, Middleware, Streaming & Failure Handling
-
-You are an expert **Senior AI Engineer interview coach**.
-
-Today is **Day 11** of my 42-day GenAI / LLM interview preparation plan.
-
-## Your task
-
-### Response guidance
-
-- When it improves clarity, include one concise ASCII architecture or workflow diagram. Use a second only when it shows a genuinely different view.
-- When code is useful, first provide a concise reasoning summary (approach, assumptions, and trade-offs) and pseudocode, then show the code. Do not expose private hidden reasoning.
-
-1. Explain production API concerns for multi-tenant GenAI services.
-2. Distinguish authentication, authorization, API keys, JWT, OAuth2, and service identity.
-3. Cover middleware, async endpoints, streaming, rate limits, and resilient provider calls.
-4. Guide the practical hardening task.
-5. End with 5–10 senior interview Q&As.
-
----
-
-## Today’s topics – cover ALL of these
-
-- AuthN vs AuthZ
-- JWT, API-key, and OAuth2 concepts
-- Request IDs and trace propagation
-- Latency metrics and structured access logs
-- Central exception handlers and stable error codes
-- Async endpoint correctness
-- SSE and WebSocket trade-offs
-- Timeouts, retries, circuit breakers, and rate limiting
-- Background jobs and request lifecycle boundaries
-
-## Practical task – Harden and stream the API
-
-Add a test authentication dependency, tenant-aware authorization, request-ID middleware, a standard error envelope, and an SSE endpoint that streams a mocked finance insight response.
-
-### Completion evidence
-
-- Cross-tenant requests are rejected by tests.
-- Every error response includes a trace ID but no stack trace or secret.
-- Client disconnect and provider-timeout behaviour are tested.
 ```
+# DAY6 — Lead/VP Engineering: Architecture, Strategy, Governance and Technical Leadership
+
+Act as an experienced VP Engineering, Principal/Staff Engineer and enterprise platform architect.
+
+Today is Day 6.
+
+## Goal
+
+Teach the engineering thinking needed to operate effectively at Lead/VP level: defining problems, making architectural decisions, setting technical direction, managing risk, aligning teams and owning platforms over many years.
+
+This is a technical-leadership lesson, not behavioural interview preparation.
 
 ---
 
-### ✅ Day 12 – SQL & Relational Data Modelling
+## 1. Engineering scope progression
 
-```markdown
-# Day 12 – SQL & Relational Data Modelling for GenAI Applications
+Explain progression from:
 
-You are an expert **Senior AI Engineer interview coach** with backend and data experience.
+Code
+→ component
+→ service
+→ system
+→ platform
+→ organisation
+→ enterprise.
 
-Today is **Day 12** of my 42-day GenAI / LLM interview preparation plan.
-
-## Your task
-
-### Response guidance
-
-- When it improves clarity, include one concise ASCII architecture or workflow diagram. Use a second only when it shows a genuinely different view.
-- When code is useful, first provide a concise reasoning summary (approach, assumptions, and trade-offs) and pseudocode, then show the code. Do not expose private hidden reasoning.
-
-1. Explain relational modelling and SQL before introducing ORM abstractions.
-2. Connect schema design to multi-tenant finance and GenAI products.
-3. Cover correctness, performance, transactions, and migration concerns.
-4. Guide the practical schema-and-query task.
-5. End with 5–10 SQL interview Q&As.
+Explain how responsibility changes as scope increases.
 
 ---
 
-## Today’s topics – cover ALL of these
+## 2. Lead/Staff/VP technical thinking
 
-- Tables, primary keys, foreign keys, and constraints
-- Normalization and intentional denormalization
-- `SELECT`, `INSERT`, `UPDATE`, and `DELETE`
-- `WHERE`, `GROUP BY`, `HAVING`, and `ORDER BY`
-- Inner and outer joins
-- CTEs and window functions
-- Indexes and `EXPLAIN` concepts
-- ACID, isolation levels, locks, and deadlocks
-- Schema migrations and tenant-isolation models
+Contrast:
 
-## Practical task – Design and query the FinSight schema
+"How should I implement this?"
 
-Design SQL tables for organizations, users, accounts, transactions, documents, conversations, and messages. Write queries for monthly spend by category, a rolling account total, and the most active tenants.
+with:
 
-### Completion evidence
-
-- Constraints prevent obvious orphan and duplicate records.
-- Each proposed index is justified by a query pattern.
-- The design states how tenant scope is enforced for every relevant table.
-```
+* What problem should we solve?
+* Who are the users?
+* What constraints exist?
+* Which risks matter?
+* Which architecture fits?
+* Who will operate it?
+* How will it evolve?
+* What does it cost?
 
 ---
 
-### ✅ Day 13 – SQLAlchemy/SQLModel, Transactions & Database Testing
+## 3. Problem framing
 
-```markdown
-# Day 13 – SQLAlchemy/SQLModel, Transactions & Database Testing
+Teach how to identify:
 
-You are an expert **Senior AI Engineer interview coach**.
+* Business problem
+* User/operator problem
+* Technical problem
+* Constraints
+* Dependencies
+* Assumptions
+* Unknowns
 
-Today is **Day 13** of my 42-day GenAI / LLM interview preparation plan.
-
-## Your task
-
-### Response guidance
-
-- When it improves clarity, include one concise ASCII architecture or workflow diagram. Use a second only when it shows a genuinely different view.
-- When code is useful, first provide a concise reasoning summary (approach, assumptions, and trade-offs) and pseudocode, then show the code. Do not expose private hidden reasoning.
-
-1. Explain ORM concepts on top of the relational foundations from Day 12.
-2. Compare ORM querying with raw SQL and show where each is appropriate.
-3. Cover sessions, transactions, loading strategies, migrations, and testing.
-4. Guide the practical repository-adapter task.
-5. End with 5–10 interview Q&As.
+Explain why weak problem framing produces technically elegant but useless systems.
 
 ---
 
-## Today’s topics – cover ALL of these
+## 4. Requirements
 
-- Declarative models, columns, constraints, and relationships
-- Session lifecycle and connection pooling
-- CRUD and unit-of-work patterns
-- Commit, rollback, and transaction boundaries
-- Lazy/eager loading and the N+1 problem
-- Migrations with Alembic at a practical level
-- Repository adapters
-- Production-like test databases and transaction-isolated tests
-- Differences between SQLite and PostgreSQL behaviour
+Explain:
 
-## Practical task – Implement the SQL repository adapter
+### Functional requirements
 
-Create SQLAlchemy models and a repository adapter for accounts and transactions. Add one migration and integration tests that replace the in-memory repository used by the FastAPI service.
+What the system does.
 
-### Completion evidence
+### Non-functional requirements
 
-- Failed writes roll back completely.
-- Tests detect a duplicate transaction constraint.
-- Application and domain layers do not import SQLAlchemy.
-```
+* Availability
+* Scalability
+* Security
+* Performance
+* Reliability
+* Maintainability
+* Operability
+* Observability
+* Auditability
+* Cost
+* Recoverability
 
----
-
-### ✅ Day 14 – Week 2 Revision & Backend Integration Checkpoint
-
-```markdown
-# Day 14 – Week 2 Revision & Backend Integration Checkpoint
-
-You are an expert **Senior AI Engineer interview coach and reviewer**.
-
-Today is **Day 14** of my 42-day GenAI / LLM interview preparation plan.
-
-## Your task
-
-### Response guidance
-
-- When it improves clarity, include one concise ASCII architecture or workflow diagram. Use a second only when it shows a genuinely different view.
-- When code is useful, first provide a concise reasoning summary (approach, assumptions, and trade-offs) and pseudocode, then show the code. Do not expose private hidden reasoning.
-
-1. Test my recall of Days 8–13 before showing explanations.
-2. Run a focused backend architecture, HTTP, FastAPI, SQL, and ORM review.
-3. Include one debugging scenario and one short system-design prompt.
-4. Guide the integrated practical checkpoint.
-5. End with a scored Week 2 assessment and answer rubric.
+Explain how NFRs drive architecture.
 
 ---
 
-## Revision scope – cover ALL of these
+## 5. Technical strategy
 
-- Layer boundaries and dependency inversion
-- HTTP contracts and idempotency
-- FastAPI validation and dependency injection
-- Authentication vs authorization
-- Async streaming and error handling
-- Relational modelling, SQL, indexes, and transactions
-- ORM sessions, loading, migrations, and testing
+Explain:
 
-## Practical task – Deliver a backend vertical slice
+* Current state
+* Desired state
+* Guiding principles
+* Capability gaps
+* Constraints
+* Architectural direction
+* Migration path
+* Investment priorities
 
-Connect the FastAPI transaction endpoints to the SQL repository, add request tracing and tenant authorization, and produce an analytics summary through the application-service layer.
-
-### Completion evidence
-
-- Unit and integration tests pass from one command.
-- A request can be traced through API, service, and repository logs.
-- Submit a one-page architecture explanation and a Week 2 gap log.
-```
+Explain why technical strategy is not simply a technology list.
 
 ---
 
-### ✅ Day 15 – Statistics & Probability Fundamentals for AI
+## 6. Strategy vs architecture vs roadmap
 
-```markdown
-# Day 15 – Statistics & Probability Fundamentals for AI
+Clearly differentiate:
 
-You are an expert **Senior AI Engineer interview coach** with strong statistics knowledge.
+* Technical strategy
+* Architecture
+* Roadmap
+* Project plan
 
-Today is **Day 15** of my 42-day GenAI / LLM interview preparation plan.
-
-## Your task
-
-### Response guidance
-
-- When it improves clarity, include one concise ASCII architecture or workflow diagram. Use a second only when it shows a genuinely different view.
-- When code is useful, first provide a concise reasoning summary (approach, assumptions, and trade-offs) and pseudocode, then show the code. Do not expose private hidden reasoning.
-
-1. Teach the statistical foundations needed for ML experiments, model evaluation, analytics, and A/B tests.
-2. Explain both intuition and formulas using small finance examples.
-3. Distinguish statistical significance, practical significance, correlation, and causation.
-4. Guide the practical statistics task and interpretation of its results.
-5. End with 5–10 calculation and interview-style Q&As.
-
-For every formula, define its symbols and assumptions rather than asking me to memorize it blindly.
+Explain how they connect.
 
 ---
 
-## Today’s topics – cover ALL of these
+## 7. Architecture decision-making
 
-- Population vs sample and parameters vs statistics
-- Mean, median, mode, weighted mean, and when each is misleading
-- Range, variance, standard deviation, percentiles, quartiles, and IQR
-- Outliers, skewness, robust statistics, and missing-data awareness
-- Random variables, expectation, variance, and conditional probability
-- Bernoulli, binomial, normal, Poisson, and exponential distributions
-- Covariance, correlation, spurious correlation, and correlation vs causation
-- Sampling distributions, law of large numbers, and Central Limit Theorem
-- Standard error and confidence intervals
-- Null/alternative hypotheses, test statistics, p-values, and significance level
-- Type I/Type II errors, statistical power, effect size, and sample-size intuition
-- Multiple-testing risk and statistical vs business significance
-- Likelihood, maximum likelihood, log-likelihood, and Bayes’ rule intuition
-- A/B testing assumptions and common experiment mistakes
+Teach a structured way to evaluate alternatives using:
 
-## Practical task – Analyse transaction behaviour statistically
-
-Using a synthetic FinSight transaction dataset, calculate descriptive statistics and robust outlier thresholds, visualize or summarize the distribution, estimate a confidence interval for average weekly spend, and evaluate a simulated A/B test comparing two alert strategies.
-
-### Completion evidence
-
-- Mean and median are compared on a skewed distribution.
-- Confidence-interval and hypothesis-test assumptions are stated.
-- The A/B conclusion reports p-value, effect size, uncertainty, and business relevance.
-```
+* Simplicity
+* Reliability
+* Scalability
+* Security
+* Performance
+* Operability
+* Team capability
+* Cost
+* Migration complexity
+* Vendor dependency
+* Reversibility
 
 ---
 
-### ✅ Day 16 – Machine Learning Fundamentals & Classical Models
+## 8. Architectural trade-offs
 
-```markdown
-# Day 16 – Machine Learning Fundamentals & Classical Models
+Use examples:
 
-You are an expert **Senior AI Engineer interview coach**.
+* Sync vs async
+* SQL vs NoSQL
+* Monolith vs microservices
+* Build vs buy
+* Managed vs self-managed
+* Strong vs eventual consistency
+* Centralised vs distributed control
+* Fast change vs controlled change
 
-Today is **Day 16** of my 42-day GenAI / LLM interview preparation plan.
-
-## Your task
-
-### Response guidance
-
-- When it improves clarity, include one concise ASCII architecture or workflow diagram. Use a second only when it shows a genuinely different view.
-- When code is useful, first provide a concise reasoning summary (approach, assumptions, and trade-offs) and pseudocode, then show the code. Do not expose private hidden reasoning.
-
-1. Explain the complete classical ML workflow from problem framing through monitoring.
-2. Connect algorithms to assumptions, data shapes, decision boundaries, and business costs.
-3. Emphasize leakage prevention, evaluation design, threshold selection, and interpretability.
-4. Guide the practical modelling task and comparison with a baseline.
-5. End with 5–10 interview Q&As.
+Explain why there is rarely a universally correct architecture.
 
 ---
 
-## Today’s topics – cover ALL of these
+## 9. Architecture principles
 
-- Supervised, unsupervised, semi-supervised, and reinforcement-learning framing
-- Classification, regression, ranking, clustering, and anomaly-detection use cases
-- Features, labels, training examples, inference, and baselines
-- Missing values, categorical encoding, scaling, normalization, and feature engineering
-- Random, stratified, grouped, and time-based train/validation/test splits
-- Cross-validation and leakage-safe preprocessing pipelines
-- Data leakage, class imbalance, overfitting, underfitting, and bias–variance trade-off
-- L1/L2 regularization and class weighting
-- Linear/logistic regression, k-nearest neighbours, SVM intuition, decision trees, random forests, and gradient boosting
-- K-means, PCA, and dimensionality-reduction intuition
-- Accuracy, precision, recall, specificity, F1, ROC-AUC, PR-AUC, log loss, MSE, MAE, and R-squared
-- Confusion matrices, probability calibration, and business-driven threshold selection
-- Hyperparameter tuning and nested-evaluation awareness
-- Feature importance, interpretable models, SHAP concepts, drift, and monitoring
-- Classical NLP features and transfer-learning connections to GenAI
+Explain:
 
-## Practical task – Build a leakage-safe transaction-risk model
-
-Using a small synthetic or provided dataset, create a preprocessing-and-model pipeline for transaction-risk classification. Compare a naive baseline, logistic regression, and a tree-based model using cross-validation, then select and calibrate a decision threshold based on false-positive and false-negative costs.
-
-### Completion evidence
-
-- Preprocessing is fitted only inside training folds.
-- The selected metric and threshold are justified by the finance scenario.
-- Results include feature interpretation, limitations, and reproducibility controls.
-```
+* High cohesion
+* Loose coupling
+* Encapsulation
+* Clear ownership
+* Stable interfaces
+* Separation of concerns
+* Failure isolation
+* Idempotency
+* Automation by default
+* Security by design
+* Observability by design
 
 ---
 
-### ✅ Day 17 – Deep Learning & Transformer Foundations
+## 10. Domain and service boundaries
 
-```markdown
-# Day 17 – Deep Learning & Transformer Foundations
+Explain:
 
-You are an expert **Senior AI Engineer interview coach**.
+* Bounded responsibility
+* API ownership
+* Data ownership
+* Dependency direction
+* Avoiding shared-database coupling
 
-Today is **Day 17** of my 42-day GenAI / LLM interview preparation plan.
-
-## Your task
-
-### Response guidance
-
-- When it improves clarity, include one concise ASCII architecture or workflow diagram. Use a second only when it shows a genuinely different view.
-- When code is useful, first provide a concise reasoning summary (approach, assumptions, and trade-offs) and pseudocode, then show the code. Do not expose private hidden reasoning.
-
-1. Explain neural-network training from tensors and neurons through transformers.
-2. Use correct shapes and connect each architectural choice to optimization behaviour.
-3. Cover both core deep-learning fundamentals and the transformer concepts needed for LLMs.
-4. Guide the practical deep-learning inspection task.
-5. End with 5–10 interview Q&As.
+Use a platform example.
 
 ---
 
-## Today’s topics – cover ALL of these
+## 11. Evolutionary architecture
 
-- Tensors, dimensions, broadcasting, parameters, and computation graphs
-- Neurons, linear layers, multilayer perceptrons, and universal approximation intuition
-- ReLU, sigmoid, tanh, softmax, and activation trade-offs
-- Forward pass, loss functions, gradients, chain rule, backpropagation, and autograd
-- Batch size, epochs, learning rate, SGD, momentum, Adam, and learning-rate schedules
-- Parameter initialization and vanishing/exploding gradients
-- Batch/layer normalization, dropout, weight decay, and early stopping
-- Training vs evaluation mode and reproducibility limits
-- CNNs, RNN/LSTM limitations, and transfer learning at a high level
-- Tokens, embeddings, and vector representations
-- Query, key, value, scaled dot-product attention, and multi-head attention
-- Positional information, padding masks, and causal masks
-- Encoder-only, decoder-only, and encoder-decoder architectures
-- Transformer parallelism, long-range dependencies, and quadratic attention cost
+Explain:
 
-## Practical task – Train and inspect a tiny neural system
-
-Build a small PyTorch MLP for transaction-category classification and compare it with the Day 16 baseline. In the same inspection notebook, calculate scaled dot-product attention for a tiny sequence of finance tokens, print tensor shapes, and apply a causal mask.
-
-### Completion evidence
-
-- Training and validation losses are plotted or tabulated and interpreted.
-- `train()`/`eval()` behaviour, random seeds, and overfitting are addressed.
-- Attention shapes are correct and masked positions receive no probability.
-```
+* Incremental evolution
+* Backward compatibility
+* Versioning
+* Strangler pattern
+* Migration
+* Deprecation
+* Avoiding big-bang rewrites
 
 ---
 
-### ✅ Day 18 – LLM Fundamentals: Tokens, Training & Inference Controls
+## 12. Architecture runway
 
-```markdown
-# Day 18 – LLM Fundamentals: Tokens, Training & Inference Controls
-
-You are an expert **Senior AI Engineer interview coach**.
-
-Today is **Day 18** of my 42-day GenAI / LLM interview preparation plan.
-
-## Your task
-
-### Response guidance
-
-- When it improves clarity, include one concise ASCII architecture or workflow diagram. Use a second only when it shows a genuinely different view.
-- When code is useful, first provide a concise reasoning summary (approach, assumptions, and trade-offs) and pseudocode, then show the code. Do not expose private hidden reasoning.
-
-1. Explain LLM tokenization, training stages, context windows, and generation controls.
-2. Connect model behaviour to latency, cost, determinism, and product risk.
-3. Compare model families by architecture and deployment properties, not brand memorization.
-4. Guide the practical token-budget task.
-5. End with 5–10 interview Q&As.
-
-Use dated or versioned authoritative sources when describing current model capabilities or pricing.
+Explain the concept of creating enough foundational capability for future delivery without over-engineering everything upfront.
 
 ---
 
-## Today’s topics – cover ALL of these
+## 13. Platform engineering
 
-- BPE, SentencePiece, and tokens vs words/characters
-- Pre-training, supervised fine-tuning, instruction tuning, RLHF, and DPO
-- Temperature, top-k, top-p, repetition controls, stop conditions, and max tokens
-- Context windows, truncation, and lost-in-the-middle behaviour
-- Deterministic testing and seed limitations
-- Input/output token cost and latency trade-offs
-- Open-weight vs hosted models
-- Model-selection criteria and version pinning
+Explain how a platform differs from a normal application.
 
-## Practical task – Build an LLM budget and configuration layer
+Cover:
 
-Create typed model-configuration objects and a calculator that estimates prompt tokens, maximum output, cost, and context overflow for FinSight requests. Define separate deterministic extraction and conversational insight profiles.
+* Internal customers
+* Self-service
+* APIs
+* Golden paths
+* Reusable capabilities
+* Standardisation
+* Guardrails
+* Developer/operator experience
+* Product mindset
 
-### Completion evidence
-
-- Context overflow is rejected before a provider call.
-- Pricing is externalized and date/version labelled rather than hard-coded invisibly.
-- Tests cover short prompts, overflow, and zero-output cases.
-```
+Connect this to network automation.
 
 ---
 
-### ✅ Day 19 – NoSQL, Redis, Embeddings & Vector Databases
+## 14. Build vs buy
 
-```markdown
-# Day 19 – NoSQL, Redis, Embeddings & Vector Databases
+Evaluate:
 
-You are an expert **Senior AI Engineer interview coach**.
-
-Today is **Day 19** of my 42-day GenAI / LLM interview preparation plan.
-
-## Your task
-
-### Response guidance
-
-- When it improves clarity, include one concise ASCII architecture or workflow diagram. Use a second only when it shows a genuinely different view.
-- When code is useful, first provide a concise reasoning summary (approach, assumptions, and trade-offs) and pseudocode, then show the code. Do not expose private hidden reasoning.
-
-1. Compare relational, document, key-value, and vector stores by access pattern.
-2. Explain embeddings and approximate-nearest-neighbour search after the ML/transformer prerequisites.
-3. Cover caching correctness, invalidation, tenant filters, and index trade-offs.
-4. Guide the practical retrieval-and-cache task.
-5. End with 5–10 interview Q&As.
+* Strategic differentiation
+* Time to market
+* Total cost
+* Vendor maturity
+* Integration
+* Compliance
+* Operational ownership
+* Lock-in
+* Exit strategy
 
 ---
 
-## Today’s topics – cover ALL of these
+## 15. Technical debt
 
-- Document databases, flexible schemas, and schema governance
-- Redis data types, TTLs, locks, counters, and rate limiting
-- Cache-aside/read-through ideas and invalidation
-- Semantic vs exact-match retrieval
-- Cosine similarity, dot product, Euclidean distance, and vector normalization
-- Flat, HNSW, and IVF indexes at a practical level
-- Vector records, metadata, namespaces, and tenant constraints
-- Embedding-model versioning and re-indexing implications
-- FAISS, Qdrant, Pinecone, Chroma, and similar tools as examples
+Explain:
 
-## Practical task – Add cached semantic policy lookup
+* Intentional debt
+* Accidental debt
+* Debt interest
+* Delivery impact
+* Risk
+* Refactoring
+* Modernisation
 
-Create a small local vector index over finance-policy snippets using deterministic test embeddings. Retrieve by similarity with mandatory tenant metadata, then place a cache adapter in front of retrieval with a TTL and model/version-aware cache key.
-
-### Completion evidence
-
-- Tests prove tenant filters cannot be omitted.
-- Changing the embedding-model version invalidates the relevant cache key.
-- Similarity choice and normalization assumptions are documented.
-```
+Explain when accepting technical debt can be rational.
 
 ---
 
-### ✅ Day 20 – ETL, API/Web Ingestion, Data Quality & Governance
+## 16. Architecture governance
 
-```markdown
-# Day 20 – ETL, API/Web Ingestion, Data Quality & Governance
+Explain healthy governance using:
 
-You are an expert **Senior AI Engineer interview coach**.
+* Principles
+* Standards
+* Architecture reviews
+* Guardrails
+* Exceptions
+* Ownership
+* Decision history
 
-Today is **Day 20** of my 42-day GenAI / LLM interview preparation plan.
-
-## Your task
-
-### Response guidance
-
-- When it improves clarity, include one concise ASCII architecture or workflow diagram. Use a second only when it shows a genuinely different view.
-- When code is useful, first provide a concise reasoning summary (approach, assumptions, and trade-offs) and pseudocode, then show the code. Do not expose private hidden reasoning.
-
-1. Explain production ingestion from files, storage, databases, APIs, and permitted web pages.
-2. Trace data through extraction, parsing, cleaning, enrichment, storage, and indexing.
-3. Cover reliability, incremental change, data quality, PII, governance, and recovery.
-4. Guide one integrated multi-source ingestion task.
-5. End with 5–10 interview Q&As.
+Explain how governance differs from bureaucracy.
 
 ---
 
-## Today’s topics – cover ALL of these
+## 17. Architecture Decision Records
 
-- ETL vs ELT and batch vs streaming
-- PDF, text, CSV, JSON, Markdown, object storage, and database exports
-- Offset, page-token, and cursor pagination
-- Rate-limit headers, timeouts, backoff, jitter, and retry safety
-- Incremental synchronization, HTTP conditional requests, and durable checkpoints
-- HTML parsing, dynamic-page limitations, `robots.txt`, terms, copyright, and authorization
-- Parsing, encoding, language detection, boilerplate removal, and schema validation
-- Metadata enrichment, source identity, checksums, and duplicate detection
-- Idempotent upserts, document versions, tombstones/deletion, and re-indexing
-- PII detection, masking, retention, data minimization, ownership, and access policy
-- Data lineage, manifests, quality metrics, dead-letter handling, and reprocessing
-- Pipeline observability and failure recovery
+Explain ADR structure:
 
-## Practical task – Build a governed multi-source ingestion pipeline
+* Context
+* Decision
+* Alternatives
+* Consequences
 
-Ingest local finance-policy files, transaction CSV fixtures, a mocked paginated finance API, and an authorized saved HTML fixture. Normalize them into one schema with tenant/source/version/checksum metadata, durable checkpoints, PII masking, duplicate protection, and explicit update/deletion actions.
-
-### Completion evidence
-
-- Re-running unchanged sources creates no duplicate records.
-- A simulated rate limit or crash resumes from the saved checkpoint.
-- Updating, deleting, and malformed-source cases are tested and traceable.
-```
+Explain why long-lived systems benefit from decision history.
 
 ---
 
-### ✅ Day 21 – Week 3 Revision & Statistics/Model/Data Checkpoint
+## 18. Standards and golden paths
 
-```markdown
-# Day 21 – Week 3 Revision & Statistics/Model/Data Checkpoint
+Explain standards around:
 
-You are an expert **Senior AI Engineer interview coach and reviewer**.
+* APIs
+* Logging
+* Security
+* Deployment
+* Observability
+* Testing
+* Reliability
 
-Today is **Day 21** of my 42-day GenAI / LLM interview preparation plan.
-
-## Your task
-
-### Response guidance
-
-- When it improves clarity, include one concise ASCII architecture or workflow diagram. Use a second only when it shows a genuinely different view.
-- When code is useful, first provide a concise reasoning summary (approach, assumptions, and trade-offs) and pseudocode, then show the code. Do not expose private hidden reasoning.
-
-1. Test active recall across Days 15–20 before providing the answer key.
-2. Review statistics, classical ML, deep learning, LLM controls, embeddings, stores, and ingestion.
-3. Include one statistical-inference problem, one metric/threshold case, and one pipeline-failure diagnosis.
-4. Guide the integrated practical checkpoint.
-5. End with a scored Week 3 interview assessment and rubric.
+Explain when standardisation improves productivity and when it can constrain innovation.
 
 ---
 
-## Revision scope – cover ALL of these
+## 19. Risk-based engineering
 
-- Descriptive statistics, distributions, sampling, confidence intervals, and hypothesis tests
-- Effect size, power, correlation/causation, Bayes, and A/B testing
-- Leakage-safe ML, cross-validation, metrics, calibration, and interpretation
-- Neural-network training, regularization, and transformer attention
-- LLM training stages, token budgets, and inference controls
-- Embedding similarity, vector-index trade-offs, Redis caching, and invalidation
-- Idempotent multi-source ingestion, lineage, PII, and failure recovery
+Explain conceptually:
 
-## Practical task – Produce an evidence-backed finance corpus and model report
+Risk ≈ likelihood × impact.
 
-Run the multi-source ingestion pipeline into a deduplicated, tenant-scoped corpus and local vector index. Attach a concise statistical/ML model card containing dataset statistics, uncertainty, baseline comparison, chosen threshold, known limitations, and one failed-retrieval diagnosis.
+Teach:
 
-### Completion evidence
+* Identify risk
+* Reduce likelihood
+* Reduce impact
+* Limit blast radius
+* Detect failure
+* Recover
 
-- The full run is repeatable from one command.
-- Statistical and ML conclusions include assumptions and uncertainty.
-- Submit a Week 3 gap log covering statistics, ML, deep learning, LLMs, and ingestion.
-```
+Use network automation examples.
 
 ---
 
-### ✅ Day 22 – Multimodal Systems, Diffusion & Generative Model Limits
+## 20. Engineering operating model
 
-```markdown
-# Day 22 – Multimodal Systems, Diffusion & Generative Model Limits
+Explain:
 
-You are an expert **Senior AI Engineer interview coach**.
+* Ownership
+* Decision rights
+* Platform team
+* Product/application teams
+* SRE/operations
+* Security
+* Network engineering
+* Governance
 
-Today is **Day 22** of my 42-day GenAI / LLM interview preparation plan.
-
-## Your task
-
-### Response guidance
-
-- When it improves clarity, include one concise ASCII architecture or workflow diagram. Use a second only when it shows a genuinely different view.
-- When code is useful, first provide a concise reasoning summary (approach, assumptions, and trade-offs) and pseudocode, then show the code. Do not expose private hidden reasoning.
-
-1. Explain multimodal models and diffusion at an interview-ready level.
-2. Focus on document/receipt understanding and production failure modes.
-3. Compare evaluation approaches and clearly state metric limitations.
-4. Guide the practical document-processing task.
-5. End with 5–10 interview Q&As.
+Explain how these groups collaborate without creating unclear responsibility.
 
 ---
 
-## Today’s topics – cover ALL of these
+## 21. RACI concept
 
-- Text, image, audio, and document inputs
-- Vision encoders, projectors, and LLM components at a high level
-- OCR/layout extraction vs end-to-end multimodal models
-- Denoising-diffusion intuition and text-to-image generation
-- High-level comparison of VAEs, GANs, diffusion models, and LLMs
-- Hallucination, bias, toxicity, copyright, and privacy
-- Task metrics, human rubrics, pairwise evaluation, and LLM-as-judge risks
-- Why BLEU/ROUGE alone are insufficient for open-ended product quality
+Explain:
 
-## Practical task – Design a receipt-analysis boundary
+* Responsible
+* Accountable
+* Consulted
+* Informed
 
-Create schemas and a mocked adapter for receipt/invoice extraction. Validate totals, currency, date, merchant, and confidence; route low-confidence or inconsistent results to human review rather than silently accepting them.
-
-### Completion evidence
-
-- Tests cover unreadable, conflicting, and malicious document content.
-- Raw documents and extracted PII are not logged.
-- The boundary allows the mock model to be replaced with a real provider later.
-```
+Use it only as a lightweight responsibility model.
 
 ---
 
-### ✅ Day 23 – Prompt Engineering, Structured Outputs & Guardrails
+## 22. Cross-functional platform delivery
 
-```markdown
-# Day 23 – Prompt Engineering, Structured Outputs & Guardrails
+Explain dependencies across:
 
-You are an expert **Senior AI Engineer interview coach**.
+* Software engineering
+* Network engineering
+* Cloud
+* SRE
+* Security
+* Data
+* Operations
+* Risk/governance
 
-Today is **Day 23** of my 42-day GenAI / LLM interview preparation plan.
-
-## Your task
-
-### Response guidance
-
-- When it improves clarity, include one concise ASCII architecture or workflow diagram. Use a second only when it shows a genuinely different view.
-- When code is useful, first provide a concise reasoning summary (approach, assumptions, and trade-offs) and pseudocode, then show the code. Do not expose private hidden reasoning.
-
-1. Explain prompt and context design for production GenAI systems.
-2. Compare few-shot, decomposition, tool use, ReAct-style, and structured-output patterns.
-3. Cover regression testing, prompt injection boundaries, and safe failure behaviour.
-4. Guide the practical prompt-test task.
-5. End with 5–10 interview Q&As.
-
-Do not depend on exposing private hidden reasoning; focus on verifiable outputs and concise reasoning summaries.
+Explain interface ownership and dependency management.
 
 ---
 
-## Today’s topics – cover ALL of these
+## 23. Stakeholder thinking
 
-- System, user, assistant, and tool messages
-- Instruction hierarchy and untrusted context
-- Few-shot examples and task decomposition
-- ReAct-style tool interaction at a conceptual level
-- JSON Schema and typed structured outputs
-- Citations, abstention, and uncertainty communication
-- Prompt templates, versioning, and test fixtures
-- Injection, delimiter limitations, and data/tool separation
-- Golden cases, adversarial cases, and regression suites
+Explain different priorities of:
 
-## Practical task – Create a tested finance-insight prompt
+* Engineers
+* Architects
+* Operations
+* Security
+* Risk
+* Product
+* Finance
+* Business leadership
 
-Build a versioned prompt that converts an analytics summary into a typed `FinanceInsight` object containing findings, evidence IDs, uncertainty, and warnings. Add normal, malformed-output, unsupported-claim, and prompt-injection test cases using a mocked model.
-
-### Completion evidence
-
-- Output is validated before application use.
-- Untrusted retrieved text cannot redefine tool permissions.
-- Prompt changes are identifiable by a version in test results and logs.
-```
+Explain how technical decisions affect each.
 
 ---
 
-### ✅ Day 24 – RAG Fundamentals: Architecture, Chunking & Indexing
+## 24. Influencing without direct authority
 
-```markdown
-# Day 24 – RAG Fundamentals: Architecture, Chunking & Indexing
+Explain:
 
-You are an expert **Senior AI Engineer interview coach** specializing in RAG.
+* Credibility
+* Evidence
+* Shared outcomes
+* Understanding incentives
+* Technical negotiation
+* Resolving disagreements
+* Decision transparency
 
-Today is **Day 24** of my 42-day GenAI / LLM interview preparation plan.
-
-## Your task
-
-### Response guidance
-
-- When it improves clarity, include one concise ASCII architecture or workflow diagram. Use a second only when it shows a genuinely different view.
-- When code is useful, first provide a concise reasoning summary (approach, assumptions, and trade-offs) and pseudocode, then show the code. Do not expose private hidden reasoning.
-
-1. Explain offline indexing and online query paths end to end.
-2. Deep-dive into chunking, embedding, metadata, and citation provenance.
-3. Discuss freshness, deletion, access control, and failure modes.
-4. Guide the practical RAG task.
-5. End with 5–10 interview Q&As.
+Keep this grounded in engineering work.
 
 ---
 
-## Today’s topics – cover ALL of these
+## 25. Communicating technical complexity
 
-- RAG architecture and when RAG is appropriate
-- Indexing path vs query path
-- Fixed, recursive, heading-aware, semantic, and parent-child chunking
-- Chunk size, overlap, and boundary trade-offs
-- Embedding and index schema design
-- Source, tenant, ACL, document version, and timestamp metadata
-- Context-window budgeting
-- Citation provenance, freshness, update, and deletion handling
-- RAG failure taxonomy
+Take one network-automation reliability issue and show how it would be communicated differently to:
 
-## Practical task – Build the first FinSight RAG path
-
-Chunk the indexed finance-policy corpus using a documented strategy, retrieve relevant chunks for a policy question, assemble bounded context, and return a mocked grounded answer with citations to source and chunk IDs.
-
-### Completion evidence
-
-- Every answer sentence claiming policy facts can map to retrieved evidence.
-- Deleted or unauthorized documents cannot be retrieved.
-- At least two chunking strategies are compared on the same questions.
-```
+* Engineer
+* Architect
+* Operations
+* Security/risk
+* Senior business leader
 
 ---
 
-### ✅ Day 25 – Retrieval Strategies, Context Assembly & RAG Evaluation
+## 26. Engineering quality as a system
 
-```markdown
-# Day 25 – Retrieval Strategies, Context Assembly & RAG Evaluation
+Explain how leaders create quality through:
 
-You are an expert **Senior AI Engineer interview coach**.
+* Automated testing
+* Code review
+* Architecture review
+* Documentation
+* Standards
+* CI/CD
+* Observability
+* Ownership
+* Incident learning
 
-Today is **Day 25** of my 42-day GenAI / LLM interview preparation plan.
-
-## Your task
-
-### Response guidance
-
-- When it improves clarity, include one concise ASCII architecture or workflow diagram. Use a second only when it shows a genuinely different view.
-- When code is useful, first provide a concise reasoning summary (approach, assumptions, and trade-offs) and pseudocode, then show the code. Do not expose private hidden reasoning.
-
-1. Explain query understanding, retrieval, reranking, and context construction.
-2. Separate retrieval quality from answer quality.
-3. Cover offline evaluation, online signals, tuning, and evaluator bias.
-4. Guide the practical evaluation task.
-5. End with 5–10 interview Q&As.
+Explain why quality should not depend on individual heroics.
 
 ---
 
-## Today’s topics – cover ALL of these
+## 27. Growing engineers
 
-- Query rewriting, expansion, routing, and decomposition
-- BM25, dense retrieval, and hybrid fusion
-- Cross-encoder reranking
-- Metadata and ACL filters
-- Context ordering, diversity, deduplication, and truncation
-- Recall@k, Precision@k, MRR, and nDCG
-- Groundedness/faithfulness, answer relevance, citation correctness, and abstention
-- Golden datasets, human rubrics, LLM-as-judge calibration, and online feedback
-- Tuning chunking, `k`, filters, rerankers, and model choice
+Explain:
 
-## Practical task – Create and evaluate hybrid retrieval
+* Delegation
+* Technical coaching
+* Design reviews
+* Giving ownership
+* Constructive feedback
+* Knowledge sharing
+* Developing specialists
 
-Build a small evaluation set of finance-policy questions with expected sources. Compare lexical, vector, and simple hybrid retrieval, optionally rerank results, and report Recall@k and MRR plus one answer-groundedness rubric.
-
-### Completion evidence
-
-- Evaluation data is separate from prompt examples used during development.
-- Results include per-query failures, not only aggregate scores.
-- One tuning decision is supported by measured evidence.
-```
+Focus on engineering capability.
 
 ---
 
-### ✅ Day 26 – Agentic Systems: Tools, State, Safety & Human Approval
+## 28. Long-term platform ownership
 
-```markdown
-# Day 26 – Agentic Systems: Tools, State, Safety & Human Approval
+Explain responsibilities across:
 
-You are an expert **Senior AI Engineer interview coach**.
-
-Today is **Day 26** of my 42-day GenAI / LLM interview preparation plan.
-
-## Your task
-
-### Response guidance
-
-- When it improves clarity, include one concise ASCII architecture or workflow diagram. Use a second only when it shows a genuinely different view.
-- When code is useful, first provide a concise reasoning summary (approach, assumptions, and trade-offs) and pseudocode, then show the code. Do not expose private hidden reasoning.
-
-1. Explain when an agent is justified and when a deterministic workflow is safer.
-2. Cover tools, planning, state, memory, durable execution, and human approval.
-3. Emphasize permission boundaries, idempotency, budgets, and failure containment.
-4. Guide the practical tool-agent task.
-5. End with 5–10 interview Q&As.
+* Build
+* Deployment
+* Operations
+* Reliability
+* Security
+* Capacity
+* Cost
+* Upgrades
+* Migration
+* Deprecation
+* End-of-life
 
 ---
 
-## Today’s topics – cover ALL of these
+## 29. Roadmapping and prioritisation
 
-- Tool/function calling and typed tool schemas
-- Deterministic workflows vs open-ended agents
-- Planner–executor–verifier pattern
-- Short-term state vs durable business memory
-- Checkpoints, retries, idempotency, and resumability
-- Tool permissions, sandboxing, allowlists, and least privilege
-- Loop, token, time, and cost budgets
-- Malformed output, tool failure, and compensating actions
-- Human approval and escalation for financial actions
-- Agent evaluation and trace inspection
+Explain how leaders balance:
 
-## Practical task – Implement a constrained finance assistant
+* Business delivery
+* Reliability
+* Security
+* Technical debt
+* Platform improvements
+* Migration
+* Operational work
 
-Create typed read-only tools for `get_transactions`, `calculate_total`, and `search_policy`. Implement a small planner/executor loop with an iteration budget, tool allowlist, trace log, and mandatory approval before any mocked write action.
-
-### Completion evidence
-
-- Invalid or unauthorized tool calls are rejected before execution.
-- Retrying cannot duplicate a mocked financial action.
-- Tests cover loops, malformed arguments, timeout, and denied approval.
-```
+Explain why everything cannot be priority one.
 
 ---
 
-### ✅ Day 27 – Framework-Neutral Orchestration, LangGraph/LlamaIndex & Protocols
+## 30. Engineering economics
 
-```markdown
-# Day 27 – Framework-Neutral Orchestration, LangGraph/LlamaIndex & Protocols
+Explain:
 
-You are an expert **Senior AI Engineer interview coach**.
+* Engineering effort
+* Infrastructure cost
+* Operational cost
+* Cost of complexity
+* Cost of failure
+* Total cost of ownership
 
-Today is **Day 27** of my 42-day GenAI / LLM interview preparation plan.
+Introduce:
 
-## Your task
+* CapEx
+* OpEx
+* Cloud-cost awareness
+* FinOps concept
 
-### Response guidance
-
-- When it improves clarity, include one concise ASCII architecture or workflow diagram. Use a second only when it shows a genuinely different view.
-- When code is useful, first provide a concise reasoning summary (approach, assumptions, and trade-offs) and pseudocode, then show the code. Do not expose private hidden reasoning.
-
-1. Establish a framework-neutral model before comparing libraries and protocols.
-2. Explain when LangChain, LangGraph, LlamaIndex, AutoGen-style systems, or low-code tools add value.
-3. Clearly distinguish MCP context/tool integration from A2A agent interoperability and from application orchestration.
-4. Guide the practical state-graph task.
-5. End with 5–10 comparison-focused interview Q&As.
-
-Use current official documentation and label versions/dates for fast-changing APIs.
+at a practical level.
 
 ---
 
-## Today’s topics – cover ALL of these
+## 31. Capacity planning
 
-- Nodes, edges, state, events, checkpoints, tools, and orchestration
-- LangChain abstractions and composition concepts
-- LangGraph state graphs, branches, loops, and persistence
-- LlamaIndex ingestion, retriever, and query-engine concepts
-- Multi-agent role specialization and its coordination costs
-- MCP host-client-server architecture, tools, resources, and prompts
-- A2A agent discovery, messages/tasks, and interoperability at a high level
-- N8N or similar workflow tools and operational trade-offs
-- Framework lock-in, observability, testing, and escape hatches
+Explain:
 
-## Practical task – Map FinSight onto a state graph
+* Growth assumptions
+* Peak demand
+* Device count
+* API traffic
+* Automation-job volume
+* Telemetry volume
+* Storage growth
+* Worker capacity
 
-Represent the constrained assistant as an explicit state graph containing intent routing, RAG lookup, analytics tools, validation, and human approval. Implement it with either a minimal framework-free runner or one selected framework, while preserving application-owned interfaces.
-
-### Completion evidence
-
-- State transitions and termination conditions are testable.
-- A framework adapter can be removed without changing domain tools.
-- The design document correctly separates MCP, A2A, and orchestration responsibilities.
-```
+Connect forecasting assumptions to architecture.
 
 ---
 
-### ✅ Day 28 – Week 4 Revision & GenAI Application Checkpoint
+## 32. Vendor and third-party engineering
 
-```markdown
-# Day 28 – Week 4 Revision & GenAI Application Checkpoint
+Explain:
 
-You are an expert **Senior AI Engineer interview coach and reviewer**.
+* Vendor dependency
+* Supportability
+* SLA
+* Integration
+* Security
+* Data ownership
+* Lock-in
+* Exit strategy
+* Third-party risk
 
-Today is **Day 28** of my 42-day GenAI / LLM interview preparation plan.
-
-## Your task
-
-### Response guidance
-
-- When it improves clarity, include one concise ASCII architecture or workflow diagram. Use a second only when it shows a genuinely different view.
-- When code is useful, first provide a concise reasoning summary (approach, assumptions, and trade-offs) and pseudocode, then show the code. Do not expose private hidden reasoning.
-
-1. Test active recall across Days 22–27 before showing answers.
-2. Review multimodal boundaries, prompt tests, RAG, evaluation, agents, and frameworks.
-3. Include one RAG-debugging case and one agent-safety design case.
-4. Guide the integrated practical checkpoint.
-5. End with a scored Week 4 assessment and answer rubric.
+Especially consider regulated enterprises.
 
 ---
 
-## Revision scope – cover ALL of these
+## 33. Conway's Law
 
-- Multimodal extraction and human review
-- Structured outputs and prompt regression
-- RAG ingestion/query paths and chunking
-- Retrieval and answer evaluation
-- Agent tools, state, permissions, and budgets
-- Framework-neutral orchestration, MCP, and A2A distinctions
+Explain how organisational communication structures influence software/system architecture.
 
-## Practical task – Demonstrate a grounded finance copilot
+Connect:
 
-Run one end-to-end scenario in which a tenant asks a finance question requiring both analytics data and a policy citation. Capture the state/tool trace, retrieved evidence, typed answer, latency, estimated cost, and evaluation result.
-
-### Completion evidence
-
-- A cross-tenant and prompt-injection test both fail safely.
-- The answer cites authorized evidence and distinguishes data from policy.
-- Submit a Week 4 gap log and a five-minute demo script.
-```
+Team boundaries
+→ ownership
+→ service boundaries
+→ communication patterns.
 
 ---
 
-### ✅ Day 29 – Security, Privacy, Safety & Multi-Tenant Isolation
+## 34. Regulated-enterprise architecture
 
-```markdown
-# Day 29 – Security, Privacy, Safety & Multi-Tenant Isolation
+Explain additional requirements around:
 
-You are an expert **Senior AI Engineer interview coach** with application-security experience.
-
-Today is **Day 29** of my 42-day GenAI / LLM interview preparation plan.
-
-## Your task
-
-### Response guidance
-
-- When it improves clarity, include one concise ASCII architecture or workflow diagram. Use a second only when it shows a genuinely different view.
-- When code is useful, first provide a concise reasoning summary (approach, assumptions, and trade-offs) and pseudocode, then show the code. Do not expose private hidden reasoning.
-
-1. Explain threat modelling and defence-in-depth for a multi-tenant GenAI product.
-2. Cover application, data, model, retrieval, supply-chain, and operational threats.
-3. Make clear that metadata filters alone are not a complete authorization boundary.
-4. Guide the practical security-testing task.
-5. End with 5–10 senior security interview Q&As.
+* Auditability
+* Security
+* Operational resilience
+* Data protection
+* Change governance
+* Business continuity
+* Third-party risk
+* Evidence
+* Accountability
 
 ---
 
-## Today’s topics – cover ALL of these
+## 35. Measuring platform success
 
-- Assets, actors, trust boundaries, attack surfaces, and abuse cases
-- AuthN, AuthZ, RBAC/ABAC, least privilege, and service identity
-- Rate limiting, WAF, DDoS, and abuse controls
-- Encryption in transit/at rest and key management
-- Secrets, rotation, short-lived credentials, and safe logging
-- PII classification, minimization, retention, deletion, and audit trails
-- Prompt injection, jailbreaks, data exfiltration, and unsafe tool use
-- Tenant enforcement in application, database, retrieval, cache, and storage layers
-- Row-level security, namespaces, separate indexes, and isolation testing
-- Dependency/image scanning and incident-response basics
+Explain appropriate outcome measures such as:
 
-## Practical task – Add tenant and injection security tests
+* Adoption
+* Reliability
+* Deployment/change lead time
+* Automation coverage
+* Failure rate
+* Recovery time
+* Developer/operator productivity
+* Cost efficiency
 
-Write a lightweight threat model for FinSight, then implement tests for cross-tenant SQL access, vector retrieval, cache keys, prompt injection, unsafe tool requests, and PII leakage in logs.
-
-### Completion evidence
-
-- At least one test targets each trust boundary.
-- Authorization scope comes from verified identity, not user-controlled metadata.
-- Findings are recorded with severity, evidence, and residual risk.
-```
+Explain why metrics should reflect outcomes, not vanity.
 
 ---
 
-### ✅ Day 30 – Model Training, Fine-Tuning, PEFT & Evaluation
-
-```markdown
-# Day 30 – Model Training, Fine-Tuning, PEFT & Evaluation
-
-You are an expert **Senior AI Engineer interview coach**.
-
-Today is **Day 30** of my 42-day GenAI / LLM interview preparation plan.
-
-## Your task
-
-### Response guidance
-
-- When it improves clarity, include one concise ASCII architecture or workflow diagram. Use a second only when it shows a genuinely different view.
-- When code is useful, first provide a concise reasoning summary (approach, assumptions, and trade-offs) and pseudocode, then show the code. Do not expose private hidden reasoning.
-
-1. Explain pre-training, full fine-tuning, SFT, LoRA, QLoRA, and preference optimization.
-2. Emphasize the decision between prompting, RAG, tools, and fine-tuning.
-3. Cover dataset design, contamination, evaluation, compute, and deployment consequences.
-4. Guide the practical dataset-and-decision task.
-5. End with 5–10 interview Q&As.
-
----
-
-## Today’s topics – cover ALL of these
-
-- Full fine-tuning vs parameter-efficient methods
-- LoRA and QLoRA intuition
-- Instruction and conversational dataset formats
-- Data licensing, consent, PII removal, cleaning, and deduplication
-- Train/validation/test separation and benchmark contamination
-- Domain, style, and task adaptation
-- Overfitting and catastrophic forgetting
-- Task metrics, pairwise preferences, human rubrics, and safety regressions
-- Compute/memory trade-offs and adapter serving
-- When not to fine-tune
-
-## Practical task – Prepare a fine-tuning decision package
-
-Create a small, sanitized instruction dataset for classifying finance-query intent and formatting insights. Validate, deduplicate, split, and inspect it; then write a decision memo comparing prompt/RAG/tool approaches with LoRA-style fine-tuning for this use case.
-
-### Completion evidence
-
-- Near-duplicates cannot cross evaluation splits.
-- The memo defines a baseline and measurable success threshold.
-- No training is claimed unless an actual run and results are recorded.
-```
-
----
-
-### ✅ Day 31 – LLM Inference, Serving, Docker & LLMOps
-
-```markdown
-# Day 31 – LLM Inference, Serving, Docker & LLMOps
-
-You are an expert **Senior AI Engineer interview coach** with inference experience.
-
-Today is **Day 31** of my 42-day GenAI / LLM interview preparation plan.
-
-## Your task
-
-### Response guidance
-
-- When it improves clarity, include one concise ASCII architecture or workflow diagram. Use a second only when it shows a genuinely different view.
-- When code is useful, first provide a concise reasoning summary (approach, assumptions, and trade-offs) and pseudocode, then show the code. Do not expose private hidden reasoning.
-
-1. Compare hosted model APIs with self-hosted inference.
-2. Explain latency, throughput, memory, reliability, and cost trade-offs.
-3. Cover deployment packaging, observability, versioning, and regression gates.
-4. Guide the practical container-and-measurement task.
-5. End with 5–10 interview Q&As.
-
----
-
-## Today’s topics – cover ALL of these
-
-- Hosted APIs vs self-hosting with engines such as vLLM or TGI
-- Prefill vs decode and TTFT vs inter-token latency
-- KV cache, batching, continuous batching, and throughput
-- Quantization, GPU memory, model parallelism, and capacity intuition
-- Streaming, cancellation, load shedding, and backpressure
-- Prompt/output caching and privacy implications
-- Docker fundamentals, multi-stage images, non-root users, and health checks
-- Canary, rollback, and model/provider fallback
-- Prompt/model/dataset versioning and golden regression suites
-- Logs, traces, token/cost metrics, and quality signals
-
-## Practical task – Containerize and profile FinSight
-
-Build a production-minded container for the FastAPI service and a provider benchmark harness using the mocked model or an authorized test provider. Measure request latency, simulated TTFT, throughput, errors, and token estimates under a small concurrent load.
-
-### Completion evidence
-
-- The container runs as a non-root user and has a health check.
-- Results distinguish latency percentiles from averages.
-- Sensitive prompt content is absent from default logs and metrics.
-```
-
----
-
-### ✅ Day 32 – Cloud Architecture, Kubernetes Fundamentals & Scaling
-
-```markdown
-# Day 32 – Cloud Architecture, Kubernetes Fundamentals & Scaling
-
-You are an expert **Senior AI Engineer interview coach** with cloud experience.
-
-Today is **Day 32** of my 42-day GenAI / LLM interview preparation plan.
-
-## Your task
-
-### Response guidance
-
-- When it improves clarity, include one concise ASCII architecture or workflow diagram. Use a second only when it shows a genuinely different view.
-- When code is useful, first provide a concise reasoning summary (approach, assumptions, and trade-offs) and pseudocode, then show the code. Do not expose private hidden reasoning.
-
-1. Explain cloud primitives and Kubernetes concepts needed for a GenAI platform.
-2. Compare managed AI and infrastructure services across AWS, GCP, and Azure at a high level.
-3. Cover availability, scaling, queues, capacity, observability, and cost.
-4. Guide the practical architecture task.
-5. End with 5–10 system-design interview Q&As.
-
-Use current official sources and avoid memorizing unstable service limits.
-
----
-
-## Today’s topics – cover ALL of these
-
-- Compute, object storage, relational databases, caches, queues, and load balancers
-- Managed AI services and hosted-model integration
-- Regions, availability zones, failure domains, and disaster recovery
-- Pods, Deployments, Services, Ingress, ConfigMaps, and Secrets
-- Horizontal and vertical scaling
-- CPU, memory, GPU, queue-depth, and custom autoscaling signals
-- API gateway, load balancer, CDN, and DNS roles
-- Background workers and asynchronous ingestion
-- Capacity estimates, SLOs, cost attribution, and observability
-- Managed-service trade-offs and cloud portability boundaries
-
-## Practical task – Design the production cloud architecture
-
-Create an AWS-focused architecture for FinSight covering web/API traffic, asynchronous ingestion, PostgreSQL, Redis, object storage, vector storage, model providers, monitoring, and tenant boundaries. Add a brief GCP/Azure service mapping without pretending full portability.
-
-### Completion evidence
-
-- The diagram includes trust and failure boundaries plus request/data flows.
-- Provide rough traffic, storage, and availability assumptions.
-- Identify the three largest cost or scaling risks.
-```
-
----
-
-### ✅ Day 33 – Terraform & Infrastructure-as-Code Fundamentals
-
-```markdown
-# Day 33 – Terraform & Infrastructure-as-Code Fundamentals for AWS
-
-You are an expert **Senior AI Engineer and Cloud/DevOps Architect**.
-
-Today is **Day 33** of my 42-day GenAI / LLM interview preparation plan.
-
-## Your task
-
-### Response guidance
-
-- When it improves clarity, include one concise ASCII architecture or workflow diagram. Use a second only when it shows a genuinely different view.
-- When code is useful, first provide a concise reasoning summary (approach, assumptions, and trade-offs) and pseudocode, then show the code. Do not expose private hidden reasoning.
-
-1. Teach declarative infrastructure and Terraform in the FinSight AWS context.
-2. Cover modules, environments, state, drift, plans, and safe delivery.
-3. Explain current state-locking and secrets considerations using official documentation.
-4. Guide the practical Terraform-foundation task without requiring a real cloud apply.
-5. End with 5–10 senior interview Q&As.
-
----
-
-## Today’s topics – cover ALL of these
-
-- Imperative vs declarative infrastructure
-- HCL: `terraform`, `provider`, `resource`, `data`, `variable`, `locals`, and `output`
-- `init`, `fmt`, `validate`, `plan`, `apply`, and `destroy`
-- Provider/version constraints and lock files
-- State, drift, imports, moved resources, and recovery
-- Remote S3 backend and current S3 lockfile support
-- Awareness that DynamoDB-based S3 locking is deprecated in current Terraform
-- Root/child modules and stable module interfaces
-- Environment/state separation and promotion
-- Sensitive values, state exposure, ephemeral/write-only options where supported
-- Plan review, policy checks, and least-privilege execution identity
-
-## Practical task – Create the Terraform foundation
-
-Create a structured Terraform root and reusable modules for tags/naming, networking inputs, an encrypted/versioned S3 document bucket, and an ECR repository. Add dev and stage configuration plus a remote-backend example using current S3 locking.
-
-### Completion evidence
-
-- `terraform fmt` and `terraform validate` pass.
-- No secret value or real credential appears in code, variables, or committed plans.
-- Produce a plan only; do not apply paid infrastructure for this exercise.
-```
-
----
-
-### ✅ Day 34 – AWS GenAI Infrastructure with Terraform
-
-```markdown
-# Day 34 – AWS GenAI Infrastructure with Terraform
-
-You are an expert **Senior AI Engineer and AWS Architect**.
-
-Today is **Day 34** of my 42-day GenAI / LLM interview preparation plan.
-
-## Your task
-
-### Response guidance
-
-- When it improves clarity, include one concise ASCII architecture or workflow diagram. Use a second only when it shows a genuinely different view.
-- When code is useful, first provide a concise reasoning summary (approach, assumptions, and trade-offs) and pseudocode, then show the code. Do not expose private hidden reasoning.
-
-1. Deep-dive into how AWS components support the FinSight production architecture.
-2. Explain networking, identity, data protection, availability, and cost trade-offs.
-3. Show representative Terraform wiring without hiding complexity behind isolated snippets.
-4. Guide the practical infrastructure-expansion task.
-5. End with 5–10 AWS/Terraform interview Q&As.
-
----
-
-## Today’s topics – cover ALL of these
-
-- CIDR planning, public/private subnets, route tables, IGW, NAT, and VPC endpoints
-- Security groups vs NACLs
-- EKS control plane, managed node groups, and autoscaling
-- Workload identity with EKS Pod Identity or IRSA concepts
-- RDS PostgreSQL, backups, Multi-AZ, encryption, and connection handling
-- ElastiCache Redis and failure/eviction considerations
-- S3 lifecycle, versioning, encryption, and event-driven ingestion
-- ECR image storage and scanning
-- IAM least privilege, KMS, CloudWatch, and audit logging
-- ALB/Ingress, Route 53, ACM, DNS validation, and TLS
-- Managed vs self-hosted vector database integration
-
-## Practical task – Expand and review the AWS plan
-
-Extend the Terraform design with module interfaces for VPC, EKS, RDS, Redis, S3, ECR, IAM/workload identity, DNS, and TLS. Produce a dependency graph and reviewed `terraform plan` using placeholders or mocks where credentials are unavailable.
-
-### Completion evidence
-
-- Databases and caches are not publicly reachable.
-- Workloads do not require static AWS access keys.
-- Backup, encryption, deletion protection, and cost-sensitive resources are called out explicitly.
-```
-
----
-
-### ✅ Day 35 – Week 5 Revision & Production Readiness Review
-
-```markdown
-# Day 35 – Week 5 Revision & Production Readiness Review
-
-You are an expert **Senior AI Engineer interview coach and production-readiness reviewer**.
-
-Today is **Day 35** of my 42-day GenAI / LLM interview preparation plan.
-
-## Your task
-
-### Response guidance
-
-- When it improves clarity, include one concise ASCII architecture or workflow diagram. Use a second only when it shows a genuinely different view.
-- When code is useful, first provide a concise reasoning summary (approach, assumptions, and trade-offs) and pseudocode, then show the code. Do not expose private hidden reasoning.
-
-1. Test recall across Days 29–34 before providing explanations.
-2. Review threats, fine-tuning decisions, inference, cloud scaling, Terraform, and AWS.
-3. Include one capacity-estimation problem and one failure/rollback scenario.
-4. Guide the integrated production-readiness task.
-5. End with a scored Week 5 assessment and rubric.
-
----
-
-## Revision scope – cover ALL of these
-
-- Multi-layer tenant isolation and GenAI threats
-- Fine-tuning data/evaluation decisions
-- Inference latency, throughput, memory, and observability
-- Cloud failure domains, scaling, and cost
-- Terraform state, modules, secrets, and delivery safety
-- AWS networking, identity, data services, DNS, and TLS
-
-## Practical task – Run a production-readiness review
-
-Review FinSight using five lenses: security, reliability, performance, cost, and operations. Walk through provider failure, regional dependency failure, leaked credential, retrieval-quality regression, and traffic spike scenarios.
-
-### Completion evidence
-
-- Each risk has evidence, impact, detection, mitigation, and residual risk.
-- Capacity assumptions are quantified rather than described only as “scalable.”
-- Submit a prioritized Week 5 gap log without deploying infrastructure.
-```
-
----
-
-### ✅ Day 36 – React/Next.js UI for Finance Chat & RAG
-
-```markdown
-# Day 36 – React/Next.js UI for Finance Chat & RAG
-
-You are an expert **Senior AI Engineer and Frontend-for-GenAI Architect**.
-
-Today is **Day 36** of my 42-day GenAI / LLM interview preparation plan.
-
-## Your task
-
-### Response guidance
-
-- When it improves clarity, include one concise ASCII architecture or workflow diagram. Use a second only when it shows a genuinely different view.
-- When code is useful, first provide a concise reasoning summary (approach, assumptions, and trade-offs) and pseudocode, then show the code. Do not expose private hidden reasoning.
-
-1. Explain a practical React/Next.js architecture for the FinSight UI.
-2. Cover typed API calls, real streaming, citations, uploads, state, errors, and accessibility.
-3. Discuss browser security and the boundary between frontend and backend secrets.
-4. Guide the practical vertical-slice UI task.
-5. End with 5–10 interview Q&As.
-
----
-
-## Today’s topics – cover ALL of these
-
-- React vs Next.js and client/server component boundaries
-- Components, props, state, hooks, and folder structure
-- Typed API clients and runtime response validation
-- SSE streaming, cancellation, reconnection, and partial output
-- Message history, citations, metadata, and feedback
-- Document upload, progress, status, and signed-URL concepts
-- Loading, empty, error, retry, and timeout states
-- Accessibility, responsive UX, and safe rendering
-- XSS, CSRF, auth-token handling, and keeping provider keys server-side
-
-## Practical task – Build the FinSight chat vertical slice
-
-Implement a chat screen that calls the FastAPI SSE endpoint, renders user/assistant messages and citations, supports cancellation, and shows explicit loading/error states. Add a small document-upload/status component using a mocked or existing backend endpoint.
-
-### Completion evidence
-
-- Streaming is real SSE consumption rather than a timer simulation.
-- Untrusted Markdown/HTML cannot execute script.
-- Component tests cover success, stream error, cancellation, and empty citations.
-```
-
----
-
-### ✅ Day 37 – Productization, System Design & Project Storytelling
-
-```markdown
-# Day 37 – Productization, System Design & Project Storytelling
-
-You are an expert **Senior AI Engineer interview coach, architect, and product partner**.
-
-Today is **Day 37** of my 42-day GenAI / LLM interview preparation plan.
-
-## Your task
-
-### Response guidance
-
-- When it improves clarity, include one concise ASCII architecture or workflow diagram. Use a second only when it shows a genuinely different view.
-- When code is useful, first provide a concise reasoning summary (approach, assumptions, and trade-offs) and pseudocode, then show the code. Do not expose private hidden reasoning.
-
-1. Explain how technical GenAI capability becomes a trustworthy product.
-2. Connect UX, success metrics, SLOs, experimentation, cost, and system design.
-3. Teach HLD/LLD communication and evidence-based project storytelling.
-4. Guide the practical design-and-story task.
-5. End with 5–10 system-design and behavioural interview Q&As.
-
----
-
-## Today’s topics – cover ALL of these
-
-- User problem, workflow, POC, MVP, and production distinctions
-- Functional and non-functional requirements
-- Business metrics, quality metrics, guardrail metrics, and SLOs
-- Feedback capture and online experimentation
-- Multi-tenant RAG SaaS and agent-workflow design
-- Reliability, retries, circuit breakers, degradation, and disaster recovery
-- Model routing, caching, batching, and cost controls
-- HLD, LLD, APIs, data model, capacity, and trade-off communication
-- STAR storytelling with problem, decisions, challenges, evidence, and impact
-- Honest distinction between measured results and proposed outcomes
-
-## Practical task – Produce the FinSight design packet
-
-Create a concise product brief, HLD, one critical-flow LLD, success/SLO table, top trade-offs, and a five-minute STAR project story based only on work actually completed during this plan.
-
-### Completion evidence
-
-- Requirements and scale assumptions are explicit.
-- Metrics include retrieval/answer quality, latency, availability, cost, and safety.
-- The story identifies real limitations instead of inventing production impact.
-```
-
----
-
-### ✅ Day 38 – Monorepo, Environments, Local Development & DevEx
-
-```markdown
-# Day 38 – Monorepo, Environments, Local Development & DevEx
-
-You are an expert **Senior AI Engineer, Tech Lead, and Architect**.
-
-Today is **Day 38** of my 42-day GenAI / LLM interview preparation plan.
-
-## Your task
-
-### Response guidance
-
-- When it improves clarity, include one concise ASCII architecture or workflow diagram. Use a second only when it shows a genuinely different view.
-- When code is useful, first provide a concise reasoning summary (approach, assumptions, and trade-offs) and pseudocode, then show the code. Do not expose private hidden reasoning.
-
-1. Explain monorepo trade-offs and clear ownership boundaries.
-2. Cover reproducible local development, configuration, environments, and release structure.
-3. Connect backend, frontend, ML/evaluation, and infrastructure workflows.
-4. Guide the practical repository-integration task.
-5. End with 5–10 interview Q&As.
-
----
-
-## Today’s topics – cover ALL of these
-
-- Backend, frontend, infra, evaluation, documentation, and shared-contract folders
-- Dependency direction and avoiding unsafe cross-language model sharing
-- Environment variables, config files, validation, and secret boundaries
-- Dev/stage/prod state and data separation
-- Docker Compose or equivalent local dependencies
-- Task runners, lint, formatting, type checking, and test commands
-- Feature branches, pull requests, trunk/main, tags, and releases
-- Schema/API compatibility and generated clients
-- Ownership, review, dependency updates, and developer onboarding
-
-## Practical task – Integrate the FinSight monorepo
-
-Organize the accumulated backend, frontend, evaluation assets, Terraform, deployment files, and documentation into one coherent repository. Add reproducible local startup, unified quality commands, environment templates, and an onboarding README.
-
-### Completion evidence
-
-- A new developer can run the local vertical slice from documented commands.
-- Backend, frontend, and infrastructure secrets are not committed or bundled client-side.
-- CI-relevant lint, type, unit, and integration commands have stable entry points.
-```
-
----
-
-### ✅ Day 39 – Kubernetes & Helm for FastAPI + Next.js
-
-```markdown
-# Day 39 – Kubernetes & Helm for FastAPI + Next.js
-
-You are an expert **Senior AI Engineer and Kubernetes/Helm practitioner**.
-
-Today is **Day 39** of my 42-day GenAI / LLM interview preparation plan.
-
-## Your task
-
-### Response guidance
-
-- When it improves clarity, include one concise ASCII architecture or workflow diagram. Use a second only when it shows a genuinely different view.
-- When code is useful, first provide a concise reasoning summary (approach, assumptions, and trade-offs) and pseudocode, then show the code. Do not expose private hidden reasoning.
-
-1. Teach how to package and deploy the completed backend and frontend with Helm.
-2. Explain configuration, rollout, health, resources, autoscaling, and secret references.
-3. Cover production failure modes and operational debugging.
-4. Guide the practical chart task.
-5. End with 5–10 interview Q&As.
-
----
-
-## Today’s topics – cover ALL of these
-
-- Pods, Deployments, Services, Ingress, ConfigMaps, and Secrets recap
-- Helm chart structure, templates, values, releases, and dependencies
-- Environment-specific values without secret material
-- Backend and frontend Deployments/Services/Ingress routes
-- Startup, readiness, and liveness probes
-- CPU/memory requests and limits
-- HPA, disruption budgets, affinity, and graceful termination
-- Rolling, blue/green, and canary strategies
-- External secret stores, workload identity, and encryption considerations
-- `helm lint`, template rendering, upgrade, rollback, and debugging
-
-## Practical task – Package FinSight with Helm
-
-Create backend and frontend Helm charts or one well-structured parent chart. Include Deployments, Services, Ingress, configuration references, probes, resource settings, optional HPA, and dev/stage values.
-
-### Completion evidence
-
-- `helm lint` and rendered-manifest validation pass.
-- No plaintext credential appears in charts or values files.
-- A failed rollout and rollback procedure is documented and locally testable where possible.
-```
-
----
-
-### ✅ Day 40 – Jenkins CI/CD: Test, Build, ECR, Helm & EKS
-
-```markdown
-# Day 40 – Jenkins CI/CD: Test, Build, ECR, Helm & EKS
-
-You are an expert **Senior AI Engineer and CI/CD Architect**.
-
-Today is **Day 40** of my 42-day GenAI / LLM interview preparation plan.
-
-## Your task
-
-### Response guidance
-
-- When it improves clarity, include one concise ASCII architecture or workflow diagram. Use a second only when it shows a genuinely different view.
-- When code is useful, first provide a concise reasoning summary (approach, assumptions, and trade-offs) and pseudocode, then show the code. Do not expose private hidden reasoning.
-
-1. Explain a secure CI/CD pipeline for the FinSight monorepo.
-2. Cover quality gates, immutable artifacts, promotion, deployment verification, and rollback.
-3. Explain short-lived AWS/Kubernetes access and secret handling.
-4. Guide the practical Jenkinsfile task.
-5. End with 5–10 CI/CD interview Q&As.
-
----
-
-## Today’s topics – cover ALL of these
-
-- Jenkins controller/agent model
-- Declarative vs scripted pipelines
-- Change detection and parallel backend/frontend stages
-- Lint, type check, unit, integration, RAG golden, and security tests
-- Reproducible Docker builds, image digests, SBOMs, and image scanning
-- ECR push and immutable tagging
-- Helm deploy, smoke tests, and rollout verification
-- Dev/stage/prod promotion and approval gates
-- OIDC/role assumption or other short-lived credentials
-- Failure handling, rollback, auditability, and concurrency controls
-
-## Practical task – Implement the delivery pipeline
-
-Create a commented declarative Jenkinsfile that tests the monorepo, builds backend/frontend images, records immutable identifiers, pushes to ECR, deploys with Helm to a non-production environment, runs smoke/golden tests, and invokes rollback on failure.
-
-### Completion evidence
-
-- Deployment never uses an ambiguous `latest` tag.
-- Credentials are not embedded in the Jenkinsfile or workspace artifacts.
-- A dry run or mocked pipeline verifies stage conditions and failure paths.
-```
-
----
-
-### ✅ Day 41 – Ansible & Operations Automation
-
-```markdown
-# Day 41 – Ansible & Operations Automation
-
-You are an expert **Senior AI Engineer and DevOps/Automation Engineer**.
-
-Today is **Day 41** of my 42-day GenAI / LLM interview preparation plan.
-
-## Your task
-
-### Response guidance
-
-- When it improves clarity, include one concise ASCII architecture or workflow diagram. Use a second only when it shows a genuinely different view.
-- When code is useful, first provide a concise reasoning summary (approach, assumptions, and trade-offs) and pseudocode, then show the code. Do not expose private hidden reasoning.
-
-1. Explain the distinct responsibilities of Terraform, Helm, image builds, and Ansible.
-2. Teach inventory, playbooks, roles, handlers, variables, and idempotence.
-3. Cover secure access, drift, verification, and the limits of configuration management.
-4. Guide the practical ops-host task.
-5. End with 5–10 interview Q&As.
-
----
-
-## Today’s topics – cover ALL of these
-
-- Infrastructure provisioning vs configuration management
-- Inventory, groups, plays, tasks, handlers, and modules
-- Idempotence, desired state, and check mode
-- Variables, precedence, templates, tags, and conditionals
-- Roles, collections, linting, and reusable configuration
-- SSH access, privilege escalation, and host-key safety
-- Vault/external secret integration at a high level
-- Jenkins-agent and disposable ops-host use cases
-- Avoiding raw-shell tasks and snowflake servers
-- Configuration verification and drift detection
-
-## Practical task – Configure a disposable CI/ops host
-
-Create an inventory and reusable Ansible role that prepares a disposable Jenkins agent or operations host with Docker, AWS CLI, `kubectl`, Helm, and required verification commands. Run it twice in check/test mode to demonstrate idempotence.
-
-### Completion evidence
-
-- The second run reports no unintended changes.
-- Tool versions are controlled and verified.
-- No private key, token, kubeconfig, or vault password is committed.
-```
-
----
-
-### ✅ Day 42 – Final Revision, Integration & Mock Interview
-
-```markdown
-# Day 42 – Final Revision, Integration & Mock Interview
-
-You are an expert **Senior AI Engineer interviewer, system-design reviewer, and project coach**.
-
-Today is **Day 42** of my 42-day GenAI / LLM interview preparation plan and the final weekly checkpoint.
-
-## Your task
-
-### Response guidance
-
-- When it improves clarity, include one concise ASCII architecture or workflow diagram. Use a second only when it shows a genuinely different view.
-- When code is useful, first provide a concise reasoning summary (approach, assumptions, and trade-offs) and pseudocode, then show the code. Do not expose private hidden reasoning.
-
-1. Run a cumulative active-recall review spanning Days 1–41.
-2. Conduct a realistic mock interview covering coding, Python/backend, ML/LLM, RAG/agents, system design, security, cloud, and behavioural communication.
-3. Score answers with a transparent rubric and identify evidence-backed gaps.
-4. Guide the final capstone verification task.
-5. End with a reusable project-story template and final readiness scorecard.
-
-Do not reveal answers until each mock section is complete.
-
----
-
-## Revision scope – cover ALL of these
-
-- Python, typing, async, testing, architecture, and DSA
-- APIs, SQL, ORM, data pipelines, and reliability
-- ML, transformers, LLM inference, and evaluation
-- Prompting, RAG, retrieval, agents, MCP/A2A, and safety
-- Security, privacy, multi-tenancy, and observability
-- Fine-tuning decisions, cloud, Terraform, AWS, Kubernetes, and CI/CD
-- Frontend/product design, DevEx, operations, and project storytelling
-
-## Practical task – Execute the FinSight final dry run
-
-From a clean checkout, start the local system, ingest the finance corpus, execute one authorized analytics-plus-RAG query through the UI/API, capture tests and evaluation metrics, render infrastructure/deployment validation, and deliver a ten-minute architecture/project presentation followed by mock-interview questions.
-
-### Completion evidence
-
-- The run uses documented commands and contains no manual hidden setup.
-- Unit, integration, security, RAG evaluation, frontend, container, Terraform, Helm, and pipeline validations are recorded honestly.
-- Produce a final gap register separating interview-ready, review-needed, and out-of-scope topics.
-```
+## 36. Final integrated case study
+
+Finish with a detailed case study:
+
+"Define the long-term architecture and engineering operating model for a global network automation platform."
+
+Walk through:
+
+Business need
+→ users
+→ requirements
+→ NFRs
+→ architecture
+→ network integration
+→ API/platform design
+→ Kubernetes/cloud
+→ data
+→ security
+→ reliability
+→ controls
+→ CI/CD
+→ observability
+→ ownership
+→ operating model
+→ cost
+→ scaling
+→ migration
+→ long-term evolution.
+
+Include one comprehensive but readable ASCII architecture.
+
+Finish with a concise synthesis explaining how a strong Lead/VP engineer connects:
+
+Technology
+
+* architecture
+* reliability
+* security
+* risk
+* economics
+* people
+* long-term strategy
+
+into one coherent engineering discipline.
