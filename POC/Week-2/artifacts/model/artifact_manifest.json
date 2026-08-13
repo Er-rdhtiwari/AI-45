@@ -1,0 +1,13 @@
+{
+  "artifact": "expense_risk_v1.joblib",
+  "sha256": "017b44b438d06c5db9111cff9135b210c9ec3ec3b048573869634a49e62cb88f",
+  "model_version": "expense-risk-v1",
+  "dataset_version": "expenses-synthetic-v1",
+  "schema_version": "1.0.0",
+  "selected_family": "logistic_regression",
+  "selected_params": {
+    "C": 1.0,
+    "class_weight": "balanced"
+  },
+  "created_at_utc": "2026-08-13T14:06:59.026571+00:00"
+}

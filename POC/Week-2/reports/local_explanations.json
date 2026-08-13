@@ -1,0 +1,262 @@
+[
+  {
+    "expense_id": "EXP-0010746",
+    "probability": 1.0,
+    "contributions": [
+      {
+        "feature": "amount_to_policy_ratio",
+        "reason_code": "POLICY_EXCEEDANCE_SIGNAL",
+        "observed_value": 7.263,
+        "reference_value": 0.6163,
+        "raw_probability_delta_vs_reference": 0.44497451474528527,
+        "calibrated_probability_delta_vs_reference": 0.9224806201550387,
+        "direction": "raises_risk"
+      },
+      {
+        "feature": "duplicate_7d_count",
+        "reason_code": "RECENT_DUPLICATE_SIGNAL",
+        "observed_value": 1,
+        "reference_value": 0.0,
+        "raw_probability_delta_vs_reference": 3.5871192296532683e-05,
+        "calibrated_probability_delta_vs_reference": 0.43181818181818177,
+        "direction": "raises_risk"
+      },
+      {
+        "feature": "department",
+        "reason_code": "DEPARTMENT_PATTERN_SIGNAL",
+        "observed_value": "Engineering",
+        "reference_value": "Sales",
+        "raw_probability_delta_vs_reference": 8.661617918459541e-07,
+        "calibrated_probability_delta_vs_reference": 0.0,
+        "direction": "raises_risk"
+      },
+      {
+        "feature": "region",
+        "reason_code": "REGION_PATTERN_SIGNAL",
+        "observed_value": "EMEA",
+        "reference_value": "North America",
+        "raw_probability_delta_vs_reference": 8.508326946321532e-07,
+        "calibrated_probability_delta_vs_reference": 0.0,
+        "direction": "raises_risk"
+      },
+      {
+        "feature": "prior_30d_claim_count",
+        "reason_code": "CLAIM_VELOCITY_SIGNAL",
+        "observed_value": 2,
+        "reference_value": 4.0,
+        "raw_probability_delta_vs_reference": -7.659572407447968e-07,
+        "calibrated_probability_delta_vs_reference": 0.0,
+        "direction": "lowers_risk"
+      }
+    ],
+    "caveat": "Perturbation explanations describe model behavior, not causality, intent, or guilt."
+  },
+  {
+    "expense_id": "EXP-0010231",
+    "probability": 0.5681818181818182,
+    "contributions": [
+      {
+        "feature": "amount_to_policy_ratio",
+        "reason_code": "POLICY_EXCEEDANCE_SIGNAL",
+        "observed_value": 3.7337,
+        "reference_value": 0.6163,
+        "raw_probability_delta_vs_reference": 0.36094660268842593,
+        "calibrated_probability_delta_vs_reference": 0.49066243833685697,
+        "direction": "raises_risk"
+      },
+      {
+        "feature": "receipt_attached",
+        "reason_code": "RECEIPT_SIGNAL",
+        "observed_value": false,
+        "reference_value": true,
+        "raw_probability_delta_vs_reference": 0.008750549616353798,
+        "calibrated_probability_delta_vs_reference": 0.0,
+        "direction": "raises_risk"
+      },
+      {
+        "feature": "prior_30d_claim_count",
+        "reason_code": "CLAIM_VELOCITY_SIGNAL",
+        "observed_value": 9,
+        "reference_value": 4.0,
+        "raw_probability_delta_vs_reference": 0.0014427796820118965,
+        "calibrated_probability_delta_vs_reference": 0.0,
+        "direction": "raises_risk"
+      },
+      {
+        "feature": "cross_border",
+        "reason_code": "CROSS_BORDER_SIGNAL",
+        "observed_value": true,
+        "reference_value": false,
+        "raw_probability_delta_vs_reference": 0.001226641004678175,
+        "calibrated_probability_delta_vs_reference": 0.0,
+        "direction": "raises_risk"
+      },
+      {
+        "feature": "policy_limit_usd",
+        "reason_code": "POLICY_LIMIT_CONTEXT",
+        "observed_value": 500.0,
+        "reference_value": 140.0,
+        "raw_probability_delta_vs_reference": 0.0006929913430444579,
+        "calibrated_probability_delta_vs_reference": 0.0,
+        "direction": "raises_risk"
+      }
+    ],
+    "caveat": "Perturbation explanations describe model behavior, not causality, intent, or guilt."
+  },
+  {
+    "expense_id": "EXP-0011269",
+    "probability": 0.5681818181818182,
+    "contributions": [
+      {
+        "feature": "duplicate_7d_count",
+        "reason_code": "RECENT_DUPLICATE_SIGNAL",
+        "observed_value": 1,
+        "reference_value": 0.0,
+        "raw_probability_delta_vs_reference": 0.21925959266324824,
+        "calibrated_probability_delta_vs_reference": 0.39357864357864364,
+        "direction": "raises_risk"
+      },
+      {
+        "feature": "merchant_risk_tier",
+        "reason_code": "MERCHANT_RISK_SIGNAL",
+        "observed_value": "high",
+        "reference_value": "low",
+        "raw_probability_delta_vs_reference": 0.05890518429356861,
+        "calibrated_probability_delta_vs_reference": 0.13961038961038968,
+        "direction": "raises_risk"
+      },
+      {
+        "feature": "amount_to_policy_ratio",
+        "reason_code": "POLICY_EXCEEDANCE_SIGNAL",
+        "observed_value": 1.1873,
+        "reference_value": 0.6163,
+        "raw_probability_delta_vs_reference": 0.05053733618113432,
+        "calibrated_probability_delta_vs_reference": 0.13961038961038968,
+        "direction": "raises_risk"
+      },
+      {
+        "feature": "payment_method",
+        "reason_code": "PAYMENT_METHOD_SIGNAL",
+        "observed_value": "cash",
+        "reference_value": "corporate_card",
+        "raw_probability_delta_vs_reference": 0.04040840533350187,
+        "calibrated_probability_delta_vs_reference": 0.13961038961038968,
+        "direction": "raises_risk"
+      },
+      {
+        "feature": "weekend_submission",
+        "reason_code": "WEEKEND_SIGNAL",
+        "observed_value": true,
+        "reference_value": false,
+        "raw_probability_delta_vs_reference": 0.009207545587932131,
+        "calibrated_probability_delta_vs_reference": 0.0,
+        "direction": "raises_risk"
+      }
+    ],
+    "caveat": "Perturbation explanations describe model behavior, not causality, intent, or guilt."
+  },
+  {
+    "expense_id": "EXP-0011110",
+    "probability": 0.5681818181818182,
+    "contributions": [
+      {
+        "feature": "amount_to_policy_ratio",
+        "reason_code": "POLICY_EXCEEDANCE_SIGNAL",
+        "observed_value": 2.3736,
+        "reference_value": 0.6163,
+        "raw_probability_delta_vs_reference": 0.37875984656666273,
+        "calibrated_probability_delta_vs_reference": 0.49066243833685697,
+        "direction": "raises_risk"
+      },
+      {
+        "feature": "duplicate_7d_count",
+        "reason_code": "RECENT_DUPLICATE_SIGNAL",
+        "observed_value": 1,
+        "reference_value": 0.0,
+        "raw_probability_delta_vs_reference": 0.1977486088180508,
+        "calibrated_probability_delta_vs_reference": 0.39357864357864364,
+        "direction": "raises_risk"
+      },
+      {
+        "feature": "prior_30d_claim_count",
+        "reason_code": "CLAIM_VELOCITY_SIGNAL",
+        "observed_value": 6,
+        "reference_value": 4.0,
+        "raw_probability_delta_vs_reference": 0.006687745567328873,
+        "calibrated_probability_delta_vs_reference": 0.0,
+        "direction": "raises_risk"
+      },
+      {
+        "feature": "expense_category",
+        "reason_code": "CATEGORY_PATTERN_SIGNAL",
+        "observed_value": "Taxi",
+        "reference_value": "Meals",
+        "raw_probability_delta_vs_reference": 0.003661546939715654,
+        "calibrated_probability_delta_vs_reference": 0.0,
+        "direction": "raises_risk"
+      },
+      {
+        "feature": "employee_level",
+        "reason_code": "LEVEL_PATTERN_SIGNAL",
+        "observed_value": "Manager",
+        "reference_value": "IC1-2",
+        "raw_probability_delta_vs_reference": -0.002515631691524134,
+        "calibrated_probability_delta_vs_reference": 0.0,
+        "direction": "lowers_risk"
+      }
+    ],
+    "caveat": "Perturbation explanations describe model behavior, not causality, intent, or guilt."
+  },
+  {
+    "expense_id": "EXP-0010510",
+    "probability": 0.5681818181818182,
+    "contributions": [
+      {
+        "feature": "amount_to_policy_ratio",
+        "reason_code": "POLICY_EXCEEDANCE_SIGNAL",
+        "observed_value": 2.2925,
+        "reference_value": 0.6163,
+        "raw_probability_delta_vs_reference": 0.36360952032674065,
+        "calibrated_probability_delta_vs_reference": 0.49066243833685697,
+        "direction": "raises_risk"
+      },
+      {
+        "feature": "receipt_attached",
+        "reason_code": "RECEIPT_SIGNAL",
+        "observed_value": false,
+        "reference_value": true,
+        "raw_probability_delta_vs_reference": 0.11989935444797306,
+        "calibrated_probability_delta_vs_reference": 0.2881818181818182,
+        "direction": "raises_risk"
+      },
+      {
+        "feature": "outside_business_hours",
+        "reason_code": "SUBMISSION_TIME_SIGNAL",
+        "observed_value": true,
+        "reference_value": false,
+        "raw_probability_delta_vs_reference": 0.010839646839047146,
+        "calibrated_probability_delta_vs_reference": 0.0,
+        "direction": "raises_risk"
+      },
+      {
+        "feature": "weekend_submission",
+        "reason_code": "WEEKEND_SIGNAL",
+        "observed_value": true,
+        "reference_value": false,
+        "raw_probability_delta_vs_reference": 0.008849587314197271,
+        "calibrated_probability_delta_vs_reference": 0.0,
+        "direction": "raises_risk"
+      },
+      {
+        "feature": "region",
+        "reason_code": "REGION_PATTERN_SIGNAL",
+        "observed_value": "EMEA",
+        "reference_value": "North America",
+        "raw_probability_delta_vs_reference": 0.006411467270120763,
+        "calibrated_probability_delta_vs_reference": 0.0,
+        "direction": "raises_risk"
+      }
+    ],
+    "caveat": "Perturbation explanations describe model behavior, not causality, intent, or guilt."
+  }
+]
