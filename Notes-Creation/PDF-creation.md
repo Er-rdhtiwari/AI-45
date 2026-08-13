@@ -1,7 +1,7 @@
-SOURCE_FOLDER="Notes/Week-1"
+SOURCE_FOLDER="AI-45\foundation"
 PDF_OUTPUT_FOLDER="${SOURCE_FOLDER}/pdfs"
 SOURCE_FILE_PATTERN="*.md"
-EXPECTED_FILE_COUNT=7
+EXPECTED_FILE_COUNT=32
 VALIDATION_REPORT="${PDF_OUTPUT_FOLDER}/pdf-validation-report.md"
 INDEX_PDF="${PDF_OUTPUT_FOLDER}/Day-00-Notes-Index.pdf"
 
@@ -96,7 +96,7 @@ For Mermaid code fences:
 
 14. If the number of matching Markdown files differs from `${EXPECTED_FILE_COUNT}`, record the difference in `${VALIDATION_REPORT}` and process all matching files without inventing or deleting files.
 
-15. After all note PDFs are created and validated, create and validate `${INDEX_PDF}` from the actual generated PDFs. Follow the structure and visual style of `output/pdf/Day-00-Notes-Index.pdf`, adapting its topic entries, grouping, quick locator, page counts, and collection summary to the generated collection without inventing content.
+15. After all note PDFs are created and validated, create and validate `${INDEX_PDF}` from the actual generated PDFs. Follow the structure and visual style of `DSA-Design\output\pdf\Day-00-Foundation-Learning-Index.pdf`, adapting its topic entries, grouping, quick locator, page counts, and collection summary to the generated collection without inventing content.
 
 Follow this order:
 
