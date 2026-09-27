@@ -1,9 +1,10 @@
-SOURCE_FOLDER="AI-45\foundation\notes-part-3"
+SOURCE_FOLDER="AI-45\foundation\notes-part-6"
 PDF_OUTPUT_FOLDER="${SOURCE_FOLDER}/pdfs"
 SOURCE_FILE_PATTERN="*.md"
 EXPECTED_FILE_COUNT="AUTO"
 VALIDATION_REPORT="${PDF_OUTPUT_FOLDER}/pdf-validation-report.md"
 INDEX_PDF="${PDF_OUTPUT_FOLDER}/Day-${FIRST_DAY_NUMBER}-to-Day-${LAST_DAY_NUMBER}-Notes-Index.pdf"
+INDEX_TEMPLATE="AI-45\Notes-Creation\Template-index.pdf"
 
 Create one PDF for each Markdown note matching `${SOURCE_FILE_PATTERN}` inside `${SOURCE_FOLDER}`.
 
@@ -96,7 +97,7 @@ For Mermaid code fences:
 
 14. Calculate `${EXPECTED_FILE_COUNT}` from the number of matching Markdown files discovered, record it in `${VALIDATION_REPORT}`, and process all matching files without inventing or deleting files.
 
-15. After all note PDFs are created and validated, create and validate `${INDEX_PDF}` from the actual generated PDFs. Follow the structure and visual style of `DSA-Design\output\pdf\Day-00-Foundation-Learning-Index.pdf`, adapting its topic entries, grouping, quick locator, page counts, and collection summary to the generated collection without inventing content.
+15. After all note PDFs are created and validated, create and validate `${INDEX_PDF}` from the actual generated PDFs. Use `${INDEX_TEMPLATE}` as the template, adapting its topic entries, grouping, quick locator, page counts, and collection summary to the generated collection without inventing content.
 
 Follow this order:
 
