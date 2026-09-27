@@ -3726,28 +3726,47 @@ Do not provide the full Python solution.
 ### Ready-to-copy prompt
 
 ```text
-Teach me **Day 119: Weekly Revision — Unsupervised ML, RL, Pipelines and FastAPI** in beginner-friendly language.
+Teach me **Day 119: Weekly Revision — Unsupervised ML, RL, Pipelines, MLflow and FastAPI** in beginner-friendly language.
 
 Include:
 
 1. Day number
 2. Topic name: revision of Days 113–118
-3. Connection: This week moved from model concepts into a small practical ML application workflow.
-4. Revision summary of Days 113–118
-5. Important topics: K-Means, DBSCAN, PCA, association learning, reinforcement learning, Q-Learning idea, scikit-learn Pipeline, Kaggle workflow, FastAPI
+3. Connection: This week moved from model concepts into a small practical ML application workflow, including experiment tracking with MLflow.
+4. Revision summary of Days 113–118, including the additional MLflow concepts learned during Day 118.
+5. Important topics: K-Means, DBSCAN, PCA, association learning, reinforcement learning, Q-Learning idea, scikit-learn Pipeline, Kaggle workflow, MLflow, FastAPI
 6. Foundational notes
 7. Easy example
-8. Revision problem statement: Given a small dataset, explain whether clustering could be useful, describe one simple ML pipeline, and create the design for one FastAPI endpoint that accepts data and returns a simple JSON result.
+8. Revision problem statement: Given a small dataset, explain whether clustering could be useful, describe one simple ML pipeline, describe how MLflow could track a few experiments with different models or parameters, and create the design for one FastAPI endpoint that accepts data and returns a simple JSON result.
 9. Concepts used
 10. Thought process
 11. Beginner-friendly pseudocode
-12. Suggested solving approach: conceptual ML + API flow
-13. Easy edge cases
-14. Common mistakes to avoid
-15. 3 to 5 quick self-check questions
-16. Hint only
+12. Suggested solving approach: conceptual ML + scikit-learn Pipeline + MLflow experiment tracking + API flow
+13. MLflow revision covering:
+   - experiment and run
+   - parameter vs metric
+   - comparing different models
+   - tracking hyperparameters
+   - class weights
+   - accuracy, precision, recall, and F1
+   - logging trained models
+   - logging artifacts such as confusion matrix or predictions
+   - autologging idea
+   - run names and tags
+   - comparing runs in the MLflow UI
+   - tracking preprocessing/Pipeline changes
+   - reproducibility idea
+   - concept of creating several deliberately different runs
+14. Easy edge cases, including one MLflow edge case such as forgetting to log an important parameter or unfairly comparing runs that used different train/test splits
+15. Common mistakes to avoid
+16. 3 to 5 quick self-check questions, including at least one MLflow question
+17. Hint only
+
+Keep the MLflow revision beginner-friendly and connected to the scikit-learn workflow.
 
 Do not create the final ML API yet.
+
+Do not introduce advanced MLOps, model deployment, cloud infrastructure, Docker, authentication, databases, deep reinforcement learning, or advanced clustering/PCA mathematics.
 ```
 
 ---
