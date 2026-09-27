@@ -1,9 +1,9 @@
 SOURCE_FOLDER="AI-45\foundation"
 PDF_OUTPUT_FOLDER="${SOURCE_FOLDER}/pdfs"
 SOURCE_FILE_PATTERN="*.md"
-EXPECTED_FILE_COUNT=32
+EXPECTED_FILE_COUNT="AUTO"
 VALIDATION_REPORT="${PDF_OUTPUT_FOLDER}/pdf-validation-report.md"
-INDEX_PDF="${PDF_OUTPUT_FOLDER}/Day-00-Notes-Index.pdf"
+INDEX_PDF="${PDF_OUTPUT_FOLDER}/Day-${FIRST_DAY_NUMBER}-to-Day-${LAST_DAY_NUMBER}-Notes-Index.pdf"
 
 Create one PDF for each Markdown note matching `${SOURCE_FILE_PATTERN}` inside `${SOURCE_FOLDER}`.
 
@@ -94,13 +94,13 @@ For Mermaid code fences:
 * no generated PDF is empty
 * generated filenames match their source filenames
 
-14. If the number of matching Markdown files differs from `${EXPECTED_FILE_COUNT}`, record the difference in `${VALIDATION_REPORT}` and process all matching files without inventing or deleting files.
+14. Calculate `${EXPECTED_FILE_COUNT}` from the number of matching Markdown files discovered, record it in `${VALIDATION_REPORT}`, and process all matching files without inventing or deleting files.
 
 15. After all note PDFs are created and validated, create and validate `${INDEX_PDF}` from the actual generated PDFs. Follow the structure and visual style of `DSA-Design\output\pdf\Day-00-Foundation-Learning-Index.pdf`, adapting its topic entries, grouping, quick locator, page counts, and collection summary to the generated collection without inventing content.
 
 Follow this order:
 
-1. Discover all matching Markdown files
+1. Discover all matching Markdown files and set `${FIRST_DAY_NUMBER}` and `${LAST_DAY_NUMBER}` from the lowest and highest numeric `Day-N` values in their filenames
 2. Record their names, checksums, and Mermaid block inventory
 3. Create `${PDF_OUTPUT_FOLDER}`
 4. Generate each PDF separately, rendering Mermaid blocks independently
