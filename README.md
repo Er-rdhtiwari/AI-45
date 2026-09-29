@@ -7919,3 +7919,3420 @@ Final assessment
 
 This is a much better stopping point than extending the curriculum indefinitely. **By Day 210, the learner should stop collecting topics and start repeatedly solving, building, explaining, and interviewing.** The three projects plus DSA/SQL practice address the biggest practical gap that remained after Day 180.
 
+---
+# DSA Track
+
+
+# Day 210–300 — Complete DSA Learning Roadmap
+
+## Overall Progression
+
+```text
+Day 210
+Existing 210-Day Final Assessment
+        ↓
+Days 211–240
+FOUNDATIONAL DSA
+        ↓
+Arrays / Strings / Hashing
+        ↓
+Two Pointers / Sliding Window
+        ↓
+Stack / Queue / Linked List
+        ↓
+Recursion / Sorting / Binary Search
+        ↓
+Trees / BST / Heap / Matrix
+
+Days 241–270
+INTERMEDIATE DSA
+        ↓
+Fast & Slow Pointers
+        ↓
+Linked List Patterns
+        ↓
+Intervals
+        ↓
+Monotonic Stack
+        ↓
+Tree Patterns
+        ↓
+Heap / Top-K
+        ↓
+Graphs
+        ↓
+Backtracking
+        ↓
+Greedy
+        ↓
+DP Introduction
+
+Days 271–290
+ADVANCED DSA
+        ↓
+Dynamic Programming
+        ↓
+Trie
+        ↓
+Union-Find
+        ↓
+MST
+        ↓
+Shortest Path
+        ↓
+Advanced BFS
+        ↓
+Binary Search on Answer
+        ↓
+Bit Manipulation
+        ↓
+Advanced Heap / Intervals
+
+Days 291–300
+INTERVIEW MODE
+        ↓
+Mixed Coding
+        ↓
+Timed Problems
+        ↓
+Pattern Recognition
+        ↓
+Mock Interviews
+        ↓
+Final DSA Assessment
+```
+
+---
+
+# Day 210 — Final 210-Day Revision
+
+### Ready-to-copy prompt
+
+```text
+Teach me **Day 210: Final Revision and Comprehensive Fresher Technical Mock Interview**.
+
+This is the final day of my original 210-day foundational journey before starting my dedicated DSA specialization.
+
+Part 1 — Revision Map
+
+Give me a concise revision map covering:
+
+Python
+↓
+OOP
+↓
+DSA basics
+↓
+Git/GitHub
+↓
+APIs
+↓
+SQL
+↓
+NumPy/Pandas
+↓
+Statistics
+↓
+Machine Learning
+↓
+Deep Learning
+↓
+NLP
+↓
+Transformers
+↓
+PyTorch
+↓
+LLMs
+↓
+RAG
+↓
+Agents
+↓
+FastAPI
+↓
+Docker
+↓
+Projects
+
+Part 2 — Existing DSA Baseline
+
+Test my current understanding of:
+
+- Big-O
+- arrays
+- strings
+- dictionaries/sets
+- two pointers
+- sliding window
+- stack
+- queue
+- linked list
+- binary search
+- trees
+- BFS
+- DFS
+
+Do not teach advanced DSA today.
+
+Part 3 — Baseline Coding
+
+Give me:
+
+- one easy array/string problem
+- one hashing problem
+- one tree or linked-list problem
+
+Do not give hints initially.
+
+For every coding problem require:
+
+1. problem clarification
+2. brute-force idea
+3. optimized idea
+4. pseudocode
+5. Python solution
+6. time complexity
+7. space complexity
+
+Part 4 — DSA Baseline Assessment
+
+Classify each existing DSA area as:
+
+- Comfortable
+- Needs Practice
+- Weak
+- Not Yet Learned
+
+Do not introduce new advanced algorithms.
+
+Tomorrow I will begin a fresh 90-day dedicated DSA specialization.
+```
+
+---
+
+# PHASE 1 — FOUNDATIONAL DSA
+
+# Days 211–240
+
+---
+
+# Day 211 — Big-O and Array Fundamentals
+
+### Ready-to-copy prompt
+
+```text
+Teach me **Day 211: DSA Foundation — Big-O and Arrays** in beginner-friendly Python.
+
+This begins my dedicated 90-day DSA specialization.
+
+Include:
+
+1. Day number
+2. Topic name: Big-O notation and array fundamentals
+3. Connection: I have seen Big-O and Python lists before. Today I will rebuild the foundation carefully.
+4. Important topics:
+   - algorithm
+   - input size
+   - time complexity
+   - space complexity
+   - O(1)
+   - O(n)
+   - O(n²)
+   - Python list as an array
+   - indexing
+   - traversal
+5. Explain Big-O using simple real-life intuition.
+6. Show code examples of:
+   - direct indexing
+   - one loop
+   - nested loops
+7. Explain why we normally ignore constants in Big-O.
+8. Give one guided easy array problem.
+9. Give one independent easy array problem.
+10. For the independent problem, do not give the solution initially.
+11. Ask me to identify the time and space complexity.
+12. Include easy edge cases.
+13. Explain common beginner mistakes.
+14. End with 5 quick self-check questions.
+
+Use Python only.
+
+Do not introduce advanced algorithms.
+```
+
+---
+
+# Day 212 — Array Traversal and Basic Patterns
+
+### Ready-to-copy prompt
+
+```text
+Teach me **Day 212: Arrays — Traversal and Basic Problem-Solving Patterns** in beginner-friendly Python.
+
+Include:
+
+1. Connection: Yesterday I learned array complexity and traversal. Today I will use traversal to solve simple problems.
+2. Important topics:
+   - forward traversal
+   - reverse traversal
+   - index vs value
+   - accumulator
+   - minimum
+   - maximum
+   - counting
+   - updating array values
+3. Explain the accumulator pattern.
+4. Show how to find:
+   - sum
+   - minimum
+   - maximum
+   - count matching values
+5. Explain when one traversal is enough.
+6. Give one guided problem.
+7. Give two independent easy array problems.
+8. Do not show independent solutions initially.
+9. For every problem ask me to write:
+   - thought process
+   - pseudocode
+   - Python code
+   - time complexity
+   - space complexity
+10. Include empty-array and one-element edge cases.
+11. Explain common off-by-one mistakes.
+12. End with pattern-recognition notes.
+```
+
+---
+
+# Day 213 — String Fundamentals for DSA
+
+### Ready-to-copy prompt
+
+```text
+Teach me **Day 213: Strings for DSA** in beginner-friendly Python.
+
+Include:
+
+1. Connection: Arrays taught me indexed traversal. Strings use many of the same ideas.
+2. Important topics:
+   - character indexing
+   - string traversal
+   - immutability
+   - slicing
+   - comparison
+   - counting characters
+   - reversing
+3. Explain why Python strings are immutable.
+4. Compare string and list operations.
+5. Teach simple palindrome checking.
+6. Show brute-force thinking before optimization.
+7. Give one guided string problem.
+8. Give two independent easy string problems.
+9. Do not provide their solutions initially.
+10. Ask me to analyze complexity.
+11. Include:
+   - empty string
+   - one character
+   - spaces
+   - uppercase/lowercase
+12. Explain common mistakes.
+13. End with string-problem recognition signals.
+```
+
+---
+
+# Day 214 — Hash Maps and Sets
+
+### Ready-to-copy prompt
+
+```text
+Teach me **Day 214: Hash Maps and Sets for DSA** in beginner-friendly Python.
+
+Include:
+
+1. Connection: Yesterday I solved strings using traversal. Today I will learn how fast lookup can improve solutions.
+2. Important topics:
+   - dictionary
+   - set
+   - key-value mapping
+   - membership
+   - frequency counting
+   - duplicate detection
+   - average O(1) lookup
+3. Explain when a dictionary is useful.
+4. Explain when a set is enough.
+5. Teach the frequency-map pattern.
+6. Compare nested-loop lookup with hash-based lookup.
+7. Give one guided frequency problem.
+8. Give one guided duplicate-detection problem.
+9. Give one independent easy/medium problem.
+10. Do not show its solution initially.
+11. Ask me for brute-force and optimized approaches.
+12. Require time and space complexity.
+13. Include common mistakes.
+14. End with signals that suggest hashing.
+```
+
+---
+
+# Day 215 — Two Pointer Technique
+
+### Ready-to-copy prompt
+
+```text
+Teach me **Day 215: Two Pointer Technique** in beginner-friendly Python.
+
+Include:
+
+1. Connection: Hashing reduces repeated searching using extra memory. Today I will learn a pattern that can sometimes solve problems using very little extra memory.
+2. Important topics:
+   - left pointer
+   - right pointer
+   - pointers moving toward each other
+   - pointers moving in the same direction
+   - sorted-array pattern
+3. Explain when two pointers are useful.
+4. Use an ASCII visualization.
+5. Walk through one palindrome example.
+6. Walk through one sorted-array example.
+7. Compare brute force vs two pointers.
+8. Give one guided problem.
+9. Give two independent problems.
+10. Do not reveal independent solutions initially.
+11. Require pseudocode before Python code.
+12. Require complexity analysis.
+13. Explain common pointer-update mistakes.
+14. End with recognition signals for two pointers.
+```
+
+---
+
+# Day 216 — Fixed Sliding Window
+
+### Ready-to-copy prompt
+
+```text
+Teach me **Day 216: Fixed Sliding Window** in beginner-friendly Python.
+
+Include:
+
+1. Connection: Two pointers move boundaries. Sliding window uses boundaries to maintain a useful contiguous region.
+2. Important topics:
+   - contiguous subarray
+   - window size
+   - left/right boundary
+   - add incoming value
+   - remove outgoing value
+3. Explain sliding window using a visual example.
+4. First solve a fixed-size-window problem using brute force.
+5. Show why recalculating every window is wasteful.
+6. Then explain the optimized sliding-window idea.
+7. Give one guided problem.
+8. Give two independent easy problems.
+9. Do not provide independent solutions.
+10. Ask for complexity.
+11. Include edge cases where:
+   - k = 1
+   - k equals array length
+   - array is smaller than k
+12. Explain common mistakes.
+```
+
+---
+
+# Day 217 — Week 1 DSA Revision
+
+### Ready-to-copy prompt
+
+```text
+Teach me **Day 217: DSA Revision — Big-O, Arrays, Strings, Hashing, Two Pointers and Sliding Window**.
+
+Do not introduce a major new topic.
+
+Include:
+
+1. Revision of Days 211–216.
+2. Create a pattern-recognition table for:
+   - array traversal
+   - string traversal
+   - hash map
+   - set
+   - two pointers
+   - fixed sliding window
+3. Give me 10 short recognition scenarios.
+4. Ask me which pattern I would try and why.
+5. Then give 3 coding problems:
+   - easy
+   - easy
+   - easy/medium
+6. Do not tell me which pattern each problem uses.
+7. Do not give hints initially.
+8. Require:
+   - brute-force reasoning
+   - optimized reasoning
+   - pseudocode
+   - Python
+   - time complexity
+   - space complexity
+9. After I answer, identify my weak patterns.
+10. End with a one-page revision cheat sheet.
+```
+
+---
+
+# Day 218 — Variable Sliding Window
+
+### Ready-to-copy prompt
+
+```text
+Teach me **Day 218: Variable Sliding Window** in beginner-friendly Python.
+
+Include:
+
+1. Connection: Fixed windows always had the same length. Today the window size will grow and shrink dynamically.
+2. Important topics:
+   - expand right
+   - shrink left
+   - window condition
+   - longest valid window
+   - shortest valid window idea
+3. Explain how to recognize variable-window problems.
+4. Use one detailed dry run.
+5. Compare brute force and sliding window.
+6. Explain why the left pointer does not usually move backward.
+7. Give one guided problem.
+8. Give two independent problems.
+9. Do not reveal their solutions initially.
+10. Require complexity analysis.
+11. Include typical bugs when shrinking the window.
+12. Keep difficulty easy to early-medium.
+```
+
+---
+
+# Day 219 — Prefix Sum
+
+### Ready-to-copy prompt
+
+```text
+Teach me **Day 219: Prefix Sum** in beginner-friendly Python.
+
+Include:
+
+1. Connection: Sliding window helps with moving contiguous ranges. Prefix sums help answer repeated range-sum questions efficiently.
+2. Important topics:
+   - running sum
+   - prefix array
+   - range sum
+   - preprocessing
+3. Build a prefix-sum array step by step.
+4. Explain the formula for getting a range sum.
+5. Explain why preprocessing can make later queries faster.
+6. Compare repeated loops vs prefix sums.
+7. Give one guided problem.
+8. Give two independent problems.
+9. Do not give independent solutions initially.
+10. Require time and space complexity.
+11. Include index-boundary edge cases.
+12. Explain common off-by-one mistakes.
+13. End with recognition signals.
+```
+
+---
+
+# Day 220 — Stack Fundamentals
+
+### Ready-to-copy prompt
+
+```text
+Teach me **Day 220: Stack Fundamentals** in beginner-friendly Python.
+
+Include:
+
+1. Connection: Arrays store general sequences. Today I will learn a structure where the most recently added item is handled first.
+2. Important topics:
+   - LIFO
+   - push
+   - pop
+   - peek/top
+   - empty stack
+   - stack using Python list
+3. Use real-world analogy and ASCII visualization.
+4. Explain the complexity of stack operations.
+5. Teach how stacks help with:
+   - matching brackets
+   - undo-style behavior
+6. Give one guided stack problem.
+7. Give two independent easy stack problems.
+8. Do not show their solutions initially.
+9. Require pseudocode and complexity.
+10. Include empty-stack edge cases.
+11. Explain common mistakes.
+```
+
+---
+
+# Day 221 — Queue and Deque
+
+### Ready-to-copy prompt
+
+```text
+Teach me **Day 221: Queue and Deque Fundamentals** in beginner-friendly Python.
+
+Include:
+
+1. Connection: Stack uses LIFO. Queue uses FIFO.
+2. Important topics:
+   - FIFO
+   - enqueue
+   - dequeue
+   - front
+   - rear
+   - collections.deque
+3. Explain why `list.pop(0)` is normally inefficient.
+4. Explain deque operations.
+5. Compare:
+   - stack
+   - queue
+   - deque
+6. Give a visual example.
+7. Give one guided queue problem.
+8. Give two independent problems.
+9. Do not provide solutions initially.
+10. Require complexity analysis.
+11. Include empty-queue edge cases.
+12. End with recognition signals.
+```
+
+---
+
+# Day 222 — Singly Linked List Fundamentals
+
+### Ready-to-copy prompt
+
+```text
+Teach me **Day 222: Singly Linked List Fundamentals** in beginner-friendly Python.
+
+Include:
+
+1. Connection: Arrays store elements using indexes. Linked lists connect nodes using references.
+2. Important topics:
+   - node
+   - value
+   - next
+   - head
+   - tail concept
+   - traversal
+3. Draw an ASCII linked list.
+4. Create a beginner-friendly `ListNode` class.
+5. Compare arrays and linked lists.
+6. Explain traversal step by step.
+7. Explain why random indexing is not efficient in linked lists.
+8. Give one guided traversal problem.
+9. Give one independent problem.
+10. Do not provide its solution initially.
+11. Explain complexity.
+12. Include:
+   - empty list
+   - one node
+13. Explain common reference mistakes.
+```
+
+---
+
+# Day 223 — Linked List Insert and Delete
+
+### Ready-to-copy prompt
+
+```text
+Teach me **Day 223: Linked List Insert and Delete Operations** in beginner-friendly Python.
+
+Include:
+
+1. Connection: Yesterday I learned linked-list traversal. Today I will modify the list safely.
+2. Important topics:
+   - insert at beginning
+   - insert after a node
+   - delete head
+   - delete by value
+   - pointer/reference updates
+3. Draw before-and-after ASCII diagrams.
+4. Explain the correct order of reference updates.
+5. Explain what can go wrong if a link is overwritten too early.
+6. Give one guided insertion exercise.
+7. Give one guided deletion exercise.
+8. Give one independent problem.
+9. Do not give its solution initially.
+10. Require complexity analysis.
+11. Include empty and single-node cases.
+```
+
+---
+
+# Day 224 — Week 2 Revision
+
+### Ready-to-copy prompt
+
+```text
+Teach me **Day 224: DSA Revision — Sliding Window, Prefix Sum, Stack, Queue and Linked List**.
+
+Include:
+
+1. Concise revision of Days 218–223.
+2. Compare:
+   - sliding window
+   - prefix sum
+   - stack
+   - queue
+   - linked list
+3. Give 10 pattern-recognition mini-scenarios.
+4. Ask me to select the appropriate structure/pattern.
+5. Give 3 mixed coding problems.
+6. Do not identify the required technique.
+7. No hints initially.
+8. Require:
+   - reasoning
+   - pseudocode
+   - Python
+   - complexity
+9. After my answers, explain mistakes.
+10. Give a revision checklist.
+```
+
+---
+
+# Day 225 — Recursion Fundamentals
+
+### Ready-to-copy prompt
+
+```text
+Teach me **Day 225: Recursion Fundamentals** in beginner-friendly Python.
+
+Include:
+
+1. Connection: Until now I mainly used loops. Today I will learn how a function can solve a smaller version of the same problem.
+2. Important topics:
+   - recursive function
+   - base case
+   - recursive case
+   - smaller subproblem
+   - call stack
+3. Use a simple countdown example.
+4. Explain factorial recursively.
+5. Draw the call stack.
+6. Explain what happens when the base case is missing.
+7. Compare recursion and iteration.
+8. Give one guided recursive problem.
+9. Give two independent easy recursion problems.
+10. Do not show solutions initially.
+11. Explain time and space complexity.
+12. Explain recursion-depth concerns in Python.
+```
+
+---
+
+# Day 226 — Recursion and the Call Stack
+
+### Ready-to-copy prompt
+
+```text
+Teach me **Day 226: Recursion — Understanding the Call Stack**.
+
+Include:
+
+1. Connection: Yesterday I learned basic recursion. Today I want to understand exactly what happens during recursive calls.
+2. Important topics:
+   - stack frame
+   - function call
+   - return path
+   - recursion tree
+   - pre-order work
+   - post-order work idea
+3. Trace recursive calls line by line.
+4. Use examples such as:
+   - sum from 1 to n
+   - reverse a string
+5. Show the expanding and unwinding phases.
+6. Give one guided problem.
+7. Give two independent problems.
+8. Require me to manually trace the calls before coding.
+9. Require complexity analysis.
+10. Explain common recursion mistakes.
+```
+
+---
+
+# Day 227 — Elementary Sorting
+
+### Ready-to-copy prompt
+
+```text
+Teach me **Day 227: Sorting Fundamentals — Bubble, Selection and Insertion Sort**.
+
+Include:
+
+1. Connection: I previously used Python `.sort()`. Today I will learn how basic sorting algorithms work internally.
+2. Important algorithms:
+   - Bubble Sort
+   - Selection Sort
+   - Insertion Sort
+3. For each:
+   - intuition
+   - step-by-step trace
+   - Python implementation
+   - best/average/worst complexity
+   - space complexity
+   - stability
+   - in-place property
+4. Use the same small array for comparison.
+5. Explain why these algorithms are useful for learning even though Python's built-in sort is better in practice.
+6. Give one implementation exercise.
+7. Give one conceptual comparison exercise.
+8. End with a comparison table.
+```
+
+---
+
+# Day 228 — Merge Sort
+
+### Ready-to-copy prompt
+
+```text
+Teach me **Day 228: Merge Sort** in beginner-friendly Python.
+
+Include:
+
+1. Connection: Yesterday I learned simple O(n²) sorting methods. Today I will learn divide-and-conquer sorting.
+2. Important topics:
+   - divide
+   - recursively sort
+   - merge
+   - divide and conquer
+3. Explain merge sort visually.
+4. Show how an array is repeatedly divided.
+5. Explain the merge operation separately before showing the complete algorithm.
+6. Trace one example completely.
+7. Explain why the time complexity is O(n log n).
+8. Explain auxiliary space.
+9. Give one guided implementation.
+10. Then ask me to implement it independently without looking.
+11. Include edge cases and common mistakes.
+```
+
+---
+
+# Day 229 — Quick Sort
+
+### Ready-to-copy prompt
+
+```text
+Teach me **Day 229: Quick Sort Fundamentals** in beginner-friendly Python.
+
+Include:
+
+1. Connection: Merge sort divides the array and merges results. Quick sort partitions elements around a pivot.
+2. Important topics:
+   - pivot
+   - partition
+   - smaller side
+   - larger side
+   - recursion
+3. Use a simple partition strategy suitable for beginners.
+4. Trace one example visually.
+5. Explain:
+   - average O(n log n)
+   - worst O(n²)
+6. Compare merge sort and quick sort.
+7. Explain in-place idea at a high level.
+8. Give one guided implementation.
+9. Give one independent implementation exercise.
+10. Explain common pivot/partition mistakes.
+11. Do not introduce advanced randomized-analysis mathematics.
+```
+
+---
+
+# Day 230 — Binary Search Fundamentals
+
+### Ready-to-copy prompt
+
+```text
+Teach me **Day 230: Binary Search Fundamentals** in beginner-friendly Python.
+
+Include:
+
+1. Connection: Sorting enables faster searching. Today I will learn the classic O(log n) search algorithm.
+2. Important topics:
+   - sorted input
+   - left
+   - right
+   - middle
+   - discard half
+3. Compare linear search and binary search.
+4. Visualize every iteration.
+5. Teach iterative binary search first.
+6. Explain the loop condition carefully.
+7. Explain why `mid = (left + right) // 2` works in Python.
+8. Give one guided problem.
+9. Give two independent binary-search problems.
+10. Do not give solutions initially.
+11. Require complexity analysis.
+12. Include target absent and empty-array cases.
+```
+
+---
+
+# Day 231 — Binary Search Variants
+
+### Ready-to-copy prompt
+
+```text
+Teach me **Day 231: Binary Search Variants** in beginner-friendly Python.
+
+Include:
+
+1. Connection: Yesterday I searched for an exact target. Today I will learn how binary search can find boundaries.
+2. Important topics:
+   - first occurrence
+   - last occurrence
+   - lower-bound idea
+   - insertion position
+3. Explain why simply returning when the target is found does not work for boundary problems.
+4. Trace first-occurrence search.
+5. Trace last-occurrence search.
+6. Give one guided boundary problem.
+7. Give two independent problems.
+8. Do not provide solutions initially.
+9. Require pseudocode.
+10. Require complexity analysis.
+11. Explain typical `left <= right` and boundary mistakes.
+```
+
+---
+
+# Day 232 — Week 3 Revision
+
+### Ready-to-copy prompt
+
+```text
+Teach me **Day 232: DSA Revision — Recursion, Sorting and Binary Search**.
+
+Include:
+
+1. Revision of Days 225–231.
+2. Compare:
+   - iteration
+   - recursion
+   - Bubble Sort
+   - Selection Sort
+   - Insertion Sort
+   - Merge Sort
+   - Quick Sort
+   - Binary Search
+3. Give 10 conceptual questions.
+4. Give 3 coding problems without identifying the algorithm.
+5. One problem must require recursion.
+6. One must involve sorting.
+7. One must involve binary search.
+8. No hints initially.
+9. Require complexity analysis.
+10. Identify my weak areas after I answer.
+```
+
+---
+
+# Day 233 — Binary Tree Fundamentals
+
+### Ready-to-copy prompt
+
+```text
+Teach me **Day 233: Binary Tree Fundamentals** in beginner-friendly Python.
+
+Include:
+
+1. Connection: Linked lists connected nodes linearly. Trees connect nodes hierarchically.
+2. Important topics:
+   - root
+   - parent
+   - child
+   - left
+   - right
+   - leaf
+   - subtree
+   - height
+   - depth
+3. Draw several ASCII trees.
+4. Create a simple `TreeNode` class.
+5. Explain tree terminology.
+6. Explain why trees are recursive structures.
+7. Give one guided tree-reading exercise.
+8. Give one easy independent problem.
+9. Do not show its solution initially.
+10. Explain empty-tree and one-node cases.
+```
+
+---
+
+# Day 234 — DFS Tree Traversals
+
+### Ready-to-copy prompt
+
+```text
+Teach me **Day 234: Tree DFS — Preorder, Inorder and Postorder**.
+
+Include:
+
+1. Connection: Yesterday I learned tree structure. Today I will visit every node using depth-first search.
+2. Important traversals:
+   - preorder
+   - inorder
+   - postorder
+3. Explain each using:
+   - Node
+   - Left
+   - Right
+4. Use the same ASCII tree for all three traversals.
+5. Trace recursive calls.
+6. Explain iterative DFS conceptually but prioritize recursive DFS today.
+7. Give one guided traversal problem.
+8. Give two independent easy tree problems.
+9. Do not reveal their solutions initially.
+10. Require time and space complexity.
+11. Explain common recursion mistakes.
+```
+
+---
+
+# Day 235 — Tree BFS / Level Order
+
+### Ready-to-copy prompt
+
+```text
+Teach me **Day 235: Tree BFS and Level-Order Traversal**.
+
+Include:
+
+1. Connection: DFS explores one branch deeply. BFS processes the tree level by level.
+2. Important topics:
+   - queue
+   - level order
+   - nodes per level
+   - deque
+3. Use an ASCII tree.
+4. Show the queue after every important step.
+5. Teach basic level-order traversal.
+6. Then explain how to return values grouped by level.
+7. Give one guided problem.
+8. Give two independent BFS tree problems.
+9. Do not provide solutions initially.
+10. Require complexity analysis.
+11. Include empty-root edge case.
+```
+
+---
+
+# Day 236 — Binary Search Tree Fundamentals
+
+### Ready-to-copy prompt
+
+```text
+Teach me **Day 236: Binary Search Tree Fundamentals**.
+
+Include:
+
+1. Connection: Yesterday I traversed generic binary trees. Today node ordering will give the tree additional search properties.
+2. Important topics:
+   - BST property
+   - smaller values on left
+   - larger values on right
+   - search
+   - insert
+   - inorder sorted order
+3. Draw an example BST.
+4. Search for multiple targets visually.
+5. Explain insertion.
+6. Explain average vs worst-case search complexity.
+7. Give one guided search problem.
+8. Give one independent BST problem.
+9. Do not show solution initially.
+10. Explain duplicate-value assumptions.
+11. Compare BST search with binary search on arrays.
+```
+
+---
+
+# Day 237 — Heap and Priority Queue Fundamentals
+
+### Ready-to-copy prompt
+
+```text
+Teach me **Day 237: Heap and Priority Queue Fundamentals** in beginner-friendly Python.
+
+Include:
+
+1. Connection: A BST maintains ordered relationships. A heap efficiently gives access to the highest- or lowest-priority item.
+2. Important topics:
+   - min heap
+   - max heap concept
+   - priority queue
+   - Python `heapq`
+   - push
+   - pop
+   - peek
+3. Explain heap property without going too deep into implementation internals.
+4. Explain Python's min-heap behavior.
+5. Show how negative values can simulate a max heap.
+6. Give one guided heap problem.
+7. Give two independent easy heap problems.
+8. Do not give solutions initially.
+9. Explain operation complexities.
+10. End with heap recognition signals.
+```
+
+---
+
+# Day 238 — Matrix and Grid Traversal
+
+### Ready-to-copy prompt
+
+```text
+Teach me **Day 238: Matrix and Grid Traversal** in beginner-friendly Python.
+
+Include:
+
+1. Connection: Arrays are one-dimensional. Today I will solve problems on rows and columns.
+2. Important topics:
+   - row
+   - column
+   - nested loops
+   - boundaries
+   - four directions
+   - neighbor coordinates
+3. Explain matrix indexing visually.
+4. Traverse a matrix row by row.
+5. Traverse column by column.
+6. Explain how to check valid neighbors.
+7. Give one guided matrix problem.
+8. Give two independent easy matrix problems.
+9. Do not show their solutions initially.
+10. Require complexity analysis.
+11. Explain boundary mistakes.
+```
+
+---
+
+# Day 239 — Foundation Pattern Recognition
+
+### Ready-to-copy prompt
+
+```text
+Teach me **Day 239: DSA Foundation Pattern Recognition**.
+
+Today should focus on deciding which technique to use rather than learning another data structure.
+
+Review these patterns:
+
+- array traversal
+- strings
+- hashing
+- two pointers
+- sliding window
+- prefix sum
+- stack
+- queue
+- linked list
+- recursion
+- sorting
+- binary search
+- trees
+- BST
+- heap
+- matrix
+
+Include:
+
+1. Give me 20 short problem descriptions.
+2. For each, ask me:
+   - likely data structure/pattern
+   - why
+   - expected complexity
+3. Do not reveal answers until I attempt.
+4. Then give me 3 mixed coding problems.
+5. Do not mention their patterns.
+6. Require brute-force and optimized reasoning.
+7. End with a pattern-recognition cheat sheet.
+```
+
+---
+
+# Day 240 — Foundation DSA Assessment
+
+### Ready-to-copy prompt
+
+```text
+Conduct **Day 240: Foundation DSA Assessment**.
+
+Test everything learned during Days 211–239.
+
+Part 1 — Concepts
+
+Ask 15 short questions covering:
+
+- Big-O
+- arrays
+- strings
+- hash maps
+- sets
+- stack
+- queue
+- linked list
+- recursion
+- sorting
+- binary search
+- tree
+- BST
+- heap
+- matrix
+
+Part 2 — Coding
+
+Give me 4 problems:
+
+1. Easy array/string
+2. Easy/medium hashing or sliding window
+3. Easy linked-list/tree
+4. Easy/medium binary-search/heap problem
+
+Do not reveal patterns.
+
+Do not give hints initially.
+
+For every coding problem require:
+
+- clarification
+- brute force
+- optimization
+- pseudocode
+- Python
+- time complexity
+- space complexity
+
+Part 3 — Assessment
+
+Score each topic:
+
+- Strong
+- Comfortable
+- Needs Practice
+- Weak
+
+Use my actual answers only.
+
+Do not begin intermediate topics until the assessment is complete.
+```
+
+---
+
+# PHASE 2 — INTERMEDIATE DSA
+
+# Days 241–270
+
+---
+
+# Day 241 — Fast and Slow Pointers
+
+### Ready-to-copy prompt
+
+```text
+Teach me **Day 241: Fast and Slow Pointer Pattern**.
+
+Include:
+
+1. Connection: I already know two pointers. Today the pointers will move at different speeds.
+2. Important topics:
+   - slow pointer
+   - fast pointer
+   - linked-list middle
+   - cycle concept
+3. Explain why different speeds are useful.
+4. Use ASCII linked-list diagrams.
+5. Walk through finding the middle node.
+6. Introduce Floyd's cycle-detection intuition.
+7. Give one guided problem.
+8. Give two independent problems.
+9. Do not reveal solutions initially.
+10. Require complexity analysis.
+11. End with recognition signals.
+```
+
+---
+
+# Day 242 — Reverse a Linked List
+
+### Ready-to-copy prompt
+
+```text
+Teach me **Day 242: Reverse a Singly Linked List** in beginner-friendly Python.
+
+Include:
+
+1. Connection: I already know node traversal and pointer updates. Today I will reverse every link.
+2. Important variables:
+   - previous
+   - current
+   - next node
+3. Draw the list before reversal.
+4. Show each pointer update visually.
+5. Explain why the next node must be saved first.
+6. Teach iterative reversal first.
+7. Introduce recursive reversal only after iterative understanding.
+8. Give one guided reversal.
+9. Give one independent related problem.
+10. Require complexity analysis.
+11. Explain common pointer-loss mistakes.
+```
+
+---
+
+# Day 243 — Linked List Cycle and Middle Patterns
+
+### Ready-to-copy prompt
+
+```text
+Teach me **Day 243: Linked List — Cycle and Middle Patterns**.
+
+Include:
+
+1. Connection: Yesterday I reversed pointers. Today I will solve linked-list problems without extra arrays.
+2. Important patterns:
+   - fast/slow pointers
+   - middle node
+   - cycle detection
+   - cycle-entry concept at a high level
+3. First show a hash-set solution for cycle detection.
+4. Then optimize using fast/slow pointers.
+5. Compare their space complexity.
+6. Give one guided problem.
+7. Give two independent linked-list problems.
+8. No solutions initially.
+9. Require brute-force and optimized reasoning.
+10. End with linked-list recognition signals.
+```
+
+---
+
+# Day 244 — Merge Intervals
+
+### Ready-to-copy prompt
+
+```text
+Teach me **Day 244: Merge Intervals Pattern**.
+
+Include:
+
+1. Connection: Sorting can place related intervals together. Today I will use that property to combine overlapping ranges.
+2. Important topics:
+   - interval
+   - start
+   - end
+   - overlap
+   - sorting intervals
+   - merged result
+3. Explain overlap using number-line diagrams.
+4. Show why sorting by start time helps.
+5. Trace one merge example.
+6. Give one guided merge-interval problem.
+7. Give two independent interval problems.
+8. Do not show solutions initially.
+9. Require complexity analysis including sorting cost.
+10. Explain edge cases such as touching intervals and contained intervals.
+```
+
+---
+
+# Day 245 — Interval Scheduling and Overlap Problems
+
+### Ready-to-copy prompt
+
+```text
+Teach me **Day 245: Interval Scheduling and Overlap Problems**.
+
+Include:
+
+1. Connection: Yesterday I merged intervals. Today I will decide which intervals conflict or can coexist.
+2. Important topics:
+   - overlapping intervals
+   - non-overlapping intervals
+   - sorting by start
+   - sorting by end
+   - meeting-room style problems
+3. Explain how interval problems differ from ordinary array problems.
+4. Walk through one overlap-detection problem.
+5. Introduce the greedy idea of choosing an interval by its ending time.
+6. Give one guided problem.
+7. Give two independent problems.
+8. No solutions initially.
+9. Require complexity analysis.
+10. Keep difficulty medium-foundational.
+```
+
+---
+
+# Day 246 — Monotonic Stack
+
+### Ready-to-copy prompt
+
+```text
+Teach me **Day 246: Monotonic Stack** in beginner-friendly Python.
+
+Include:
+
+1. Connection: I already know normal stacks. Today the stack will maintain increasing or decreasing order.
+2. Important topics:
+   - monotonic increasing stack
+   - monotonic decreasing stack
+   - next greater element
+   - previous greater/smaller concept
+3. Explain why repeatedly scanning to the right can become O(n²).
+4. Show how a stack avoids repeated work.
+5. Trace a next-greater-element example completely.
+6. Give one guided problem.
+7. Give two independent problems.
+8. Do not reveal solutions initially.
+9. Explain amortized O(n) intuition simply.
+10. Explain common stack-pop-condition mistakes.
+```
+
+---
+
+# Day 247 — Monotonic Queue and Window Maximum
+
+### Ready-to-copy prompt
+
+```text
+Teach me **Day 247: Monotonic Queue / Deque Pattern**.
+
+Include:
+
+1. Connection: Yesterday a monotonic stack maintained useful ordering. Today I will combine ordering with a moving window.
+2. Important topics:
+   - deque
+   - decreasing deque
+   - window boundary
+   - removing expired indices
+   - removing smaller useless elements
+3. Start with the brute-force sliding-window maximum.
+4. Explain why it can be slow.
+5. Build the optimized deque solution step by step.
+6. Use indices rather than only values and explain why.
+7. Give one guided problem.
+8. Give one independent problem.
+9. Require complexity analysis.
+10. Keep explanation interview-focused and beginner-friendly.
+```
+
+---
+
+# Day 248 — Intermediate Revision 1
+
+### Ready-to-copy prompt
+
+```text
+Teach me **Day 248: Intermediate DSA Revision — Linked List and Interval Patterns**.
+
+Review:
+
+- fast/slow pointers
+- linked-list reversal
+- cycle detection
+- merge intervals
+- interval scheduling
+- monotonic stack
+- monotonic queue
+
+Include:
+
+1. Pattern-recognition summary.
+2. 12 short scenarios.
+3. Ask me to choose the pattern.
+4. Give 3 coding problems without naming the pattern.
+5. At least one linked-list problem.
+6. At least one interval/stack problem.
+7. No hints initially.
+8. Require pseudocode and complexity.
+9. Review my solution like an interviewer.
+```
+
+---
+
+# Day 249 — Tree Height, Depth and Recursion
+
+### Ready-to-copy prompt
+
+```text
+Teach me **Day 249: Tree Recursion — Height, Depth and Basic Properties**.
+
+Include:
+
+1. Connection: I know DFS traversal. Today I will make recursive tree functions return useful information.
+2. Important topics:
+   - subtree
+   - height
+   - depth
+   - leaf
+   - recursive return value
+3. Explain the relationship between a node and its left/right subtrees.
+4. Derive the maximum-depth solution step by step.
+5. Show the recursion tree.
+6. Give one guided problem.
+7. Give two independent tree problems.
+8. Do not reveal solutions initially.
+9. Require complexity analysis.
+10. Explain recursive base cases carefully.
+```
+
+---
+
+# Day 250 — Tree Path Problems
+
+### Ready-to-copy prompt
+
+```text
+Teach me **Day 250: Binary Tree Path Problems**.
+
+Include:
+
+1. Connection: Yesterday tree recursion returned height information. Today recursion will carry information along a root-to-node path.
+2. Important topics:
+   - root-to-leaf path
+   - path sum
+   - current state
+   - backtracking during tree recursion
+3. Explain one path-sum example.
+4. Show what state is passed downward.
+5. Explain what happens when recursion returns.
+6. Give one guided path problem.
+7. Give two independent problems.
+8. No solutions initially.
+9. Require complexity analysis.
+10. Explain common state-management mistakes.
+```
+
+---
+
+# Day 251 — BST Search, Insert and Validation
+
+### Ready-to-copy prompt
+
+```text
+Teach me **Day 251: Binary Search Tree — Search, Insert and Validation**.
+
+Include:
+
+1. Connection: I learned BST basics earlier. Today I will solve common BST interview operations.
+2. Important topics:
+   - BST invariant
+   - search
+   - insertion
+   - valid lower/upper bounds
+   - inorder property
+3. Review search and insertion briefly.
+4. Explain why checking only a parent and child is not enough to validate an entire BST.
+5. Show the valid-range idea.
+6. Give one guided validation problem.
+7. Give two independent BST problems.
+8. No solutions initially.
+9. Require complexity analysis.
+10. Discuss balanced vs skewed BST complexity.
+```
+
+---
+
+# Day 252 — Lowest Common Ancestor
+
+### Ready-to-copy prompt
+
+```text
+Teach me **Day 252: Lowest Common Ancestor in Trees**.
+
+Include:
+
+1. Connection: Tree recursion can combine answers coming from left and right subtrees.
+2. Important topics:
+   - ancestor
+   - common ancestor
+   - lowest common ancestor
+   - recursive return values
+3. Use an ASCII tree.
+4. Explain LCA in a normal binary tree.
+5. Explain why BST ordering can simplify the problem.
+6. Compare binary-tree LCA and BST LCA.
+7. Give one guided problem.
+8. Give one independent problem.
+9. Do not show its solution initially.
+10. Require complexity analysis.
+```
+
+---
+
+# Day 253 — Heap Top-K Pattern
+
+### Ready-to-copy prompt
+
+```text
+Teach me **Day 253: Heap — Top-K Pattern**.
+
+Include:
+
+1. Connection: I know heap basics. Today I will use a heap when I need only the best K elements rather than sorting everything.
+2. Important topics:
+   - top K
+   - min heap
+   - heap size K
+   - kth largest
+   - frequency + heap
+3. Compare:
+   - sorting all elements
+   - maintaining a heap of K elements
+4. Trace one Kth-largest example.
+5. Give one guided problem.
+6. Give two independent Top-K problems.
+7. No solutions initially.
+8. Require time/space complexity.
+9. Explain when heap is preferable to full sorting.
+```
+
+---
+
+# Day 254 — Multiple Sorted Sequences and Heap
+
+### Ready-to-copy prompt
+
+```text
+Teach me **Day 254: Heap — Working with Multiple Sorted Sequences**.
+
+Include:
+
+1. Connection: Yesterday I used a heap for Top-K. Today the heap will track the smallest current candidate from multiple sorted sources.
+2. Important topics:
+   - K sorted lists
+   - heap entry
+   - source/list index
+   - next candidate
+3. Explain the idea using very small sorted lists.
+4. Trace heap state step by step.
+5. Connect the pattern to merge-sort merging.
+6. Give one guided problem.
+7. Give one independent problem.
+8. Do not show solution initially.
+9. Require complexity analysis.
+10. Keep implementation beginner-friendly.
+```
+
+---
+
+# Day 255 — Intermediate Revision 2
+
+### Ready-to-copy prompt
+
+```text
+Teach me **Day 255: Intermediate DSA Revision — Trees, BST and Heap**.
+
+Review:
+
+- tree recursion
+- height/depth
+- path problems
+- BST
+- LCA
+- heap
+- Top-K
+- merging sorted sequences
+
+Include:
+
+1. 12 conceptual questions.
+2. 10 pattern-recognition scenarios.
+3. 3 mixed coding problems.
+4. Do not name the pattern for each problem.
+5. No hints initially.
+6. Require reasoning, pseudocode, Python and complexity.
+7. Identify which tree/heap concepts I still confuse.
+8. End with a compact revision sheet.
+```
+
+---
+
+# Day 256 — Graph Fundamentals and Representation
+
+### Ready-to-copy prompt
+
+```text
+Teach me **Day 256: Graph Fundamentals and Representation** in beginner-friendly Python.
+
+Include:
+
+1. Connection: Trees are a special type of graph. Today I will learn structures where nodes can connect more freely.
+2. Important topics:
+   - vertex/node
+   - edge
+   - directed graph
+   - undirected graph
+   - weighted/unweighted
+   - adjacency list
+   - adjacency matrix
+3. Draw small graphs in ASCII.
+4. Convert edge lists into adjacency lists.
+5. Use Python dictionaries/lists.
+6. Compare adjacency list vs matrix.
+7. Explain space complexity.
+8. Give one guided graph-building exercise.
+9. Give two independent representation exercises.
+10. Do not introduce advanced graph algorithms yet.
+```
+
+---
+
+# Day 257 — Graph BFS
+
+### Ready-to-copy prompt
+
+```text
+Teach me **Day 257: Graph Breadth-First Search**.
+
+Include:
+
+1. Connection: I already used BFS on trees. Graph BFS needs an additional visited structure.
+2. Important topics:
+   - queue
+   - visited set
+   - neighbors
+   - traversal order
+3. Explain why graphs may contain cycles.
+4. Explain why `visited` is necessary.
+5. Trace BFS step by step on an ASCII graph.
+6. Give one guided traversal problem.
+7. Give two independent graph-BFS problems.
+8. Do not reveal solutions initially.
+9. Explain O(V + E).
+10. Explain common visited-timing mistakes.
+```
+
+---
+
+# Day 258 — Graph DFS and Connected Components
+
+### Ready-to-copy prompt
+
+```text
+Teach me **Day 258: Graph DFS and Connected Components**.
+
+Include:
+
+1. Connection: Yesterday I traversed graphs with BFS. Today I will traverse deeply using DFS.
+2. Important topics:
+   - recursive DFS
+   - iterative DFS concept
+   - visited
+   - connected component
+3. Trace recursive DFS.
+4. Explain how multiple DFS starts can count components.
+5. Compare BFS and DFS.
+6. Give one guided component problem.
+7. Give two independent DFS problems.
+8. No solutions initially.
+9. Require O(V + E) analysis.
+10. Explain recursion-depth considerations.
+```
+
+---
+
+# Day 259 — Grid BFS/DFS and Number of Islands Pattern
+
+### Ready-to-copy prompt
+
+```text
+Teach me **Day 259: Grid BFS/DFS — Connected Region Problems**.
+
+Include:
+
+1. Connection: A matrix can also be viewed as a graph where cells are nodes.
+2. Important topics:
+   - row/column
+   - four-direction movement
+   - visited
+   - connected region
+   - flood fill
+3. Explain how a grid becomes an implicit graph.
+4. Walk through a small island-counting example.
+5. Show DFS solution thinking.
+6. Explain how BFS could solve the same problem.
+7. Give one guided grid problem.
+8. Give two independent problems.
+9. Do not show solutions initially.
+10. Require complexity analysis.
+```
+
+---
+
+# Day 260 — Graph Cycle Detection
+
+### Ready-to-copy prompt
+
+```text
+Teach me **Day 260: Graph Cycle Detection Fundamentals**.
+
+Include:
+
+1. Connection: Graph traversal tells us what is reachable. Today I will detect whether traversal returns to previously visited structure in a way that forms a cycle.
+2. Cover:
+   - cycle in undirected graph
+   - parent tracking
+   - directed-cycle intuition
+   - visiting vs visited states
+3. Explain undirected cycle detection first.
+4. Use an ASCII graph.
+5. Then explain directed cycle detection at a beginner level.
+6. Give one guided problem.
+7. Give one independent problem.
+8. Do not reveal solution initially.
+9. Explain complexity.
+10. Highlight common mistakes.
+```
+
+---
+
+# Day 261 — Topological Sort
+
+### Ready-to-copy prompt
+
+```text
+Teach me **Day 261: Topological Sort** in beginner-friendly Python.
+
+Include:
+
+1. Connection: Directed graphs can express dependencies such as prerequisite relationships.
+2. Important topics:
+   - DAG
+   - dependency
+   - indegree
+   - topological ordering
+   - Kahn's algorithm
+3. Use a course-prerequisite example.
+4. Build indegree values step by step.
+5. Show queue processing.
+6. Explain how cycle detection relates to topological sort.
+7. Give one guided problem.
+8. Give two independent problems.
+9. No solutions initially.
+10. Require complexity analysis.
+```
+
+---
+
+# Day 262 — Graph Revision
+
+### Ready-to-copy prompt
+
+```text
+Teach me **Day 262: Graph Revision — BFS, DFS, Components, Cycles and Topological Sort**.
+
+Include:
+
+1. Review graph terminology and representation.
+2. Compare BFS and DFS.
+3. Review connected components.
+4. Review grid-as-graph.
+5. Review cycle detection.
+6. Review topological sort.
+7. Give 15 pattern-recognition questions.
+8. Give 3 graph coding problems.
+9. Do not identify the required algorithm.
+10. No hints initially.
+11. Require complexity analysis.
+12. Identify my weak graph areas after I answer.
+```
+
+---
+
+# Day 263 — Backtracking Fundamentals: Subsets
+
+### Ready-to-copy prompt
+
+```text
+Teach me **Day 263: Backtracking Fundamentals — Subsets**.
+
+Include:
+
+1. Connection: Recursion follows one path of smaller subproblems. Backtracking explores multiple choices and then reverses those choices.
+2. Important topics:
+   - decision tree
+   - choose
+   - explore
+   - unchoose
+   - current path
+   - result
+3. Draw the recursion tree for a tiny subset example.
+4. Explain include/exclude decisions.
+5. Explain copying the current path into results.
+6. Give one guided subsets problem.
+7. Give one independent backtracking problem.
+8. No solution initially.
+9. Explain exponential complexity intuitively.
+10. Explain common mutable-list mistakes.
+```
+
+---
+
+# Day 264 — Permutations and Combinations
+
+### Ready-to-copy prompt
+
+```text
+Teach me **Day 264: Backtracking — Permutations and Combinations**.
+
+Include:
+
+1. Connection: Yesterday I generated subsets. Today order and selection rules will change.
+2. Important topics:
+   - permutation
+   - combination
+   - used elements
+   - start index
+3. Explain the difference between:
+   - subset
+   - combination
+   - permutation
+4. Draw a small decision tree.
+5. Teach permutations using a `used` structure.
+6. Teach combinations using a start index.
+7. Give one guided problem.
+8. Give two independent problems.
+9. No solutions initially.
+10. Explain complexity at a high level.
+```
+
+---
+
+# Day 265 — Combination Sum Pattern
+
+### Ready-to-copy prompt
+
+```text
+Teach me **Day 265: Backtracking — Combination Sum Pattern**.
+
+Include:
+
+1. Connection: Combinations choose values. Today choices must also satisfy a running target.
+2. Important topics:
+   - remaining target
+   - current combination
+   - reuse vs no reuse
+   - pruning
+3. Explain a small example visually.
+4. Show when recursion stops successfully.
+5. Show when recursion should stop early.
+6. Explain backtracking after exploring one choice.
+7. Give one guided problem.
+8. Give one independent problem.
+9. Do not show solution initially.
+10. Explain common duplicate/reuse mistakes.
+```
+
+---
+
+# Day 266 — Word Search and Grid Backtracking
+
+### Ready-to-copy prompt
+
+```text
+Teach me **Day 266: Backtracking on Grids — Word Search Pattern**.
+
+Include:
+
+1. Connection: I previously traversed grids with DFS. Today DFS will temporarily mark choices and backtrack.
+2. Important topics:
+   - current character
+   - neighbor search
+   - visited state
+   - mark
+   - explore
+   - restore
+3. Use a very small board example.
+4. Trace one search path including a failed branch.
+5. Explain why restoration is necessary.
+6. Give one guided grid-backtracking problem.
+7. Give one independent problem.
+8. No solution initially.
+9. Require complexity reasoning.
+10. Explain common state-restoration bugs.
+```
+
+---
+
+# Day 267 — Greedy Fundamentals
+
+### Ready-to-copy prompt
+
+```text
+Teach me **Day 267: Greedy Algorithm Fundamentals**.
+
+Include:
+
+1. Connection: Dynamic exploration considers many possibilities. Greedy algorithms make the best-looking local choice when the problem structure allows it.
+2. Important topics:
+   - local choice
+   - global result
+   - greedy property
+   - sorting before greedy
+3. Explain that greedy does NOT work for every optimization problem.
+4. Use simple examples.
+5. Compare greedy with brute-force thinking.
+6. Explain how to justify a greedy strategy informally.
+7. Give one guided greedy problem.
+8. Give two independent easy/medium problems.
+9. No solutions initially.
+10. End with greedy recognition signals and warnings.
+```
+
+---
+
+# Day 268 — Greedy Interval Problems
+
+### Ready-to-copy prompt
+
+```text
+Teach me **Day 268: Greedy Interval Scheduling**.
+
+Include:
+
+1. Connection: I have learned interval sorting and basic greedy thinking. Today I will combine them.
+2. Important topics:
+   - earliest finishing time
+   - selecting non-overlapping intervals
+   - removing minimum overlaps
+3. Use a timeline visualization.
+4. Explain why choosing the earliest finishing interval can leave more room for future intervals.
+5. Walk through one problem completely.
+6. Give one guided problem.
+7. Give two independent problems.
+8. No solutions initially.
+9. Require complexity analysis.
+10. Explain common sorting-key mistakes.
+```
+
+---
+
+# Day 269 — Dynamic Programming Introduction
+
+### Ready-to-copy prompt
+
+```text
+Teach me **Day 269: Dynamic Programming Fundamentals** in very beginner-friendly Python.
+
+This is my first dedicated DP lesson.
+
+Include:
+
+1. Connection: Recursion may solve the same subproblem repeatedly. Dynamic programming saves those repeated results.
+2. Important topics:
+   - overlapping subproblems
+   - optimal substructure
+   - recursion
+   - memoization
+   - tabulation
+3. Start with Fibonacci.
+4. Show:
+   - naive recursion
+   - repeated work
+   - memoized recursion
+   - iterative DP
+5. Draw a small recursion tree.
+6. Explain DP state in simple language.
+7. Give one guided beginner DP problem.
+8. Give one independent easy DP problem.
+9. Do not reveal solution initially.
+10. Require time/space complexity.
+11. Do not teach advanced DP yet.
+```
+
+---
+
+# Day 270 — Intermediate DSA Assessment
+
+### Ready-to-copy prompt
+
+```text
+Conduct **Day 270: Intermediate DSA Assessment**.
+
+Test Days 241–269.
+
+Cover:
+
+- fast/slow pointers
+- linked-list reversal
+- cycle detection
+- intervals
+- monotonic stack
+- monotonic queue
+- tree recursion
+- BST
+- LCA
+- heap
+- Top-K
+- graphs
+- BFS
+- DFS
+- connected components
+- cycles
+- topological sort
+- backtracking
+- greedy
+- DP fundamentals
+
+Part 1:
+Ask 15 conceptual/pattern-recognition questions.
+
+Part 2:
+Give 5 coding problems:
+
+1. Linked list
+2. Tree/heap
+3. Graph
+4. Backtracking/greedy
+5. Introductory DP
+
+Do not identify the pattern.
+
+No hints initially.
+
+Require:
+
+- brute force
+- optimization
+- pseudocode
+- Python
+- complexity
+
+At the end classify each topic:
+
+Strong
+Comfortable
+Needs Practice
+Weak
+```
+
+---
+
+# PHASE 3 — ADVANCED DSA
+
+# Days 271–290
+
+---
+
+# Day 271 — Memoization vs Tabulation
+
+### Ready-to-copy prompt
+
+```text
+Teach me **Day 271: Dynamic Programming — Memoization vs Tabulation**.
+
+Include:
+
+1. Connection: Yesterday I learned why DP avoids repeated recursive work.
+2. Important topics:
+   - state
+   - recurrence
+   - base case
+   - memoization
+   - tabulation
+3. Solve the same simple problem both ways.
+4. Compare top-down and bottom-up thinking.
+5. Explain how to identify the DP state.
+6. Explain how to identify transitions.
+7. Give one guided DP conversion problem.
+8. Give one independent problem.
+9. Do not show solution initially.
+10. Require time/space complexity.
+```
+
+---
+
+# Day 272 — 1-D DP: Climbing Stairs and House Robber
+
+### Ready-to-copy prompt
+
+```text
+Teach me **Day 272: 1-D Dynamic Programming Patterns**.
+
+Include:
+
+1. Connection: Yesterday I learned DP structure. Today I will solve problems where each state depends on a few previous states.
+2. Use:
+   - Climbing Stairs style
+   - House Robber style
+3. For each:
+   - define state
+   - derive recurrence
+   - identify base cases
+   - build table
+4. Explain space optimization after the normal DP solution.
+5. Give one guided problem.
+6. Give two independent 1-D DP problems.
+7. No solutions initially.
+8. Require complexity analysis.
+9. Explain common recurrence mistakes.
+```
+
+---
+
+# Day 273 — Coin Change DP
+
+### Ready-to-copy prompt
+
+```text
+Teach me **Day 273: Dynamic Programming — Coin Change Pattern**.
+
+Include:
+
+1. Connection: 1-D DP stored the best answer for smaller states. Today the state represents an amount.
+2. Important topics:
+   - amount/state
+   - transitions using coin choices
+   - impossible states
+   - minimum-count problem
+3. Start with brute-force recursion conceptually.
+4. Show repeated subproblems.
+5. Build memoized solution.
+6. Build tabulation solution.
+7. Give one guided coin-change problem.
+8. Give one independent related problem.
+9. No solution initially.
+10. Require complexity analysis.
+```
+
+---
+
+# Day 274 — 0/1 Knapsack Fundamentals
+
+### Ready-to-copy prompt
+
+```text
+Teach me **Day 274: 0/1 Knapsack Fundamentals**.
+
+Include:
+
+1. Connection: Backtracking explored include/exclude choices. Knapsack uses similar choices but saves repeated states using DP.
+2. Important topics:
+   - item index
+   - remaining capacity
+   - take
+   - skip
+   - state
+3. Start with a tiny recursive decision tree.
+4. Identify repeated states.
+5. Explain memoization.
+6. Introduce the 2-D DP table.
+7. Explain why this is called 0/1 Knapsack.
+8. Give one guided problem.
+9. Give one independent beginner knapsack problem.
+10. Do not reveal solution initially.
+11. Keep mathematics simple.
+```
+
+---
+
+# Day 275 — Longest Common Subsequence
+
+### Ready-to-copy prompt
+
+```text
+Teach me **Day 275: Dynamic Programming — Longest Common Subsequence**.
+
+Include:
+
+1. Connection: Knapsack used two changing variables. LCS also naturally uses a 2-D state.
+2. Important topics:
+   - two strings
+   - indexes
+   - matching characters
+   - skipping a character
+   - 2-D DP
+3. Use very small strings.
+4. First explain recursive choices.
+5. Define the DP state.
+6. Derive the recurrence.
+7. Visualize the DP table.
+8. Give one guided LCS problem.
+9. Give one independent related problem.
+10. Require complexity analysis.
+```
+
+---
+
+# Day 276 — Longest Increasing Subsequence
+
+### Ready-to-copy prompt
+
+```text
+Teach me **Day 276: Dynamic Programming — Longest Increasing Subsequence**.
+
+Include:
+
+1. Connection: LCS compared two sequences. LIS finds an ordered subsequence inside one sequence.
+2. Important topics:
+   - subsequence
+   - increasing order
+   - DP ending at index i
+3. Teach the O(n²) DP solution first.
+4. Explain the state meaning carefully.
+5. Trace one small example.
+6. Mention that an O(n log n) solution exists but do not prioritize it yet.
+7. Give one guided problem.
+8. Give one independent LIS-style problem.
+9. No solution initially.
+10. Require complexity analysis.
+```
+
+---
+
+# Day 277 — Grid Dynamic Programming
+
+### Ready-to-copy prompt
+
+```text
+Teach me **Day 277: Grid Dynamic Programming**.
+
+Include:
+
+1. Connection: I have solved grids using BFS/DFS. Today each grid cell will store an answer based on neighboring states.
+2. Important topics:
+   - DP cell state
+   - top neighbor
+   - left neighbor
+   - path counting
+   - minimum path cost concept
+3. Teach Unique Paths style first.
+4. Show recursive reasoning.
+5. Build the DP table.
+6. Explain initialization of first row/column.
+7. Give one guided problem.
+8. Give two independent grid-DP problems.
+9. No solutions initially.
+10. Require complexity analysis.
+```
+
+---
+
+# Day 278 — Dynamic Programming Revision
+
+### Ready-to-copy prompt
+
+```text
+Teach me **Day 278: Dynamic Programming Revision**.
+
+Review:
+
+- DP recognition
+- state
+- recurrence
+- base case
+- memoization
+- tabulation
+- 1-D DP
+- Coin Change
+- Knapsack
+- LCS
+- LIS
+- grid DP
+
+Include:
+
+1. Give 12 problem descriptions.
+2. Ask me whether each is likely DP and why.
+3. For DP problems, ask me to define:
+   - state
+   - recurrence
+   - base case
+4. Give 3 coding problems.
+5. No hints initially.
+6. Require brute-force recursive thinking before DP.
+7. Require complexity analysis.
+8. Identify my weakest DP skill.
+```
+
+---
+
+# Day 279 — Trie
+
+### Ready-to-copy prompt
+
+```text
+Teach me **Day 279: Trie / Prefix Tree** in beginner-friendly Python.
+
+Include:
+
+1. Connection: Hash maps support exact lookup. A Trie organizes strings by prefixes.
+2. Important topics:
+   - Trie node
+   - children
+   - end-of-word marker
+   - insert
+   - search
+   - startsWith/prefix search
+3. Draw a Trie for a few simple words.
+4. Build a beginner-friendly Python TrieNode.
+5. Implement insert conceptually.
+6. Explain search and prefix search.
+7. Give one guided problem.
+8. Give one independent Trie problem.
+9. Do not show solution initially.
+10. Explain complexity in terms of word length.
+```
+
+---
+
+# Day 280 — Union-Find / Disjoint Set
+
+### Ready-to-copy prompt
+
+```text
+Teach me **Day 280: Union-Find / Disjoint Set Union** in beginner-friendly Python.
+
+Include:
+
+1. Connection: Graph DFS/BFS can determine connectivity. Union-Find is another structure designed specifically for connectivity between groups.
+2. Important topics:
+   - parent
+   - representative/root
+   - find
+   - union
+   - connected components
+3. Use a real-world grouping analogy.
+4. Show a naive parent structure.
+5. Explain path compression.
+6. Explain union by rank/size at a beginner level.
+7. Give one guided connectivity problem.
+8. Give one independent problem.
+9. No solution initially.
+10. Explain near-constant-time intuition without advanced math.
+```
+
+---
+
+# Day 281 — Minimum Spanning Tree and Kruskal
+
+### Ready-to-copy prompt
+
+```text
+Teach me **Day 281: Minimum Spanning Tree and Kruskal's Algorithm**.
+
+Include:
+
+1. Connection: Union-Find efficiently joins graph components. Kruskal uses it to construct a low-cost spanning tree.
+2. Important topics:
+   - weighted graph
+   - spanning tree
+   - minimum spanning tree
+   - edge sorting
+   - Union-Find
+3. Explain MST visually.
+4. Explain why cycles must be avoided.
+5. Walk through Kruskal step by step.
+6. Explain complexity including sorting.
+7. Give one guided MST exercise.
+8. Give one independent problem.
+9. No solution initially.
+10. Keep proof details informal.
+```
+
+---
+
+# Day 282 — Dijkstra's Shortest Path
+
+### Ready-to-copy prompt
+
+```text
+Teach me **Day 282: Dijkstra's Shortest Path Algorithm**.
+
+Include:
+
+1. Connection: BFS finds shortest paths when edges are unweighted. Today I will handle non-negative weighted edges.
+2. Important topics:
+   - weighted graph
+   - distance
+   - relaxation
+   - min heap
+   - shortest known distance
+3. Explain why ordinary BFS is insufficient for arbitrary positive weights.
+4. Trace Dijkstra using a tiny graph.
+5. Show heap contents and distance updates.
+6. Explain outdated heap entries.
+7. Give one guided problem.
+8. Give one independent shortest-path problem.
+9. No solution initially.
+10. Explain complexity.
+11. Clearly state that Dijkstra requires non-negative edge weights.
+```
+
+---
+
+# Day 283 — Multi-Source BFS
+
+### Ready-to-copy prompt
+
+```text
+Teach me **Day 283: Multi-Source BFS**.
+
+Include:
+
+1. Connection: Normal BFS starts from one source. Sometimes several starting positions should spread simultaneously.
+2. Important topics:
+   - multiple initial queue entries
+   - level-by-level expansion
+   - minimum distance to nearest source
+3. Explain the intuition using a grid.
+4. Compare repeated BFS from each source with one multi-source BFS.
+5. Walk through one complete example.
+6. Give one guided problem.
+7. Give two independent problems.
+8. No solutions initially.
+9. Require complexity analysis.
+10. End with recognition signals.
+```
+
+---
+
+# Day 284 — Shortest Path Algorithm Selection
+
+### Ready-to-copy prompt
+
+```text
+Teach me **Day 284: Choosing the Right Shortest-Path Algorithm**.
+
+Do not focus on memorizing code today.
+
+Compare:
+
+- BFS for unweighted graphs
+- Multi-source BFS
+- Dijkstra for non-negative weighted graphs
+- Bellman-Ford concept for negative edges
+
+Include:
+
+1. Explain when each algorithm is appropriate.
+2. Explain why algorithm selection depends on graph properties.
+3. Explain negative-weight edges conceptually.
+4. Introduce Bellman-Ford only at a high level.
+5. Do not require full Bellman-Ford implementation unless I ask.
+6. Give me 12 graph scenarios.
+7. Ask me to choose the correct shortest-path approach.
+8. Then give one coding problem using BFS or Dijkstra.
+9. Do not identify the algorithm.
+10. Require complexity reasoning.
+```
+
+---
+
+# Day 285 — Binary Search on Answer
+
+### Ready-to-copy prompt
+
+```text
+Teach me **Day 285: Binary Search on Answer** in beginner-friendly Python.
+
+Include:
+
+1. Connection: Traditional binary search finds a value in sorted data. Today I will binary-search a range of possible answers.
+2. Important topics:
+   - search space
+   - feasibility function
+   - monotonic true/false condition
+   - minimum feasible answer
+   - maximum feasible answer
+3. Start with a very simple conceptual example.
+4. Explain the monotonic property carefully.
+5. Show how to define low and high.
+6. Walk through one guided problem.
+7. Give two independent problems.
+8. No solutions initially.
+9. Require complexity analysis including feasibility-check cost.
+10. Explain common boundary mistakes.
+```
+
+---
+
+# Day 286 — Bit Manipulation Fundamentals
+
+### Ready-to-copy prompt
+
+```text
+Teach me **Day 286: Bit Manipulation Fundamentals** in beginner-friendly Python.
+
+Include:
+
+1. Connection: Computers ultimately represent integers using bits. Some coding problems can exploit these representations efficiently.
+2. Important topics:
+   - binary representation
+   - AND
+   - OR
+   - XOR
+   - NOT concept
+   - left shift
+   - right shift
+3. Explain each using tiny binary numbers.
+4. Teach useful XOR properties.
+5. Explain how to test whether a bit is set.
+6. Give one guided XOR problem.
+7. Give two independent easy bit problems.
+8. No solutions initially.
+9. Explain complexity.
+10. Do not go deep into competitive-programming tricks.
+```
+
+---
+
+# Day 287 — Advanced Heap Patterns
+
+### Ready-to-copy prompt
+
+```text
+Teach me **Day 287: Advanced Heap Patterns**.
+
+Include:
+
+1. Connection: I already used heaps for Top-K and Dijkstra. Today I will learn additional interview patterns.
+2. Important topics:
+   - two heaps concept
+   - streaming median
+   - keeping lower and upper halves
+   - heap balancing
+3. Explain median-of-stream intuition.
+4. Use a sequence of numbers and show both heaps after each insertion.
+5. Explain max-heap simulation in Python.
+6. Give one guided problem.
+7. Give one independent heap problem.
+8. Do not show solution initially.
+9. Require complexity analysis.
+10. Keep implementation readable rather than clever.
+```
+
+---
+
+# Day 288 — Sweep Line / Advanced Interval Thinking
+
+### Ready-to-copy prompt
+
+```text
+Teach me **Day 288: Sweep Line and Advanced Interval Thinking** at an interview-friendly level.
+
+Include:
+
+1. Connection: Earlier interval problems sorted ranges. Sweep-line thinking converts starts and ends into events.
+2. Important topics:
+   - event
+   - start
+   - end
+   - sorting events
+   - active count
+3. Explain using meeting overlap.
+4. Show how starts increase active count and ends decrease it.
+5. Explain tie-handling carefully.
+6. Give one guided problem.
+7. Give one independent interval problem.
+8. No solution initially.
+9. Require complexity analysis.
+10. Keep the topic practical and do not introduce computational geometry.
+```
+
+---
+
+# Day 289 — Advanced Pattern Recognition
+
+### Ready-to-copy prompt
+
+```text
+Teach me **Day 289: Advanced DSA Pattern Recognition**.
+
+Cover recognition between:
+
+- sliding window
+- two pointers
+- prefix sum
+- monotonic stack
+- heap
+- binary search
+- binary search on answer
+- BFS
+- DFS
+- Union-Find
+- topological sort
+- Dijkstra
+- backtracking
+- greedy
+- DP
+- Trie
+- interval/sweep-line patterns
+
+Include:
+
+1. Give me 25 short problem statements.
+2. Do not tell me their patterns.
+3. Ask me to identify:
+   - likely pattern
+   - reason
+   - expected complexity
+4. Challenge ambiguous cases where multiple approaches are possible.
+5. Then give 3 mixed medium problems.
+6. No hints initially.
+7. Review my pattern selection before reviewing code.
+```
+
+---
+
+# Day 290 — Advanced DSA Assessment
+
+### Ready-to-copy prompt
+
+```text
+Conduct **Day 290: Advanced DSA Assessment**.
+
+Cover everything from Days 271–289.
+
+Part 1 — Concepts
+
+Ask questions on:
+
+- memoization
+- tabulation
+- 1-D DP
+- 2-D DP
+- Knapsack
+- LCS
+- LIS
+- grid DP
+- Trie
+- Union-Find
+- MST
+- Dijkstra
+- multi-source BFS
+- shortest-path selection
+- binary search on answer
+- bit manipulation
+- advanced heap
+- sweep-line thinking
+
+Part 2 — Coding
+
+Give 5 problems:
+
+1. Medium DP
+2. Graph/shortest path
+3. Union-Find or MST
+4. Binary-search-on-answer or heap
+5. Mixed medium
+
+Do not identify patterns.
+
+No hints initially.
+
+Require complete interview-style solutions.
+
+At the end classify every major topic:
+
+Strong
+Interview Ready
+Needs Practice
+Weak
+```
+
+---
+
+# PHASE 4 — DSA INTERVIEW MODE
+
+# Days 291–300
+
+---
+
+# Day 291 — Arrays, Strings and Hashing Mock
+
+### Ready-to-copy prompt
+
+```text
+Conduct **Day 291: DSA Mock — Arrays, Strings and Hashing**.
+
+Act like an interviewer.
+
+Give me:
+
+1. One easy warm-up problem.
+2. One medium array/string problem.
+3. One medium hashing/sliding-window problem.
+
+Rules:
+
+- Ask one problem at a time.
+- Do not name the pattern.
+- Do not give hints initially.
+- Ask me to clarify requirements.
+- Require brute-force reasoning first.
+- Ask me to optimize.
+- Require pseudocode.
+- Require Python.
+- Require time and space complexity.
+- Ask follow-up questions.
+
+At the end score:
+
+- pattern recognition
+- correctness
+- code quality
+- complexity analysis
+- communication
+
+Then tell me which array/string patterns need revision.
+```
+
+---
+
+# Day 292 — Linked List, Stack and Queue Mock
+
+### Ready-to-copy prompt
+
+```text
+Conduct **Day 292: DSA Mock — Linked List, Stack and Queue**.
+
+Give me 3 problems:
+
+1. Linked-list problem
+2. Stack problem
+3. Queue/deque or monotonic-stack problem
+
+Do not name the technique.
+
+For each problem:
+
+- let me think first
+- do not give hints initially
+- ask for brute force if relevant
+- ask for optimized approach
+- require pseudocode
+- require Python
+- require complexity
+- test edge cases
+
+After all problems, evaluate:
+
+- pointer handling
+- stack/queue recognition
+- code correctness
+- edge-case handling
+- communication
+```
+
+---
+
+# Day 293 — Tree, BST and Heap Mock
+
+### Ready-to-copy prompt
+
+```text
+Conduct **Day 293: DSA Mock — Trees, BST and Heap**.
+
+Give me:
+
+1. One binary-tree DFS/BFS problem.
+2. One BST or LCA problem.
+3. One heap/Top-K problem.
+
+Rules:
+
+- Ask one at a time.
+- Do not reveal the pattern.
+- No hints initially.
+- Ask me to draw or explain the structure before coding.
+- Require recursive reasoning where appropriate.
+- Require complexity.
+- Ask one follow-up optimization question.
+
+At the end assess:
+
+- tree recursion
+- BFS/DFS choice
+- BST reasoning
+- heap recognition
+- code clarity
+```
+
+---
+
+# Day 294 — Graph Mock Interview
+
+### Ready-to-copy prompt
+
+```text
+Conduct **Day 294: DSA Mock — Graphs**.
+
+Give me 4 graph scenarios/problems covering a mixture of:
+
+- BFS
+- DFS
+- connected components
+- grid traversal
+- cycle detection
+- topological sort
+- shortest paths
+- Union-Find
+
+Do not tell me which algorithm to use.
+
+Ask one problem at a time.
+
+For each:
+
+1. Ask me how I would represent the graph.
+2. Ask me to choose the algorithm.
+3. Ask why.
+4. Require pseudocode.
+5. Require Python.
+6. Require O(V + E) or appropriate complexity analysis.
+
+At the end identify whether my main weakness is:
+
+- graph representation
+- algorithm selection
+- implementation
+- visited-state handling
+- complexity
+```
+
+---
+
+# Day 295 — Backtracking and Greedy Mock
+
+### Ready-to-copy prompt
+
+```text
+Conduct **Day 295: DSA Mock — Backtracking and Greedy**.
+
+Give me:
+
+1. One subset/permutation-style problem.
+2. One grid/backtracking problem.
+3. One greedy or interval problem.
+
+Do not identify which technique each problem requires.
+
+For backtracking problems require me to explain:
+
+- state
+- choices
+- base case
+- choose
+- explore
+- unchoose
+
+For greedy require me to explain:
+
+- greedy choice
+- why the choice is reasonable
+- sorting strategy if any
+
+No hints initially.
+
+At the end compare my backtracking and greedy understanding.
+```
+
+---
+
+# Day 296 — Dynamic Programming Mock
+
+### Ready-to-copy prompt
+
+```text
+Conduct **Day 296: DSA Mock — Dynamic Programming**.
+
+Give me 3 problems:
+
+1. Easy 1-D DP
+2. Medium DP
+3. Medium grid/string/knapsack-style DP
+
+Do not say which known pattern they correspond to.
+
+For each problem, before coding require me to identify:
+
+1. Why brute force repeats work.
+2. State definition.
+3. Recurrence.
+4. Base cases.
+5. Memoization or tabulation choice.
+6. Time complexity.
+7. Space complexity.
+
+Do not give hints initially.
+
+After the interview, specifically evaluate whether I can derive DP rather than memorize solutions.
+```
+
+---
+
+# Day 297 — Mixed Timed Coding Set 1
+
+### Ready-to-copy prompt
+
+```text
+Conduct **Day 297: Mixed DSA Timed Coding Set 1**.
+
+Give me 4 interview-style problems:
+
+- 1 Easy
+- 2 Medium
+- 1 Medium challenging
+
+Choose from different patterns.
+
+Do not tell me their topics.
+
+Recommended total time: 90 minutes.
+
+Rules:
+
+- no hints for the first attempt
+- no solution until I submit mine
+- require complexity
+- require clean Python
+
+After I submit all answers:
+
+1. Review correctness.
+2. Show missed edge cases.
+3. Review complexity.
+4. Identify the intended pattern.
+5. Show a better approach only where necessary.
+6. Track which patterns I failed to recognize.
+```
+
+---
+
+# Day 298 — Mixed Timed Coding Set 2
+
+### Ready-to-copy prompt
+
+```text
+Conduct **Day 298: Mixed DSA Timed Coding Set 2**.
+
+Increase difficulty slightly from Day 297.
+
+Give me 4 problems:
+
+1. Medium array/string or sliding-window
+2. Medium tree/heap
+3. Medium graph/backtracking
+4. Medium DP or binary-search-on-answer
+
+Do not identify topics.
+
+Recommended time: 100 minutes.
+
+For each problem require:
+
+- clarification
+- approach
+- pseudocode
+- implementation
+- complexity
+- test case
+
+No hints initially.
+
+At the end compare my performance with Day 297 and identify improvement or regression.
+```
+
+---
+
+# Day 299 — Full DSA Mock Interview
+
+### Ready-to-copy prompt
+
+```text
+Conduct **Day 299: Full DSA Technical Mock Interview**.
+
+Act like a real software-engineering interviewer.
+
+Round 1 — Coding Warm-Up
+
+Give one easy problem.
+
+Round 2 — Main Coding
+
+Give one medium problem.
+
+Round 3 — Follow-Up
+
+Modify the previous problem with an additional requirement that may require a better algorithm or data structure.
+
+Round 4 — Second Main Problem
+
+Give another medium problem from a different DSA family.
+
+Possible families include:
+
+- arrays/strings
+- hashing
+- linked list
+- stack/queue
+- trees
+- heap
+- graphs
+- backtracking
+- greedy
+- DP
+
+Rules:
+
+1. Ask one question at a time.
+2. Do not identify the pattern.
+3. Do not give hints unless I am completely stuck and explicitly ask.
+4. Ask clarification questions like an interviewer.
+5. Ask me to explain before coding.
+6. Require complexity.
+7. Challenge assumptions.
+8. Test edge cases.
+
+At the end score me out of 10 for:
+
+- problem understanding
+- pattern recognition
+- brute-force reasoning
+- optimization
+- Python implementation
+- data-structure choice
+- complexity analysis
+- testing
+- communication
+
+Then list the final gaps I should revise tomorrow.
+```
+
+---
+
+# Day 300 — Final DSA Revision and Comprehensive Assessment
+
+### Ready-to-copy prompt
+
+```text
+Teach me **Day 300: Final DSA Revision and Comprehensive Interview Assessment**.
+
+This is the final day of my 300-day learning journey and the final day of my dedicated 90-day DSA specialization.
+
+PART 1 — COMPLETE DSA REVISION MAP
+
+Create a concise revision map covering:
+
+Big-O
+↓
+Arrays
+↓
+Strings
+↓
+Hash Maps / Sets
+↓
+Two Pointers
+↓
+Sliding Window
+↓
+Prefix Sum
+↓
+Stack
+↓
+Queue / Deque
+↓
+Linked List
+↓
+Fast / Slow Pointers
+↓
+Recursion
+↓
+Sorting
+↓
+Binary Search
+↓
+Binary Search on Answer
+↓
+Trees
+↓
+BST
+↓
+BFS / DFS
+↓
+Heap / Priority Queue
+↓
+Intervals
+↓
+Monotonic Stack / Queue
+↓
+Graphs
+↓
+Connected Components
+↓
+Cycle Detection
+↓
+Topological Sort
+↓
+Backtracking
+↓
+Greedy
+↓
+Dynamic Programming
+↓
+Trie
+↓
+Union-Find
+↓
+MST
+↓
+Shortest Path
+↓
+Bit Manipulation
+
+PART 2 — PATTERN RECOGNITION TEST
+
+Give me 20 short unseen problem descriptions.
+
+For each, ask me:
+
+1. What pattern/data structure would I consider?
+2. Why?
+3. What complexity would I target?
+
+Do not reveal answers until I respond.
+
+PART 3 — FINAL CODING ASSESSMENT
+
+Give me 5 unseen interview problems:
+
+1. Easy
+2. Medium
+3. Medium
+4. Medium
+5. Medium challenging
+
+Use different DSA families.
+
+Do not identify the pattern.
+
+Do not give hints initially.
+
+For each require:
+
+- clarification
+- brute-force idea
+- optimized idea
+- pseudocode
+- Python code
+- test cases
+- time complexity
+- space complexity
+
+PART 4 — FINAL TOPIC ASSESSMENT
+
+Score me out of 10 for:
+
+- Arrays / Strings
+- Hashing
+- Two Pointers / Sliding Window
+- Stack / Queue
+- Linked List
+- Recursion
+- Sorting / Binary Search
+- Trees / BST
+- Heap
+- Graphs
+- Backtracking
+- Greedy
+- Dynamic Programming
+- Advanced DSA
+- Pattern Recognition
+- Coding Speed
+- Complexity Analysis
+- Communication
+
+Classify each as:
+
+- Strong
+- Interview Ready
+- Needs Practice
+- Weak
+
+PART 5 — FINAL GAP PLAN
+
+Based only on my actual performance, create a targeted revision plan.
+
+Do not automatically recommend learning additional advanced topics.
+
+Prioritize repeated practice of patterns that I failed to recognize or implement.
+
+PART 6 — INTERVIEW READINESS
+
+Tell me:
+
+- which Easy problems I should now solve comfortably
+- which Medium problem families I am ready for
+- where I still need guided practice
+- where I can now practice without hints
+
+The objective is not competitive programming.
+
+The objective is strong DSA foundations and practical software/AI-engineering interview readiness using Python.
+```
+
+---
+
+# Final 300-Day Journey
+
+```text
+DAYS 1–60
+Python Foundations
+        ↓
+Programming Confidence
+
+DAYS 61–120
+Data + SQL + Statistics + ML
+        ↓
+Machine Learning Foundations
+
+DAYS 121–180
+Deep Learning
+        ↓
+NLP
+        ↓
+Transformers
+        ↓
+LLMs
+        ↓
+RAG
+        ↓
+Agents
+        ↓
+AI Application Development
+
+DAYS 181–210
+Initial DSA Exposure
+        ↓
+SQL / Coding Practice
+        ↓
+Projects
+        ↓
+Mock Interviews
+        ↓
+Foundation Assessment
+
+DAYS 211–240
+FOUNDATIONAL DSA
+        ↓
+Core Data Structures
+        ↓
+Core Algorithms
+        ↓
+Pattern Recognition
+
+DAYS 241–270
+INTERMEDIATE DSA
+        ↓
+Linked List Patterns
+        ↓
+Intervals
+        ↓
+Trees / Heaps
+        ↓
+Graphs
+        ↓
+Backtracking
+        ↓
+Greedy
+        ↓
+DP Introduction
+
+DAYS 271–290
+ADVANCED DSA
+        ↓
+Dynamic Programming
+        ↓
+Trie
+        ↓
+Union-Find
+        ↓
+MST
+        ↓
+Shortest Path
+        ↓
+Advanced Search / Heap / Intervals
+
+DAYS 291–300
+INTERVIEW MODE
+        ↓
+Mixed Problems
+        ↓
+Timed Coding
+        ↓
+Pattern Recognition
+        ↓
+Mock Interviews
+        ↓
+Final DSA Assessment
+```
+
+# Core Learning Rule for Days 211–300
+
+For every coding problem, follow this order:
+
+```text
+1. Read the problem carefully
+        ↓
+2. Restate the problem in simple words
+        ↓
+3. Identify input and output
+        ↓
+4. Work through one example manually
+        ↓
+5. Think of brute force
+        ↓
+6. Calculate brute-force complexity
+        ↓
+7. Look for a DSA pattern
+        ↓
+8. Design optimized approach
+        ↓
+9. Write pseudocode
+        ↓
+10. Write Python code
+        ↓
+11. Dry run the code
+        ↓
+12. Test edge cases
+        ↓
+13. State time complexity
+        ↓
+14. State space complexity
+```
+
+Do not memorize solutions.
+
+Learn to recognize:
+
+```text
+Problem wording
+      ↓
+Underlying pattern
+      ↓
+Correct data structure
+      ↓
+Algorithm
+      ↓
+Complexity
+```
+
+That is the primary goal of Days 211–300.
