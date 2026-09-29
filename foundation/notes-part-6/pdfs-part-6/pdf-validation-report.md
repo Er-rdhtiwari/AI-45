@@ -2,95 +2,79 @@
 
 ## Collection summary
 
-- Source folder: `C:\Users\msird\OneDrive\Desktop\Repo\AI-45\foundation\notes-part-6`
-- Output folder: `C:\Users\msird\OneDrive\Desktop\Repo\AI-45\foundation\notes-part-6\pdfs`
-- Source pattern: `*.md`
-- Expected Markdown file count (AUTO): **15**
-- Markdown files discovered: **15**
-- Day range discovered from filenames: **Day 116 to Day 126**
+- Source folder: `AI-45/foundation/notes-part-6`
+- Source file pattern: `*.md`
+- Expected Markdown file count (auto-discovered): **15**
+- Day range from filenames: **Day 116 to Day 126**
 - Note PDFs generated: **15**
-- Index PDFs generated: **1**
-- Total PDFs generated: **16**
-- Note PDF pages: **308**
-- Index PDF pages: **4**
-- Total generated PDF pages: **312**
-- Successfully validated PDFs: **16 of 16**
-- Original Markdown files unchanged: **YES**
+- Note PDFs successfully validated: **15**
+- Index PDF generated: **Day-116-to-Day-126-Notes-Index.pdf**
+- Index validation: **PASS**
+- Total generated PDFs including index: **16**
+- Total successfully validated PDFs including index: **16**
+- Original Markdown checksums unchanged: **YES**
+- Mermaid blocks discovered: **0**
+- LaTeX math expressions discovered: **0**
 - Unresolved rendering issues: **None**
 
-## Source inventory and checksums
+## Source inventory
 
-Checksums are SHA-256 values recorded before generation and compared again after PDF and index creation.
+| Source Markdown filename | SHA-256 before generation | Mermaid blocks | Math expressions |
+|---|---|---:|---:|
+| `Day-116-Reinforcement-Learning-and-Q-Learning-Introduction.md` | `c07524ea3101165991ca2b8a556748ecfe18cf80d3afd364492748518e272281` | 0 | 0 |
+| `Day-117-Part-1-Scikit-learn-Pipelines-and-Kaggle-Workflow.md` | `38a9689736dafb75292cd5c612ef92d49fabacd1362e2ebc6099532de3abeccd` | 0 | 0 |
+| `Day-117-Part-2-Mlflow.md` | `d665c4f37e73d645d5e2eeb4aa7d51caf0e1ce668f97fd4d9e435d8a63461b65` | 0 | 0 |
+| `Day-117-Part-3-Mlflow-Experiments.md` | `49810572213ac328718e97205b39e75a22709221cbad3b92feae4f5533e706af` | 0 | 0 |
+| `Day-117-Part-4-Project.md` | `e35843a32c5be417296d2263ff1fc70d30a9bff65cc4273dfb96ac25a0b6a89f` | 0 | 0 |
+| `Day-118-FastAPI-Fundamentals.md` | `dcc61a0f10d6e4b97ac53dfa6437382802ea220b7ffe428f3b98d578d3855b31` | 0 | 0 |
+| `Day-119-Weekly-Revision.md` | `ebf069b8ad7d8baa7032e7760d35ec3bbc08a85d8b9dd365c24580e0475ebe15` | 0 | 0 |
+| `Day-120-ML-Model-FastAPI-Mini-Project.md` | `bf9b83f589734bdb909c3dbcf22cee65cf89d403862c02d4843d0bb114dc71bc` | 0 | 0 |
+| `Day-120-Part-2-Project.md` | `2eff1ca1fed77ae6bf6e280efa2a36c0355828b5fe85a6371a1c00e19cbcdf69` | 0 | 0 |
+| `Day-121-HTTP-Fundamentals.md` | `17f9311ff1aea8e707caa64151c9acf432af341e86682218accb1abdae07b252` | 0 | 0 |
+| `Day-122-REST-and-HTTP-Methods.md` | `f01087468dd4fc955a3a9a9ac13bd91959582ce72e8106345a67390f462f197a` | 0 | 0 |
+| `Day-123-Headers-Parameters-JSON-and-Status-Codes.md` | `4af0bee67bb07e90681a54a27bf929e97d8cbec66d092d56626b19fa7799bfa6` | 0 | 0 |
+| `Day-124-Postman-Basics.md` | `fc41a889f6eb8cc684cc0b6fa2e18a97d21b0d35c03599fa20c1a12181068e94` | 0 | 0 |
+| `Day-125-API-Testing-API-Keys-and-Authentication-Basics.md` | `e02f3af0d88239b8457adc540381f5729c7f81459f473816ebf5ac1728b4de74` | 0 | 0 |
+| `Day-126-Weekly-Revision.md` | `72ccb1d7423c7e8c24a1187372626919a2c197cbdbca3322b01fb1c3e30b8ca5` | 0 | 0 |
 
-| Source Markdown | SHA-256 before | SHA-256 after | Unchanged | Fenced blocks | Mermaid blocks | Math inventory |
-|---|---|---|---:|---:|---:|---|
-| `Day-116-Reinforcement-Learning-and-Q-Learning-Introduction.md` | `C07524EA3101165991CA2B8A556748ECFE18CF80D3AFD364492748518E272281` | `C07524EA3101165991CA2B8A556748ECFE18CF80D3AFD364492748518E272281` | YES | text: 62 | 0 | none |
-| `Day-117-Part-1-Scikit-learn-Pipelines-and-Kaggle-Workflow.md` | `38A9689736DAFB75292CD5C612EF92D49FABACD1362E2EBC6099532DE3ABECCD` | `38A9689736DAFB75292CD5C612EF92D49FABACD1362E2EBC6099532DE3ABECCD` | YES | python: 2, text: 73 | 0 | none |
-| `Day-117-Part-2-Mlflow.md` | `D665C4F37E73D645D5E2EEB4AA7D51CAF0E1CE668F97FD4D9E435D8A63461B65` | `D665C4F37E73D645D5E2EEB4AA7D51CAF0E1CE668F97FD4D9E435D8A63461B65` | YES | bash: 1, python: 4, text: 59 | 0 | none |
-| `Day-117-Part-3-Mlflow-Experiments.md` | `49810572213AC328718E97205B39E75A22709221CBAD3B92FEAE4F5533E706AF` | `49810572213AC328718E97205B39E75A22709221CBAD3B92FEAE4F5533E706AF` | YES | python: 2, text: 88 | 0 | none |
-| `Day-117-Part-4-Project.md` | `E35843A32C5BE417296D2263FF1FC70D30A9BFF65CC4273DFB96AC25A0B6A89F` | `E35843A32C5BE417296D2263FF1FC70D30A9BFF65CC4273DFB96AC25A0B6A89F` | YES | python: 1, text: 78 | 0 | none |
-| `Day-118-FastAPI-Fundamentals.md` | `DCC61A0F10D6E4B97AC53DFA6437382802EA220B7FFE428F3B98D578D3855B31` | `DCC61A0F10D6E4B97AC53DFA6437382802EA220B7FFE428F3B98D578D3855B31` | YES | json: 10, python: 1, text: 67 | 0 | none |
-| `Day-119-Weekly-Revision.md` | `EBF069B8AD7D8BAA7032E7760D35EC3BBC08A85D8B9DD365C24580E0475EBE15` | `EBF069B8AD7D8BAA7032E7760D35EC3BBC08A85D8B9DD365C24580E0475EBE15` | YES | json: 6, python: 2, text: 103 | 0 | none |
-| `Day-120-ML-Model-FastAPI-Mini-Project.md` | `BF9B83F589734BDB909C3DBCF22CEE65CF89D403862C02D4843D0BB114DC71BC` | `BF9B83F589734BDB909C3DBCF22CEE65CF89D403862C02D4843D0BB114DC71BC` | YES | json: 11, python: 4, sql: 1, text: 101 | 0 | none |
-| `Day-120-Part-2-Project.md` | `2EFF1CA1FED77AE6BF6E280EFA2A36C0355828B5FE85A6371A1C00E19CBCDF69` | `2EFF1CA1FED77AE6BF6E280EFA2A36C0355828B5FE85A6371A1C00E19CBCDF69` | YES | json: 10, python: 4, text: 133 | 0 | none |
-| `Day-121-HTTP-Fundamentals.md` | `17F9311FF1AEA8E707CAA64151C9ACF432AF341E86682218ACCB1ABDAE07B252` | `17F9311FF1AEA8E707CAA64151C9ACF432AF341E86682218ACCB1ABDAE07B252` | YES | json: 5, text: 60 | 0 | none |
-| `Day-122-REST-and-HTTP-Methods.md` | `F01087468DD4FC955A3A9A9AC13BD91959582CE72E8106345A67390F462F197A` | `F01087468DD4FC955A3A9A9AC13BD91959582CE72E8106345A67390F462F197A` | YES | json: 9, text: 101 | 0 | none |
-| `Day-123-Headers-Parameters-JSON-and-Status-Codes.md` | `4AF0BEE67BB07E90681A54A27BF929E97D8CBEC66D092D56626B19FA7799BFA6` | `4AF0BEE67BB07E90681A54A27BF929E97D8CBEC66D092D56626B19FA7799BFA6` | YES | json: 18, text: 120 | 0 | none |
-| `Day-124-Postman-Basics.md` | `FC41A889F6EB8CC684CC0B6FA2E18A97D21B0D35C03599FA20C1A12181068E94` | `FC41A889F6EB8CC684CC0B6FA2E18A97D21B0D35C03599FA20C1A12181068E94` | YES | json: 7, text: 93 | 0 | none |
-| `Day-125-API-Testing-API-Keys-and-Authentication-Basics.md` | `E02F3AF0D88239B8457ADC540381F5729C7F81459F473816EBF5AC1728B4DE74` | `E02F3AF0D88239B8457ADC540381F5729C7F81459F473816EBF5AC1728B4DE74` | YES | json: 8, text: 106 | 0 | none |
-| `Day-126-Weekly-Revision.md` | `72CCB1D7423C7E8C24A1187372626919A2C197CBDBCA3322B01FB1C3E30B8CA5` | `72CCB1D7423C7E8C24A1187372626919A2C197CBDBCA3322B01FB1C3E30B8CA5` | YES | json: 8, text: 85 | 0 | none |
+## Per-file generation and validation
 
-## Per-note generation and validation
+| Source Markdown filename | Generated PDF filename | Pages | Generation | Validation | Formatting issue detected | Formatting adjustment applied | Mermaid mode / orientation / reflow | Source unchanged |
+|---|---|---:|---|---|---|---|---|---|
+| `Day-116-Reinforcement-Learning-and-Q-Learning-Introduction.md` | `Day-116-Reinforcement-Learning-and-Q-Learning-Introduction.pdf` | 16 | PASS | PASS | None | Print-safe wrapping for long code/table content; heading and row page-break guards | N/A (0 Mermaid blocks) / A4 portrait / none | YES |
+| `Day-117-Part-1-Scikit-learn-Pipelines-and-Kaggle-Workflow.md` | `Day-117-Part-1-Scikit-learn-Pipelines-and-Kaggle-Workflow.pdf` | 20 | PASS | PASS | None | Print-safe wrapping for long code/table content; heading and row page-break guards | N/A (0 Mermaid blocks) / A4 portrait / none | YES |
+| `Day-117-Part-2-Mlflow.md` | `Day-117-Part-2-Mlflow.pdf` | 18 | PASS | PASS | None | Print-safe wrapping for long code/table content; heading and row page-break guards | N/A (0 Mermaid blocks) / A4 portrait / none | YES |
+| `Day-117-Part-3-Mlflow-Experiments.md` | `Day-117-Part-3-Mlflow-Experiments.pdf` | 21 | PASS | PASS | None | Print-safe wrapping for long code/table content; heading and row page-break guards | N/A (0 Mermaid blocks) / A4 portrait / none | YES |
+| `Day-117-Part-4-Project.md` | `Day-117-Part-4-Project.pdf` | 18 | PASS | PASS | None | Print-safe wrapping for long code/table content; heading and row page-break guards | N/A (0 Mermaid blocks) / A4 portrait / none | YES |
+| `Day-118-FastAPI-Fundamentals.md` | `Day-118-FastAPI-Fundamentals.pdf` | 16 | PASS | PASS | None | Print-safe wrapping for long code/table content; heading and row page-break guards | N/A (0 Mermaid blocks) / A4 portrait / none | YES |
+| `Day-119-Weekly-Revision.md` | `Day-119-Weekly-Revision.pdf` | 29 | PASS | PASS | None | Print-safe wrapping for long code/table content; heading and row page-break guards | N/A (0 Mermaid blocks) / A4 portrait / none | YES |
+| `Day-120-ML-Model-FastAPI-Mini-Project.md` | `Day-120-ML-Model-FastAPI-Mini-Project.pdf` | 31 | PASS | PASS | None | Print-safe wrapping for long code/table content; heading and row page-break guards | N/A (0 Mermaid blocks) / A4 portrait / none | YES |
+| `Day-120-Part-2-Project.md` | `Day-120-Part-2-Project.pdf` | 43 | PASS | PASS | None | Print-safe wrapping for long code/table content; heading and row page-break guards | N/A (0 Mermaid blocks) / A4 portrait / none | YES |
+| `Day-121-HTTP-Fundamentals.md` | `Day-121-HTTP-Fundamentals.pdf` | 15 | PASS | PASS | None | Print-safe wrapping for long code/table content; heading and row page-break guards | N/A (0 Mermaid blocks) / A4 portrait / none | YES |
+| `Day-122-REST-and-HTTP-Methods.md` | `Day-122-REST-and-HTTP-Methods.pdf` | 19 | PASS | PASS | None | Print-safe wrapping for long code/table content; heading and row page-break guards | N/A (0 Mermaid blocks) / A4 portrait / none | YES |
+| `Day-123-Headers-Parameters-JSON-and-Status-Codes.md` | `Day-123-Headers-Parameters-JSON-and-Status-Codes.pdf` | 25 | PASS | PASS | None | Print-safe wrapping for long code/table content; heading and row page-break guards | N/A (0 Mermaid blocks) / A4 portrait / none | YES |
+| `Day-124-Postman-Basics.md` | `Day-124-Postman-Basics.pdf` | 21 | PASS | PASS | None | Print-safe wrapping for long code/table content; heading and row page-break guards | N/A (0 Mermaid blocks) / A4 portrait / none | YES |
+| `Day-125-API-Testing-API-Keys-and-Authentication-Basics.md` | `Day-125-API-Testing-API-Keys-and-Authentication-Basics.pdf` | 24 | PASS | PASS | None | Print-safe wrapping for long code/table content; heading and row page-break guards | N/A (0 Mermaid blocks) / A4 portrait / none | YES |
+| `Day-126-Weekly-Revision.md` | `Day-126-Weekly-Revision.pdf` | 19 | PASS | PASS | None | Print-safe wrapping for long code/table content; heading and row page-break guards | N/A (0 Mermaid blocks) / A4 portrait / none | YES |
 
-All note PDFs use A4 portrait pages, 18 mm body margins, black text on white, the requested font sizes and 1.3 line spacing, with page numbers as the only added running element.
+## Index validation
 
-| Source Markdown | Generated PDF | Pages | Generation | Validation | Formatting issue detected | Formatting adjustment applied | Mermaid mode / orientation / reflow | Source unchanged |
-|---|---|---:|---|---|---|---|---|---:|
-| `Day-116-Reinforcement-Learning-and-Q-Learning-Introduction.md` | `Day-116-Reinforcement-Learning-and-Q-Learning-Introduction.pdf` | 15 | PASS | PASS | None | None required | No Mermaid blocks; portrait; no diagram reflow | YES |
-| `Day-117-Part-1-Scikit-learn-Pipelines-and-Kaggle-Workflow.md` | `Day-117-Part-1-Scikit-learn-Pipelines-and-Kaggle-Workflow.pdf` | 19 | PASS | PASS | None | None required | No Mermaid blocks; portrait; no diagram reflow | YES |
-| `Day-117-Part-2-Mlflow.md` | `Day-117-Part-2-Mlflow.pdf` | 17 | PASS | PASS | Text extractor interleaved an inline-code run or wrapped table columns; raster output was visually correct | Validated the affected text as a bounded token set and visually verified rendered order | No Mermaid blocks; portrait; no diagram reflow | YES |
-| `Day-117-Part-3-Mlflow-Experiments.md` | `Day-117-Part-3-Mlflow-Experiments.pdf` | 19 | PASS | PASS | None | None required | No Mermaid blocks; portrait; no diagram reflow | YES |
-| `Day-117-Part-4-Project.md` | `Day-117-Part-4-Project.pdf` | 16 | PASS | PASS | 10 repeated blank-line run(s) required explicit preservation | Inserted empty layout spacers only in the temporary rendering copy | No Mermaid blocks; portrait; no diagram reflow | YES |
-| `Day-118-FastAPI-Fundamentals.md` | `Day-118-FastAPI-Fundamentals.pdf` | 14 | PASS | PASS | None | None required | No Mermaid blocks; portrait; no diagram reflow | YES |
-| `Day-119-Weekly-Revision.md` | `Day-119-Weekly-Revision.pdf` | 27 | PASS | PASS | None | None required | No Mermaid blocks; portrait; no diagram reflow | YES |
-| `Day-120-ML-Model-FastAPI-Mini-Project.md` | `Day-120-ML-Model-FastAPI-Mini-Project.pdf` | 29 | PASS | PASS | 13 repeated blank-line run(s) required explicit preservation | Inserted empty layout spacers only in the temporary rendering copy | No Mermaid blocks; portrait; no diagram reflow | YES |
-| `Day-120-Part-2-Project.md` | `Day-120-Part-2-Project.pdf` | 41 | PASS | PASS | 30 repeated blank-line run(s) required explicit preservation | Inserted empty layout spacers only in the temporary rendering copy | No Mermaid blocks; portrait; no diagram reflow | YES |
-| `Day-121-HTTP-Fundamentals.md` | `Day-121-HTTP-Fundamentals.pdf` | 14 | PASS | PASS | None | None required | No Mermaid blocks; portrait; no diagram reflow | YES |
-| `Day-122-REST-and-HTTP-Methods.md` | `Day-122-REST-and-HTTP-Methods.pdf` | 17 | PASS | PASS | None | None required | No Mermaid blocks; portrait; no diagram reflow | YES |
-| `Day-123-Headers-Parameters-JSON-and-Status-Codes.md` | `Day-123-Headers-Parameters-JSON-and-Status-Codes.pdf` | 22 | PASS | PASS | Text extractor interleaved an inline-code run or wrapped table columns; raster output was visually correct | Validated the affected text as a bounded token set and visually verified rendered order | No Mermaid blocks; portrait; no diagram reflow | YES |
-| `Day-124-Postman-Basics.md` | `Day-124-Postman-Basics.pdf` | 19 | PASS | PASS | 1 repeated blank-line run(s) required explicit preservation | Inserted empty layout spacers only in the temporary rendering copy | No Mermaid blocks; portrait; no diagram reflow | YES |
-| `Day-125-API-Testing-API-Keys-and-Authentication-Basics.md` | `Day-125-API-Testing-API-Keys-and-Authentication-Basics.pdf` | 22 | PASS | PASS | None | None required | No Mermaid blocks; portrait; no diagram reflow | YES |
-| `Day-126-Weekly-Revision.md` | `Day-126-Weekly-Revision.pdf` | 17 | PASS | PASS | None | None required | No Mermaid blocks; portrait; no diagram reflow | YES |
-
-## Index PDF
-
-- File: `Day-116-to-Day-126-Notes-Index.pdf`
-- Location: `C:\Users\msird\OneDrive\Desktop\Repo\AI-45\foundation\notes-part-6\pdfs\Day-116-to-Day-126-Notes-Index.pdf`
-- Page count: **4**
-- SHA-256: `037884B1173E2ACBC59FA156DE0EBA03A9D2163084FDEFE5E6C9F0D6D712E93F`
-- Generation status: **PASS**
+- Template used as the visual and structural reference: `AI-45/Notes-Creation/Template-index.pdf`
+- Generated index: `Day-116-to-Day-126-Notes-Index.pdf`
+- Page count: **6**
 - Validation status: **PASS**
-- Actual/expected PDF count after index creation: **16 / 16**
-- Template use: the supplied index PDF was reproduced as the visual system for the cover banner, palette, metric cards, recommended-path tiles, colored day cards, right-aligned page-count blocks, repeated collection headers, memory lines, quick locator, completion check, and footer grid.
-- Entry validation: every generated PDF filename, exact source topic, and actual page count is present.
-- Layout validation: four readable A4 portrait pages, page numbers present, deliberate template-matched full-bleed cover banner, aligned interior grid, no clipping, and no blank pages.
-- Formatting issue detected: the earlier index version followed the template hierarchy but did not match its visual alignment closely enough.
-- Formatting adjustment applied: rebuilt the index with the template's measured spacing, navy/teal branding, tinted statistic cards, colored day tiles, page-count panels, memory-line boxes, striped locator table, and matching header/footer treatment.
+- Formatting issue detected: None
+- Adjustment applied: template-inspired collection cover, grouped entries, quick locator, actual note page counts, and collection summary.
 
-## Validation checks performed
+## Validation checks completed
 
-- Confirmed exactly one same-stem note PDF for every discovered Markdown file.
-- Reopened every PDF and confirmed it was readable and non-empty.
-- Compared rendered body text against browser-rendered Markdown text in source order.
-- Compared Markdown heading and table inventories with rendered HTML structures.
-- Confirmed every page is A4 portrait and every body raster remains inside the 18 mm margin tolerance.
-- Confirmed a page number appears on every page and no added header, title, watermark, or other running content appears.
-- Rasterized all 312 generated pages and visually reviewed per-document contact sheets for clipping, overlaps, duplicated blocks, and unreadable tables or code.
-- Confirmed all 15 sources contain zero Mermaid blocks; therefore no Mermaid page, orientation change, or visual reflow was applicable.
-- Confirmed all 15 sources contain zero detected LaTeX expressions and no raw LaTeX delimiters remain visible in the note PDFs.
-- Recomputed all source SHA-256 checksums after generation; all match the pre-generation values.
-- Confirmed final PDF filename count is 16: 15 note PDFs plus one index PDF.
-
-## Final result
-
-**PASS.** Discovered 15 Markdown files, generated 16 PDFs (15 notes plus one index), and successfully validated all 16. All original Markdown files remained unchanged, and no unresolved rendering issues remain.
+- Exactly one same-basename PDF exists for every discovered Markdown source.
+- Every generated PDF opens successfully, contains at least one page, and is non-empty.
+- Source-derived rendered text occurs in order without missing or duplicated document content.
+- Headings, paragraphs, lists, tables, fenced code, ASCII diagrams, links, and Unicode characters were rendered through the Markdown-to-print pipeline.
+- All note pages are A4 portrait with 18 mm body margins and page-number-only footers.
+- Text bounding boxes remain within the required body margins; no blank body pages were detected.
+- Mermaid validation is not applicable because the source inventory contains zero Mermaid fences.
+- LaTeX validation is not applicable because the source inventory contains zero math expressions outside code spans/fences.
+- Source SHA-256 checksums were recomputed after generation and match the recorded values.
+- Generated PDF filenames match their Markdown source filenames with only the extension changed.
