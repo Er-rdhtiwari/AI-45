@@ -1,4 +1,4 @@
-SOURCE_FOLDER="AI-45\foundation\notes-part-6"
+SOURCE_FOLDER="AI-45\DSA\DSA-Part-1"
 PDF_OUTPUT_FOLDER="${SOURCE_FOLDER}/pdfs"
 SOURCE_FILE_PATTERN="*.md"
 EXPECTED_FILE_COUNT="AUTO"
@@ -30,6 +30,7 @@ day-01.md → day-01.pdf
 * Code blocks and tables: 11.5 pt
 * Line spacing: 1.3
 * Margins: 18 mm on all sides
+* Black text on a white background
 * Page numbers only
 * Do not add headers, footers, titles, watermarks, or extra content
 * Pages containing large Mermaid diagrams may use A4 landscape when required for readability; keep surrounding narrative pages portrait
