@@ -11336,3 +11336,2468 @@ Complexity
 ```
 
 That is the primary goal of Days 211–300.
+
+---
+
+# FAANG Focused
+
+
+# Day 301–330 — FAANG / Product Company Interview Mastery
+
+## Main Objective
+
+Days 211–300 taught and practiced DSA.
+
+Days 301–330 should now convert that knowledge into:
+
+```text
+DSA Knowledge
+        ↓
+Fast Pattern Recognition
+        ↓
+Independent Problem Solving
+        ↓
+Interview Communication
+        ↓
+System Design Thinking
+        ↓
+Architecture Trade-offs
+        ↓
+LLD / Object Design
+        ↓
+AI System Design
+        ↓
+Full Technical Interview Readiness
+```
+
+The focus is **not learning hundreds of additional algorithms**.
+
+The focus is:
+
+- unseen problems
+- interview-style ambiguity
+- optimization
+- communication
+- architecture
+- scalability
+- reliability
+- trade-offs
+- coding under time pressure
+- system-design leadership
+
+Use **Python** for all coding exercises.
+
+---
+
+# PHASE 1 — FAANG DSA MASTERY
+
+# Days 301–306
+
+---
+
+# Day 301 — Arrays, Strings and Hashing Mastery
+
+### Ready-to-copy prompt
+
+```text
+Teach me **Day 301: FAANG DSA Mastery — Arrays, Strings and Hashing**.
+
+This begins my FAANG/product-company interview mastery phase.
+
+Assume I already know:
+
+- arrays
+- strings
+- dictionaries
+- sets
+- prefix sums
+- two pointers
+- sliding window
+
+Do not teach these from zero.
+
+Today's goal is:
+
+Pattern recognition
++
+Optimization
++
+Interview communication.
+
+PART 1 — Rapid Revision
+
+Briefly revise:
+
+- array traversal
+- frequency map
+- duplicate detection
+- prefix sum
+- two pointers
+- fixed sliding window
+- variable sliding window
+
+Create a comparison table:
+
+Problem signal
+→ likely pattern
+→ expected complexity.
+
+PART 2 — Pattern Recognition
+
+Give me 12 short problem descriptions.
+
+Do not tell me the pattern.
+
+For each ask me:
+
+1. What pattern would I consider?
+2. Why?
+3. What brute-force approach exists?
+4. What complexity should I target?
+
+Reveal answers only after I attempt.
+
+PART 3 — Interview Coding
+
+Give me:
+
+1. one Easy warm-up
+2. one Medium array/hash problem
+3. one Medium string/sliding-window problem
+
+Ask one problem at a time.
+
+Do not give hints initially.
+
+For every problem require:
+
+- clarification
+- example walkthrough
+- brute-force approach
+- bottleneck
+- optimized approach
+- pseudocode
+- Python solution
+- dry run
+- edge cases
+- time complexity
+- space complexity
+
+PART 4 — Interview Evaluation
+
+Score me out of 10 for:
+
+- pattern recognition
+- optimization
+- implementation
+- complexity analysis
+- communication
+
+Do not introduce unrelated advanced DSA.
+```
+
+---
+
+# Day 302 — Binary Search and Sliding Window Mastery
+
+### Ready-to-copy prompt
+
+```text
+Teach me **Day 302: FAANG DSA Mastery — Binary Search and Sliding Window**.
+
+Assume I already know the basic algorithms.
+
+Today's goal is choosing the correct technique without being told.
+
+Review briefly:
+
+- normal binary search
+- first/last occurrence
+- binary search on answer
+- fixed sliding window
+- variable sliding window
+
+PART 1 — Recognition
+
+Give me 10 short scenarios.
+
+Mix problems where the answer may require:
+
+- binary search
+- binary search on answer
+- two pointers
+- sliding window
+
+Do not identify the pattern.
+
+Ask me to explain why I selected it.
+
+PART 2 — Coding Interview
+
+Give me 3 problems:
+
+1. one standard binary-search problem
+2. one variable sliding-window problem
+3. one binary-search-on-answer problem
+
+Difficulty:
+
+Easy/Medium
+→ Medium
+→ Medium
+
+For each require:
+
+1. clarification
+2. brute force
+3. monotonic or window property identification
+4. optimized algorithm
+5. pseudocode
+6. Python
+7. test cases
+8. time/space complexity
+
+Do not give hints initially.
+
+PART 3 — Common Failure Analysis
+
+After I answer, explain whether I struggle with:
+
+- search-space definition
+- boundary conditions
+- window shrinking
+- maintaining state
+- off-by-one errors
+- pattern recognition
+```
+
+---
+
+# Day 303 — Linked List, Stack, Queue and Heap Mastery
+
+### Ready-to-copy prompt
+
+```text
+Teach me **Day 303: FAANG DSA Mastery — Linked List, Stack, Queue and Heap**.
+
+Assume I know the basics.
+
+Focus on interview application.
+
+Review quickly:
+
+- linked-list reversal
+- fast/slow pointers
+- cycle detection
+- stack
+- monotonic stack
+- queue/deque
+- heap
+- Top-K
+
+PART 1 — Pattern Recognition
+
+Give me 12 short scenarios.
+
+Ask me to choose among:
+
+- linked list
+- fast/slow pointer
+- stack
+- monotonic stack
+- queue/deque
+- heap
+
+Do not reveal answers initially.
+
+PART 2 — Interview Problems
+
+Give me:
+
+1. one linked-list Medium problem
+2. one stack/monotonic-stack Medium problem
+3. one heap or Top-K Medium problem
+
+Ask one problem at a time.
+
+For linked-list problems require pointer diagrams.
+
+For heap problems ask:
+
+Why heap instead of sorting everything?
+
+For stack problems ask:
+
+What information does the stack preserve?
+
+Require:
+
+- brute force
+- optimized solution
+- pseudocode
+- Python
+- complexity
+- edge cases
+
+PART 3 — Evaluation
+
+Evaluate:
+
+- pointer safety
+- stack recognition
+- heap recognition
+- correctness
+- communication
+```
+
+---
+
+# Day 304 — Trees and BST Mastery
+
+### Ready-to-copy prompt
+
+```text
+Teach me **Day 304: FAANG DSA Mastery — Trees and Binary Search Trees**.
+
+Assume I know:
+
+- DFS
+- BFS
+- preorder
+- inorder
+- postorder
+- height/depth
+- BST
+- LCA
+
+Today's goal is solving unseen tree problems independently.
+
+PART 1 — Tree Pattern Recognition
+
+Give me 10 scenarios.
+
+Ask whether I would consider:
+
+- DFS
+- BFS
+- recursive return value
+- path state
+- BST property
+- LCA
+- level-order traversal
+
+Do not reveal answers until I attempt.
+
+PART 2 — Coding
+
+Give me 3 interview problems:
+
+1. one tree DFS problem
+2. one BFS/level-order problem
+3. one BST/LCA problem
+
+Difficulty:
+
+Easy/Medium
+Medium
+Medium
+
+Require me to explain:
+
+- recursive state
+- base case
+- what each function returns
+- why DFS or BFS is suitable
+
+Require Python and complexity.
+
+PART 3 — Follow-Up
+
+For at least one problem, modify the requirement after my solution.
+
+Example:
+
+- return values by level
+- return path instead of Boolean
+- handle duplicate values
+- optimize memory
+
+Evaluate how I adapt.
+```
+
+---
+
+# Day 305 — Graphs and Dynamic Programming Mastery
+
+### Ready-to-copy prompt
+
+```text
+Teach me **Day 305: FAANG DSA Mastery — Graphs and Dynamic Programming**.
+
+Assume I already know:
+
+Graphs:
+- BFS
+- DFS
+- connected components
+- cycle detection
+- topological sort
+- Dijkstra
+- Union-Find
+
+DP:
+- memoization
+- tabulation
+- 1-D DP
+- 2-D DP
+- Knapsack
+- LCS
+- LIS
+- grid DP
+
+PART 1 — Algorithm Selection
+
+Give me 12 scenarios.
+
+Mix:
+
+- BFS
+- DFS
+- topological sort
+- Union-Find
+- Dijkstra
+- DP
+- greedy
+
+Ask me:
+
+1. Which algorithm?
+2. Why?
+3. What state or graph representation?
+4. What target complexity?
+
+Do not reveal answers initially.
+
+PART 2 — Coding
+
+Give me:
+
+1. one graph Medium problem
+2. one DP Medium problem
+3. one mixed graph/DP-style reasoning problem
+
+Do not identify patterns.
+
+For DP require:
+
+- state
+- recurrence
+- base cases
+- memoization/tabulation choice
+
+For graphs require:
+
+- graph representation
+- traversal/algorithm choice
+- visited/state handling
+
+PART 3 — Evaluation
+
+Tell me whether my biggest weakness is:
+
+- algorithm selection
+- implementation
+- state definition
+- recurrence
+- graph representation
+- complexity reasoning
+```
+
+---
+
+# Day 306 — Full FAANG-Style DSA Mock
+
+### Ready-to-copy prompt
+
+```text
+Conduct **Day 306: Full FAANG-Style DSA Mock Interview**.
+
+Act like a real interviewer.
+
+Do not teach first.
+
+ROUND 1 — Warm-Up
+
+Give one Easy problem.
+
+Target time:
+10–15 minutes.
+
+ROUND 2 — Main Problem
+
+Give one Medium problem.
+
+Target time:
+25–35 minutes.
+
+ROUND 3 — Follow-Up
+
+Change one requirement from Round 2.
+
+Ask me to adapt my existing solution.
+
+ROUND 4 — Second Medium
+
+Give a Medium problem from a different DSA family.
+
+Possible topics:
+
+- arrays
+- strings
+- hashing
+- sliding window
+- linked list
+- tree
+- heap
+- graph
+- backtracking
+- DP
+
+INTERVIEW RULES
+
+Do not tell me:
+
+- topic
+- pattern
+- algorithm
+
+Do not give hints unless:
+
+1. I explicitly ask, or
+2. I am completely blocked.
+
+For each question require:
+
+- clarification
+- brute force
+- optimization
+- pseudocode
+- code
+- test cases
+- complexity
+
+FINAL SCORE
+
+Score /10:
+
+- problem understanding
+- pattern recognition
+- brute-force reasoning
+- optimization
+- implementation
+- testing
+- complexity
+- communication
+
+Then identify the top 3 DSA weaknesses to revise during Days 307–330.
+
+Do not recommend learning many new algorithms.
+```
+
+---
+
+# PHASE 2 — SYSTEM DESIGN FOUNDATIONS
+
+# Days 307–313
+
+---
+
+# Day 307 — How to Approach a System Design Interview
+
+### Ready-to-copy prompt
+
+```text
+Teach me **Day 307: System Design Interview Framework** in beginner-friendly but senior-engineer-oriented language.
+
+Assume I am new to structured system-design interviews but have software-development experience.
+
+Teach me a repeatable interview framework.
+
+Use:
+
+1. Clarify functional requirements
+2. Clarify non-functional requirements
+3. Estimate scale
+4. Identify core entities
+5. Design APIs
+6. Design data model
+7. Draw high-level architecture
+8. Explain major request/data flows
+9. Identify bottlenecks
+10. Scale the system
+11. Handle failures
+12. Discuss consistency
+13. Discuss security
+14. Discuss observability
+15. Explain trade-offs
+
+Explain each step.
+
+Teach me what NOT to do:
+
+- start drawing immediately
+- over-engineer too early
+- list technologies without reasons
+- ignore scale
+- ignore failures
+- ignore interviewer feedback
+
+Use one small example:
+
+Design a URL Shortener at a very high level.
+
+Do not fully solve it yet.
+
+At the end:
+
+Give me a reusable 45-minute system-design interview template.
+```
+
+---
+
+# Day 308 — Scaling Web Applications
+
+### Ready-to-copy prompt
+
+```text
+Teach me **Day 308: Scaling Web Applications** for system-design interviews.
+
+Include:
+
+- client
+- DNS
+- CDN concept
+- load balancer
+- reverse proxy
+- application server
+- stateless services
+- horizontal scaling
+- vertical scaling
+- autoscaling
+- session management
+- sticky sessions concept
+- health checks
+
+Start with:
+
+One server
+↓
+more users
+↓
+bottlenecks
+↓
+multiple servers
+↓
+load balancer
+↓
+stateless architecture.
+
+Explain why stateless services make scaling easier.
+
+Explain:
+
+Vertical vs horizontal scaling.
+
+Explain common failure scenarios:
+
+- one server dies
+- load balancer fails
+- traffic suddenly spikes
+
+Use diagrams in text/ASCII.
+
+Give me 5 interview questions.
+
+Then ask me to design the application-server layer for a simple e-commerce site.
+
+Require me to explain trade-offs.
+```
+
+---
+
+# Day 309 — Databases for System Design
+
+### Ready-to-copy prompt
+
+```text
+Teach me **Day 309: Databases for System Design Interviews**.
+
+Cover:
+
+- relational database
+- NoSQL
+- key-value
+- document store
+- wide-column concept
+- SQL vs NoSQL
+- primary key
+- secondary index
+- replication
+- read replica
+- partitioning
+- sharding
+- transactions
+- ACID
+- eventual consistency concept
+
+Teach using practical examples.
+
+Explain:
+
+When would I choose PostgreSQL/MySQL?
+
+When would I choose a key-value store?
+
+When would I choose a document database?
+
+Explain database indexing clearly.
+
+Explain why indexes improve reads but have costs.
+
+Explain replication.
+
+Explain sharding with a simple user table.
+
+Discuss shard-key selection.
+
+Explain hot shard problems.
+
+Give me 10 system-design scenarios.
+
+Ask me to select a database style and justify it.
+
+Do not accept answers like:
+
+"Use NoSQL because it scales."
+
+Require specific reasoning.
+```
+
+---
+
+# Day 310 — Caching and Redis Design Patterns
+
+### Ready-to-copy prompt
+
+```text
+Teach me **Day 310: Caching for System Design Interviews**.
+
+Cover:
+
+- cache
+- Redis
+- cache hit
+- cache miss
+- TTL
+- eviction
+- cache-aside
+- read-through concept
+- write-through
+- write-back concept
+- cache invalidation
+- cache stampede
+- cache penetration
+- hot keys
+- distributed cache
+
+Explain using:
+
+API
+→ cache
+→ database.
+
+Teach cache-aside step by step.
+
+Explain:
+
+What happens when cached data becomes stale?
+
+How should TTL be selected?
+
+Explain cache invalidation difficulty.
+
+Explain cache stampede and common mitigation approaches.
+
+Explain hot-key problems.
+
+Give me one mini design:
+
+Design caching for a product-details API.
+
+Ask me:
+
+- cache key
+- TTL
+- invalidation
+- failure behavior
+- consistency expectations
+
+End with common caching interview mistakes.
+```
+
+---
+
+# Day 311 — Message Queues and Event-Driven Systems
+
+### Ready-to-copy prompt
+
+```text
+Teach me **Day 311: Message Queues and Event-Driven Architecture** for system-design interviews.
+
+Cover:
+
+- synchronous processing
+- asynchronous processing
+- producer
+- consumer
+- message
+- queue
+- Kafka concept
+- SQS/PubSub concept
+- partition
+- consumer group
+- ordering
+- retry
+- dead-letter queue
+- idempotency
+- duplicate delivery
+- at-least-once delivery concept
+
+Start with:
+
+Client request
+→ synchronous processing
+→ slow API
+
+Then redesign:
+
+Client
+→ API
+→ Queue
+→ Worker.
+
+Explain when async processing is useful.
+
+Use examples:
+
+- email
+- image processing
+- payment event
+- analytics event
+
+Explain why consumers must often be idempotent.
+
+Explain retries and DLQ.
+
+Give me a mini system design:
+
+Design an asynchronous email notification system.
+
+Require:
+
+- API
+- queue
+- workers
+- retries
+- DLQ
+- status tracking
+- duplicate handling
+```
+
+---
+
+# Day 312 — Distributed Systems Fundamentals
+
+### Ready-to-copy prompt
+
+```text
+Teach me **Day 312: Distributed Systems Fundamentals for System Design**.
+
+Cover:
+
+- distributed system
+- network failure
+- replication
+- leader/follower
+- quorum concept
+- consistency
+- eventual consistency
+- strong consistency
+- availability
+- partition tolerance
+- CAP theorem intuition
+
+Do not make this purely theoretical.
+
+Use practical examples.
+
+Explain:
+
+Why distributed systems cannot assume the network is reliable.
+
+Explain leader/follower replication.
+
+Explain read-after-write consistency.
+
+Explain eventual consistency using something like social-media likes or views.
+
+Explain where stronger consistency matters:
+
+- payment
+- account balance
+- inventory reservation
+
+Explain CAP theorem using simple scenarios.
+
+Do not teach CAP as:
+
+"Choose any two."
+
+Explain the nuance correctly at an interview-friendly level.
+
+Give me 8 scenarios.
+
+Ask what consistency level might be appropriate and why.
+```
+
+---
+
+# Day 313 — Reliability, Rate Limiting and Observability
+
+### Ready-to-copy prompt
+
+```text
+Teach me **Day 313: Reliability Patterns for System Design Interviews**.
+
+Cover:
+
+- timeout
+- retry
+- exponential backoff
+- jitter concept
+- circuit breaker
+- bulkhead concept
+- rate limiting
+- token bucket
+- health checks
+- graceful degradation
+- failover
+- metrics
+- logs
+- traces
+- alerts
+- SLI
+- SLO concept
+
+Explain the danger of unlimited retries.
+
+Explain retry storms.
+
+Explain idempotency when retries occur.
+
+Teach token-bucket rate limiting at a high level.
+
+Explain the difference between:
+
+logs
+vs
+metrics
+vs
+traces.
+
+Use one request flow:
+
+Client
+→ API gateway
+→ Service A
+→ Service B
+→ Database
+
+Explain how tracing helps debug latency.
+
+Give me a mini design:
+
+Protect an API from excessive traffic.
+
+Require:
+
+- rate limiter
+- timeout
+- retries
+- circuit breaker
+- monitoring
+- failure behavior
+```
+
+---
+
+# PHASE 3 — FAANG-STYLE HLD CASE STUDIES
+
+# Days 314–320
+
+---
+
+# Day 314 — Design a URL Shortener
+
+### Ready-to-copy prompt
+
+```text
+Conduct **Day 314: System Design Interview — Design a URL Shortener**.
+
+Do not give me the full architecture immediately.
+
+Act as interviewer and guide only when necessary.
+
+Start with:
+
+"Design a URL-shortening service similar to TinyURL."
+
+Require me to cover:
+
+1. Functional requirements
+2. Non-functional requirements
+3. Expected scale
+4. APIs
+5. Data model
+6. Short-code generation
+7. Collision handling
+8. Database choice
+9. Read-heavy optimization
+10. Caching
+11. Scaling
+12. Availability
+13. Analytics optional extension
+14. Security/abuse considerations
+
+Ask follow-up questions such as:
+
+- How would you generate unique IDs?
+- What happens if one DB shard fails?
+- What would you cache?
+- How would redirects remain fast?
+- How would you handle custom aliases?
+
+After I complete my design:
+
+Review it like a senior interviewer.
+
+Explain missing components and trade-offs.
+
+Provide a final reference architecture only after my attempt.
+```
+
+---
+
+# Day 315 — Design a Distributed Rate Limiter
+
+### Ready-to-copy prompt
+
+```text
+Conduct **Day 315: System Design Interview — Design a Distributed Rate Limiter**.
+
+Requirements should include:
+
+- limit requests per user/API key
+- multiple application servers
+- configurable limits
+- low latency
+- highly available
+
+Ask me first to clarify requirements.
+
+Require discussion of:
+
+- fixed window
+- sliding window concept
+- token bucket
+- leaky bucket concept
+- distributed state
+- Redis
+- atomic operations
+- API gateway placement
+- consistency
+- failure behavior
+- local vs centralized limiting
+
+Ask:
+
+What happens if Redis becomes unavailable?
+
+What happens when multiple servers update the same limit?
+
+How do we avoid excessive latency?
+
+How could different customers have different quotas?
+
+After my design:
+
+Compare implementation alternatives and trade-offs.
+```
+
+---
+
+# Day 316 — Design a Notification System
+
+### Ready-to-copy prompt
+
+```text
+Conduct **Day 316: System Design Interview — Design a Notification Platform**.
+
+Support:
+
+- email
+- SMS
+- push notification
+
+Require:
+
+1. requirements
+2. APIs
+3. notification request
+4. templates
+5. user preferences
+6. asynchronous queue
+7. workers
+8. external providers
+9. retries
+10. DLQ
+11. idempotency
+12. delivery status
+13. rate limits
+14. observability
+
+Discuss:
+
+How to prevent duplicate notifications?
+
+How to retry provider failures?
+
+How to respect user preferences?
+
+How to handle provider outages?
+
+How to support millions of notifications?
+
+Ask me to design first.
+
+Then review my architecture.
+
+Include a final production-style request flow.
+```
+
+---
+
+# Day 317 — Design a Chat / Messaging System
+
+### Ready-to-copy prompt
+
+```text
+Conduct **Day 317: System Design Interview — Design a Chat/Messaging System**.
+
+Design something similar to WhatsApp/Slack direct messaging at a simplified interview scope.
+
+Support:
+
+- 1-to-1 messages
+- online/offline users
+- message history
+- message ordering
+- delivery status
+
+Optional:
+- group chat
+
+Require discussion of:
+
+- WebSocket vs polling
+- connection servers
+- message service
+- message queue
+- storage
+- message IDs
+- ordering
+- delivery acknowledgement
+- offline messages
+- retries
+- scalability
+- partitioning
+- presence
+- failure recovery
+
+Ask me:
+
+How would messages reach users connected to different servers?
+
+How do we avoid message loss?
+
+How would we handle duplicate delivery?
+
+How should conversations be partitioned?
+
+After my attempt:
+
+Review architecture and trade-offs.
+```
+
+---
+
+# Day 318 — Design a News Feed
+
+### Ready-to-copy prompt
+
+```text
+Conduct **Day 318: System Design Interview — Design a Social News Feed**.
+
+Support:
+
+- users
+- follow relationships
+- create post
+- view feed
+- large user base
+
+Require discussion of:
+
+- APIs
+- post storage
+- follower graph
+- feed generation
+- fan-out on write
+- fan-out on read
+- celebrity problem
+- caching
+- ranking concept
+- pagination
+- consistency
+- storage scaling
+
+Ask me to compare:
+
+Push model
+vs
+Pull model
+vs
+Hybrid model.
+
+Ask:
+
+What happens when a celebrity has 50 million followers?
+
+How do we keep feed reads fast?
+
+How do we paginate reliably?
+
+After my design:
+
+Review scalability and trade-offs.
+```
+
+---
+
+# Day 319 — Design Google Drive / File Storage
+
+### Ready-to-copy prompt
+
+```text
+Conduct **Day 319: System Design Interview — Design a Cloud File Storage Service**.
+
+Simplified scope similar to Google Drive/Dropbox.
+
+Support:
+
+- upload file
+- download file
+- folders
+- metadata
+- file versions
+- synchronization concept
+
+Require discussion of:
+
+- API design
+- metadata database
+- blob/object storage
+- multipart upload
+- large files
+- chunking
+- file IDs
+- versioning
+- replication
+- CDN
+- synchronization
+- consistency
+- permissions
+- storage durability
+
+Ask:
+
+Why should file bytes and metadata be stored differently?
+
+How do we resume failed large uploads?
+
+How do we handle file versions?
+
+How can downloads scale globally?
+
+After my solution:
+
+Review trade-offs and bottlenecks.
+```
+
+---
+
+# Day 320 — Design YouTube / Video Platform
+
+### Ready-to-copy prompt
+
+```text
+Conduct **Day 320: System Design Interview — Design a Large Video Platform**.
+
+Simplify the problem to:
+
+- upload video
+- process video
+- watch video
+- metadata
+- high traffic
+
+Require discussion of:
+
+- upload API
+- object storage
+- metadata DB
+- asynchronous transcoding
+- job queue
+- workers
+- multiple video resolutions
+- thumbnails
+- CDN
+- streaming
+- caching
+- recommendation system only at high level
+- observability
+- failures
+
+Ask:
+
+Why should transcoding be asynchronous?
+
+How do we retry failed transcoding jobs?
+
+How do we prevent duplicate processing?
+
+How do we serve a popular video globally?
+
+How do we manage metadata separately from video blobs?
+
+After my attempt:
+
+Review it as a system-design interviewer.
+
+Do not go unnecessarily deep into video codecs.
+```
+
+---
+
+# PHASE 4 — LOW-LEVEL DESIGN / OBJECT DESIGN
+
+# Days 321–324
+
+---
+
+# Day 321 — LLD Fundamentals and SOLID
+
+### Ready-to-copy prompt
+
+```text
+Teach me **Day 321: Low-Level Design Fundamentals for Product-Company Interviews**.
+
+Explain the difference between:
+
+HLD
+vs
+LLD
+vs
+machine coding.
+
+Cover:
+
+- class
+- object
+- interface
+- abstraction
+- encapsulation
+- inheritance
+- composition
+- dependency injection concept
+- extensibility
+- SOLID principles
+
+Explain SOLID using simple examples.
+
+Do not teach design patterns as memorization.
+
+Teach me a repeatable LLD process:
+
+1. Clarify requirements
+2. Identify entities
+3. Identify responsibilities
+4. Define relationships
+5. Define interfaces
+6. Separate changing behavior
+7. Design for extensibility
+8. Write code skeleton
+9. Discuss trade-offs
+
+Give one small exercise:
+
+Design a basic payment-method abstraction.
+
+Ask me to identify:
+
+- classes
+- interface
+- responsibilities
+```
+
+---
+
+# Day 322 — LLD: Design a Parking Lot
+
+### Ready-to-copy prompt
+
+```text
+Conduct **Day 322: Low-Level Design Interview — Parking Lot**.
+
+Act as interviewer.
+
+Start with simplified requirements:
+
+- multiple parking floors
+- car/bike parking spots
+- vehicle enters
+- allocate spot
+- vehicle exits
+- calculate fee
+
+Ask me to identify:
+
+- entities
+- enums
+- classes
+- interfaces
+- responsibilities
+- relationships
+
+Possible entities may include:
+
+Vehicle
+ParkingSpot
+ParkingFloor
+ParkingLot
+Ticket
+PricingStrategy
+
+Do not provide these automatically unless needed.
+
+Require:
+
+1. class design
+2. relationships
+3. method signatures
+4. extensibility discussion
+5. Python code skeleton
+
+Ask follow-ups:
+
+- What if a new vehicle type is added?
+- What if pricing strategy changes?
+- What if spot allocation strategy changes?
+
+Evaluate SOLID and composition choices.
+```
+
+---
+
+# Day 323 — LLD: Elevator or Vending Machine
+
+### Ready-to-copy prompt
+
+```text
+Conduct **Day 323: Low-Level Design Interview — Elevator System**.
+
+If Elevator becomes too complex for the available time, use Vending Machine as the fallback problem.
+
+For Elevator, simplified requirements:
+
+- multiple floors
+- elevator requests
+- inside-floor selection
+- movement
+- direction
+- basic scheduling strategy
+
+Require:
+
+- entities
+- states
+- responsibilities
+- interfaces
+- method signatures
+- extensibility
+
+Discuss:
+
+- Elevator
+- ElevatorController
+- Request
+- Direction
+- State
+- SchedulingStrategy
+
+Do not hand me the classes initially.
+
+Ask me to derive them.
+
+Require a Python code skeleton.
+
+Ask:
+
+How would scheduling strategy be replaceable?
+
+How would you avoid one class doing everything?
+
+Evaluate:
+
+- responsibility separation
+- extensibility
+- state handling
+- communication
+```
+
+---
+
+# Day 324 — LLD: Notification Framework / Logger
+
+### Ready-to-copy prompt
+
+```text
+Conduct **Day 324: Low-Level Design Interview — Extensible Notification Framework**.
+
+Requirements:
+
+Support:
+
+- email
+- SMS
+- push
+
+Need ability to add new notification channels later.
+
+Require me to design:
+
+- interfaces
+- implementations
+- message object
+- notification service
+- routing/strategy
+- error handling
+
+Ask:
+
+How would we add WhatsApp later without modifying all existing code?
+
+How should configuration be injected?
+
+How do we avoid a large if-elif block?
+
+Discuss relevant principles such as:
+
+- Strategy
+- Factory concept
+- Dependency Inversion
+- Open/Closed Principle
+
+Do not make pattern names the primary goal.
+
+Primary goal:
+
+Clean extensible design.
+
+Require Python code skeleton.
+
+After my attempt:
+
+Review class responsibilities and coupling.
+```
+
+---
+
+# PHASE 5 — AI / PLATFORM SYSTEM DESIGN
+
+# Days 325–327
+
+---
+
+# Day 325 — Design a Production RAG Platform
+
+### Ready-to-copy prompt
+
+```text
+Conduct **Day 325: AI System Design — Production RAG Platform**.
+
+Assume users ask questions over enterprise documents.
+
+Design an end-to-end production RAG platform.
+
+Require discussion of:
+
+INGESTION
+
+- document upload
+- parsing
+- OCR concept where needed
+- chunking
+- metadata
+- embedding generation
+- vector indexing
+
+RETRIEVAL
+
+- vector search
+- keyword/BM25 concept
+- hybrid search
+- metadata filters
+- reranking
+
+GENERATION
+
+- prompt construction
+- LLM
+- citations
+- structured output
+
+PRODUCTION CONCERNS
+
+- authentication
+- authorization
+- tenant isolation
+- caching
+- latency
+- model failures
+- retries
+- observability
+- cost
+- document updates
+- re-indexing
+
+EVALUATION
+
+- retrieval recall
+- precision
+- groundedness
+- answer correctness
+- latency
+- cost
+
+Ask me first to gather requirements.
+
+Then ask me to draw:
+
+Client
+→ API
+→ Retrieval
+→ LLM
+→ Response.
+
+Then gradually add production components.
+
+Ask follow-up questions such as:
+
+- How do you prevent unauthorized document retrieval?
+- How do document updates propagate?
+- How do you evaluate retrieval separately from generation?
+- How do you reduce latency?
+- How do you debug a bad answer?
+- How do you handle contradictory documents?
+
+After my design:
+
+Review architecture like a senior AI platform interviewer.
+```
+
+---
+
+# Day 326 — Design an Agentic AI Platform
+
+### Ready-to-copy prompt
+
+```text
+Conduct **Day 326: AI System Design — Agentic AI Platform**.
+
+Design a production platform where users submit tasks and an AI agent can:
+
+- reason over multiple steps
+- call tools
+- call MCP servers/APIs
+- maintain state
+- perform asynchronous work
+- retry failures
+- request human approval
+- resume execution
+
+Require discussion of:
+
+CONTROL PLANE
+
+- authentication
+- API gateway
+- policies
+- agent configuration
+- tool registry
+- quotas
+
+ORCHESTRATION PLANE
+
+- workflow engine
+- LangGraph-like orchestration
+- state machine
+- routing
+- checkpoints
+- durable execution
+
+DATA / EXECUTION PLANE
+
+- tool calls
+- MCP
+- REST APIs
+- database operations
+- external integrations
+
+RELIABILITY
+
+- timeout
+- retry
+- bounded retry
+- delayed retry
+- scheduler
+- DLQ
+- idempotency
+- duplicate actions
+- checkpointing
+
+HUMAN-IN-THE-LOOP
+
+- approval
+- pause
+- resume
+- audit trail
+
+OBSERVABILITY
+
+- agent run ID
+- tool execution ID
+- traces
+- logs
+- metrics
+- token/cost tracking
+
+Ask:
+
+What is the difference between an agent run and a tool execution?
+
+How do you prevent duplicate side effects after a retry?
+
+How should long-running workflows resume after crashes?
+
+How would you secure tools?
+
+How do you track approval state?
+
+After my design:
+
+Review trade-offs and production failure modes.
+```
+
+---
+
+# Day 327 — Design an LLM Gateway / AI Platform
+
+### Ready-to-copy prompt
+
+```text
+Conduct **Day 327: AI System Design — LLM Gateway and Multi-Model Platform**.
+
+Design a centralized platform used by multiple engineering teams to access LLMs.
+
+Requirements:
+
+- multiple model providers
+- internal/private models
+- routing
+- fallbacks
+- rate limits
+- quotas
+- prompt management
+- logging
+- security
+- cost tracking
+
+Require discussion of:
+
+API GATEWAY
+
+- authentication
+- tenant/project identification
+- quotas
+- request validation
+
+MODEL ROUTING
+
+- model selection
+- latency
+- quality
+- cost
+- fallback
+- provider outage
+
+SAFETY / GOVERNANCE
+
+- input filtering
+- output validation
+- PII handling
+- prompt injection considerations
+- access policies
+
+PERFORMANCE
+
+- caching
+- streaming
+- concurrency
+- rate limiting
+
+OBSERVABILITY
+
+- request ID
+- model
+- tokens
+- latency
+- error
+- cost
+- traces
+
+EVALUATION
+
+- offline evaluations
+- online metrics
+- regression testing
+
+Ask:
+
+How would you route simple vs complex prompts?
+
+How do you fail over when one provider is unavailable?
+
+How would you enforce team budgets?
+
+How would you prevent teams from directly bypassing policies?
+
+How would you version prompts/models?
+
+After my design:
+
+Review the architecture from both platform-engineering and AI-engineering perspectives.
+```
+
+---
+
+# PHASE 6 — FULL INTERVIEW LOOPS
+
+# Days 328–330
+
+---
+
+# Day 328 — Full Coding Interview Loop
+
+### Ready-to-copy prompt
+
+```text
+Conduct **Day 328: FAANG-Style Coding Interview Loop**.
+
+Run two separate coding rounds.
+
+ROUND 1
+
+Give:
+
+- one warm-up if needed
+- one Medium main problem
+
+Target:
+45 minutes.
+
+ROUND 2
+
+Give:
+
+- one Medium problem from a different DSA family
+- one follow-up requirement
+
+Target:
+45 minutes.
+
+Rules:
+
+- unseen questions
+- do not name topics
+- no initial hints
+- ask one problem at a time
+- require clarification
+- require brute force
+- require optimization
+- require Python
+- require testing
+- require complexity
+
+Behave like an interviewer.
+
+Ask follow-ups such as:
+
+- Can we reduce memory?
+- What changes if input is huge?
+- What if data arrives as a stream?
+- What if duplicates exist?
+- What if ordering changes?
+
+FINAL EVALUATION
+
+Score /10:
+
+- coding
+- problem solving
+- DSA selection
+- optimization
+- code quality
+- edge cases
+- communication
+- speed
+
+Identify only the highest-priority gaps.
+```
+
+---
+
+# Day 329 — Full System Design Interview Loop
+
+### Ready-to-copy prompt
+
+```text
+Conduct **Day 329: Full FAANG-Style System Design Mock Interview**.
+
+Give me one unseen large-scale system-design problem.
+
+Do not select:
+
+- URL shortener
+- notification system
+- chat
+- news feed
+- file storage
+- YouTube
+
+because I already practiced those.
+
+Choose another realistic product.
+
+Possible categories:
+
+- ride sharing
+- food delivery
+- search autocomplete
+- job scheduler
+- metrics/monitoring platform
+- payment system
+- ticket booking
+- collaborative document editing
+
+Do not tell me the architecture.
+
+Give me 45–60 minutes worth of interview interaction.
+
+Require me to lead.
+
+Evaluate whether I cover:
+
+1. Functional requirements
+2. Non-functional requirements
+3. Scale
+4. APIs
+5. Data model
+6. High-level architecture
+7. Data flow
+8. Database
+9. Cache
+10. Queue
+11. Partitioning
+12. Consistency
+13. Failure handling
+14. Reliability
+15. Security
+16. Observability
+17. Trade-offs
+
+Challenge my decisions.
+
+Ask:
+
+Why this database?
+
+Why this partition key?
+
+What breaks at 10x scale?
+
+Where is the bottleneck?
+
+What happens during failure?
+
+At the end provide:
+
+- strengths
+- missing areas
+- alternative designs
+- final interview score /10
+```
+
+---
+
+# Day 330 — Complete Product-Company Technical Loop and Final Readiness Assessment
+
+### Ready-to-copy prompt
+
+```text
+Conduct **Day 330: Final FAANG/Product-Company Technical Interview Assessment**.
+
+This is the final day of my 330-day learning path.
+
+Do not teach before testing.
+
+Simulate a multi-round experienced-engineer interview loop.
+
+==================================================
+ROUND 1 — DSA CODING
+==================================================
+
+Give one unseen Medium DSA problem.
+
+Do not identify the pattern.
+
+Require:
+
+- clarification
+- brute force
+- optimization
+- pseudocode
+- Python
+- testing
+- complexity
+
+==================================================
+ROUND 2 — DSA FOLLOW-UP / SECOND PROBLEM
+==================================================
+
+Either:
+
+- add a difficult follow-up to Round 1
+
+or
+
+- give another Medium problem from a different family.
+
+Evaluate adaptability.
+
+==================================================
+ROUND 3 — HIGH-LEVEL SYSTEM DESIGN
+==================================================
+
+Give one unseen scalable system-design problem.
+
+Require:
+
+- requirements
+- capacity reasoning
+- APIs
+- data model
+- architecture
+- database
+- cache
+- queues
+- partitioning
+- reliability
+- security
+- observability
+- trade-offs
+
+Do not provide the architecture.
+
+==================================================
+ROUND 4 — LOW-LEVEL DESIGN
+==================================================
+
+Give one object-oriented design problem.
+
+Require:
+
+- entities
+- responsibilities
+- interfaces
+- relationships
+- extensibility
+- Python code skeleton
+
+Evaluate SOLID principles pragmatically.
+
+==================================================
+ROUND 5 — AI / PLATFORM SYSTEM DESIGN
+==================================================
+
+Give one unseen AI engineering design problem.
+
+Possible examples:
+
+- AI evaluation platform
+- document intelligence system
+- model-serving platform
+- distributed embedding pipeline
+- enterprise agent platform
+- prompt-management platform
+- AI observability system
+
+Require production concerns:
+
+- scale
+- reliability
+- security
+- cost
+- evaluation
+- monitoring
+- failure handling
+
+==================================================
+FINAL READINESS MATRIX
+==================================================
+
+Score me from 1–10 for:
+
+DSA:
+- Arrays / Strings
+- Hashing
+- Sliding Window
+- Binary Search
+- Stack / Queue
+- Linked List
+- Trees
+- Heap
+- Graphs
+- Backtracking
+- Greedy
+- DP
+- Pattern Recognition
+
+Coding:
+- Python fluency
+- correctness
+- speed
+- edge cases
+- testing
+- complexity analysis
+
+System Design:
+- requirements clarification
+- APIs
+- data modelling
+- database selection
+- caching
+- queues
+- distributed systems
+- scalability
+- consistency
+- reliability
+- observability
+- security
+- trade-offs
+
+LLD:
+- object modelling
+- SOLID
+- interfaces
+- extensibility
+- code structure
+
+AI Engineering:
+- RAG architecture
+- agent architecture
+- model platform
+- evaluation
+- governance
+- observability
+- reliability
+
+Interview Skills:
+- communication
+- structured thinking
+- handling ambiguity
+- responding to hints
+- handling follow-ups
+- explaining trade-offs
+
+==================================================
+CLASSIFICATION
+==================================================
+
+For each major area classify me as:
+
+- Strong
+- Interview Ready
+- Needs Practice
+- Weak
+
+Do not inflate the scores.
+
+Use only my actual performance.
+
+==================================================
+FINAL GAP PLAN
+==================================================
+
+Based on my performance, create a focused revision plan.
+
+Do NOT automatically create another long learning syllabus.
+
+Only recommend topics I actually demonstrated weakness in.
+
+Separate:
+
+Critical Before Interviews
+Important
+Nice to Improve
+
+==================================================
+FINAL INTERVIEW READINESS
+==================================================
+
+Tell me separately whether my current performance appears ready for:
+
+1. Standard product-company coding rounds
+2. FAANG-style DSA rounds
+3. Senior backend system-design rounds
+4. AI/ML engineering system-design rounds
+5. Senior/Lead engineering interviews
+
+Base the assessment on demonstrated performance, not on simply completing Day 330.
+```
+
+---
+
+# COMPLETE DAYS 211–330 INTERVIEW JOURNEY
+
+```text
+DAYS 211–240
+FOUNDATIONAL DSA
+        ↓
+Core Data Structures
+        ↓
+Core Algorithms
+        ↓
+Pattern Recognition
+
+DAYS 241–270
+INTERMEDIATE DSA
+        ↓
+Linked Lists
+Trees
+Heaps
+Graphs
+Backtracking
+Greedy
+DP
+
+DAYS 271–290
+ADVANCED DSA
+        ↓
+Advanced DP
+Union-Find
+MST
+Shortest Path
+Advanced Search
+Advanced Heap
+
+DAYS 291–300
+DSA INTERVIEW MODE
+        ↓
+Unseen Problems
+Timed Coding
+Mocks
+
+DAYS 301–306
+FAANG DSA MASTERY
+        ↓
+Medium Problems
+Pattern Recognition
+Optimization
+Communication
+
+DAYS 307–313
+SYSTEM DESIGN FOUNDATION
+        ↓
+Scaling
+Database
+Caching
+Queues
+Distributed Systems
+Reliability
+
+DAYS 314–320
+HLD CASE STUDIES
+        ↓
+URL Shortener
+Rate Limiter
+Notifications
+Chat
+News Feed
+File Storage
+Video Platform
+
+DAYS 321–324
+LOW-LEVEL DESIGN
+        ↓
+SOLID
+Object Modelling
+Parking Lot
+Elevator
+Extensible Frameworks
+
+DAYS 325–327
+AI SYSTEM DESIGN
+        ↓
+Production RAG
+Agent Platform
+LLM Gateway
+
+DAYS 328–330
+FULL INTERVIEW LOOPS
+        ↓
+DSA
+HLD
+LLD
+AI System Design
+        ↓
+FINAL READINESS ASSESSMENT
+```
+
+# Interview Rule From Day 301 Onward
+
+From Day 301, avoid this learning style:
+
+```text
+Today's topic is Sliding Window
+→ here is a Sliding Window question
+→ solve using Sliding Window
+```
+
+Instead use:
+
+```text
+Here is an unseen problem
+        ↓
+Understand it
+        ↓
+Find brute force
+        ↓
+Identify bottleneck
+        ↓
+Recognize pattern yourself
+        ↓
+Choose data structure
+        ↓
+Optimize
+        ↓
+Code
+        ↓
+Test
+        ↓
+Explain complexity
+```
+
+For System Design:
+
+```text
+Do NOT begin with:
+"We should use Kafka, Redis, Kubernetes..."
+
+Begin with:
+
+What are we building?
+        ↓
+Who uses it?
+        ↓
+What scale?
+        ↓
+What are the critical requirements?
+        ↓
+What APIs/data exist?
+        ↓
+Simple architecture
+        ↓
+Find bottlenecks
+        ↓
+Introduce technology only when it solves a problem
+        ↓
+Explain trade-offs
+```
+
+# Final Goal of Day 330
+
+The goal is NOT:
+
+"I completed 330 days."
+
+The goal is:
+
+```text
+I receive an unfamiliar problem
+and can structure my thinking.
+
+I receive an unfamiliar DSA problem
+and can independently select an approach.
+
+I receive an unfamiliar system-design problem
+and can lead the architecture discussion.
+
+I can explain why I selected:
+database
+cache
+queue
+partitioning
+consistency model
+reliability strategy.
+
+I can design clean object-oriented components.
+
+I can discuss production AI systems beyond
+just calling an LLM API.
+
+I can communicate trade-offs clearly
+while coding and designing.
+```
+
+That is the expected outcome of **Days 301–330**.
